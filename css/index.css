@@ -1,0 +1,14 @@
+.navbar-dark .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0);
+    color: white;
+}
+
+@font-face {
+    font-family: "archivoBlack";
+    src: url("/Wonder_Grupo4_ProjetoI/fonts/ArchivoBlack-Regular.ttf")
+}
+
+#pageNameCenter {
+    font-family: archivoBlack;
+    color: white;
+}
