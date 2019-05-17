@@ -7,6 +7,7 @@
     
 }
 
-.dropdown{
-    align: center;
+
+.input-group.md-form.form-sm.form-2 input.amber-border  {
+    border: 1px solid #ffa812;
 }
