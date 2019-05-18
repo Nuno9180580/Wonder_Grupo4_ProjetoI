@@ -71,6 +71,11 @@ input:focus {
     margin-left: 4px;
 }
 
+@font-face {
+    font-family: "archivoBlack";
+    src: url("../fonts/ArchivoBlack-Regular.ttf")
+}
+
 h3 {
     font-family: archivoBlack;
 }
