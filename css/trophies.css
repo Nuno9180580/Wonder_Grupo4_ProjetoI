@@ -1,0 +1,31 @@
+.conteiner{
+    background-color: #c8c8c8;
+    border: 30px;
+}
+
+.row{
+    background-color: #c8c8c8;
+}
+.col-sm{
+    background-color: #c8c8c8;
+}
+
+.card{
+    margin-left:95px;
+    margin-top: 40px;
+    margin-block-end: 40px;
+}
+
+.card-title{
+    font-size: 15px;
+}
+
+
+@font-face {
+    font-family: "archivoBlack";
+    src: url("../fonts/ArchivoBlack-Regular.ttf")
+}
+
+h1 {
+    font-family: archivoBlack;
+}
