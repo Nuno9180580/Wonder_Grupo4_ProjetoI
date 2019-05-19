@@ -17,39 +17,39 @@
   <!-- REGISTO / LOGIN-->
   <div class="container">
     <div class="d-flex justify-content-center h-100">
-      <div class="card">
+      <div class="card" id="changeCard">
         <div class="card-header">
           <h3>Registo</h3>
         </div>
         <div class="card-body">
-          <form id="formChanging">
-            <p>Nome de Utilizador</p>
+          <form id="myForm">
+            <label for="txtUsername">Nome de Utilizador</label>
             <div class="input-group form-group">
               <div class="input-group-prepend">
               </div>
               <input type="text" class="form-control" id="txtUsername">
             </div>
-            <p>E-Mail</p>
+            <label for="txtEmail">E-Mail</label>
             <div class="input-group form-group">
               <div class="input-group-prepend">
               </div>
               <input type="text" class="form-control" id="txtEmail">
             </div>
-            <p>Palavra Passe</p>
+            <label for="txtPass">Password</label>
             <div class="input-group form-group">
               <div class="input-group-prepend">
               </div>
               <input type="password" class="form-control" id="txtPass">
             </div>
-            <p>Confirmar Palavra Passe</p>
+            <label for="txtConfirmPass">Confirmar Palavra Passe</label>
             <div class="input-group form-group">
               <div class="input-group-prepend">
               </div>
               <input type="password" class="form-control" id="txtConfirmPass">
             </div>
             <div class="form-group">
-              <input type="submit" value="Registar" class="btn float-right login_btn" id="btnRegister">
-              <input type="submit" value="Iniciar Sessão" class="btn float-left login_btn" id="btnLogin">
+              <input type="button" value="Iniciar Sessão" class="btn float-right login_btn" id="btnChangeToLogin">
+              <input type="submit" value="Registar" class="btn float-left login_btn" id="btnRegister">
             </div>
           </form>
         </div>
@@ -67,6 +67,8 @@
   </script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
     integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+  </script>
+  <script src="../js/controller/landing.js">
   </script>
 </body>
 
