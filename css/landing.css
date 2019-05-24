@@ -15,7 +15,7 @@ body {
     margin-top: auto;
     margin-bottom: auto;
     width: 400px;
-    background-color: rgba(255, 176, 0, 1) !important;
+    background-color: rgba(255, 176, 0, 0.9) !important;
 }
 
 .social_icon span {
