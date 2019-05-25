@@ -86,7 +86,7 @@ function loginSubmit() {
   //se os campos nao tiverem vazios
   if (txtUsername != "") {
     if (txtPass != "") {
-
+      
     }
   }
 }
