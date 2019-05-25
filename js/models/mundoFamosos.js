@@ -15,4 +15,5 @@ export default famousOnes =[
 "Torres Gémeas",
 "Burj Khalifa",
 "Taipei",
+"CNN Tower"
 ]
