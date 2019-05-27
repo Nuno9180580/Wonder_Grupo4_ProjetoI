@@ -1,8 +1,4 @@
 import User from "./userModel.js"
-<<<<<<< HEAD
-=======
-import Monument from "./monumentModel.js"
->>>>>>> fbfc1ec18650013db43d8f24e4e70b9ba4b48f31
 
 //array de utilizadores 
 export let users = []
@@ -23,17 +19,16 @@ if (localStorage.users) {
 
 //função para validar o registo para o landing
 export function registerSubmit(txtUsername, txtEmail, txtPass, txtConfirmPass) {
+    let usernameExists = false
+    let emailExists = false
     if (txtPass === txtConfirmPass) {
-        let usernameExists = false;
-        let emailExists = false;
         for (const user of users) {
             if (user.name === txtUsername) {
-                userExists === true;
+                userExists === true
             } else if (user.email === txtEmail) {
-                emailExists === true;
+                emailExists === true
             }
         }
-
         if (usernameExists === false && emailExists === false) {
             alert(`Conta criada com sucesso!`)
             users.push(new User(txtUsername, txtEmail, txtPass, "1", "0", ""))
@@ -44,8 +39,6 @@ export function registerSubmit(txtUsername, txtEmail, txtPass, txtConfirmPass) {
             alert("Email já existe!")
         }
     } else {
-        txtPass = ""
-        txtConfirmPass = ""
         alert("As palavras passe não coincidem!")
     }
 }
