@@ -1,10 +1,7 @@
 import User from "./userModel.js"
-import Monument from "./monumentModel"
 
 //array de utilizadores 
 export let users = []
-//array de Monuments
-export let monuments = []
 
 // Caso já exista uma chave users na LocalStorage é carregado tudo para o array
 // Caso contrário são guardadas no array, vários objetos User inseridos manualmente
