@@ -14,25 +14,31 @@ if (localStorage.monuments) {
     const mnt1 = new Monument("Torre Eiffel", "1889", "../img/sample2.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
     const mnt2 = new Monument("Piramides de Gize", "1850 A.C", "../img/sample1.jpg", "PIRAMIDES", "Paris", "Egito")
     const mnt3 = new Monument("Big Ben", "1889", "../img/sample.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
-    const mnt4 = new Monument("Stonehendge", "1889", "../img/sample2.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
-    const mnt5 = new Monument("Torre dos Clerigos", "1889", "../img/sample2.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
-    const mnt6 = new Monument("Torre de Belem", "1889", "../img/sample2.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
-    const mnt7 = new Monument("Estatua da Liberdade", "1889", "../img/sample2.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
-    const mnt8 = new Monument("Arco do Triunfo", "1889", "../img/sample2.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
-    const mnt9 = new Monument("Palacio da Pena", "1889", "../img/sample2.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
-    monuments.push(mnt1, mnt2, mnt3, mnt4, mnt5, mnt6, mnt7, mnt8, mnt9)
+    const mnt4 = new Monument("Stonehendge", "1889", "../img/sample3.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
+    const mnt5 = new Monument("Torre dos Clerigos", "1889", "../img/sample5.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
+    const mnt6 = new Monument("Torre de Belem", "1889", "../img/sample4.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
+    monuments.push(mnt1, mnt2, mnt3, mnt4, mnt5, mnt6)
     localStorage.setItem("monuments", JSON.stringify(monuments))
 }
 
 const myCatalog = document.querySelector("#myCatalog")
 
-
-function organize(){
+//Função Ordenar por ordem Alfabetica
+function rearrange() {
     let monuments2 = []
     monuments2 = monuments
-    monuments2.sort((a,b) => (a.name > b.name) ? 1 : -1);
+    monuments2.sort((a, b) => (a.name > b.name) ? 1 : -1);
     console.log(monuments2)
+    renderCatalog();
+
 }
+
+//Evento Click do Botão Ordem Alfabetica
+document.getElementById("myBtn").addEventListener("click", function () {
+    rearrange();
+
+});
+
 
 
 
@@ -72,9 +78,7 @@ function renderCatalog() {
                                         <h5>Detalhes:</h5>
                                         <p>${monument.description}</p>
                                     </div>
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
-                                    </div>                            
+                          
                                 </div>
                               </div>
                         </div>
@@ -88,14 +92,3 @@ function renderCatalog() {
     }
     myCatalog.innerHTML = result
 }
-
-//let monuments2 = []
-//monuments2 = monuments
-//monuments2.sort();
-//document.getElementById("myCatalog").innerHTML = monuments2;
-
-//function myFunction() {
-  //monuments2.sort();
-  //document.getElementById("myCatalog").innerHTML = monuments2;
-  //console.log(monuments2)
-//}
