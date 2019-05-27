@@ -13,6 +13,7 @@ const btnLogin = document.querySelector("#btnLogin")
 //clica no botao iniciar sessao e altera os campos do form
 changeToLogin.addEventListener("click", function () {
   //funcao que muda o conteudo do form para os campos necessários ao login
+  
 })
 
 //clica e valida o registo
