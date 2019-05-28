@@ -12,7 +12,7 @@ if (localStorage.monuments) {
 } else {
     // Só vai entrar aqui a primeira vez
     const mnt1 = new Monument("Torre Eiffel", "1889", "../img/sample2.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
-    const mnt2 = new Monument("Piramides de Gize", "1850 A.C", "../img/sample1.jpg", "PIRAMIDES", "Paris", "Egito")
+    const mnt2 = new Monument("Piramides de Gize", "1850 A.C", "../img/sample1.jpg", "PIRAMIDES", "Cairo", "Egito")
     const mnt3 = new Monument("Big Ben", "1889", "../img/sample.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
     const mnt4 = new Monument("Stonehendge", "1889", "../img/sample3.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
     const mnt5 = new Monument("Torre dos Clerigos", "1889", "../img/sample5.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
@@ -68,26 +68,7 @@ function renderCatalog() {
                     <img id="cardImg" class="card-img-top" src="${monument.photo}">
                     <div class="card-body">
                         <h5 id="cardTitle" class="card-title">${monument.name}</h5>
-                        <button type="button" class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">Detalhes</button>                        
-                        <!-- Modal -->
-                        <div id="myModal" class="modal fade" role="dialog">
-                          <div class="modal-dialog">
-                            <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                                    </div>
-                                    <div class="modal-body">
-                                        <h4>${monument.name}</h4>
-                                        <img id="cardImg" class="card-img-top" src="${monument.photo}">
-                                        <h5>${monument.city},${monument.country}</h5>
-                                        <h5>Ano: ${monument.year}</h5>
-                                        <h5>Detalhes:</h5>
-                                        <p>${monument.description}</p>
-                                    </div>
-                          
-                                </div>
-                              </div>
-                        </div>
+                        <button type="button" id="${monument.name}" class="btn btn-info btn-lg view" data-toggle="modal" data-target="#myModal">Detalhes</button>                                               
                     </div>
                 </div>
             </div>`
@@ -97,4 +78,33 @@ function renderCatalog() {
         }
     }
     myCatalog.innerHTML = result
+
+    const btnsSeeMore = document.getElementsByClassName("view")
+    for (const elem of btnsSeeMore) {
+        elem.addEventListener("click", function () {
+           const modalTitle = document.querySelector("#modalTitle")
+           const modalImg = document.querySelector("#modalImg")
+           const modalCityCountry = document.querySelector("#modalCityCountry")
+           const modalYear = document.querySelector("#modalYear")
+           const modalDescription = document.querySelector("#modalDescription")
+
+           const myMonument = getMonumentByName(this.id)
+           modalTitle.innerHTML=myMonument.name
+           modalCityCountry.innerHTML=myMonument.city + ", " + myMonument.country
+           modalYear.innerHTML=myMonument.year
+           modalDescription.innerHTML=myMonument.description 
+           modalImg.src = myMonument.photo;
+        })
+    }
+
+}
+
+function getMonumentByName(name){
+    for (const monument of monuments) {
+        if(monument.name === name){
+            return monument
+
+        }
+        
+    }
 }

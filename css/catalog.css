@@ -1,5 +1,12 @@
+@font-face {
+    font-family: "archivoBlack";
+    src: url("../fonts/ArchivoBlack-Regular.ttf")
+}
+
 .card{
-    background-color: #ffa812;
+    background-color: hsl(209, 92%, 48%);
+    color: whitesmoke;
+    font-family: archivoBlack;
 }
 
 #dropdownMenuButton{
@@ -10,4 +17,19 @@
 
 .input-group.md-form.form-sm.form-2 input.amber-border  {
     border: 1px solid #ffa812;
+}
+
+#myBtn3{
+    background-color: #ffa812;
+}
+
+#btnDe{
+    font-family: Verdana;
+    font-size: 15px;
+    background-color: #ffa812;
+    color: black;
+}
+
+#myModal{
+    color: black;
 }
