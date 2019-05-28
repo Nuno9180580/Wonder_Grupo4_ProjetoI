@@ -21,17 +21,17 @@ if (localStorage.users) {
 export function registerSubmit(txtUsername, txtEmail, txtPass, txtConfirmPass) {
     let usernameExists = false
     let emailExists = false
-    if (txtUsername != "" && txtEmail != "" && txtPass != "" && txtConfirmPass != "") {
         if (txtPass === txtConfirmPass) {
             for (const user of users) {
                 if (user.username === txtUsername) {
-                    usernameExists === true
-                } else if (user.email === txtEmail) {
-                    emailExists === true
+                    usernameExists = true
+                }
+                if (user.email === txtEmail) {
+                    emailExists = true
                 }
             }
             if (usernameExists === false && emailExists === false) {
-                alert(`Conta criada com sucesso!`)
+                alert("Conta criada com sucesso!")
                 users.push(new User(txtUsername, txtEmail, txtPass, "1", "0", "../img/AvatarFields.jpg"))
                 localStorage.setItem("users", JSON.stringify(users))
                 window.location.href = "../html/landingLogin.html" //redireciona para apagina login
@@ -48,10 +48,6 @@ export function registerSubmit(txtUsername, txtEmail, txtPass, txtConfirmPass) {
             document.querySelector("#txtPass").value = ""
             document.querySelector("#txtConfirmPass").value = ""
         }
-    } else {
-        alert("Preencha todos os campos!")
-    }
-
 }
 
 //função para validar o inicio de sessão para o landing
