@@ -1,7 +1,15 @@
-const data = sessionStorage.getItem('loggedUser')
-const labelUser = document.querySelector("#txtUserLogged")
-labelUser.innerHTML = data;
+import users from "../models/main.js"
 
+const userOn = sessionStorage.getItem('loggedUser')
+const labelUser = document.querySelector("#txtUserLogged")
+labelUser.innerHTML = userOn;
+
+const imgAvatar = ""
+for (const user of users) {
+    if (user.username === userOn) {
+        imgAvatar = user.userImage
+    }
+}
+alert(imgAvatar)
 const userAvatar = document.querySelector("#userAvatar")
-userAvatar.src = "../img/Perfil_Side_Icon.png"
-///const userLogged = document.querySelector("#txtUserLogged")
+userAvatar.src = imgAvatar
