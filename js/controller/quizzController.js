@@ -1,4 +1,8 @@
-import Question from "../models/questionModel.js" 
+import Question from "../models/questionModel.js"
+import {
+    users
+}
+from "../models/Main.js"
 
 // Define um array para guardar os objetos Question
 
@@ -8,7 +12,7 @@ export let questions = []
 // Caso já exista uma chave questions na LocalStorage é carregado tudo para o array
 // Caso contrário são guardadas no array, vários objetos Band inseridos manualmente
 if (localStorage.questions) {
-   questions = JSON.parse(localStorage.questions)
+    questions = JSON.parse(localStorage.questions)
 } else {
     // Só vai entrar aqui a primeira vez
     const ask1 = new Question("muse", "Pop-Rock", "http://www.planckmachine.com/wp-content/uploads/2016/09/hysteria-muse-meaning-song.jpg", "The best band ever", "xxx")
@@ -18,3 +22,16 @@ if (localStorage.questions) {
     questions.push(ask1, ask2, ask3, ask4)
     localStorage.setItem("questions", JSON.stringify(questions))
 }
+
+const userOn = sessionStorage.getItem('loggedUser')
+const labelUser = document.querySelector("#txtUserLogged")
+labelUser.innerHTML = userOn;
+
+let imgAvatar = ""
+for (const user of users) {
+    if (user.username === userOn) {
+        imgAvatar = user.userImage
+    }
+}
+const userAvatar = document.querySelector("#userAvatar")
+userAvatar.src = imgAvatar
