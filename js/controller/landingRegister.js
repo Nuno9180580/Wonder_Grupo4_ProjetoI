@@ -4,10 +4,10 @@ import {
 }
 from "../models/main.js"
 
-const btnRegister = document.querySelector("#btnRegister")
+
 
 //clica e valida o registo
-btnRegister.addEventListener("click", function (event) {
+document.querySelector("#myForm").addEventListener("submit", function (event) {
   //obter os valores dos campos
   const txtUsername = document.querySelector("#txtUsername").value
   const txtEmail = document.querySelector("#txtEmail").value
