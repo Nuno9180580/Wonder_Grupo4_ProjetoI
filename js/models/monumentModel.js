@@ -3,7 +3,7 @@ export default class Monument {
         this.name = name
         this.year = year
         this.photo = photo
-        this.description = description 
+        this.description = description
         this.city = city
         this.country = country
     }
@@ -17,6 +17,3 @@ export default class Monument {
         return 0;
     }
 }
-
-
-

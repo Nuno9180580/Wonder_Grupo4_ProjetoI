@@ -33,9 +33,9 @@ const myCatalog = document.querySelector("#myCatalog")
 
 } */
 
-function alphabeticalOrder(){
+function alphabeticalOrder() {
     monuments.sort(Monument.compare)
-    localStorage.setItem("monumentos",JSON.stringify(monuments))
+    localStorage.setItem("monumentos", JSON.stringify(monuments))
     renderCatalog();
 }
 
