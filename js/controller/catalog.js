@@ -1,4 +1,9 @@
 import Monument from "../models/monumentModel.js"
+import {
+    users
+}
+from "../models/Main.js"
+
 
 // Define um array para guardar os objetos Question
 
@@ -82,29 +87,42 @@ function renderCatalog() {
     const btnsSeeMore = document.getElementsByClassName("view")
     for (const elem of btnsSeeMore) {
         elem.addEventListener("click", function () {
-           const modalTitle = document.querySelector("#modalTitle")
-           const modalImg = document.querySelector("#modalImg")
-           const modalCityCountry = document.querySelector("#modalCityCountry")
-           const modalYear = document.querySelector("#modalYear")
-           const modalDescription = document.querySelector("#modalDescription")
+            const modalTitle = document.querySelector("#modalTitle")
+            const modalImg = document.querySelector("#modalImg")
+            const modalCityCountry = document.querySelector("#modalCityCountry")
+            const modalYear = document.querySelector("#modalYear")
+            const modalDescription = document.querySelector("#modalDescription")
 
-           const myMonument = getMonumentByName(this.id)
-           modalTitle.innerHTML=myMonument.name
-           modalCityCountry.innerHTML=myMonument.city + ", " + myMonument.country
-           modalYear.innerHTML=myMonument.year
-           modalDescription.innerHTML=myMonument.description 
-           modalImg.src = myMonument.photo;
+            const myMonument = getMonumentByName(this.id)
+            modalTitle.innerHTML = myMonument.name
+            modalCityCountry.innerHTML = myMonument.city + ", " + myMonument.country
+            modalYear.innerHTML = myMonument.year
+            modalDescription.innerHTML = myMonument.description
+            modalImg.src = myMonument.photo;
         })
     }
 
 }
 
-function getMonumentByName(name){
+function getMonumentByName(name) {
     for (const monument of monuments) {
-        if(monument.name === name){
+        if (monument.name === name) {
             return monument
 
         }
-        
+
     }
 }
+
+const userOn = sessionStorage.getItem('loggedUser')
+const labelUser = document.querySelector("#txtUserLogged")
+labelUser.innerHTML = userOn;
+
+let imgAvatar = ""
+for (const user of users) {
+    if (user.username === userOn) {
+        imgAvatar = user.userImage
+    }
+}
+const userAvatar = document.querySelector("#userAvatar")
+userAvatar.src = imgAvatar

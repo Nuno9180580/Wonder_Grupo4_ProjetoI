@@ -21,33 +21,33 @@ if (localStorage.users) {
 export function registerSubmit(txtUsername, txtEmail, txtPass, txtConfirmPass) {
     let usernameExists = false
     let emailExists = false
-        if (txtPass === txtConfirmPass) {
-            for (const user of users) {
-                if (user.username === txtUsername) {
-                    usernameExists = true
-                }
-                if (user.email === txtEmail) {
-                    emailExists = true
-                }
+    if (txtPass === txtConfirmPass) {
+        for (const user of users) {
+            if (user.username === txtUsername) {
+                usernameExists = true
             }
-            if (usernameExists === false && emailExists === false) {
-                alert("Conta criada com sucesso!")
-                users.push(new User(txtUsername, txtEmail, txtPass, "1", "0", "../img/AvatarFields.jpg"))
-                localStorage.setItem("users", JSON.stringify(users))
-                window.location.href = "../html/landingLogin.html" //redireciona para apagina login
+            if (user.email === txtEmail) {
+                emailExists = true
             }
-            if (usernameExists === true) {
-                document.querySelector("#txtUsername").value = ""
-                alert("Nome de Utilizador já existe!")
-            } else if (emailExists === true) {
-                document.querySelector("#txtEmail").value = ""
-                alert("Email já existe!")
-            }
-        } else {
-            alert("As palavras passe não coincidem!")
-            document.querySelector("#txtPass").value = ""
-            document.querySelector("#txtConfirmPass").value = ""
         }
+        if (usernameExists === false && emailExists === false) {
+            alert("Conta criada com sucesso!")
+            users.push(new User(txtUsername, txtEmail, txtPass, "1", "0", "../img/AvatarFields.jpg"))
+            localStorage.setItem("users", JSON.stringify(users))
+            window.location.href = "../html/landingLogin.html" //redireciona para apagina login
+        }
+        if (usernameExists === true) {
+            document.querySelector("#txtUsername").value = ""
+            alert("Nome de Utilizador já existe!")
+        } else if (emailExists === true) {
+            document.querySelector("#txtEmail").value = ""
+            alert("Email já existe!")
+        }
+    } else {
+        alert("As palavras passe não coincidem!")
+        document.querySelector("#txtPass").value = ""
+        document.querySelector("#txtConfirmPass").value = ""
+    }
 }
 
 //função para validar o inicio de sessão para o landing
