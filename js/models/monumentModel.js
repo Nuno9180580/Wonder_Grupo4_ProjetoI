@@ -7,6 +7,15 @@ export default class Monument {
         this.city = city
         this.country = country
     }
+    static compare(mntA, mntB) {
+        if (mntA.name < mntB.name) {
+            return -1;
+        }
+        if (mntA.name > mntB.name) {
+            return 1;
+        }
+        return 0;
+    }
 }
 
 
