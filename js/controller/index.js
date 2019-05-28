@@ -1,3 +1,4 @@
-const userLogged = document.querySelector("txtUserLogged")
+const userLogged = document.querySelector("#txtUserLogged")
 
-userLogged.innerHTML;
+const x = JSON.parse(sessionStorage.loggedUser);
+userLogged.innerHTML = x
