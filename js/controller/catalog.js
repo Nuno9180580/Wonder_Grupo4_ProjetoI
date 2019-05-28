@@ -24,18 +24,24 @@ if (localStorage.monuments) {
 const myCatalog = document.querySelector("#myCatalog")
 
 //Função Ordenar por ordem Alfabetica
-function rearrange() {
+/* function rearrange() {
     let monuments2 = []
     monuments2 = monuments
     monuments2.sort((a, b) => (a.name > b.name) ? 1 : -1);
     console.log(monuments2)
     renderCatalog();
 
+} */
+
+function alphabeticalOrder() {
+    monuments.sort(Monument.compare)
+    localStorage.setItem("monumentos", JSON.stringify(monuments))
+    renderCatalog();
 }
 
 //Evento Click do Botão Ordem Alfabetica
-document.getElementById("myBtn").addEventListener("click", function () {
-    rearrange();
+document.getElementById("btnAlpha").addEventListener("click", function () {
+    alphabeticalOrder();
 
 });
 

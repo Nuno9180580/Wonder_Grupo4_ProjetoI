@@ -44,18 +44,27 @@
 
     <div class="container-fluid">
         <div class="row">
-            <div class="col-sm-3"></div>
-            <div class="col-sm-2">
-                <button id="myBtn" type="button" >Ordem Alfabétia</button>
-                <button id="myBtn2" type="button" onclick="location.reload()" >Normal</button>
+            <div class="col-sm-3">
 
+            </div>
+            <div class="col-sm-2">
+                <div class="dropdown">
+                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                        data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Ordenar:
+                    </button>
+                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                        <a id="btnAlpha" class="dropdown-item" href="#">A-Z</a>
+                        <a class="dropdown-item" onclick="location.reload()" href="#">Normal</a>
+                    </div>
+                </div>
             </div>
             <div class="col-sm-4">
                 <div class="row">
                     <div class="col-sm-10">
                         <div class="input-group md-form form-sm form-2 pl-0">
-                            <input id="searchBar" class="form-control my-0 py-1 red-border" type="text" placeholder="Search"
-                                aria-label="Search">
+                            <input id="searchBar" class="form-control my-0 py-1 red-border" type="text"
+                                placeholder="Search" aria-label="Search">
                             <button id="myBtn3" type="button">lupa.png</button>
                         </div>
                     </div>
@@ -69,7 +78,7 @@
     <div class="container">
         <p id="myCatalog"></p>
     </div>
-    
+
     <!-- Optional JavaScript -->
     <script type="module" src="../js/controller/catalog.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
