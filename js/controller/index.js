@@ -1,4 +1,7 @@
-const userLogged = document.querySelector("#txtUserLogged")
+const data = sessionStorage.getItem('loggedUser')
+const labelUser = document.querySelector("#txtUserLogged")
+labelUser.innerHTML = data;
 
-const x = JSON.parse(sessionStorage.loggedUser);
-userLogged.innerHTML = x
+const userAvatar = document.querySelector("#userAvatar")
+userAvatar.src = "../img/Perfil_Side_Icon.png"
+///const userLogged = document.querySelector("#txtUserLogged")
