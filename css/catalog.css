@@ -41,7 +41,15 @@
 
 #modalCityCountry {
     font-family: archivoBlack;
+    font-size: 25px;
 
+}
+
+#modalImg {
+    border: 5px solid hsl(209, 92%, 48%);
+    border-radius: 5px;
+    background-color: hsl(209, 92%, 48%);
+    margin-bottom: 10px;
 }
 
 #descLabel {
