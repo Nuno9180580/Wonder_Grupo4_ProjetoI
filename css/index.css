@@ -29,3 +29,16 @@
     border: 10px solid #ffa812;
     border-radius: 10px;
 }
+
+#topMenu{
+    margin-left: 335px;
+    margin-top: -7px;   
+}
+
+#banner{
+    width: 190px;
+    height: 290px;
+    margin-right: 80px;
+  
+}
+
