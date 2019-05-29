@@ -26,17 +26,6 @@ if (localStorage.monuments) {
     localStorage.setItem("monuments", JSON.stringify(monuments))
 }
 
-const myCatalog = document.querySelector("#myCatalog")
-
-//Função Ordenar por ordem Alfabetica
-/* function rearrange() {
-    let monuments2 = []
-    monuments2 = monuments
-    monuments2.sort((a, b) => (a.name > b.name) ? 1 : -1);
-    console.log(monuments2)
-    renderCatalog();
-
-} */
 
 function alphabeticalOrder() {
     monuments.sort(Monument.compare)
@@ -58,10 +47,14 @@ document.getElementById("btnAlpha").addEventListener("click", function () {
 //carrega as bandas todas na msm sem filtros
 renderCatalog();
 //funcao para atualizar as bandas do catalogo
-function renderCatalog() {
+function renderCatalog(filtername="") {
+    const myCatalog = document.querySelector("#myCatalog")
     let result = "";
     let i = 0;
     for (const monument of monuments) {
+        if(filtername !== "" && !monument.name.startsWith(filtername)){
+            continue;
+        }
         //criacao da linha
         if (i % 3 === 0) {
             result += `<br><div class = "row">`
@@ -126,3 +119,28 @@ for (const user of users) {
 }
 const userAvatar = document.querySelector("#userAvatar")
 userAvatar.src = imgAvatar
+
+
+
+
+function searchMonument() {
+    const searchBar = document.querySelector("#searchBar").value
+ 
+    for (const monument of monuments) {
+        if (monument.name.startsWith(searchBar)) {
+            renderCatalog(searchBar)
+        }
+    }
+}
+
+
+document.querySelector("#myBtn3").addEventListener("click", function(){
+    searchMonument();
+})
+
+document.querySelector("#myBtn4").addEventListener("click", function(){
+    renderCatalog();
+    const searchBar = document.querySelector("#searchBar")
+    searchBar.value = "";    
+
+})
