@@ -11,6 +11,7 @@
 
 #dropdownMenuButton{
     background-color: #ffa812;
+    color: black;
     
 }
 
@@ -19,7 +20,13 @@
     border: 1px solid #ffa812;
 }
 
+
 #myBtn3{
+    background-color: #ffa812;
+    margin-left: -5px;
+}
+#myBtn4{
+    margin-left: 10px;
     background-color: #ffa812;
 }
 

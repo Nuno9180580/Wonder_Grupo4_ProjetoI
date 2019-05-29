@@ -71,5 +71,7 @@ export function loginSubmit(txtUsername, txtPass) {
 
 //função para efetuar logout
 export function logout() {
+    alert("Sessão terminada.")
     sessionStorage.removeItem("loggedUser")
+    window.location.href = "../html/landingRegister.html"
 }
