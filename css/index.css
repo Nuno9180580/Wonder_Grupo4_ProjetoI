@@ -24,8 +24,8 @@
 
 #videoContainer{
     background-color: #ffa812;
-    margin-top: 50px;
-    margin-bottom: 50px;
-    border: 15px solid #ffa812;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: 10px solid #ffa812;
     border-radius: 10px;
 }
