@@ -12,6 +12,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/sideBarView.css">
 </head>
 
 <body>
@@ -20,8 +21,15 @@
         <form>
             <!-- BOTAO HAMBURGUER  -->
             <button class="navbar-toggler" type="button">
-                <span class="navbar-toggler-icon"></span>
+                <span style="font-size:30px;cursor:pointer" id="openNav">&#9776;</span>
             </button>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closeBtn" id="closeNav">&times;</a>
+                <a href="#" id="optionAbout">About</a>
+                <a href="#" id="optionLogout">Logout</a>
+            </div>
+
             <!-- AVATAR REDIRECIONA PARA PERFIL -->
             <a class="navbar-brand" href="#">
                 <img id="userAvatar" src="" height="40"><label id="txtUserLogged"></label>
@@ -31,28 +39,28 @@
         <div class="topnav-centered">
             <h1 id="pageNameCenter">Perfil</h1>
         </div>
-        <a class="navbar-brand" href="#">
+        <a class="navbar-brand" href="index.html">
             <!-- ICONE DO SITE WONDER AQUI!! -->
-            <a class="button" href="index.html"><img src="../img/logo.png" width="140" height="40"
+            <a class="button" href="index.html"><img src="../img/Logo2.png" width="140" height="40"
                     class="d-inline-block"></a>
         </a>
     </nav>
     <br><br>
     <div class="row">
-            <div class="container">
-                <div class="jumbotron text-center col-md-4 jb1">
-                    <h1>Become Awesome</h1>
-                    <p>Here you will learn how to become awesome.</p>
-                    <a class="btn btn-danger pull-right" href="{% url 'awesome_info' %}">More Info</a>
-                </div>
-        
-                <div class="jumbotron text-center col-md-8 jb2">
-                    <h1>Here you will learn how to become super rad.</h1>
-                    <p>Tubular dude.</p>
-                    <a class="btn btn-success" href="{% url 'rad_info' %}" role="button">More Info</a>
-                </div>
+        <div class="container">
+            <div class="jumbotron text-center col-md-4 jb1">
+                <h1>Become Awesome</h1>
+                <p>Here you will learn how to become awesome.</p>
+                <a class="btn btn-danger pull-right" href="{% url 'awesome_info' %}">More Info</a>
+            </div>
+
+            <div class="jumbotron text-center col-md-8 jb2">
+                <h1>Here you will learn how to become super rad.</h1>
+                <p>Tubular dude.</p>
+                <a class="btn btn-success" href="{% url 'rad_info' %}" role="button">More Info</a>
             </div>
         </div>
+    </div>
     <!-- <div class="container-fluid">
             <div class="col">
                 <div id="jumbotron1" class="jumbotron">
@@ -82,8 +90,9 @@
                 </div>
             </div>
         </div> -->
-    
+
     <!-- Optional JavaScript -->
+    <script type="module" src="../js/views/sideBarView.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
