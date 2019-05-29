@@ -21,12 +21,12 @@
         <form>
             <!-- BOTAO HAMBURGUER  -->
             <button class="navbar-toggler" type="button">
-                <span style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+                <span style="font-size:30px;cursor:pointer" id="openNav">&#9776;</span>
             </button>
 
             <div id="mySidenav" class="sidenav">
-                <a href="javascript:void(0)" class="closeBtn" onclick="closeNav()">&times;</a>
-                <a href="#">About</a>
+                <a href="javascript:void(0)" class="closeBtn" id="closeNav">&times;</a>
+                <a href="#" id="optionAbout">About</a>
                 <a href="#" id="optionLogout">Logout</a>
             </div>
 
@@ -328,7 +328,7 @@
 
     <!-- Optional JavaScript -->
     <script type="module" src="../js/controller/trophiesController.js"></script>
-    <script src="../js/views/sideBarView.js"></script>
+    <script type="module" src="../js/views/sideBarView.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
