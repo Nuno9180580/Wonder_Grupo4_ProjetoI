@@ -64,8 +64,8 @@ function renderCatalog(filtername="") {
         }
         //geraçao do card
         result += ` 
-            <div class="col-sm">
-            <div id="rip2" class="card" style="width: 22rem; height: 23rem;">
+            <div id="rip3" class="col-sm">
+            <div id="rip2" class="card" style="width: 22rem; height: 23.6rem;">
                 <div id="rip" class="card" style="width: 20rem;">
                     <img id="cardImg" class="card-img-top" src="${monument.photo}">
                     <div class="card-body">

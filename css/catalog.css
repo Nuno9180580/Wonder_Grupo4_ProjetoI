@@ -17,11 +17,17 @@
     
 }
 
+#cardTitle{
+    color: white;
+    font-family: archivoBlack;
+    font-size: 25px; 
+}
 #rip{
     margin-left: 10px;
     margin-top: 11px;
 
 }
+
 
 #rip2{
     background-color: white;
@@ -42,11 +48,18 @@
 }
 
 .view{
-    font-family: Verdana;
-    font-size: 15px;
+    font-family: archivoBlack;
+    font-size: 16px;
     background-color: #ffa812;
     color: black;
 }
+
+#myBtn3:hover, #myBtn4:hover, #dropdownMenuButton:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+  }
+
 
 #myModal{
     color: black;
