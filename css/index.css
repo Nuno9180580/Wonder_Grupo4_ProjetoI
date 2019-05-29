@@ -34,8 +34,11 @@
 }
 
 #topMenu{
-    margin-left: 330px;
-    margin-top: -7px;   
+    display: flex;
+    justify-content:center;
+    padding-left: 100px;
+    
+      
 }
 
 #banner{

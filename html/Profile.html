@@ -42,13 +42,12 @@
         </div>
         <a class="navbar-brand" href="index.html">
             <!-- ICONE DO SITE WONDER AQUI!! -->
-            <img src="../img/Logo2.png" width="140" height="40"
-                    class="d-inline-block">
+            <img src="../img/Logo2.png" width="140" height="40" class="d-inline-block">
         </a>
     </nav>
 
-<!-- SideMenu -->
-<div id="sideMenu" class="w3-sidebar" style="width:6%;right:0;">
+    <!-- SideMenu -->
+    <div id="sideMenu" class="w3-sidebar" style="width:6%;right:0;">
         <a href="index.html" class="w3-bar-item w3-button">
             <img src="../img/Home_Side_Icon.png" width="80" height="80" class="d-inline-block" alt="">
         </a>
@@ -56,13 +55,13 @@
             <img src="../img/Catalog_Side_Icon.png" width="80" height="80" class="d-inline-block" alt="">
         </a>
         <a href="Quizzes.html" class="w3-bar-item w3-button">
-            <img src="../img/Quizz_Side_Icon.png" width="80" height="80" class="d-inline-block" alt="">        
+            <img src="../img/Quizz_Side_Icon.png" width="80" height="80" class="d-inline-block" alt="">
         </a>
         <a href="trophies.html" class="w3-bar-item w3-button">
             <img src="../img/Trophy_Side_Icon.png" width="80" height="80" class="d-inline-block" alt="">
         </a>
-  </div>
-  
+    </div>
+
 
 
 
@@ -70,41 +69,65 @@
     <div class="row">
         <div class="container">
             <div class="jumbotron text-center col-md-4 jb1">
-                    <img id="cardImg" class="card-img-top" src="../img/AvatarFields.jpg">
-                    <div class="card-body">
-                        <h5 id="cardTitle" class="card-title">gerherh</h5>
-                    </div>
-                <p>Here you will learn how to become awesome.</p>
-                <a class="btn btn-danger pull-right" href="{% url 'awesome_info' %}">More Info</a>
+                <img src="../img/AvatarFields.jpg"
+                    class="img-fluid ${3|rounded-top,rounded-right,rounded-bottom,rounded-left,rounded-circle,|}"
+                    alt="">
+                <div class="flex-container">
+                    <br>
+                    <h5 id="cardTitle" class="card-title">João, </h5>
+                </div>
+
+                <h2 id="currentLvl">Nivel 8</h2>
+
             </div>
 
             <div class="jumbotron text-center col-md-8 jb2">
-                
+
                 <div class="container-fluid">
                     <h1>Here you will learn how to become super rad.</h1>
                     <div class="progress">
-                            <div id="xpBar" class="progress-bar progress-bar-danger" role="progressbar"
-                                aria-valuenow="80" aria-valuemin="0" aria-valuemax="100" style="width:80%">
-                                80%
-                            </div>
+                        <div id="xpBar" class="progress-bar progress-bar-danger"  role="progressbar" aria-valuenow="80"
+                            aria-valuemin="0" aria-valuemax="100" style="width:80%">
+                            80%
                         </div>
+                    </div>
                     <div class="col">
                         <div id="jumbotron2" class="jumbotron">
-                           
+
 
                         </div>
                     </div>
                 </div>
-               
-                
+
+
             </div>
-        </div>
+
     </div>
 
 
-    
+        </div>
+        <div class="row">
+            <div id="container1" class="container">
+                <div class="jumbotron text-center col-md-4 jb3">
 
-    <!-- <div class="container-fluid">
+                    <div class="container-fluid">
+                        <h1>Here you will learn how to become super rad.</h1>
+
+                        <div class="col">
+                            <div id="jumbotron2" class="jumbotron">
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <!-- <div class="container-fluid">
             <div class="col">
                 <div id="jumbotron1" class="jumbotron">
     
@@ -119,18 +142,18 @@
             </div>
         </div> -->
 
-    <!-- Optional JavaScript -->
-    <script type="module" src="../js/views/sideBarView.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        <!-- Optional JavaScript -->
+        <script type="module" src="../js/views/sideBarView.js"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
