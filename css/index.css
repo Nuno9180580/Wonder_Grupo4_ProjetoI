@@ -21,3 +21,11 @@
     width: 60%;
     height: auto;
 }
+
+#videoContainer{
+    background-color: #ffa812;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    border: 15px solid #ffa812;
+    border-radius: 10px;
+}
