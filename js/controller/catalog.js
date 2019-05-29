@@ -52,7 +52,7 @@ function renderCatalog(filtername="") {
     let result = "";
     let i = 0;
     for (const monument of monuments) {
-        if(filtername !== "" && !monument.name.startsWith(filtername)){
+        if(filtername !== "" && !monument.name.toLowerCase().startsWith(filtername)){
             continue;
         }
         //criacao da linha
@@ -124,10 +124,10 @@ userAvatar.src = imgAvatar
 
 
 function searchMonument() {
-    const searchBar = document.querySelector("#searchBar").value
- 
+    const searchBar = document.querySelector("#searchBar").value.toLowerCase()
     for (const monument of monuments) {
-        if (monument.name.startsWith(searchBar)) {
+        let monumentName = monument.name.toLowerCase()
+        if (monumentName.startsWith(searchBar)) {
             renderCatalog(searchBar)
         }
     }
