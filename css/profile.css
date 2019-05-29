@@ -3,8 +3,9 @@
     margin-right: 40px;
     background-color: #c8c8c8;
 }
-.jumbotron{
+.jumbotron1{
     background-color:#c8c8c8;
+    width: 40%;
 }
 #xpContainer{
     width: 70%;
@@ -16,4 +17,12 @@
     margin-top: 10px;
     padding-bottom: 900px;
 }
-
+.container{
+    display: flex;   
+}
+.jumbotron + .jumbotron{
+    margin: 0 0 0 8px;
+}
+.jb2{
+    height: 420px;
+}

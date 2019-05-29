@@ -38,18 +38,25 @@
         </a>
     </nav>
     <br><br>
-    <div class="container-fluid">
-        <div class="col">
-            <div class="jumbotron">
-                <div id="xpContainer" class="container">
-                    <div class="progress">
-                        <div id="xpBar" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70"
-                            aria-valuemin="0" aria-valuemax="100" style="width:70%">
-                            70%
-                        </div>
-                    </div>
+    <div class="row">
+            <div class="container">
+                <div class="jumbotron text-center col-md-4 jb1">
+                    <h1>Become Awesome</h1>
+                    <p>Here you will learn how to become awesome.</p>
+                    <a class="btn btn-danger pull-right" href="{% url 'awesome_info' %}">More Info</a>
                 </div>
-                <div class="col-sm">
+        
+                <div class="jumbotron text-center col-md-8 jb2">
+                    <h1>Here you will learn how to become super rad.</h1>
+                    <p>Tubular dude.</p>
+                    <a class="btn btn-success" href="{% url 'rad_info' %}" role="button">More Info</a>
+                </div>
+            </div>
+        </div>
+    <!-- <div class="container-fluid">
+            <div class="col">
+                <div id="jumbotron1" class="jumbotron">
+    
                     <div class="flex-container" style="width: 10rem;">
                         <img id="cardImg" class="card-img-top" src="../img/AvatarFields.jpg">
                         <div class="card-body">
@@ -57,12 +64,25 @@
                         </div>
                     </div>
                 </div>
-
+    
             </div>
         </div>
-
-    </div>
-
+        <div class="container-fluid">
+            <div class="col">
+                <div id="jumbotron2" class="jumbotron">
+                    <div id="xpContainer" class="container">
+                        <div class="progress">
+                            <div id="xpBar" class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70"
+                                aria-valuemin="0" aria-valuemax="100" style="width:70%">
+                                70%
+                            </div>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+        </div> -->
+    
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
