@@ -3,15 +3,9 @@
     margin-right: 40px;
     background-color: #c8c8c8;
 }
-.jumbotron1{
-    background-color:#c8c8c8;
+.jb1{
+    background-color:#7f00c0;
     width: 40%;
-}
-#xpContainer{
-    width: 70%;
-    padding-top: 200px;
-    padding-left: 150px;
-
 }
 #cardImg{
     margin-top: 10px;
@@ -25,4 +19,9 @@
 }
 .jb2{
     height: 420px;
+}
+.pontos{
+    width: 100%;
+    background-color: white;
+    border-block-start-color: black;
 }
