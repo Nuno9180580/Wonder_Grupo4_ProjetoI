@@ -65,11 +65,13 @@ function renderCatalog(filtername="") {
         //geraçao do card
         result += ` 
             <div class="col-sm">
-                <div class="card" style="width: 20rem;">
+            <div id="rip2" class="card" style="width: 22rem; height: 23rem;">
+                <div id="rip" class="card" style="width: 20rem;">
                     <img id="cardImg" class="card-img-top" src="${monument.photo}">
                     <div class="card-body">
                         <h5 id="cardTitle" class="card-title">${monument.name}</h5>
                         <button type="button" id="${monument.name}" class="btn btn-info btn-lg view" data-toggle="modal" data-target="#myModal">Detalhes</button>                                               
+                    </div>
                     </div>
                 </div>
             </div>`
