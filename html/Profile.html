@@ -12,6 +12,7 @@
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/profile.css">
+    <link rel="stylesheet" href="../css/sideBarView.css">
 </head>
 
 <body>
@@ -20,8 +21,15 @@
         <form>
             <!-- BOTAO HAMBURGUER  -->
             <button class="navbar-toggler" type="button">
-                <span class="navbar-toggler-icon"></span>
+                <span style="font-size:30px;cursor:pointer" id="openNav">&#9776;</span>
             </button>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closeBtn" id="closeNav">&times;</a>
+                <a href="#" id="optionAbout">About</a>
+                <a href="#" id="optionLogout">Logout</a>
+            </div>
+
             <!-- AVATAR REDIRECIONA PARA PERFIL -->
             <a class="navbar-brand" href="#">
                 <img id="userAvatar" src="" height="40"><label id="txtUserLogged"></label>
@@ -33,8 +41,13 @@
         </div>
         <a class="navbar-brand" href="index.html">
             <!-- ICONE DO SITE WONDER AQUI!! -->
+<<<<<<< HEAD
             <img src="../img/Logo2.png" width="140" height="40"
                     class="d-inline-block">
+=======
+            <a class="button" href="index.html"><img src="../img/Logo2.png" width="140" height="40"
+                    class="d-inline-block"></a>
+>>>>>>> ea34ca00789a74662ad57d64b84dc7b54cffffed
         </a>
     </nav>
     <br><br>
@@ -47,6 +60,7 @@
             </div>
 
             <div class="jumbotron text-center col-md-8 jb2">
+<<<<<<< HEAD
                 
                 <div class="container-fluid">
                     <h1>Here you will learn how to become super rad.</h1>
@@ -62,6 +76,11 @@
                 </div>
                 <p>Tubular dude.</p>
                 
+=======
+                <h1>Here you will learn how to become super rad.</h1>
+                <p>Tubular dude.</p>
+                <a class="btn btn-success" href="{% url 'rad_info' %}" role="button">More Info</a>
+>>>>>>> ea34ca00789a74662ad57d64b84dc7b54cffffed
             </div>
         </div>
     </div>
@@ -80,8 +99,12 @@
             </div>
         </div> -->
 
+<<<<<<< HEAD
 
+=======
+>>>>>>> ea34ca00789a74662ad57d64b84dc7b54cffffed
     <!-- Optional JavaScript -->
+    <script type="module" src="../js/views/sideBarView.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
