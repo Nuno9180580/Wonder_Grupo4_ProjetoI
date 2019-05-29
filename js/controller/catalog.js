@@ -24,7 +24,7 @@ if (localStorage.monuments) {
     const mnt6 = new Monument("Torre de Belém", "1519 d.C.", "../img/TorreDeBelem.jpg", "Lorem Ipsum", "Lisboa", "Portugal")
     const mnt7 = new Monument("Monte Rushmore", "1941 d.C.", "../img/MonteRushmore.jpg", "Lorem Ipsum", "Keystone", "Estados Unidos da América")
     const mnt8 = new Monument("Coliseu de Roma", "80 d.C.", "../img/ColiseuDeRoma.jpg", "Lorem Ipsum", "Roma", "Itália")
-    const mnt9 = new Monument("Palácio da Pena", "1854 d.C.", "../img/PalacioDaPena.jpg", "Lorem Ipsum", "Sintra", "Portugal")  
+    const mnt9 = new Monument("Palácio da Pena", "1854 d.C.", "../img/PalacioDaPena.jpg", "Lorem Ipsum", "Sintra", "Portugal")
     monuments.push(mnt1, mnt2, mnt3, mnt4, mnt5, mnt6, mnt7, mnt8, mnt9)
     localStorage.setItem("monuments", JSON.stringify(monuments))
 }
@@ -50,12 +50,12 @@ document.getElementById("btnAlpha").addEventListener("click", function () {
 //carrega as bandas todas na msm sem filtros
 renderCatalog();
 //funcao para atualizar as bandas do catalogo
-function renderCatalog(filtername="") {
+function renderCatalog(filtername = "") {
     const myCatalog = document.querySelector("#myCatalog")
     let result = "";
     let i = 0;
     for (const monument of monuments) {
-        if(filtername !== "" && !monument.name.toLowerCase().startsWith(filtername)){
+        if (filtername !== "" && !monument.name.toLowerCase().startsWith(filtername)) {
             continue;
         }
         //criacao da linha
@@ -71,7 +71,7 @@ function renderCatalog(filtername="") {
                     <div class="card-body">
                         <h5 id="cardTitle" class="card-title">${monument.name}</h5>
                         <button type="button" id="${monument.name}" class="btn btn-info btn-lg view" data-toggle="modal" data-target="#myModal">Detalhes</button>                                               
-                    </div>
+                        </div>
                     </div>
                 </div>
             </div>`
@@ -139,13 +139,13 @@ function searchMonument() {
 }
 
 
-document.querySelector("#myBtn3").addEventListener("click", function(){
+document.querySelector("#myBtn3").addEventListener("click", function () {
     searchMonument();
 })
 
-document.querySelector("#myBtn4").addEventListener("click", function(){
+document.querySelector("#myBtn4").addEventListener("click", function () {
     renderCatalog();
     const searchBar = document.querySelector("#searchBar")
-    searchBar.value = "";    
+    searchBar.value = "";
 
 })

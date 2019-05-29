@@ -3,70 +3,115 @@
     src: url("../fonts/ArchivoBlack-Regular.ttf")
 }
 
-.card{
+.card {
     background-color: hsl(209, 92%, 48%);
     color: whitesmoke;
     font-family: archivoBlack;
 }
 
-#dropdownMenuButton{
+#dropdownMenuButton {
     background-color: #ffa812;
     color: black;
     font-family: archivoBlack;
     font-size: 18px;
-    
+
 }
 
-#cardTitle{
+#cardTitle {
     color: white;
     font-family: archivoBlack;
-    font-size: 25px; 
+    font-size: 25px;
 }
-#rip{
+
+#rip {
     margin-left: 10px;
     margin-top: 11px;
 
 }
 
-
-#rip2{
-    background-color: white;
-    border: 5px solid  hsl(209, 92%, 48%);
+#modalTitle {
+    font-family: archivoBlack;
+    color: white;
 }
-.input-group.md-form.form-sm.form-2 input.amber-border  {
+
+#modalYear {
+    font-family: archivoBlack;
+
+}
+
+#modalCityCountry {
+    font-family: archivoBlack;
+
+}
+
+#descLabel {
+    font-family: archivoBlack;
+    margin-left: 15px;
+    margin-top: 15px;
+}
+
+#descBorder {
+    border: 5px solid hsl(209, 92%, 48%);
+    border-radius: 5px;
+}
+
+#modalDescription {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    font-family: Verdana;
+}
+
+.modal-header,
+.modal-footer {
+    background-color: hsl(209, 92%, 48%);
+
+}
+
+#rip2 {
+    background-color: white;
+    border: 5px solid hsl(209, 92%, 48%);
+}
+
+.input-group.md-form.form-sm.form-2 input.amber-border {
     border: 1px solid #ffa812;
 }
 
 
-#myBtn3{
+#myBtn3 {
     background-color: #ffa812;
     margin-left: -5px;
 }
-#myBtn4{
+
+#myBtn4 {
     margin-left: 10px;
     background-color: #ffa812;
 }
 
-.view{
+.view {
     font-family: archivoBlack;
     font-size: 16px;
     background-color: #ffa812;
     color: black;
 }
 
-#myBtn3:hover, #myBtn4:hover, #dropdownMenuButton:hover {
-    -ms-transform: scale(1.1); /* IE 9 */
-    -webkit-transform: scale(1.1); /* Safari 3-8 */
-    transform: scale(1.1); 
-  }
+#myBtn3:hover,
+#myBtn4:hover,
+#dropdownMenuButton:hover {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+}
 
 
-#myModal{
+#myModal {
     color: black;
 }
 
-#sideMenu{
+#sideMenu {
     margin-top: 95px;
-    
-}
 
+}
