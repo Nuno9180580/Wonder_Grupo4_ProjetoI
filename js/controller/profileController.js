@@ -22,6 +22,8 @@ for (const user of users) {
 const userAvatar = document.querySelector("#userAvatar")
 const userLvl = document.querySelector("#currentLvl")
 const userExp = document.querySelector("#xpBar")
+const userImg = document.querySelector("#cardImg")
+
 
 
 function xpBarColor(){
@@ -40,7 +42,8 @@ function xpBarColor(){
 }
 
 xpBarColor();
+userImg.src = imgAvatar
 userExp.innerHTML = userXP
 userExp.style.width = userXP +"%";
 userAvatar.src = imgAvatar
-userLvl.innerHTML = userLvl2
+userLvl.innerHTML = "Nível: " + userLvl2

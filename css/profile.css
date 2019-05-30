@@ -9,7 +9,7 @@
     color: white;    
 }
 #cardTitle{
-    font-size: 30px;
+    font-size: 40px;
 }
 .jb1{
     background-color:#7f00c0;
@@ -17,7 +17,6 @@
 }
 #cardImg{
     margin-top: 10px;
-    padding-bottom: 900px;
 }
 .container{
     display: flex;   
