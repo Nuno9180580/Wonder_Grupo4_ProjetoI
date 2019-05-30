@@ -1,3 +1,7 @@
+body {
+    font-family: archivoBlack;
+}
+
 #sideMenu {
     margin-top: 95px;
     background-color: #D5F8FF;
@@ -18,22 +22,22 @@
     margin-right: 350px;
 }
 
-#startQuizz {
+#startQuiz {
     font-size: 3em;
     font-weight: bolder;
     word-break: break-all;
-    width: 270px;
-    height: 160px;
+    width: 280px;
+    height: 145px;
     border: 2px solid lightgrey;
     text-align: center;
     cursor: pointer;
     position: absolute;
-    left: 320px;
+    left: 310px;
     top: 200px;
     color: lightgrey;
 }
 
-#startQuizz:hover {
+#startQuiz:hover {
     border: 3px solid #0aac20;
     color: #0aac20;
 }
@@ -43,6 +47,28 @@
     src: url("../fonts/ArchivoBlack-Regular.ttf")
 }
 
-body {
-    font-family: archivoBlack;
+#questionImg {
+    width: 50%;
+    margin: auto;
+    left: 0px;
+}
+
+#questionImg img{
+    width : auto;
+    height : 300px;
+    margin-top: 50px;
+    border-radius: 5px;
+    border: 7px solid #0aac20;
+}
+
+#question {
+    width : 70%;
+    height: 125px;
+    margin: 0 auto 0 auto;
+}
+
+#question p {
+    width: 95%;
+    padding: 10px;
+    font-size: 1em;
 }
