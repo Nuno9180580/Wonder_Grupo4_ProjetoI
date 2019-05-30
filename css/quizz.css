@@ -10,7 +10,7 @@ body {
 
 .container-fluid {
     margin: 25px auto;
-    background-color: white;
+    background-color: #c8c8c8;
     height: 600px;
     width: 900px;
     border-radius: 5px;
@@ -53,16 +53,16 @@ body {
     left: 0px;
 }
 
-#questionImg img{
-    width : auto;
-    height : 300px;
-    margin-top: 50px;
+#questionImg img {
+    width: auto;
+    height: 300px;
+    margin-top: 20px;
     border-radius: 5px;
     border: 7px solid #0aac20;
 }
 
 #question {
-    width : 70%;
+    width: 70%;
     height: 125px;
     margin: 0 auto 0 auto;
 }
@@ -71,4 +71,42 @@ body {
     width: 95%;
     padding: 10px;
     font-size: 1em;
+}
+
+.choice {
+    display: inline-block;
+    width: 135px;
+    text-align: center;
+    border: 1px solid grey;
+    background-color: grey;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.btn-group .choice {
+    background-color: white;
+    border: 1px solid white;
+    padding: 10px 24px;
+    color: black;
+    cursor: pointer;
+    float: left;
+    text-decoration: none;
+}
+
+.btn-group .choiceLetter {
+    background-color: #0aac20;
+    border: 1px solid #0aac20;
+    color: white;
+    padding: 10px 24px;
+    cursor: pointer;
+    float: left;
+    text-decoration: none;
+}
+
+.row {
+    margin-top: 20px;
+}
+
+.col {
+    margin-left: 20px;
 }
