@@ -3,6 +3,11 @@
     src: url("../fonts/ArchivoBlack-Regular.ttf")
 }
 
+h1{
+    font-family: archivoBlack;
+    margin-left: 400px;
+}
+
 .navbar-dark .navbar-toggler {
     border-color: rgba(255, 255, 255, 0);
     color: white;
@@ -44,11 +49,9 @@ body{
 }
 
 #banner{
-    width: 140px;
-    height: 210px;
-    margin-right: 100px;
-
-  
+    width: 120px;
+    height: 180px;
+    margin-right: 90px;
 }
 
 .d-inline-block:hover {

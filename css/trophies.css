@@ -1,17 +1,24 @@
-.container{
-    background-color: #c8c8c8;
-    border: 30px;
+
+@font-face {
+    font-family: "archivoBlack";
+    src: url("../fonts/ArchivoBlack-Regular.ttf")
 }
 
-.row{
-    background-color: #c8c8c8;
+#pageNameCenter{
+    margin-right: 340px;
 }
-.col-sm{
-    background-color: #c8c8c8;
+
+#bK{
+    margin-left: 250px;
+    margin-top: 80px;
+    background-color: white;
+    width: 1000px;
+    border: 10px solid #eb2020;
+    border-radius: 10px;
 }
 
 .card{
-    margin-left:95px;
+    margin-left:87px;
     margin-top: 40px;
     margin-block-end: 40px;
 }
@@ -20,15 +27,6 @@
     font-size: 15px;
 }
 
-
-@font-face {
-    font-family: "archivoBlack";
-    src: url("../fonts/ArchivoBlack-Regular.ttf")
-}
-
-h1 {
-    font-family: archivoBlack;
-}
 #sideMenu{
     margin-top: 95px;
     background-color: #D5F8FF;
