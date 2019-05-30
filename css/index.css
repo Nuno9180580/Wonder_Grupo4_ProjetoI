@@ -1,11 +1,16 @@
-.navbar-dark .navbar-toggler {
-    border-color: rgba(255, 255, 255, 0);
-    color: white;
-}
-
 @font-face {
     font-family: "archivoBlack";
     src: url("../fonts/ArchivoBlack-Regular.ttf")
+}
+
+.navbar-dark .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0);
+    color: white;
+    
+}
+
+body{
+   background-color:  #D5F8FF;
 }
 
 #pageNameCenter {
@@ -29,3 +34,25 @@
     border: 10px solid #ffa812;
     border-radius: 10px;
 }
+
+#topMenu{
+    display: flex;
+    justify-content:center;
+    padding-left: 100px;
+    
+      
+}
+
+#banner{
+    width: 140px;
+    height: 210px;
+    margin-right: 100px;
+
+  
+}
+
+.d-inline-block:hover {
+    -ms-transform: scale(1.1); /* IE 9 */
+    -webkit-transform: scale(1.1); /* Safari 3-8 */
+    transform: scale(1.1); 
+  }

@@ -1,7 +1,7 @@
-#cardTitle{
-    margin-left: 80px;
-    margin-right: 40px;
-    background-color: #c8c8c8;
+#cardTitle,#currentLvl{
+    
+    background-color: #7f00c0;
+    color: white;    
 }
 .jb1{
     background-color:#7f00c0;
@@ -14,12 +14,19 @@
 .container{
     display: flex;   
 }
+/* #container1{
+    display: flex;
+    margin-left: 120px;
+    margin-top: 10px; 
+}*/
 .jumbotron + .jumbotron{
     margin: 0 0 0 8px;
 }
 .jb2{
     height: 420px;
 }
+ 
+
 .pontos{
     width: 100%;
     background-color: white;
@@ -27,4 +34,5 @@
 }
 #sideMenu{
     margin-top: 95px;
+    background-color: #D5F8FF;
 }

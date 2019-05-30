@@ -16,15 +16,15 @@ if (localStorage.monuments) {
     monuments = JSON.parse(localStorage.monuments)
 } else {
     // Só vai entrar aqui a primeira vez
-    const mnt1 = new Monument("Torre Eiffel", "1889", "../img/sample2.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
-    const mnt2 = new Monument("Piramides de Gize", "1850 A.C", "../img/sample1.jpg", "PIRAMIDES", "Cairo", "Egito")
-    const mnt3 = new Monument("Big Ben", "1889", "../img/sample.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
-    const mnt4 = new Monument("Stonehendge", "1889", "../img/sample3.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
-    const mnt5 = new Monument("Torre dos Clerigos", "1889", "../img/sample5.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
-    const mnt6 = new Monument("Torre de Belem", "1889", "../img/sample4.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
-    const mnt7 = new Monument("Torre de Belem", "1889", "../img/sample4.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
-    const mnt8 = new Monument("Torre de Belem", "1889", "../img/sample4.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
-    const mnt9 = new Monument("Torre de Belem", "1889", "../img/sample4.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")  
+    const mnt1 = new Monument("Torre Eiffel", "1889 d.C.", "../img/TorreEiffel.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
+    const mnt2 = new Monument("Pirâmides de Gizé", "1850 a.C.", "../img/PiramidesDeGize.jpg", "Lorem Ipsum", "Cairo", "Egito")
+    const mnt3 = new Monument("Big Ben", "1859 d.C.", "../img/BigBen.jpg", "Lorem Ipsum", "Londres", "Reino Unido")
+    const mnt4 = new Monument("Stonehendge", "3001 a.C.", "../img/Stonehendge.jpg", "Lorem Ipsum", "Salisbury", "Reino Unido")
+    const mnt5 = new Monument("Torre dos Clérigos", "1750 d.C.", "../img/TorreDosClerigos.jpg", "Lorem Ipsum", "Porto", "Portugal")
+    const mnt6 = new Monument("Torre de Belém", "1519 d.C.", "../img/TorreDeBelem.jpg", "Lorem Ipsum", "Lisboa", "Portugal")
+    const mnt7 = new Monument("Monte Rushmore", "1941 d.C.", "../img/MonteRushmore.jpg", "Lorem Ipsum", "Keystone", "Estados Unidos da América")
+    const mnt8 = new Monument("Coliseu de Roma", "80 d.C.", "../img/ColiseuDeRoma.jpg", "Lorem Ipsum", "Roma", "Itália")
+    const mnt9 = new Monument("Palácio da Pena", "1854 d.C.", "../img/PalacioDaPena.jpg", "Lorem Ipsum", "Sintra", "Portugal")
     monuments.push(mnt1, mnt2, mnt3, mnt4, mnt5, mnt6, mnt7, mnt8, mnt9)
     localStorage.setItem("monuments", JSON.stringify(monuments))
 }
@@ -50,12 +50,12 @@ document.getElementById("btnAlpha").addEventListener("click", function () {
 //carrega as bandas todas na msm sem filtros
 renderCatalog();
 //funcao para atualizar as bandas do catalogo
-function renderCatalog(filtername="") {
+function renderCatalog(filtername = "") {
     const myCatalog = document.querySelector("#myCatalog")
     let result = "";
     let i = 0;
     for (const monument of monuments) {
-        if(filtername !== "" && !monument.name.toLowerCase().startsWith(filtername)){
+        if (filtername !== "" && !monument.name.toLowerCase().startsWith(filtername)) {
             continue;
         }
         //criacao da linha
@@ -65,11 +65,13 @@ function renderCatalog(filtername="") {
         //geraçao do card
         result += ` 
             <div class="col-sm">
-                <div class="card" style="width: 20rem;">
+            <div id="rip2" class="card" style="width: 22rem; height: 23.6rem;">
+                <div id="rip" class="card" style="width: 20rem;">
                     <img id="cardImg" class="card-img-top" src="${monument.photo}">
                     <div class="card-body">
                         <h5 id="cardTitle" class="card-title">${monument.name}</h5>
                         <button type="button" id="${monument.name}" class="btn btn-info btn-lg view" data-toggle="modal" data-target="#myModal">Detalhes</button>                                               
+                        </div>
                     </div>
                 </div>
             </div>`
@@ -137,13 +139,13 @@ function searchMonument() {
 }
 
 
-document.querySelector("#myBtn3").addEventListener("click", function(){
+document.querySelector("#myBtn3").addEventListener("click", function () {
     searchMonument();
 })
 
-document.querySelector("#myBtn4").addEventListener("click", function(){
+document.querySelector("#myBtn4").addEventListener("click", function () {
     renderCatalog();
     const searchBar = document.querySelector("#searchBar")
-    searchBar.value = "";    
+    searchBar.value = "";
 
 })
