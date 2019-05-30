@@ -25,6 +25,6 @@ const userExp = document.querySelector("#xpBar")
 
 
 userExp.innerHTML = userXP
-userExp.style = `"width: ${userXP}"`
+userExp.style.width = userXP +"%";
 userAvatar.src = imgAvatar
 userLvl.innerHTML = userLvl2

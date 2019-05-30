@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "archivoBlack";
+    src: url("../fonts/ArchivoBlack-Regular.ttf")
+}
+
 #cardTitle,#currentLvl{
     
     background-color: #7f00c0;
