@@ -14,18 +14,23 @@
 .container{
     display: flex;   
 }
-/* #container1{
+.container1{
     display: flex;
-    margin-left: 120px;
-    margin-top: 10px; 
-}*/
+}
+
 .jumbotron + .jumbotron{
     margin: 0 0 0 8px;
 }
 .jb2{
-    height: 420px;
+    height: 529px;
 }
- 
+.jb3{
+    height: 500px;  
+     
+} 
+.jb4{
+    height:500px;
+}
 
 .pontos{
     width: 100%;
