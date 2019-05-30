@@ -24,6 +24,22 @@ const userLvl = document.querySelector("#currentLvl")
 const userExp = document.querySelector("#xpBar")
 
 
+function xpBarColor(){
+  if(userXP <= 33)
+  {
+    userExp.style.backgroundColor = "red" ;
+    
+  }
+  else if(userXP >= 33 && userXP <= 66){
+    userExp.style.backgroundColor = "#ffa812" ;
+
+  }
+  else{
+  userExp.style.backgroundColor = "#0aac20" ;
+  }
+}
+
+xpBarColor();
 userExp.innerHTML = userXP
 userExp.style.width = userXP +"%";
 userAvatar.src = imgAvatar
