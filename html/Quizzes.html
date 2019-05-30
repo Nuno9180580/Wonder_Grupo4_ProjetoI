@@ -9,7 +9,6 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-    <link rel="stylesheet" href="../css/quizz.css">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
@@ -66,17 +65,24 @@
 
     <!--CONTAINER PARA A IMAGEM | PERGUNTA | RESPOSTAS-->
     <div class="container-fluid bg-grey">
-        <div class="row">
-                <div class="image-container">
-                    <img src="../img/sample.jpg" id="imgQuestion" class="w3-round-small"
-                        style="width:550px; height: auto">
-                </div>
-        </div>
-        <div class="row">
-            <div class="col-sm-4">
-                <p>DLKASDSADSA</p>
+        <div id="startQuizz">Start Quiz!</div>
+        <div id="quizz" style="display: none">
+            <div id="question"></div>
+            <div id="questionImg"></div>
+            <div id="choices">
+                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
+                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
+                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
+                <div class="choice" id="D" onlick="checkAnswer('D')"></div>
             </div>
+            <div id="timer">
+                <div id="counter"></div>
+                <div id="barTime"></div>
+                <div id="barFilling"></div>
+            </div>
+            <div id="progress"></div>
         </div>
+        <div id="scoreContainer" style="display: none"></div>
     </div>
 
     <!-- Optional JavaScript -->
