@@ -47,3 +47,10 @@ userExp.innerHTML = userXP
 userExp.style.width = userXP +"%";
 userAvatar.src = imgAvatar
 userLvl.innerHTML = "Nível: " + userLvl2
+
+
+const btnsSeeMore = document.getElementsByClassName("view")
+btnsSeeMore.addEventListener("click", function () {})
+
+
+
