@@ -139,9 +139,12 @@ function searchMonument() {
 }
 
 
-document.querySelector("#myBtn3").addEventListener("click", function () {
+
+
+document.querySelector("#searchBar").addEventListener("keyup", function () {
     searchMonument();
 })
+
 
 document.querySelector("#myBtn4").addEventListener("click", function () {
     renderCatalog();
