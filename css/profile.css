@@ -3,6 +3,9 @@
     background-color: #7f00c0;
     color: white;    
 }
+#cardTitle{
+    font-size: 30px;
+}
 .jb1{
     background-color:#7f00c0;
     width: 40%;
@@ -58,4 +61,9 @@
 }
 #pageNameCenter{
     padding-right: 350px;
+}
+#labelLvl{
+    margin-bottom: -80px;
+    font-size: 23px;
+    color: white;
 }
