@@ -75,4 +75,14 @@
 
 .progress{
     height: 30px;
+    border: 2px solid #7f00c0;
+    margin-bottom: 20px;
+    margin-top: 10px;
+
+
 }
+
+#xpContainer{
+    margin-top: -30px;
+}
+
