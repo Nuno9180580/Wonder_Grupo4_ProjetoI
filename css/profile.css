@@ -27,8 +27,10 @@
     background-color: white;
 }
 .jb3{
-    height: 500px;  
+    height: 540px;  
     background-color: white;
+    margin-top: -40px;
+    z-index: -1;
 } 
 .jb4{
     height:500px;
