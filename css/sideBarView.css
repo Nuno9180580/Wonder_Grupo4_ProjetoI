@@ -3,9 +3,7 @@
     src: url("../fonts/ArchivoBlack-Regular.ttf")
 }
 
-body {
-    font-family: archivoBlack;
-}
+
 
 .sidenav {
     height: 100%;
@@ -19,7 +17,7 @@ body {
     transition: 0.4s;
     padding-top:1px;
     opacity: 60%;
-    
+    font-family: archivoBlack;
 }
 
 .sidenav a {
