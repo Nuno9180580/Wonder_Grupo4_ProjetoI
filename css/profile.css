@@ -14,6 +14,7 @@
 .jb1{
     background-color:#7f00c0;
     width: 40%;
+    height: 500px;;
 }
 
 #txtUserLogged{
@@ -38,7 +39,7 @@
 
 .jb2{
     
-    height: 360px;
+    height: 400px;
     background-color: white;
     border: 5px solid #7f00c0;
 }
@@ -47,7 +48,7 @@
     border: 5px solid #7f00c0;
 }
 .jb3{
-    height: 540px;  
+    height: 350px;  
     background-color: white;
     margin-top: -40px;
     z-index: -1;
@@ -55,8 +56,8 @@
 } 
 .jb4{
     margin-left: 400px;
-   margin-top: -700px;
-    height:668px;
+   margin-top: -380px;
+    height:350px;
     background-color: white;
     border: 5px solid #7f00c0;
 }
@@ -116,4 +117,9 @@
 
 #seePass{
     background-color: #7f00c0
+}
+
+#myBtn3 {
+    background-color: #ffa812;
+    margin-left: -5px;
 }
