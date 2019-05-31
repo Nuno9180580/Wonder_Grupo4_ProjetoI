@@ -64,60 +64,67 @@
     </div>
 
     <!--CONTAINER PARA A IMAGEM | PERGUNTA | RESPOSTAS-->
-    <div class="container-fluid">
-        <div id="startQuiz" style="display: none">COMEÇAR QUIZ!</div>
-        <div id="quiz">
-            <div id="questionImg">
-                <img src="../img/ColiseuDeRoma.jpg">
-            </div>
-            <div id="question">
-                <p>Lorem Ipsum interdum at lacus ornare hac litora tincidunt sociosq,
-                    condimentum luctus class magna ipsum neque non lacus litora?</p>
-            </div>
-            <div id="options">
-                <div class="row">
-                    <div id="aB" class="col-md-5">
-                        <div class="btn-group">
-                            <a href="#">
-                                <a href="" class="choiceLetter">A</a>
-                                <a href="" class="choice" id="A" onclick="checkAnswer('A')">Portugal</a>
-                            </a>
-                        </div>
-                    </div>
-                    <div id="aB" class="col-md-5 col-md-offset-2">
-                        <div class="btn-group">
-                            <a href="#">
-                                <a href="" class="choiceLetter">B</a>
-                                <a href="" class="choice" id="A" onclick="checkAnswer('A')">Portugal</a>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <div id="cD" class="col-md-5">
-                        <div class="btn-group">
-                            <a href="#">
-                                <a href="" class="choiceLetter">C</a>
-                                <a href="" class="choice" id="A" onclick="checkAnswer('A')">Portugal</a>
-                            </a>
-                        </div>
-                    </div>
-                    <div id="cD" class="col-md-5 col-md-offset-2">
-                        <div class="btn-group">
-                            <a href="#">
-                                <a href="" class="choiceLetter">D</a>
-                                <a href="" class="choice" id="A" onclick="checkAnswer('A')">Portugal</a>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
-
+    <div id="alignContainers">
+        <div class="container-fluid-left-side">
+            <p id="textLevel">NÍVEL</p>
+        </div>
+        <div class="container-fluid-secondLeft-side">
+            <img src="../img/timer icon.png" id="timerIcon">
             <div id="timer">
-                <div id="counter"></div>
+                <div id="counter">12</div>
                 <div id="barTime"></div>
                 <div id="barFilling"></div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div id="startQuiz" style="display: none">COMEÇAR QUIZ!</div>
+            <div id="quiz">
+                <div id="questionImg">
+                    <img src="../img/ColiseuDeRoma.jpg">
+                </div>
+                <div id="question">
+                    <p>Lorem Ipsum interdum at lacus ornare hac litora tincidunt sociosq,
+                        condimentum luctus class magna ipsum neque non lacus litora?</p>
+                </div>
+                <div id="options">
+                    <div class="row">
+                        <div id="aB" class="col-md-5">
+                            <div class="btn-group">
+                                <a href="#">
+                                    <a href="" class="choiceLetter">A</a>
+                                    <a href="" class="choice" id="A" onclick="checkAnswer('A')">Portugal</a>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="aB" class="col-md-5 col-md-offset-2">
+                            <div class="btn-group">
+                                <a href="#">
+                                    <a href="" class="choiceLetter">B</a>
+                                    <a href="" class="choice" id="A" onclick="checkAnswer('A')">Portugal</a>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div id="cD" class="col-md-5">
+                            <div class="btn-group">
+                                <a href="#">
+                                    <a href="" class="choiceLetter">C</a>
+                                    <a href="" class="choice" id="A" onclick="checkAnswer('A')">Portugal</a>
+                                </a>
+                            </div>
+                        </div>
+                        <div id="cD" class="col-md-5 col-md-offset-2">
+                            <div class="btn-group">
+                                <a href="#">
+                                    <a href="" class="choiceLetter">D</a>
+                                    <a href="" class="choice" id="A" onclick="checkAnswer('A')">Portugal</a>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
             </div>
             <div id="progress"></div>
         </div>
