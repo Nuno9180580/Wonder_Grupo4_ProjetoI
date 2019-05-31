@@ -1,5 +1,10 @@
+@font-face {
+    font-family: "archivoBlack";
+    src: url("../fonts/ArchivoBlack-Regular.ttf")
+}
+
 body {
-    font-family: "Lato", sans-serif;
+    font-family: archivoBlack;
 }
 
 .sidenav {
