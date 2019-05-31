@@ -96,3 +96,14 @@
     margin-top: -30px;
 }
 
+#userDetails{
+    display: flex;
+    align-content: flex-start, space-between;  
+    
+    
+    font-family: Verdana;
+}
+.details{
+    width: 30px;
+}
+

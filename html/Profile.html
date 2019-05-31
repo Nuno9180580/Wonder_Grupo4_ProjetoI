@@ -29,7 +29,7 @@
                 <a href="javascript:void(0)" class="closeBtn" id="closeNav">&times;</a>
                 <a href="#" id="optionAbout">Sobre</a>
                 <a href="#" id="optionLogout">Sair</a>
-                
+
             </div>
 
             <!-- AVATAR REDIRECIONA PARA PERFIL -->
@@ -75,18 +75,20 @@
                     <h5 id="cardTitle" class="card-title"></h5>
                 </div>
                 <h2 id="currentLvl"></h2>
-                <button type="button" class="btn btn-info btn-lg view" data-toggle="modal" data-target="#myModal">Mudar Avatar</button>                                               
+                <button type="button" class="btn btn-info btn-lg view" data-toggle="modal" data-target="#myModal">Mudar
+                    Avatar</button>
 
 
             </div>
 
             <div id="jb2" class="jumbotron text-center col-md-8 jb2">
 
-                <div id="xpContainer" class="container-fluid" style="color:#7f00c0; font-family: archivoBlack; font-size: 30px;">
+                <div id="xpContainer" class="container-fluid"
+                    style="color:#7f00c0; font-family: archivoBlack; font-size: 30px;">
                     BARRA DE EXPERIÊNCIA
                     <div class="progress">
-                        <div id="xpBar" class="progress-bar progress-bar-danger" role="progressbar"
-                            aria-valuemin="0" aria-valuemax="100" style="color:white; font-family: archivoBlack; font-size: 20px;"></div>
+                        <div id="xpBar" class="progress-bar progress-bar-danger" role="progressbar" aria-valuemin="0"
+                            aria-valuemax="100" style="color:white; font-family: archivoBlack; font-size: 20px;"></div>
                     </div>
                 </div>
             </div>
@@ -96,23 +98,44 @@
     <div class="row">
         <div id="container1" class="container">
             <div class="jumbotron text-center col-md-4 jb3">
-
-                <div class="container-fluid">
+                <div id="userDetails" class="container-fluid">
+                    <form >
+                        <div class="container" style="background-color:#ffa812">
+                        <label for="emailAdress" >E-mail</label>
+                    </div>
+                        <input id="emailAdress" type="email" name="emailAdress">
                     
+                        <br>
+                        <br>
+                        <div class="container" style="background-color:#ffa812">
+                        <label>Pass</label>
+                    </div>
+                        <input id="emailAdress" type="email" name="emailAdress">
+                        <br>
+                        <br>
+                        <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton"
+                                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Escolher :
+                            </button>
+                        </div>
+
+                    </form>
+
                 </div>
             </div>
         </div>
         <div id="container2" class="container">
             <div class="jumbotron text-center col-md-8 jb4">
                 <div class="container-fluid">
-                    
+
                 </div>
             </div>
         </div>
     </div>
 
-<!-- Modal -->
-<div id="myModal" class="modal fade" role="dialog">
+    <!-- Modal -->
+    <div id="myModal" class="modal fade" role="dialog">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
@@ -120,30 +143,35 @@
                     <button type="button" class="close" data-dismiss="modal">&times;</button>
                 </div>
                 <div class="modal-body">
-                        <a id="img1" class="button"><img src="../img/Home_Side_Icon.png" width="80px" height="80px" class="d-inline-block"></a>
-                        <a id="img3" class="button"><img src="../img/Perfil_Side_Icon.png" width="80px" height="80px" class="d-inline-block"></a>
-                        <a id="img4" class="button"><img src="../img/Catalog_Side_Icon.png" width="80px" height="80px" class="d-inline-block"></a>
-                        <a id="img4" class="button"><img src="../img/Quizz_Side_Icon.png" width="80px" height="80px" class="d-inline-block"></a>
-                        <a id="img4" class="button"><img src="../img/Trophy_Side_Icon.png" width="80px" height="80px" class="d-inline-block"></a>
-                <div class="modal-footer"></div>
+                    <a id="img1" class="button"><img src="../img/Home_Side_Icon.png" width="80px" height="80px"
+                            class="d-inline-block"></a>
+                    <a id="img3" class="button"><img src="../img/Perfil_Side_Icon.png" width="80px" height="80px"
+                            class="d-inline-block"></a>
+                    <a id="img4" class="button"><img src="../img/Catalog_Side_Icon.png" width="80px" height="80px"
+                            class="d-inline-block"></a>
+                    <a id="img4" class="button"><img src="../img/Quizz_Side_Icon.png" width="80px" height="80px"
+                            class="d-inline-block"></a>
+                    <a id="img4" class="button"><img src="../img/Trophy_Side_Icon.png" width="80px" height="80px"
+                            class="d-inline-block"></a>
+                    <div class="modal-footer"></div>
+                </div>
             </div>
         </div>
-    </div>
 
 
-    <!-- Optional JavaScript -->
-    <script type="module" src="../js/controller/profileController.js"></script>
-    <script type="module" src="../js/views/sideBarView.js"></script>
-    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
-        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
-    </script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
-    </script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
-    </script>
+        <!-- Optional JavaScript -->
+        <script type="module" src="../js/controller/profileController.js"></script>
+        <script type="module" src="../js/views/sideBarView.js"></script>
+        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+            integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+        </script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+            integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+        </script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+            integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+        </script>
 </body>
 
 </html>
