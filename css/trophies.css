@@ -5,7 +5,7 @@
 }
 
 #pageNameCenter{
-    margin-right: 340px;
+    margin-right: 400px;
 }
 
 #bK{
@@ -15,12 +15,16 @@
     width: 1000px;
     border: 10px solid #eb2020;
     border-radius: 10px;
+    margin-bottom: 100px;
 }
 
 .card{
     margin-left:87px;
     margin-top: 40px;
     margin-block-end: 40px;
+    border: 3px solid #eb2020;
+    color: black;
+    font-family: archivoBlack;
 }
 
 .card-title{
@@ -37,4 +41,9 @@
     font-family: archivoBlack;
     margin-left: 10px;
     font-size: 25spx;
+}
+
+#xpBar{
+    background-color: #ffa812;
+    color: black;
 }
