@@ -1,0 +1,17 @@
+#footerImg{
+    margin-left: 10px;
+ }
+
+#footerIcons{
+
+    margin-right: 10px;
+}
+
+#footer{
+   
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    background-color: #025e84;
+    font-family: Verdana;
+}
