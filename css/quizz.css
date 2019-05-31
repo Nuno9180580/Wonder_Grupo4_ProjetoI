@@ -65,12 +65,13 @@ body {
     width: 70%;
     height: 125px;
     margin: 0 auto 0 auto;
+    margin-bottom: -50px;
 }
 
 #question p {
     width: 95%;
     padding: 10px;
-    font-size: 1em;
+    font-size: 1em
 }
 
 .choice {
@@ -109,4 +110,18 @@ body {
 
 .col {
     margin-left: 20px;
+}
+
+#options{
+    margin-left: 200px;
+}
+
+#cD{
+    padding-top: 15px;
+}
+
+#txtUserLogged{
+    font-family: archivoBlack;
+    margin-left: 10px;
+    font-size: 25spx;
 }

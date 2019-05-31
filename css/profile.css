@@ -16,6 +16,12 @@
     width: 40%;
 }
 
+#txtUserLogged{
+    font-family: archivoBlack;
+    margin-left: 10px;
+    font-size: 25spx;
+}
+
 #cardImg{
     margin-top: 10px;
 }

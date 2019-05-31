@@ -67,6 +67,11 @@
     margin-right: 320px;
 }
 
+#txtUserLogged{
+    font-family: archivoBlack;
+    margin-left: 10px;
+    font-size: 25spx;
+}
 
 #modalDescription {
     margin-left: 15px;
