@@ -10,7 +10,7 @@ body {
 
 .container-fluid {
     margin: 25px auto;
-    background-color: #c8c8c8;
+    background-color: white;
     height: 600px;
     width: 900px;
     border-radius: 5px;
@@ -78,20 +78,21 @@ body {
     display: inline-block;
     width: 135px;
     text-align: center;
-    border: 1px solid grey;
-    background-color: grey;
+    border: 1px solid white;
+    background-color: white;
     cursor: pointer;
     padding: 5px;
 }
 
 .btn-group .choice {
-    background-color: white;
-    border: 1px solid white;
+    background-color: #EBFEED;
+    border: 2px solid #0aac20;
     padding: 10px 24px;
     color: black;
     cursor: pointer;
     float: left;
     text-decoration: none;
+    
 }
 
 .btn-group .choiceLetter {
