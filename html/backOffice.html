@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>WONDER</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/backOffice.css">
+    <link rel="stylesheet" href="../css/footerView.css">    
+    <link rel="stylesheet" href="../css/sideBarView.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-dark" style="background-color: #806C4F;">
+        <form>
+            <!-- BOTAO HAMBURGUER  -->
+            <button class="navbar-toggler" type="button">
+                <span style="font-size:30px;cursor:pointer" id="openNav">&#9776;</span>
+            </button>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closeBtn" id="closeNav">&times;</a>
+                <a href="#" id="optionAbout">Sobre</a>
+                <a href="#" id="optionLogout">Sair</a>
+            </div>
+
+            <!-- AVATAR REDIRECIONA PARA PERFIL -->
+            <a class="navbar-brand" href="#">
+                <img id="userAvatar" src="" height="40"><label id="txtUserLogged"></label>
+            </a>
+        </form>
+        <div class="topnav-centered">
+                <h1 id="pageNameCenter">BACKOFFICE</h1>
+            </div>
+        <a class="navbar-brand" href="#">
+            <!-- ICONE DO SITE WONDER AQUI!! -->
+            <a class="button" href="index.html"><img src="../img/logo.png" width="140" height="40"
+                    class="d-inline-block"></a>
+        </a>
+    </nav>
+
+
+
+    <div id="bK">
+        <div class="row">
+            <div class="card" style="width: 16rem;">
+                <img class="card-img-top" src="../img/Catalog_Side_Icon.png">
+                <div class="card-body">
+                    <h5 class="card-title">MONUMENTOS</h5>
+                    <button id="adicionar" type="button" class="btn">ADICIONAR</button>                     
+                </div>
+            </div>
+            <div class="card" style="width: 16rem;">
+                <img class="card-img-top" src="../img/Quizz_Side_Icon.png">
+                <div class="card-body">
+                    <h5 class="card-title">PERGUNTAS</h5>
+                    <button  id="adicionar" type="button" class="btn">ADICIONAR</button>                    
+                </div>
+            </div>
+            <div class="card" style="width: 16rem;">
+                <img class="card-img-top" src="../img/Trophy_Side_Icon.png">
+                <div class="card-body">
+                    <h5 class="card-title">CONQUISTAS</h5>
+                    <button id="adicionar" type="button" class="btn">ADICIONAR</button>                     
+                </div>
+            </div>
+        
+        </div>
+    </div>
+   <!-- Footer -->
+   <footer>
+        <!-- Copyright -->
+        <div id="footer" class="footer-copyright text-center py-3">
+            <div id="footerImg"><a href="https://www.ipp.pt/"><img id="footerImg" src="../img/esmad.png" width="110"
+                        height="30" class="d-inline-block"></a></div>
+
+            <div> © 2019 Copyright:<a href="index.html" style="color: white"> WONDER</a></div>
+
+            <div id="footerIcons">
+                <!-- Facebook -->
+                <a href="https://www.facebook.com/"><img id="footerImg" src="../img/facebook.png" width="30" height="30"
+                        class="d-inline-block"></a>
+                <!-- Twitter -->
+                <a href="https://www.instagram.com/"><img id="footerImg" src="../img/instagram.png" width="30"
+                        height="30" class="d-inline-block"></a>
+                <!--Instagram-->
+                <a href="https://www.twitter.com/"><img id="footerImg" src="../img/twitter.png" width="30" height="30"
+                        class="d-inline-block"></a>
+            </div>
+
+        </div>
+    </footer>
+
+    
+
+
+
+    <!-- Optional JavaScript -->
+    <script type="module" src="../js/controller/index.js"></script>
+    <script type="module" src="../js/views/sideBarView.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

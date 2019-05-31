@@ -9,7 +9,7 @@ export let users = []
 if (localStorage.users) {
     users = JSON.parse(localStorage.users)
 } else {
-    const userAdmin = new User("admin", "admin", "admin")
+    const userAdmin = new User("admin", "admin", "admin", " ", " ", "../img/Perfil_Side_Icon.png")
     users.push(userAdmin)
     localStorage.setItem("users", JSON.stringify(users))
 }
@@ -58,7 +58,13 @@ export function loginSubmit(txtUsername, txtPass) {
             sessionStorage.setItem("loggedUser", txtUsername)
             existUser = true
             alert(`Bem-vindo ${txtUsername}!`)
-            window.location.href = "../html/index.html" //redireciona para a pagina principal
+            if(txtUsername == "admin"){
+                window.location.href = "../html/backOffice.html" //redireciona para a pagina principal
+            }
+            else{
+                window.location.href = "../html/index.html" //redireciona para a pagina principal
+
+            }
         }
     }
     if (existUser === false) {
