@@ -160,6 +160,7 @@
     font-size: 2em;
     margin-left: -10px;
     margin-top: 10px;
+    font-family: archivoBlack;
 }
 
 #barTime {
@@ -189,4 +190,12 @@
     margin: 10px 53px;
     font-family: archivoBlack;
     font-size: 30px
+}
+
+#quizLevel {
+    margin: 10px 80px;
+    margin-top: -15px;
+    font-family: archivoBlack;
+    font-size: 50px;
+    color: #0aac20;
 }
