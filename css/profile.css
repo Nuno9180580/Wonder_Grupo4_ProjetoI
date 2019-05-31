@@ -36,10 +36,6 @@
     display: flex;
 }
 
-.jumbotron + .jumbotron{
-    margin: 0 0 0 8px;
-    background-color: white;
-}
 .jb2{
     
     height: 360px;
@@ -106,4 +102,5 @@
 .details{
     width: 30px;
 }
+
 
