@@ -29,7 +29,7 @@ import {
   const userImg = document.querySelector("#cardImg")
   const userEmail = document.querySelector("#emailAdress")
   const userPass = document.querySelector("#passWord")
-
+  const peekBtn = document.querySelector("#peekBtn")
   
   
   
@@ -56,6 +56,21 @@ import {
   userLvl.innerHTML = "Nível: " + userLvl2
   userEmail.value = email;
   userPass.value = pass;
+
+  peekBtn.addEventListener("click", function (seePass){
+ 
+    var pass = userPass;
+    if (pass.type === "password") {
+      pass.type = "text";
+    } else {
+      pass.type = "password";
+    }
+    seePass.preventDefault()
+  })
+   
+
+   
   
-  const btnsSeeMore = document.getElementsByClassName("view")
-  btnsSeeMore.addEventListener("click", function () {})
+
+   
+
