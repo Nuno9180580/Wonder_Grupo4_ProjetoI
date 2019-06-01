@@ -103,11 +103,12 @@
     font-size: 16px;
 }
 #form1{
-    margin-top: -40px;
+    margin-top: -20px;
+    margin-left: -70px;
 }
 .details{
     width: 90px;
-    margin-left: 20px;
+    margin-left: 0px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     height: 30px;
@@ -119,13 +120,11 @@
 
 
 #peekBtn{
-    background-color: #ffa812;
-    margin-right: -80px;
-    margin-bottom: 40px;
+    background-color: #ffa812;    
+    z-index: 10;
+    margin-left: -114px;
+    margin-top: 119px;
+    height: 30px;
 }
 
-#myBtn3 {
-    background-color: #ffa812;
-    margin-left: -5px;
-}
 
