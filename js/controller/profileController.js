@@ -6,6 +6,13 @@ import {
   const userOn = sessionStorage.getItem('loggedUser')
   const labelUser = document.querySelector("#txtUserLogged")
   const cardTitle = document.querySelector("#cardTitle")
+  const userAvatar = document.querySelector("#userAvatar")
+  const userLvl = document.querySelector("#currentLvl")
+  const userExp = document.querySelector("#xpBar")
+  const userImg = document.querySelector("#cardImg")
+  const userEmail = document.querySelector("#emailAdress")
+  const userPass = document.querySelector("#passWord")
+  const peekBtn = document.querySelector("#peekBtn")
   cardTitle.innerHTML = userOn;
   labelUser.innerHTML = userOn;
   let imgAvatar = ""
@@ -23,13 +30,7 @@ import {
   
       }
   }
-  const userAvatar = document.querySelector("#userAvatar")
-  const userLvl = document.querySelector("#currentLvl")
-  const userExp = document.querySelector("#xpBar")
-  const userImg = document.querySelector("#cardImg")
-  const userEmail = document.querySelector("#emailAdress")
-  const userPass = document.querySelector("#passWord")
-  const peekBtn = document.querySelector("#peekBtn")
+  
   
   
   
@@ -57,7 +58,7 @@ import {
   userEmail.value = email;
   userPass.value = pass;
 
-  peekBtn.addEventListener("click", function (seePass){
+  peekBtn.addEventListener("click", function (event){
  
     var pass = userPass;
     if (pass.type === "password") {
@@ -65,7 +66,7 @@ import {
     } else {
       pass.type = "password";
     }
-    seePass.preventDefault()
+    event.preventDefault()
   })
    
 
