@@ -122,9 +122,11 @@
 #peekBtn{
     background-color: #ffa812;    
     z-index: 10;
-    margin-left: -114px;
+    margin-left: -110px;
     margin-top: 119px;
     height: 30px;
+    grid-area: auto;
+    font-family: archivoBlack;
 }
 
 
