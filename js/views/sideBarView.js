@@ -5,8 +5,12 @@ import {
 const doLogout = document.querySelector("#optionLogout")
 const navOpen = document.querySelector("#openNav")
 const navClose = document.querySelector("#closeNav")
+const userOn = sessionStorage.getItem('loggedUser')
+const seeBackOffice = document.querySelector("#BackOfficeView")
 
-
+if(userOn != "admin") {
+    seeBackOffice.style.display = "none"
+}
 
 doLogout.addEventListener("click", function () {
     logout()

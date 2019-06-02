@@ -18,28 +18,28 @@ const userAvatar = document.querySelector("#userAvatar")
 userAvatar.src = imgAvatar
 
 
-const name = document.querySelector("#name")
-const country = document.querySelector("#country")
-const city = document.querySelector("#city")
-const year = document.querySelector("#year")
-const description = document.querySelector("#description")
-const img = document.querySelector("#img")
+const name = document.querySelector("#name").value
+const country = document.querySelector("#country").value
+const city = document.querySelector("#city").value
+const year = document.querySelector("#year").value
+const description = document.querySelector("#description").value
+const img = document.querySelector("#img").value
 
 
 document.querySelector("#myForm").addEventListener("submit", function (event) {
-    addMonument();
-    event.preventDefault();
-  })
-
-
-function addMonument() {
     for (const monument of monuments) {
+        let monumentExists = false
         if (name.value === monument.name) {
-            alert("Monumento já adicionado")
-        } else {
-            monuments.push(new Monument(name.value, year.value, img.value, description.value, city.value, country.value))
-            localStorage.setItem("monuments", JSON.stringify(monuments))
-            alert("Monumento Adicionado!")
+            monumentExists = true
         }
     }
-}
+    if (monumentExists === false) {
+        monuments.push(new Monument(name, year, img, description, city, country))
+        localStorage.setItem("monuments", JSON.stringify(monuments))
+        alert("Monumento Adicionado!")
+    } else {
+        alert("Este Monumento já existe!")
+        name = ""
+    }
+    event.preventDefault();
+})

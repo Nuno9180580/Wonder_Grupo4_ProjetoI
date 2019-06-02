@@ -27,22 +27,16 @@
             <button class="navbar-toggler" type="button">
                 <span style="font-size:30px;cursor:pointer" id="openNav">&#9776;</span>
             </button>
-
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closeBtn" id="closeNav">&times;</a>
+                <a href="backOffice.html" id="BackOfficeView">BackOffice</a>
                 <a href="#" id="optionAbout">Sobre</a>
                 <a href="#" id="optionLogout">Sair</a>
             </div>
-
             <!-- AVATAR REDIRECIONA PARA PERFIL -->
             <a class="navbar-brand" href="#">
                 <img id="userAvatar" src="" height="40"><label id="txtUserLogged"></label>
             </a>
-
-
-
-
-
         </form>
         <div class="topnav-centered">
             <h1 id="pageNameCenter">ADICIONAR MONUMENTO</h1>
@@ -53,29 +47,24 @@
                     class="d-inline-block"></a>
         </a>
     </nav>
-
     <div class="card" style="width: 35rem; height: 37rem;">
         <form id="myForm">
-            Nome: <input id="name" class="input" type="text"><br>
-            País: <input id="country" class="input" type="text"><br>
-            Cidade: <input id="city" class="input" type="text"><br>
-            Ano: <input id="year" class="input" type="text"><br>
-            Descrição: <input id="description" class="input" type="text"><br>
-            Imagem: <input id="img" class="input" type="text"><br>
+            Nome: <input id="name" type="text"><br>
+            País: <input id="country" type="text"><br>
+            Cidade: <input id="city" type="text"><br>
+            Ano: <input id="year" type="text"><br>
+            Descrição: <input id="description" type="text"><br>
+            Imagem: <input id="img" type="text"><br>
             <input type="submit" value="Registar" id="btnSubmit">
         </form>
     </div>
-
-
     <!-- Footer -->
     <footer>
         <!-- Copyright -->
         <div id="footer" class="footer-copyright text-center py-3">
             <div id="footerImg"><a href="https://www.ipp.pt/"><img id="footerImg" src="../img/esmad.png" width="110"
                         height="30" class="d-inline-block"></a></div>
-
             <div> © 2019 Copyright:<a href="index.html" style="color: white"> WONDER</a></div>
-
             <div id="footerIcons">
                 <!-- Facebook -->
                 <a href="https://www.facebook.com/"><img id="footerImg" src="../img/facebook.png" width="30" height="30"
@@ -87,13 +76,8 @@
                 <a href="https://www.twitter.com/"><img id="footerImg" src="../img/twitter.png" width="30" height="30"
                         class="d-inline-block"></a>
             </div>
-
         </div>
     </footer>
-
-
-
-
 
     <!-- Optional JavaScript -->
     <script type="module" src="../js/controller/addMonument.js"></script>

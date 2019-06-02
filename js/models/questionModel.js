@@ -1,14 +1,12 @@
 export default class Question {
-    constructor( id, description, answers, correctAnswer,level, image) {
-        this.id = id
-        this.description = description
-        this.answers = answers
-        this.correctAnswer = correctAnswer
-        this.level = level        
-        this.image = image
+    constructor( question, imgQuestion, choiceA, choiceB, choiceC, choiceD, correct, level) {
+        this.question = question
+        this.imgQuestion = imgQuestion
+        this.choiceA = choiceA
+        this.choiceB = choiceB
+        this.choiceC = choiceC      
+        this.choiceD = choiceD
+        this.correct = correct
+        this.level = level
     }
-
 }
-
-
-
