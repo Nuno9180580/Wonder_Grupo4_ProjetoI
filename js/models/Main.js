@@ -10,7 +10,7 @@ export let users = []
 if (localStorage.users) {
     users = JSON.parse(localStorage.users)
 } else {
-    const userAdmin = new User("admin", "admin", "admin", " ", " ", "../img/Perfil_Side_Icon.png")
+    const userAdmin = new User("admin", "admin", "admin", " ", " ", "../img/Perfil_Side_Icon.png", "admina")
     users.push(userAdmin)
     localStorage.setItem("users", JSON.stringify(users))
 }
@@ -56,7 +56,7 @@ export function registerSubmit(txtUsername, txtEmail, txtPass, txtConfirmPass) {
         }
         if (usernameExists === false && emailExists === false) {
             alert("Conta criada com sucesso!")
-            users.push(new User(txtUsername, txtEmail, txtPass, "1", "0", "../img/AvatarFields.jpg"))
+            users.push(new User(txtUsername, txtEmail, txtPass, "1", "0", "../img/AvatarFields.jpg","criança"))
             localStorage.setItem("users", JSON.stringify(users))
             window.location.href = "../html/landingLogin.html" //redireciona para apagina login
         }
@@ -77,12 +77,14 @@ export function registerSubmit(txtUsername, txtEmail, txtPass, txtConfirmPass) {
 //função para validar o inicio de sessão para o landing
 export function loginSubmit(txtUsername, txtPass) {
     let existUser = false
+    let userType = ""
     for (const user of users) {
         if (user.username === txtUsername && user.password === txtPass) {
             sessionStorage.setItem("loggedUser", txtUsername)
+            userType = user.userType
             existUser = true
             alert(`Bem-vindo ${txtUsername}!`)
-            if(txtUsername == "admin"){
+            if(userType == "admina"){
                 window.location.href = "../html/backOffice.html" //redireciona para a pagina principal
             }
             else{
