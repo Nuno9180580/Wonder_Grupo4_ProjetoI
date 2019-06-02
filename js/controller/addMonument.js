@@ -1,6 +1,9 @@
-import Monument from "../models/monumentModel.js"
+import
+Monument
+from "../models/monumentModel.js"
 import {
-    users
+    users,
+    monuments
 }
 from "../models/Main.js"
 
@@ -12,23 +15,23 @@ let imgAvatar = ""
 for (const user of users) {
     if (user.username === userOn) {
         imgAvatar = user.userImage
+        console.log(document.querySelector("#myForm"))
     }
 }
 const userAvatar = document.querySelector("#userAvatar")
 userAvatar.src = imgAvatar
 
-
-const name = document.querySelector("#name").value
-const country = document.querySelector("#country").value
-const city = document.querySelector("#city").value
-const year = document.querySelector("#year").value
-const description = document.querySelector("#description").value
-const img = document.querySelector("#img").value
-
-
 document.querySelector("#myForm").addEventListener("submit", function (event) {
+    const name = document.querySelector("#name").value
+    const country = document.querySelector("#country").value
+    const city = document.querySelector("#city").value
+    const year = document.querySelector("#year").value
+    const description = document.querySelector("#description").value
+    const img = document.querySelector("#img").value
+
+    let monumentExists = false
     for (const monument of monuments) {
-        let monumentExists = false
+
         if (name.value === monument.name) {
             monumentExists = true
         }
@@ -39,7 +42,6 @@ document.querySelector("#myForm").addEventListener("submit", function (event) {
         alert("Monumento Adicionado!")
     } else {
         alert("Este Monumento já existe!")
-        name = ""
     }
     event.preventDefault();
 })

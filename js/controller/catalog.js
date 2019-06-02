@@ -1,34 +1,9 @@
 import Monument from "../models/monumentModel.js"
 import {
-    users
+    users,
+    monuments
 }
 from "../models/Main.js"
-
-
-// Define um array para guardar os objetos Question
-
-export let monuments = []
-
-
-// Caso já exista uma chave questions na LocalStorage é carregado tudo para o array
-// Caso contrário são guardadas no array, vários objetos Band inseridos manualmente
-if (localStorage.monuments) {
-    monuments = JSON.parse(localStorage.monuments)
-} else {
-    // Só vai entrar aqui a primeira vez
-    const mnt1 = new Monument("Torre Eiffel", "1889 d.C.", "../img/TorreEiffel.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França")
-    const mnt2 = new Monument("Pirâmides de Gizé", "1850 a.C.", "../img/PiramidesDeGize.jpg", "Lorem Ipsum", "Cairo", "Egito")
-    const mnt3 = new Monument("Big Ben", "1859 d.C.", "../img/BigBen.jpg", "Lorem Ipsum", "Londres", "Reino Unido")
-    const mnt4 = new Monument("Stonehendge", "3001 a.C.", "../img/Stonehendge.jpg", "Lorem Ipsum", "Salisbury", "Reino Unido")
-    const mnt5 = new Monument("Torre dos Clérigos", "1750 d.C.", "../img/TorreDosClerigos.jpg", "Lorem Ipsum", "Porto", "Portugal")
-    const mnt6 = new Monument("Torre de Belém", "1519 d.C.", "../img/TorreDeBelem.jpg", "Lorem Ipsum", "Lisboa", "Portugal")
-    const mnt7 = new Monument("Monte Rushmore", "1941 d.C.", "../img/MonteRushmore.jpg", "Lorem Ipsum", "Keystone", "Estados Unidos da América")
-    const mnt8 = new Monument("Coliseu de Roma", "80 d.C.", "../img/ColiseuDeRoma.jpg", "Lorem Ipsum", "Roma", "Itália")
-    const mnt9 = new Monument("Palácio da Pena", "1854 d.C.", "../img/PalacioDaPena.jpg", "Lorem Ipsum", "Sintra", "Portugal")
-    monuments.push(mnt1, mnt2, mnt3, mnt4, mnt5, mnt6, mnt7, mnt8, mnt9)
-    localStorage.setItem("monuments", JSON.stringify(monuments))
-}
-
 
 function alphabeticalOrder() {
     monuments.sort(Monument.compare)
