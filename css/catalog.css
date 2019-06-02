@@ -58,6 +58,7 @@
     border-radius: 5px;
     background-color: hsl(209, 92%, 48%);
     margin-bottom: 10px;
+    
 }
 
 #descLabel {
@@ -139,4 +140,9 @@
 
 #coments{
     background-color: white;
+}
+
+#cardImg{
+    height:198.46px;
+    width: 298px;
 }
