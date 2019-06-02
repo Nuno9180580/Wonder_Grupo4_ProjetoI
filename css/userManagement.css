@@ -3,7 +3,7 @@
     src: url("../fonts/ArchivoBlack-Regular.ttf")
 }
 
-h1{
+h1 {
     font-family: archivoBlack;
     margin-left: 400px;
 }
@@ -11,11 +11,11 @@ h1{
 .navbar-dark .navbar-toggler {
     border-color: rgba(255, 255, 255, 0);
     color: white;
-    
+
 }
 
-body{
-   background-color:  #D9D0C7;
+body {
+    background-color: #D9D0C7;
 }
 
 #pageNameCenter {
@@ -26,7 +26,7 @@ body{
 
 
 
-  #txtUserLogged{
+#txtUserLogged {
     font-family: archivoBlack;
     margin-left: 10px;
     font-size: 25spx;
@@ -38,56 +38,40 @@ body{
     src: url("../fonts/ArchivoBlack-Regular.ttf")
 }
 
+form {
+    margin-top: 20px;
+    margin-bottom: 20px;
+    margin-left: 30px;
 
-#bK{
-    margin-left: 300px;
-    margin-top: 80px;
-    width: 1000px;
-    border-radius: 10px;
-    margin-bottom: 100px;
 }
 
-#adicionar{
-    background-color: #ffa812;
-    font-family: archivoBlack;
+.input {
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
-
-.card{
-    margin-left:60px;
+.card {
+    margin-left: 60px;
     margin-top: 40px;
     margin-right: 30px;
     margin-block-end: 40px;
     color: white;
     border: 7px solid #73574D;
     background-color: #73574D;
-  
-}
-
-.card-img-top{
-    border: 3px solid #D9D0C7;
 
 }
 
-.card-title{
-    font-family: archivoBlack;
-    font-size: 21px;
-}
 
-
-#txtUserLogged{
+#txtUserLogged {
     font-family: archivoBlack;
     margin-left: 10px;
-    font-size: 25px;
+    font-size: 25spx;
 }
-
-
 #sideMenu {
     margin-top: 95px;
     background-color: transparent;  
     font-family: archivoBlack;
 }
-
 
 
 
