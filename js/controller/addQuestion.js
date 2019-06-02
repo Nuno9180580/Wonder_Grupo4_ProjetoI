@@ -1,8 +1,13 @@
-import Monument from "../models/monumentModel.js"
+import Question from "../models/questionModel.js"
+
 import {
     users
 }
 from "../models/Main.js"
+
+import {
+    questions
+} from "../views/quizView.js"
 
 const userOn = sessionStorage.getItem('loggedUser')
 const labelUser = document.querySelector("#txtUserLogged")
@@ -17,29 +22,24 @@ for (const user of users) {
 const userAvatar = document.querySelector("#userAvatar")
 userAvatar.src = imgAvatar
 
-
-const name = document.querySelector("#name")
-const country = document.querySelector("#country")
-const city = document.querySelector("#city")
-const year = document.querySelector("#year")
-const description = document.querySelector("#description")
-const img = document.querySelector("#img")
-
-
 document.querySelector("#myForm").addEventListener("submit", function (event) {
-    addMonument();
-    event.preventDefault();
-  })
+    const quest = document.querySelector("#quest").value
+    const lvl = document.querySelector("#lvl").value
 
+    let questionsExists = false
+    for (const question of questions) {
 
-function addMonument() {
-    for (const monument of monuments) {
-        if (name.value === monument.name) {
-            alert("Monumento já adicionado")
-        } else {
-            monuments.push(new Monument(name.value, year.value, img.value, description.value, city.value, country.value))
-            localStorage.setItem("monuments", JSON.stringify(monuments))
-            alert("Monumento Adicionado!")
+        if (quest.value === question.question) {
+            questionsExists = true
         }
     }
-}
+    if (questionsExists === false) {
+        questions.push(new Question(quest,"","","","","","",lvl))
+        localStorage.setItem("questions", JSON.stringify(questions))
+        alert("Pergunta Adicionada!")
+    } else {
+        alert("Pergunta já existe!")
+    }
+    event.preventDefault();
+})
+
