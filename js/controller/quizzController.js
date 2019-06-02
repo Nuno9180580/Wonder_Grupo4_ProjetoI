@@ -23,6 +23,7 @@ if (localStorage.questions) {
     localStorage.setItem("questions", JSON.stringify(questions))
 }
 
+//avatar e nome da pessoa logada
 const userOn = sessionStorage.getItem('loggedUser')
 const labelUser = document.querySelector("#txtUserLogged")
 labelUser.innerHTML = userOn;
@@ -35,3 +36,16 @@ for (const user of users) {
 }
 const userAvatar = document.querySelector("#userAvatar")
 userAvatar.src = imgAvatar
+
+//quizz code
+const start = document.querySelector("#startQuiz")
+const quiz = document.querySelector("#quiz")
+const questionImage = document.querySelector("#questionImg")
+const question = document.querySelector("#question")
+const choiceA = document.querySelector("#A")
+const choiceB = document.querySelector("#B")
+const choiceC = document.querySelector("#C")
+const choiceD = document.querySelector("#D")
+const lvlOfQuiz = document.querySelector("#quizLevel")
+const counter = document.querySelector("#counter")
+const fillTimeBar = document.querySelector("#barFilling")
