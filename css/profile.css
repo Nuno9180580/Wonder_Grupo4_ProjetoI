@@ -102,6 +102,10 @@
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     font-size: 16px;
 }
+#form1{
+    margin-top: -20px;
+    margin-left: -70px;
+}
 .details{
     width: 90px;
     margin-left: 0px;
@@ -115,11 +119,14 @@
 }
 
 
-#seePass{
-    background-color: #7f00c0
+#peekBtn{
+    background-color: #ffa812;    
+    z-index: 10;
+    margin-left: -110px;
+    margin-top: 119px;
+    height: 30px;
+    grid-area: auto;
+    font-family: archivoBlack;
 }
 
-#myBtn3 {
-    background-color: #ffa812;
-    margin-left: -5px;
-}
+
