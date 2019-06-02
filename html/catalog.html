@@ -98,8 +98,8 @@
                         <div class="input-group md-form form-sm form-2 pl-0">
                             <input id="searchBar" class="form-control my-0 py-1 red-border" type="text"
                                 placeholder="Search" aria-label="Search">
-                            <button id="myBtn3" class="btn" type="button"><i class="fa fa-search"></i></button>
-                            <button id="myBtn4" class="btn" type="button"><i class="fa fa-close"></i></button>
+                            <button id="btnSearch" class="btn" type="button"><i class="fa fa-search"></i></button>
+                            <button id="btnClear" class="btn" type="button"><i class="fa fa-close"></i></button>
                         </div>
                     </div>
                 </div>
@@ -133,7 +133,17 @@
                             <p id="modalDescription"></p>
                         </div>
                 </div>
-                <div class="modal-footer"></div>
+                <div class="modal-footer">
+                    <form action="" method="post" id="com">
+                        <label style="color: white; font-family:archivoBlack">Comentário: <br>
+                            <textarea id="txtarea" cols="20" rows="2" name="mes" style="font-family:verdana"></textarea>
+                        </label>
+                        <br><br>
+                        <input type="submit" name="submit" value="enviar" class="texty">
+                    </form>
+                    <div id="coments" class="container">
+                    </div>
+                </div>
             </div>
         </div>
     </div>

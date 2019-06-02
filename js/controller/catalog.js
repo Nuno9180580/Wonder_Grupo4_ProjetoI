@@ -65,8 +65,8 @@ function renderCatalog(filtername = "") {
         //geraçao do card
         result += ` 
             <div class="col-sm">
-            <div id="rip2" class="card" style="width: 22rem; height: 23.6rem;">
-                <div id="rip" class="card" style="width: 20rem;">
+            <div id="cardOut" class="card" style="width: 22rem; height: 23.6rem;">
+                <div id="cardIn" class="card" style="width: 20rem;">
                     <img id="cardImg" class="card-img-top" src="${monument.photo}">
                     <div class="card-body">
                         <h5 id="cardTitle" class="card-title">${monument.name}</h5>
@@ -98,6 +98,7 @@ function renderCatalog(filtername = "") {
             modalDescription.innerHTML = myMonument.description
             modalImg.src = myMonument.photo;
         })
+
     }
 
 }
@@ -146,9 +147,31 @@ document.querySelector("#searchBar").addEventListener("keyup", function () {
 })
 
 
-document.querySelector("#myBtn4").addEventListener("click", function () {
+document.querySelector("#btnSearch").addEventListener("click", function () {
     renderCatalog();
     const searchBar = document.querySelector("#searchBar")
     searchBar.value = "";
 
 })
+
+
+
+document.querySelector("#com").addEventListener("submit", function (event) {
+    const coments = document.querySelector("#coments")
+    const txtarea = document.querySelector("#txtarea").value
+
+    let txtname = "";
+    let result = ""
+
+    for (const user of users) {
+        if (user.username === userOn) {
+            txtname = user.username
+        }
+        result = `<p> ${txtname}: ${txtarea} </p>`
+    }
+
+    coments.innerHTML = result;
+    event.preventDefault();
+
+})
+

@@ -9,6 +9,25 @@
     font-family: archivoBlack;
 }
 
+#cardTitle {
+    color: white;
+    font-family: archivoBlack;
+    font-size: 25px;
+}
+
+#cardOut {
+    background-color: white;
+    border: 5px solid hsl(209, 92%, 48%);
+}
+
+#cardIn {
+    margin-left: 10px;
+    margin-top: 11px;
+
+}
+
+
+
 #dropdownMenuButton {
     background-color: #ffa812;
     color: black;
@@ -17,17 +36,6 @@
 
 }
 
-#cardTitle {
-    color: white;
-    font-family: archivoBlack;
-    font-size: 25px;
-}
-
-#rip {
-    margin-left: 10px;
-    margin-top: 11px;
-
-}
 
 #modalTitle {
     font-family: archivoBlack;
@@ -63,11 +71,11 @@
     border-radius: 5px;
 }
 
-#pageNameCenter{
+#pageNameCenter {
     margin-right: 320px;
 }
 
-#txtUserLogged{
+#txtUserLogged {
     font-family: archivoBlack;
     margin-left: 10px;
     font-size: 25spx;
@@ -87,22 +95,18 @@
 
 }
 
-#rip2 {
-    background-color: white;
-    border: 5px solid hsl(209, 92%, 48%);
-}
 
 .input-group.md-form.form-sm.form-2 input.amber-border {
     border: 1px solid #ffa812;
 }
 
 
-#myBtn3 {
+#btnSearch {
     background-color: #ffa812;
     margin-left: -5px;
 }
 
-#myBtn4 {
+#btnClear {
     margin-left: 10px;
     background-color: #ffa812;
 }
@@ -130,8 +134,9 @@
 
 #sideMenu {
     margin-top: 95px;
-    background-color: transparent;  
+    background-color: transparent;
 }
 
-
-
+#coments{
+    background-color: white;
+}
