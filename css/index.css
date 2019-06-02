@@ -18,6 +18,13 @@ body{
    background-color:  #D5F8FF;
 }
 
+#welcome{
+    margin-top: 40px;
+    margin-left: 280px;
+    font-size: 44px;
+    color:#025e84;
+}
+
 #pageNameCenter {
     font-family: archivoBlack;
     color: white;

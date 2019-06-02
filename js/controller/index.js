@@ -15,3 +15,6 @@ for (const user of users) {
 }
 const userAvatar = document.querySelector("#userAvatar")
 userAvatar.src = imgAvatar
+
+const welcome = document.querySelector("#welcome")
+welcome.innerHTML = "Olá " + userOn + "!"
