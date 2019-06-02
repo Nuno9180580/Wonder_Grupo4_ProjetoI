@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/backOffice.css">
+    <link rel="stylesheet" href="../css/addQuestion.css">
     <link rel="stylesheet" href="../css/footerView.css">
     <link rel="stylesheet" href="../css/sideBarView.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -38,51 +38,31 @@
             <a class="navbar-brand" href="#">
                 <img id="userAvatar" src="" height="40"><label id="txtUserLogged"></label>
             </a>
+
+
+
+
+
         </form>
         <div class="topnav-centered">
-            <h1 id="pageNameCenter">BACKOFFICE</h1>
+            <h1 id="pageNameCenter">ADICIONAR MONUMENTO</h1>
         </div>
         <a class="navbar-brand" href="#">
             <!-- ICONE DO SITE WONDER AQUI!! -->
-            <a class="button" href="index.html"><img src="../img/logo.png" width="140" height="40"
+            <a class="button" href="backOffice.html"><img src="../img/logo.png" width="140" height="40"
                     class="d-inline-block"></a>
         </a>
     </nav>
 
-
-
-    <div id="bK">
-        <div class="row">
-            <div class="card" style="width: 16rem;">
-                <img class="card-img-top" src="../img/Catalog_Side_Icon.png">
-                <div class="card-body">
-                    <h5 class="card-title">MONUMENTOS</h5>
-                    <a href="../html/addMonument.html" class="w3-bar-item w3-button">
-                        <button id="adicionar" type="button" class="btn">ADICIONAR</button>
-                    </a>
-                </div>
-            </div>
-            <div class="card" style="width: 16rem;">
-                <img class="card-img-top" src="../img/Quizz_Side_Icon.png">
-                <div class="card-body">
-                    <h5 class="card-title">PERGUNTAS</h5>
-                    <a href="../html/addQuestion.html" class="w3-bar-item w3-button">
-                        <button id="adicionar" type="button" class="btn">ADICIONAR</button>
-                    </a>
-                </div>
-            </div>
-            <div class="card" style="width: 16rem;">
-                <img class="card-img-top" src="../img/Trophy_Side_Icon.png">
-                <div class="card-body">
-                    <h5 class="card-title">CONQUISTAS</h5>
-                    <a href="../html/backOffice.html" class="w3-bar-item w3-button">
-                        <button id="adicionar" type="button" class="btn">ADICIONAR</button>
-                    </a>
-                </div>
-            </div>
-
-        </div>
+    <div class="card" style="width: 35rem; height: 37rem;">
+        <form id="myForm">
+           Pergunta: <input id="name" class="input" type="text"><br>
+            
+            <input type="submit" value="Registar" id="btnSubmit">
+        </form>
     </div>
+
+
     <!-- Footer -->
     <footer>
         <!-- Copyright -->
@@ -112,7 +92,7 @@
 
 
     <!-- Optional JavaScript -->
-    <script type="module" src="../js/controller/index.js"></script>
+    <script type="module" src="../js/controller/addQuestion.js"></script>
     <script type="module" src="../js/views/sideBarView.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
