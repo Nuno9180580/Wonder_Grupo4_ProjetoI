@@ -8,7 +8,9 @@
 }
 
 #footer{
+    bottom: 0;
     display: flex;
+    margin-top: 135px;
     justify-content: space-between;
     color: white;
     background-color: #025e84;
