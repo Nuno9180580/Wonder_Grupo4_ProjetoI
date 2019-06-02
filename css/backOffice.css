@@ -82,7 +82,11 @@ body{
 }
 
 
-
+#sideMenu {
+    margin-top: 95px;
+    background-color: transparent;  
+    font-family: archivoBlack;
+}
 
 
 
