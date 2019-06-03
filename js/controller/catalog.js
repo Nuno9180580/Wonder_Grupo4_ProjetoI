@@ -36,7 +36,7 @@ document.getElementById("europa").addEventListener("click", function () {
 
 
 function europa() {
-    monuments.sort(Monument.category)
+    monuments.sort(Monument.europeCategory)
     localStorage.setItem("europa", JSON.stringify(monuments))
     renderCatalog();
 }
