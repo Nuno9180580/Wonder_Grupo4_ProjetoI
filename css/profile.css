@@ -53,6 +53,7 @@
     margin-top: -40px;
     z-index: -1;
     border: 5px solid #7f00c0;
+    z-index: -1;
 } 
 .jb4{
     margin-left: 400px;
@@ -60,6 +61,7 @@
     height:350px;
     background-color: white;
     border: 5px solid #7f00c0;
+    z-index: -1;
 }
 
 .pontos{
@@ -130,3 +132,11 @@
 }
 
 
+#switchPass{
+    z-index: 10 ;
+    height: 30px;
+    margin-right: 200px ;
+    width: 100px;
+    position: unset;
+    
+}
