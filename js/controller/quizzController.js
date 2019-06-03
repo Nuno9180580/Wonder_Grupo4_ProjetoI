@@ -21,11 +21,14 @@ for (const user of users) {
 const userAvatar = document.querySelector("#userAvatar")
 userAvatar.src = imgAvatar
 
+//ARRAY PARA AS QUESTOES TEMPORARIAS CORRESPONDENTES 
+let TempQuestions = []
+
 //quizz code
 const start = document.querySelector("#startQuiz")
 const quiz = document.querySelector("#quiz")
-const questionImage = document.querySelector("#questionImg")
 const question = document.querySelector("#question")
+const questionImage = document.querySelector("#questionImg")
 const choiceA = document.querySelector("#A")
 const choiceB = document.querySelector("#B")
 const choiceC = document.querySelector("#C")
@@ -38,7 +41,6 @@ const fillTimeBar = document.querySelector("#barFilling")
 let userLevel = ""
 for (const user of users) {
     if (user.username === userOn) {
-        console.log(user.level)
         userLevel = user.level
     }
 }
@@ -48,20 +50,14 @@ quizLevel.innerHTML = userLevel;
 //cria array temporario para as questions do nivel do user
 chargeTempArray()
 
-//CHAMA UMA QUESTAO ALEATORIA
-
-
-//1. buscar um monumento random
-//2. ler a imagem do monumento
-//3. vai buscar uma pergunta random
-//4. substitui o identificador da resposta e imagem pelo respetivo monumento
-//perguntar ao stor os passos para o quiz
+//obtem o index aleatorio de uma pergunta E carrega essa pergunta aleatoria para o quiz
+questionToQuiz()
 
 //-------------------------------------------FUNÇÕES---------------------------------------------------------//
 
 //criar array temporario para as questions do nivel do user
 function chargeTempArray() {
-    let TempQuestions = []
+    TempQuestions = []
     for (const question of questions) {
         if (question.level === userLevel) {
             TempQuestions.push(new Question(question.question, question.imgQuestion, question.choiceA, question.choiceB, question.choiceC, question.choiceD, question.correct, question.level))
@@ -70,6 +66,14 @@ function chargeTempArray() {
     }
 }
 
-//função que vai buscar pergunta aleatoria ao array temporario
-let range = TempQuestions.length - 1;
-let randomIndex = Math.floor((Math.random() * range) + 0);
+//função que obtem o index aleatorio de uma pergunta E carrega essa pergunta aleatoria para o quiz
+function questionToQuiz() {
+    let range = TempQuestions.length - 1;
+    let randomIndex = Math.floor((Math.random() * range) + 0);
+    questionImage.innerHTML = `
+    <img src="${TempQuestions[randomIndex].questionImage}">
+    `
+    question.innerHTML = `
+    <p>${TempQuestions[randomIndex].question}</p>
+    `
+}
