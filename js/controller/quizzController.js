@@ -49,9 +49,7 @@ quizLevel.innerHTML = userLevel;
 chargeTempArray()
 
 //CHAMA UMA QUESTAO ALEATORIA
-let range = TempQuestions.length - 1;
-let randomIndex = Math.floor((Math.random() * range) + 0);
-let numberOfQuestions = questions.length - 1;
+
 
 //1. buscar um monumento random
 //2. ler a imagem do monumento
@@ -71,3 +69,7 @@ function chargeTempArray() {
         }
     }
 }
+
+//função que vai buscar pergunta aleatoria ao array temporario
+let range = TempQuestions.length - 1;
+let randomIndex = Math.floor((Math.random() * range) + 0);
