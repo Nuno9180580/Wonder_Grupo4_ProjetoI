@@ -21,7 +21,7 @@ for (const user of users) {
 const userAvatar = document.querySelector("#userAvatar")
 userAvatar.src = imgAvatar
 
-//quizz code
+//quiz variaveis e valores
 const start = document.querySelector("#startQuiz")
 const quiz = document.querySelector("#quiz")
 const question = document.querySelector("#question")
@@ -34,6 +34,13 @@ const quizLevel = document.querySelector("#quizLevel")
 const counter = document.querySelector("#counter")
 const fillTimeBar = document.querySelector("#barFilling")
 
+
+let count = 0;
+let questionTime = 20 //20segundos para o contador
+const barTimeWidth = 100; //100px de largura da barra do tempo
+const barTimeUnit = barTimeWidth / questionTime;
+let timer;
+
 //obter o nivel do utilizador para corresponder ao niveis das perguntas
 let userLevel = ""
 for (const user of users) {
@@ -42,9 +49,20 @@ for (const user of users) {
     }
 }
 
-renderQuestion();
+start.addEventListener("click", quizStart);
 
 //-------------------------------------------FUNÇÕES---------------------------------------------------------//
+
+//start quizz
+function quizStart() {
+    start.style.display = "none"
+    renderQuestion();
+    quiz.style.display = "block"
+    renderCounter(); //começa o contador
+    timer = setInterval(renderCounter, 1000) // executa a funcao de 1 em 1 segundo
+}
+
+//funcao para preencher o quiz
 function renderQuestion() {
     //muda o nivel do quiz para corresponder ao nivel do utilizador
     quizLevel.innerHTML = userLevel;
@@ -61,14 +79,21 @@ function renderQuestion() {
     let range = tempQuestions.length - 1;
     let randomIndex = Math.floor((Math.random() * range) + 0);
     //função que carrega para o quiz a pergunta aleatoria
-    question.innerHTML = `
-    <p>${tempQuestions[randomIndex].question}</p>
-    `
-    questionImage.innerHTML = `
-        <img src=${tempQuestions[randomIndex].imgQuestion}>
-    `
+    question.innerHTML = `<p>${tempQuestions[randomIndex].question}</p>`
+    questionImage.innerHTML = `<img src=${tempQuestions[randomIndex].imgQuestion}>`
     choiceA.innerHTML = tempQuestions[randomIndex].choiceA
     choiceB.innerHTML = tempQuestions[randomIndex].choiceB
     choiceC.innerHTML = tempQuestions[randomIndex].choiceC
     choiceD.innerHTML = tempQuestions[randomIndex].choiceD
+}
+
+//funcao para o contador do quiz
+function renderCounter() {
+    if (count <= questionTime) {
+        counter.innerHTML = count
+        fillTimeBar.style.width = count * barTimeUnit + "px";
+        count++;
+    } else {
+        count = 0
+    }
 }
