@@ -61,6 +61,41 @@ form {
 
 }
 
+#userList{
+    margin-top: 80px;
+    background-color: #73574D;
+    font-family: archivoBlack;
+    size: 15px;
+    color: white;
+    border: 7px solid #73574D;
+    margin-left: 50px;
+    width: 200px; 
+    border-radius: 5px;
+}
+
+p{
+    margin-top: 10px;
+    margin-left: 20px;
+}
+
+#addKid{
+    margin-left: 20px;
+}
+
+.butao{
+    margin-left: 10px;
+    margin-top: -2px;
+    background-color: #ffa812;
+    font-family: archivoBlack;
+}
+
+.butao:hover{
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+}
 
 #txtUserLogged {
     font-family: archivoBlack;
