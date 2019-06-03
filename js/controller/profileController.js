@@ -54,6 +54,36 @@ userLvl.innerHTML = "Nível: " + userLvl2
 userEmail.value = email;
 userPass.value = pass;
 
-changeBtn.addEventListener("click", function (event) {
+const nowPass = document.querySelector("#nowPass")
+const newPass = document.querySelector("#newPass")
 
+
+document.querySelector("#submitNewPass").addEventListener("click", function (event) {
+  for (const user of users) {
+    if (user.username === userOn) {
+      if (user.password === nowPass.value) {
+        if (newPass.value != nowPass.value) {
+          user.password = newPass
+          console.log(user.username)
+          console.log(userOn)
+          console.log(user.password)
+          console.log(newPass.value)
+          console.log(nowPass.value)
+          alert("alteracao feita")
+        } else {
+          console.log(user.username)
+          console.log(userOn)
+          console.log(user.password)
+          console.log(newPass.value)
+          console.log(nowPass.value)
+          alert("a senha não pode ser igual à atual!")
+        }
+
+      } else {
+        alert("a senha atual não é essa!")
+      }
+    }
+  }
+
+  event.preventDefault();
 })
