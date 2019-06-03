@@ -28,6 +28,8 @@ document.querySelector("#myForm").addEventListener("submit", function (event) {
     const year = document.querySelector("#year").value
     const description = document.querySelector("#description").value
     const img = document.querySelector("#img").value
+    const lvl = document.querySelector("#lvl").value
+
 
     let monumentExists = false
     for (const monument of monuments) {
@@ -37,7 +39,7 @@ document.querySelector("#myForm").addEventListener("submit", function (event) {
         }
     }
     if (monumentExists === false) {
-        monuments.push(new Monument(name, year, img, description, city, country))
+        monuments.push(new Monument(name, year, img, description, city, country, lvl))
         localStorage.setItem("monuments", JSON.stringify(monuments))
         alert("Monumento Adicionado!")
     } else {

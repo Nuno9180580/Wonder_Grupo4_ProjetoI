@@ -1,11 +1,13 @@
 export default class Monument {
-    constructor(name, year, photo, description, city, country) {
+    constructor(name, year, photo, description, city, country, level) {
         this.name = name
         this.year = year
         this.photo = photo
         this.description = description
         this.city = city
         this.country = country
+        this.level = level
+
     }
     static compare(mntA, mntB) {
         if (mntA.name < mntB.name) {
