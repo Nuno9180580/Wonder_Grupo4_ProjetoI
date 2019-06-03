@@ -42,18 +42,15 @@ for (const user of users) {
         userLevel = user.level
     }
 }
-//criar array temporario para as questions do nivel do user
-let TempQuestions = []
-for (const question of questions) {
-    if (question.level === userLevel) {
-        TempQuestions.push(new Question(question.question, question.imgQuestion, question.choiceA, question.choiceB, question.choiceC, question.choiceD, question.correct, question.level))
-        localStorage.setItem("questions", JSON.stringify(TempQuestions))
-    }
-}
+//muda o nivel do quiz para corresponder ao nivel do utilizador
+quizLevel.innerHTML = userLevel;
+
+//cria array temporario para as questions do nivel do user
+chargeTempArray()
 
 //CHAMA UMA QUESTAO ALEATORIA
-/* let range = TempQuestions.length - 1;
-let randomIndex = Math.floor((Math.random() * range) + 0); */
+let range = TempQuestions.length - 1;
+let randomIndex = Math.floor((Math.random() * range) + 0);
 let numberOfQuestions = questions.length - 1;
 
 //1. buscar um monumento random
@@ -61,3 +58,16 @@ let numberOfQuestions = questions.length - 1;
 //3. vai buscar uma pergunta random
 //4. substitui o identificador da resposta e imagem pelo respetivo monumento
 //perguntar ao stor os passos para o quiz
+
+//-------------------------------------------FUNÇÕES---------------------------------------------------------//
+
+//criar array temporario para as questions do nivel do user
+function chargeTempArray() {
+    let TempQuestions = []
+    for (const question of questions) {
+        if (question.level === userLevel) {
+            TempQuestions.push(new Question(question.question, question.imgQuestion, question.choiceA, question.choiceB, question.choiceC, question.choiceD, question.correct, question.level))
+            localStorage.setItem("questions", JSON.stringify(TempQuestions))
+        }
+    }
+}
