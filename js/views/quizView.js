@@ -7,7 +7,7 @@ export let questions = [{
         choiceC: "Wrong",
         choiceD: "Wrong",
         correct: "A",
-        level: "1"
+        level: 1
     }, {
         question: "What does CSS stand for?",
         imgQuestion: "../img/TorreDosClerigos.jpg",
@@ -16,7 +16,7 @@ export let questions = [{
         choiceC: "Wrong",
         choiceD: "Wrong",
         correct: "B",
-        level: "1"
+        level: 1
     }, {
         question: "What does JS stand for?",
         imgQuestion: "../img/Stonehendge.jpg",
@@ -25,7 +25,7 @@ export let questions = [{
         choiceC: "Correct",
         choiceD: "Wrong",
         correct: "C",
-        level: "3"
+        level: 3
     },
     {
         question: "OLA sadsadsa for?",
@@ -35,8 +35,9 @@ export let questions = [{
         choiceC: "Wrong",
         choiceD: "Correct",
         correct: "D",
-        level: "1"
-    }, {
+        level: 1
+    },
+    {
         question: "dsadasdsasadas CSS stand for?",
         imgQuestion: "../img/TorreDosClerigos.jpg",
         choiceA: "Wrong",
@@ -44,8 +45,9 @@ export let questions = [{
         choiceC: "Wrong",
         choiceD: "Wrong",
         correct: "B",
-        level: "1"
-    }, {
+        level: 1
+    },
+    {
         question: "Whatdasdasdsadasdasdsadsadadssa?",
         imgQuestion: "../img/Stonehendge.jpg",
         choiceA: "Wrong",
@@ -53,6 +55,6 @@ export let questions = [{
         choiceC: "Correct",
         choiceD: "Wrong",
         correct: "C",
-        level: "3"
+        level: 3
     }
 ]
