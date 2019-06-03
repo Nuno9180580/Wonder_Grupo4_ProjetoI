@@ -28,6 +28,8 @@ document.querySelector("#myForm").addEventListener("submit", function (event) {
     const description = document.querySelector("#description").value
     const img = document.querySelector("#img").value
     const lvl = document.querySelector("#lvl").value
+    const category = document.querySelector("#category").value
+
 
 
     let monumentExists = false
@@ -38,7 +40,7 @@ document.querySelector("#myForm").addEventListener("submit", function (event) {
         }
     }
     if (monumentExists === false) {
-        monuments.push(new Monument(name, year, img, description, city, country, lvl))
+        monuments.push(new Monument(name, year, img, description, city, country, lvl, category))
         localStorage.setItem("monuments", JSON.stringify(monuments))
         monumentListLoad();
         alert("Monumento Adicionado!")
@@ -56,8 +58,6 @@ document.querySelector("#removeForm").addEventListener("submit", function (event
         if (removeMonument === monument.name) {
             var userMnt = users.indexOf(removeMonument)
             monuments.splice(userMnt);
-            console.log(userMnt)
-            console.log(userMnt)
             localStorage.setItem("monuments", JSON.stringify(monuments))
             monumentListLoad();
         }

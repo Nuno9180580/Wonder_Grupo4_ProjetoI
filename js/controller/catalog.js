@@ -29,6 +29,18 @@ document.getElementById("btnAlpha2").addEventListener("click", function () {
 
 });
 
+document.getElementById("europa").addEventListener("click", function () {
+    europa();
+
+});
+
+
+function europa() {
+    monuments.sort(Monument.category)
+    localStorage.setItem("europa", JSON.stringify(monuments))
+    renderCatalog();
+}
+
 
 
 
@@ -44,13 +56,12 @@ for (const user of users) {
 //carrega as bandas todas na msm sem filtros
 renderCatalog();
 //funcao para atualizar as bandas do catalogo
-function renderCatalog(filtername = "", level = 1) {
+function renderCatalog(filtername = "") {
 
     const myCatalog = document.querySelector("#myCatalog")
     let result = "";
     let i = 0;
     for (const monument of monuments) {
-        console.log(monument.level + "-" + userLevel)
         if (monument.level > userLevel) {
             continue;
         }
