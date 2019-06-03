@@ -33,10 +33,11 @@ document.querySelector("#kidForm").addEventListener("submit", function (event) {
         }
     }
     if (userExists === false) {
-        users.push(new User(kidName, kidMail, KidPass,"1","0","../img/AvatarFields.jpg","criança"))
+        users.push(new User(kidName, kidMail, KidPass, "1", "0", "../img/AvatarFields.jpg", "criança"))
         localStorage.setItem("users", JSON.stringify(users))
         alert("Utilizador Adicionado!")
         userListLoad();
+        document.querySelector("#kidCard").style.display = "none";
     } else {
         alert("Utilizador já existe!")
     }
@@ -56,10 +57,12 @@ document.querySelector("#adminForm").addEventListener("submit", function (event)
         }
     }
     if (userExists === false) {
-        users.push(new User(adminName, adminMail, adminPass,"1","0","../img/Perfil_Side_Icon.png","admin"))
+        users.push(new User(adminName, adminMail, adminPass, "1", "0", "../img/Perfil_Side_Icon.png", "admin"))
         localStorage.setItem("users", JSON.stringify(users))
         alert("Administrador Adicionado!")
         userListLoad();
+        document.querySelector("#adminCard").style.display = "none";
+
     } else {
         alert("Administrador já existe!")
     }
@@ -68,20 +71,37 @@ document.querySelector("#adminForm").addEventListener("submit", function (event)
 
 
 userListLoad();
-function userListLoad(){
+
+function userListLoad() {
     const userList = document.querySelector("#userList")
-let lista = ""
+    let lista = ""
 
-for (let i = 0; i < users.length; i++) {
+    for (let i = 0; i < users.length; i++) {
 
-    const name = users[i].username;
-    const userType = users[i].userType;
-    lista +=`<p>${name}: ${userType}</p>`
-    
-} 
-    
-    
+        const name = users[i].username;
+        const userType = users[i].userType;
+        lista += `<p>${name}: ${userType}</p>`
 
-userList.innerHTML = lista
+    }
+
+
+
+    userList.innerHTML = lista
 }
 
+
+document.querySelector("#addKid").addEventListener("click", function () {
+    document.querySelector("#kidCard").style.display = "block";
+})
+
+document.querySelector("#closeKid").addEventListener("click", function () {
+    document.querySelector("#kidCard").style.display = "none";
+})
+
+document.querySelector("#addAdmin").addEventListener("click", function () {
+    document.querySelector("#adminCard").style.display = "block";
+})
+
+document.querySelector("#closeAdmin").addEventListener("click", function () {
+    document.querySelector("#adminCard").style.display = "none";
+})

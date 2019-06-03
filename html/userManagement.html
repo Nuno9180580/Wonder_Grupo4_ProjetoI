@@ -66,34 +66,38 @@
             <img src="../img/Catalog_Side_Icon.png" width="80" height="80" class="d-inline-block" alt="">
         </a>
     </div>
-    <button id="btnClear" class="btn" type="button"><i class="fa fa-close"></i></button>
-    <button id="btnClear" class="btn" type="button"><i class="fa fa-close"></i></button>
+    <button id="addKid" class="btn butao" type="button">Adicionar Criança</button>
+    <button id="removeKid" class="btn butao" type="button">Remover Criança</button>
+    <button id="addAdmin" class="btn butao" type="button">Adicionar Administrador</button>
+    <button id="removeAdmin" class="btn butao" type="button">Remover Administrador</button>
 
-    <div class="row">
-        <div class="card" style="width: 35rem; height: 37rem;">
+  <!--   Lista com todos os Users -->
+    <div id="userList" clas="conatiner"></div>
+
+    <!-- Form para adicionar uma crinaça -->
+        <div id="kidCard" class="card" style="width: 35rem; height: 37rem; display: none;">
             <form id="kidForm">
                 <h2>Adicionar Criança</h2>
                 Nome: <input id="kidName" class="input" type="text"><br>
                 e-Mail: <input id="kidMail" class="input" type="text"><br>
                 Pass: <input id="kidPass" class="input" type="text"><br>
                 <input type="submit" class="input" value="Registar" id="btnSubmit">
+                <button id="closeKid" class="btn" type="button">Fechar</button>    
             </form>
         </div>
 
-        <div class="card" style="width: 35rem; height: 37rem;">
+    <!-- Form para adicionar um Administrador -->
+        <div id="adminCard" class="card" style="width: 35rem; height: 37rem; display: none;">
             <form id="adminForm">
                 <h2>Adicionar Admin</h2>
                 Nome: <input id="adminName" class="input" type="text"><br>
                 e-Mail: <input id="adminMail" class="input" type="text"><br>
                 Pass: <input id="adminPass" class="input" type="text"><br>
                 <input type="submit" class="input" value="Registar" id="btnSubmit">
+                <button id="closeAdmin" class="btn" type="button">Fechar</button>    
             </form>
         </div>
-    </div>
-
-    <div id="userList" clas="conatiner">
-
-    </div>
+ 
 
     <!-- Footer -->
     <footer>
