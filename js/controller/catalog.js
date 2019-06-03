@@ -19,18 +19,29 @@ document.getElementById("btnAlpha").addEventListener("click", function () {
 
 
 
-
+const userOn = sessionStorage.getItem('loggedUser')
+let userLevel = 0
+for (const user of users) {
+    if (userOn == user.username) {
+        userLevel = user.level
+    }
+}
 
 
 //carrega as bandas todas na msm sem filtros
 renderCatalog();
 //funcao para atualizar as bandas do catalogo
-function renderCatalog(filtername = "") {
+function renderCatalog(filtername = "", level = 1) {
+
     const myCatalog = document.querySelector("#myCatalog")
     let result = "";
     let i = 0;
     for (const monument of monuments) {
-        if (filtername !== "" && !monument.name.toLowerCase().startsWith(filtername)) {
+        console.log(monument.level + "-" + userLevel)
+        if (monument.level > userLevel) {
+            continue;
+        }
+        if (filtername !== "" && !monument.name.toLowerCase().includes(filtername)) {
             continue;
         }
         //criacao da linha
@@ -88,16 +99,17 @@ function getMonumentByName(name) {
     }
 }
 
-const userOn = sessionStorage.getItem('loggedUser')
 const labelUser = document.querySelector("#txtUserLogged")
 labelUser.innerHTML = userOn;
 
 let imgAvatar = ""
+
 for (const user of users) {
     if (user.username === userOn) {
         imgAvatar = user.userImage
     }
 }
+
 const userAvatar = document.querySelector("#userAvatar")
 userAvatar.src = imgAvatar
 
@@ -108,7 +120,7 @@ function searchMonument() {
     const searchBar = document.querySelector("#searchBar").value.toLowerCase()
     for (const monument of monuments) {
         let monumentName = monument.name.toLowerCase()
-        if (monumentName.startsWith(searchBar)) {
+        if (monumentName.includes(searchBar)) {
             renderCatalog(searchBar)
         }
     }
@@ -149,4 +161,3 @@ document.querySelector("#com").addEventListener("submit", function (event) {
     event.preventDefault();
 
 })
-
