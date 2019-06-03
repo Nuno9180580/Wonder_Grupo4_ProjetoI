@@ -70,28 +70,19 @@ document.querySelector("#adminForm").addEventListener("submit", function (event)
 })
 
 
-/* document.querySelector("#removeForm").addEventListener("submit", function (event) {
-
+document.querySelector("#removeForm").addEventListener("submit", function (event) {
     const removeName = document.querySelector("#removeName").value
-
-
-    let userExists = false
     for (const user of users) {
-
         if (removeName === user.username) {
-            userExists = true
-        }
-    }
-    if (userExists === true) {
-        users.remove(removeName)
-        localStorage.setItem("users", JSON.stringify(users))
-        userListLoad();
-    } else {
-        alert("Utilizador já existe!")
+                var userIndex = users.indexOf(removeName)
+                users.splice(userIndex);
+                localStorage.setItem("users", JSON.stringify(users))
+                userListLoad();   
+            }
     }
     event.preventDefault();
 })
- */
+
 
 
 userListLoad();
@@ -108,8 +99,6 @@ function userListLoad() {
 
     }
 
-
-
     userList.innerHTML = lista
 }
 
@@ -117,6 +106,7 @@ function userListLoad() {
 document.querySelector("#addKid").addEventListener("click", function () {
     document.querySelector("#kidCard").style.display = "block";
     document.querySelector("#adminCard").style.display = "none";
+    document.querySelector("#removeCard").style.display = "none";
 
 })
 
@@ -127,9 +117,22 @@ document.querySelector("#closeKid").addEventListener("click", function () {
 document.querySelector("#addAdmin").addEventListener("click", function () {
     document.querySelector("#adminCard").style.display = "block";
     document.querySelector("#kidCard").style.display = "none";
+    document.querySelector("#removeCard").style.display = "none";
+
 
 })
 
 document.querySelector("#closeAdmin").addEventListener("click", function () {
     document.querySelector("#adminCard").style.display = "none";
+})
+
+
+document.querySelector("#remove").addEventListener("click", function () {
+    document.querySelector("#removeCard").style.display = "block";
+    document.querySelector("#adminCard").style.display = "none";
+    document.querySelector("#kidCard").style.display = "none";
+})
+
+document.querySelector("#closeRemove").addEventListener("click", function () {
+    document.querySelector("#removeCard").style.display = "none";
 })

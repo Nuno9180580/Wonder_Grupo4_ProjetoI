@@ -15,7 +15,6 @@ let imgAvatar = ""
 for (const user of users) {
     if (user.username === userOn) {
         imgAvatar = user.userImage
-        console.log(document.querySelector("#myForm"))
     }
 }
 const userAvatar = document.querySelector("#userAvatar")
@@ -47,3 +46,31 @@ document.querySelector("#myForm").addEventListener("submit", function (event) {
     }
     event.preventDefault();
 })
+
+
+document.querySelector("#removeForm").addEventListener("submit", function (event) {
+    const removeMonument = document.querySelector("#removeMonument").value
+    for (const monument of monuments) {
+        if (removeMonument === monument.name) {
+                var userMnt = users.indexOf(removeMonument)
+                monuments.splice(userMnt);
+                console.log(userMnt)
+                console.log(userMnt)
+                localStorage.setItem("monuments", JSON.stringify(monuments))
+            }
+    }
+    event.preventDefault();
+})
+
+monumentListLoad();
+
+function monumentListLoad() {
+    const monumentList = document.querySelector("#monumentList")
+    let lista = ""
+    for (let i = 0; i < monuments.length; i++) {
+        const name = monuments[i].name;
+        lista += `<p>${name}</p>`
+    }
+    monumentList.innerHTML = lista
+}
+

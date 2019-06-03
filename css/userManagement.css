@@ -21,7 +21,7 @@ body {
 #pageNameCenter {
     font-family: archivoBlack;
     color: white;
-    margin-left: 300px;
+    margin-left: 250px;
 }
 
 
@@ -53,11 +53,18 @@ form {
 .btn{
     background-color: #ffa812
 }
+
+.flex-container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
 .card {
-    margin-left: 300px;
-    margin-top: -326px;
-    margin-right: 30px;
-    margin-block-end: 40px;
+   margin-left: 360px;
+   margin-top: -500px;
+   margin-bottom: 360px;
+
+   
     color: white;
     border: 7px solid #73574D;
     background-color: #73574D;
@@ -71,7 +78,8 @@ form {
     color: white;
     border: 7px solid #73574D;
     margin-left: 50px;
-    width: 200px; 
+    width: 250px; 
+    height: 500px;
     border-radius: 5px;
 }
 

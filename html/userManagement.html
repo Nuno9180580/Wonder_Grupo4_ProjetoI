@@ -11,7 +11,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/userManagement.css">
-    <link rel="stylesheet" href="../css/footerView.css">
     <link rel="stylesheet" href="../css/sideBarView.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -39,7 +38,7 @@
             </a>
         </form>
         <div class="topnav-centered">
-            <h1 id="pageNameCenter">ADICIONAR USERS </h1>
+            <h1 id="pageNameCenter">GESTÃO DE USUÁRIOS</h1>
         </div>
         <a class="navbar-brand" href="#">
             <!-- ICONE DO SITE WONDER AQUI!! -->
@@ -70,67 +69,44 @@
     <button id="addAdmin" class="btn butao" type="button">Adicionar Administrador</button>
     <button id="remove" class="btn butao" type="button">Remover</button>
 
-  <!--   Lista com todos os Users -->
-    <div id="userList" clas="conatiner"></div>
+
+
+    <!--   Lista com todos os Users -->
+    <div id="userList" class="container"></div>
 
     <!-- Form para adicionar uma crinaça -->
-        <div id="kidCard" class="card" style="width: 35rem; height: 37rem; display: none;">
-            <form id="kidForm">
-                <h2>Adicionar Criança</h2>
-                Nome: <input id="kidName" class="input" type="text"><br>
-                e-Mail: <input id="kidMail" class="input" type="text"><br>
-                Pass: <input id="kidPass" class="input" type="text"><br>
-                <input type="submit" class="btn" value="Registar" id="btnSubmit">
-                <button id="closeKid" class="btn" type="button">Fechar</button>    
-            </form>
-        </div>
-
-    <!-- Form para adicionar um Administrador -->
-        <div id="adminCard" class="card" style="width: 35rem; height: 37rem; display: none;">
-            <form id="adminForm">
-                <h2>Adicionar Admin</h2>
-                Nome: <input id="adminName" class="input" type="text"><br>
-                e-Mail: <input id="adminMail" class="input" type="text"><br>
-                Pass: <input id="adminPass" class="input" type="text"><br>
-                <input type="submit" class="btn" value="Registar" id="btnSubmit">
-                <button id="closeAdmin" class="btn" type="button">Fechar</button>    
-            </form>
-        </div>
-
-      <!-- Form para adicionar um Administrador -->
-      <div id="removeCard" class="card" style="width: 35rem; height: 37rem; display:block;">
-        <form id="removeForm">
-            <h2>Remover Usuários</h2>
-            Nome: <input id="removeName" class="input" type="text"><br>
-            <input type="submit" class="btn" value="Remover" id="btnRemove">
-            <button id="closeRemove" class="btn" type="button">Fechar</button>    
+    <div id="kidCard" class="card" style="width: 35rem; height: 23rem; display: none;">
+        <form id="kidForm">
+            <h2>Adicionar Criança</h2>
+            Nome: <input id="kidName" class="input" type="text"><br>
+            e-Mail: <input id="kidMail" class="input" type="text"><br>
+            Pass: <input id="kidPass" class="input" type="text"><br>
+            <input type="submit" class="btn" value="Registar" id="btnSubmit">
+            <button id="closeKid" class="btn" type="button">Fechar</button>
         </form>
     </div>
 
+    <!-- Form para adicionar um Administrador -->
+    <div id="adminCard" class="card" style="width: 35rem; height: 23rem; display: none;">
+        <form id="adminForm">
+            <h2>Adicionar Admin</h2>
+            Nome: <input id="adminName" class="input" type="text"><br>
+            e-Mail: <input id="adminMail" class="input" type="text"><br>
+            Pass: <input id="adminPass" class="input" type="text"><br>
+            <input type="submit" class="btn" value="Registar" id="btnSubmit">
+            <button id="closeAdmin" class="btn" type="button">Fechar</button>
+        </form>
+    </div>
 
-    
-    
+    <div id="removeCard" class="card" style="width: 35rem; height: 23rem; display: none;">
+        <form id="removeForm">
+            <h2>Remover Usuário</h2>
+            Nome: <input id="removeName" class="input" type="text"><br>
+            <input type="submit" class="btn" value="Remover" id="btnRemove">
+            <button id="closeRemove" class="btn" type="button">Fechar</button>
+        </form>
+    </div>
 
-    <!-- Footer -->
-    <footer>
-        <!-- Copyright -->
-        <div id="footer" class="footer-copyright text-center py-3">
-            <div id="footerImg"><a href="https://www.ipp.pt/"><img id="footerImg" src="../img/esmad.png" width="110"
-                        height="30" class="d-inline-block"></a></div>
-            <div> © 2019 Copyright:<a href="index.html" style="color: white"> WONDER</a></div>
-            <div id="footerIcons">
-                <!-- Facebook -->
-                <a href="https://www.facebook.com/"><img id="footerImg" src="../img/facebook.png" width="30" height="30"
-                        class="d-inline-block"></a>
-                <!-- Twitter -->
-                <a href="https://www.instagram.com/"><img id="footerImg" src="../img/instagram.png" width="30"
-                        height="30" class="d-inline-block"></a>
-                <!--Instagram-->
-                <a href="https://www.twitter.com/"><img id="footerImg" src="../img/twitter.png" width="30" height="30"
-                        class="d-inline-block"></a>
-            </div>
-        </div>
-    </footer>
 
     <!-- Optional JavaScript -->
     <script type="module" src="../js/views/sideBarView.js"></script>
