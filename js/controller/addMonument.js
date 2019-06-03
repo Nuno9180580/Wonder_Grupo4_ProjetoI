@@ -56,7 +56,7 @@ document.querySelector("#removeForm").addEventListener("submit", function (event
     const removeMonument = document.querySelector("#removeMonument").value
     for (const monument of monuments) {
         if (removeMonument === monument.name) {
-            var userMnt = users.indexOf(removeMonument)
+            var userMnt = monuments.indexOf(removeMonument)
             monuments.splice(userMnt);
             localStorage.setItem("monuments", JSON.stringify(monuments))
             monumentListLoad();

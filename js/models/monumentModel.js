@@ -10,7 +10,7 @@ export default class Monument {
         this.category = category
 
     }
-    static compare(mntA, mntB) {
+    static aToZ(mntA, mntB) {
         if (mntA.name < mntB.name) {
             return -1;
         }
@@ -19,7 +19,7 @@ export default class Monument {
         }
         return 0;
     }
-    static compare2(mntA, mntB) {
+    static zToA(mntA, mntB) {
         if (mntA.name > mntB.name) {
             return -1;
         }
@@ -28,30 +28,5 @@ export default class Monument {
         }
         return 0;
     }
-    static europeCategory(mnt) {
-        if (mnt.category !== "Europa") {
-            return 1;
-        }
-        if (mnt.category === "Europa") {
-            return -1;
-        }
-        return 0;
-    }
-    static americaCategory(mnt) {
-        if (mnt.category !== "América") {
-            return 1;
-        }
-        if (mnt.category === "América") {
-            return -1;
-        }
-        return 0;
-    } static africaCategory(mnt) {
-        if (mnt.category !== "África") {
-            return 1;
-        }
-        if (mnt.category === "África") {
-            return -1;
-        }
-        return 0;
-    }
+
 }

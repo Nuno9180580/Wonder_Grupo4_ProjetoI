@@ -5,56 +5,7 @@ import {
 }
 from "../models/Main.js"
 
-function alphabeticalOrder() {
-    monuments.sort(Monument.compare)
-    localStorage.setItem("monumentos", JSON.stringify(monuments))
-    renderCatalog();
-}
-
-//Evento Click do Botão Ordem Alfabetica
-document.getElementById("btnAlpha").addEventListener("click", function () {
-    alphabeticalOrder();
-
-});
-
-function alphabeticalOrder2() {
-    monuments.sort(Monument.compare2)
-    localStorage.setItem("monumentos2", JSON.stringify(monuments))
-    renderCatalog();
-}
-
-//Evento Click do Botão Ordem Alfabetica
-document.getElementById("btnAlpha2").addEventListener("click", function () {
-    alphabeticalOrder2();
-
-});
-
-document.getElementById("europa").addEventListener("click", function () {
-    monuments.sort(Monument.europeCategory)
-    localStorage.setItem("europa", JSON.stringify(monuments))
-    renderCatalog();
-
-});
-document.getElementById("america").addEventListener("click", function () {
-    monuments.sort(Monument.americaCategory)
-    localStorage.setItem("america", JSON.stringify(monuments))
-    renderCatalog();
-
-});
-document.getElementById("africa").addEventListener("click", function () {
-    monuments.sort(Monument.africaCategory)
-    localStorage.setItem("africa", JSON.stringify(monuments))
-    renderCatalog();
-
-});
-
-
-
-
-
-
-
-
+//Função que lê o Utilizador Ativo
 const userOn = sessionStorage.getItem('loggedUser')
 let userLevel = 0
 for (const user of users) {
@@ -63,10 +14,41 @@ for (const user of users) {
     }
 }
 
+//Evento Click do Botão Ordem Alfabetica de A-Z
+document.getElementById("btnAToZ").addEventListener("click", function () {
+    aToZ();
 
-//carrega as bandas todas na msm sem filtros
+});
+//Função Para ordenar de A-Z
+function aToZ() {
+    monuments.sort(Monument.aToZ)
+    localStorage.setItem("monumentosAZ", JSON.stringify(monuments))
+    renderCatalog();
+}
+
+
+//Evento Click do Botão Ordem Alfabetica de Z-A
+document.getElementById("btnZToA").addEventListener("click", function () {
+    zToA();
+
+});
+//Função Para ordenar de Z-A
+function zToA() {
+    monuments.sort(Monument.zToA)
+    localStorage.setItem("monumentosZA", JSON.stringify(monuments))
+    renderCatalog();
+}
+
+
+/* document.querySelector("#europe").addEventListener("click", function () {
+   
+    let europe = monuments.filter(monument => monument.category === "Europa");
+
+}) */
+
+//carrega os Monumentos todos 
 renderCatalog();
-//funcao para atualizar as bandas do catalogo
+//funcao para atualizar os Monumentos do catalogo
 function renderCatalog(filtername = "") {
 
     const myCatalog = document.querySelector("#myCatalog")
@@ -97,12 +79,14 @@ function renderCatalog(filtername = "") {
                 </div>
             </div>`
         i++;
-        if (i % 3 === 0) { //fecha a row
+        //fecha a row
+        if (i % 3 === 0) {
             result += `</div>`
         }
     }
     myCatalog.innerHTML = result
 
+    //Botão que abre a Modal
     const btnsSeeMore = document.getElementsByClassName("view")
     for (const elem of btnsSeeMore) {
         elem.addEventListener("click", function () {
@@ -124,6 +108,7 @@ function renderCatalog(filtername = "") {
 
 }
 
+//Função que retorna o nome do Monumento
 function getMonumentByName(name) {
     for (const monument of monuments) {
         if (monument.name === name) {
@@ -134,23 +119,25 @@ function getMonumentByName(name) {
     }
 }
 
+
+
+
+
+//Adiciona a Imagem e o Nome do utilizador na NavBar
 const labelUser = document.querySelector("#txtUserLogged")
 labelUser.innerHTML = userOn;
-
 let imgAvatar = ""
-
 for (const user of users) {
     if (user.username === userOn) {
         imgAvatar = user.userImage
     }
 }
-
 const userAvatar = document.querySelector("#userAvatar")
 userAvatar.src = imgAvatar
 
 
 
-
+//Função da SearchBar
 function searchMonument() {
     const searchBar = document.querySelector("#searchBar").value.toLowerCase()
     for (const monument of monuments) {
@@ -163,19 +150,19 @@ function searchMonument() {
 
 
 
-
+//Ao escrever na searchBar vai automaticamente procurar os Monumentos
 document.querySelector("#searchBar").addEventListener("keyup", function () {
     searchMonument();
 })
 
-
+//Remove Os Filtros
 document.querySelector("#btnClear").addEventListener("click", function () {
     renderCatalog();
 
 })
 
 
-
+//Comentarios
 document.querySelector("#com").addEventListener("submit", function (event) {
     const coments = document.querySelector("#coments")
     const txtarea = document.querySelector("#txtarea").value
