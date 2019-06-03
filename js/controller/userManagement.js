@@ -70,6 +70,30 @@ document.querySelector("#adminForm").addEventListener("submit", function (event)
 })
 
 
+/* document.querySelector("#removeForm").addEventListener("submit", function (event) {
+
+    const removeName = document.querySelector("#removeName").value
+
+
+    let userExists = false
+    for (const user of users) {
+
+        if (removeName === user.username) {
+            userExists = true
+        }
+    }
+    if (userExists === true) {
+        users.remove(removeName)
+        localStorage.setItem("users", JSON.stringify(users))
+        userListLoad();
+    } else {
+        alert("Utilizador já existe!")
+    }
+    event.preventDefault();
+})
+ */
+
+
 userListLoad();
 
 function userListLoad() {
@@ -92,6 +116,8 @@ function userListLoad() {
 
 document.querySelector("#addKid").addEventListener("click", function () {
     document.querySelector("#kidCard").style.display = "block";
+    document.querySelector("#adminCard").style.display = "none";
+
 })
 
 document.querySelector("#closeKid").addEventListener("click", function () {
@@ -100,6 +126,8 @@ document.querySelector("#closeKid").addEventListener("click", function () {
 
 document.querySelector("#addAdmin").addEventListener("click", function () {
     document.querySelector("#adminCard").style.display = "block";
+    document.querySelector("#kidCard").style.display = "none";
+
 })
 
 document.querySelector("#closeAdmin").addEventListener("click", function () {
