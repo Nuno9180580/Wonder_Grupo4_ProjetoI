@@ -1,14 +1,23 @@
 import {
     logout
 } from "../models/Main.js"
+import {
+    users
+}
+from "../models/Main.js"
 
 const doLogout = document.querySelector("#optionLogout")
 const navOpen = document.querySelector("#openNav")
 const navClose = document.querySelector("#closeNav")
 const userOn = sessionStorage.getItem('loggedUser')
 const seeBackOffice = document.querySelector("#BackOfficeView")
-
-if(userOn != "admin") {
+let userType = ""
+for (const user of users) {
+    if (user.username === userOn) {
+        userType = user.userType
+    }
+}
+if(userType != "admin") {
     seeBackOffice.style.display = "none"
 }
 

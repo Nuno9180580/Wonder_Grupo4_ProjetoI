@@ -119,20 +119,11 @@
 }
 
 
-#peekBtn{
+#changeBtn{
     background-color: #ffa812;    
     z-index: 10;
     margin-left: -110px;
     margin-top: 119px;
-    height: 30px;
-    grid-area: auto;
-    font-family: archivoBlack;
-}
-#changeBtn{
-    background-color: #ffa812;    
-    z-index: 10;
-    margin-left: -80px;
-    margin-top: 155px;
     height: 30px;
     grid-area: auto;
     font-family: archivoBlack;
