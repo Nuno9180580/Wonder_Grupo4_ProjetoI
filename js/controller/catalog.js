@@ -30,16 +30,27 @@ document.getElementById("btnAlpha2").addEventListener("click", function () {
 });
 
 document.getElementById("europa").addEventListener("click", function () {
-    europa();
+    monuments.sort(Monument.europeCategory)
+    localStorage.setItem("europa", JSON.stringify(monuments))
+    renderCatalog();
+
+});
+document.getElementById("america").addEventListener("click", function () {
+    monuments.sort(Monument.americaCategory)
+    localStorage.setItem("america", JSON.stringify(monuments))
+    renderCatalog();
+
+});
+document.getElementById("africa").addEventListener("click", function () {
+    monuments.sort(Monument.africaCategory)
+    localStorage.setItem("africa", JSON.stringify(monuments))
+    renderCatalog();
 
 });
 
 
-function europa() {
-    monuments.sort(Monument.europeCategory)
-    localStorage.setItem("europa", JSON.stringify(monuments))
-    renderCatalog();
-}
+
+
 
 
 

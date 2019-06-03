@@ -37,4 +37,21 @@ export default class Monument {
         }
         return 0;
     }
+    static americaCategory(mnt) {
+        if (mnt.category !== "América") {
+            return 1;
+        }
+        if (mnt.category === "América") {
+            return -1;
+        }
+        return 0;
+    } static africaCategory(mnt) {
+        if (mnt.category !== "África") {
+            return 1;
+        }
+        if (mnt.category === "África") {
+            return -1;
+        }
+        return 0;
+    }
 }
