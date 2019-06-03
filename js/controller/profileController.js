@@ -60,16 +60,21 @@ const newPass = document.querySelector("#newPass")
 
 document.querySelector("#submitNewPass").addEventListener("click", function (event) {
   for (const user of users) {
+    
     if (user.username === userOn) {
       if (user.password === nowPass.value) {
         if (newPass.value != nowPass.value) {
-          user.password = newPass
+          user.password = newPass.value
+          console.log("p:" + user.password + "np:" + newPass.value)
           console.log(user.username)
           console.log(userOn)
           console.log(user.password)
           console.log(newPass.value)
           console.log(nowPass.value)
           alert("alteracao feita")
+          localStorage.setItem(users, JSON.stringify(users))
+          
+          
         } else {
           console.log(user.username)
           console.log(userOn)
@@ -82,8 +87,11 @@ document.querySelector("#submitNewPass").addEventListener("click", function (eve
       } else {
         alert("a senha atual não é essa!")
       }
+
+     
     }
   }
+  console.log("ok")
 
   event.preventDefault();
 })
