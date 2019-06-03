@@ -17,6 +17,19 @@ document.getElementById("btnAlpha").addEventListener("click", function () {
 
 });
 
+function alphabeticalOrder2() {
+    monuments.sort(Monument.compare2)
+    localStorage.setItem("monumentos2", JSON.stringify(monuments))
+    renderCatalog();
+}
+
+//Evento Click do Botão Ordem Alfabetica
+document.getElementById("btnAlpha2").addEventListener("click", function () {
+    alphabeticalOrder2();
+
+});
+
+
 
 
 const userOn = sessionStorage.getItem('loggedUser')
@@ -134,10 +147,8 @@ document.querySelector("#searchBar").addEventListener("keyup", function () {
 })
 
 
-document.querySelector("#btnSearch").addEventListener("click", function () {
+document.querySelector("#btnClear").addEventListener("click", function () {
     renderCatalog();
-    const searchBar = document.querySelector("#searchBar")
-    searchBar.value = "";
 
 })
 

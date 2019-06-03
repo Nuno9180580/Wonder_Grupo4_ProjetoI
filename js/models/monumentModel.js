@@ -18,4 +18,13 @@ export default class Monument {
         }
         return 0;
     }
+    static compare2(mntA, mntB) {
+        if (mntA.name > mntB.name) {
+            return -1;
+        }
+        if (mntA.name < mntB.name) {
+            return 1;
+        }
+        return 0;
+    }
 }
