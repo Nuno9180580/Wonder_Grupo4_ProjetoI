@@ -36,6 +36,7 @@ document.querySelector("#kidForm").addEventListener("submit", function (event) {
         users.push(new User(kidName, kidMail, KidPass,"1","0","../img/AvatarFields.jpg","criança"))
         localStorage.setItem("users", JSON.stringify(users))
         alert("Utilizador Adicionado!")
+        userListLoad();
     } else {
         alert("Utilizador já existe!")
     }
@@ -58,9 +59,29 @@ document.querySelector("#adminForm").addEventListener("submit", function (event)
         users.push(new User(adminName, adminMail, adminPass,"1","0","../img/Perfil_Side_Icon.png","admin"))
         localStorage.setItem("users", JSON.stringify(users))
         alert("Administrador Adicionado!")
+        userListLoad();
     } else {
         alert("Administrador já existe!")
     }
     event.preventDefault();
 })
+
+
+userListLoad();
+function userListLoad(){
+    const userList = document.querySelector("#userList")
+let lista = ""
+
+for (let i = 0; i < users.length; i++) {
+
+    const name = users[i].username;
+    const userType = users[i].userType;
+    lista +=`<p>${name}: ${userType}</p>`
+    
+} 
+    
+    
+
+userList.innerHTML = lista
+}
 
