@@ -39,6 +39,12 @@ body {
     height: auto;
 }
 
+#sugCard{
+    align-content: center;
+    margin-left: 550px;
+    margin-bottom: 150px;
+}
+
 #videoContainer {
     background-color: #ffa812;
     margin-top: 20px;
@@ -108,3 +114,16 @@ body {
     font-family:'Helvetica Neue', sans-serif;
 }
 
+#sugestions{
+    background-color: #ffa812;
+    height: 60px;
+    width: 340px;
+    margin-left: 46px;
+    margin-top: 16px;
+    font-size: 30px;
+
+}
+
+#sugTitle{
+    margin-left: 16px;
+}
