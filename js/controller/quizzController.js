@@ -23,6 +23,7 @@ userAvatar.src = imgAvatar
 
 //quiz variaveis e valores
 const start = document.querySelector("#startQuiz")
+const endQuiz = document.querySelector("#gameOverQuiz")
 const quiz = document.querySelector("#quiz")
 const levelShow = document.querySelector("#levelContainer")
 const timerShow = document.querySelector("#timerContainer")
@@ -42,8 +43,7 @@ const checkC = document.querySelector("#choiceC")
 const checkD = document.querySelector("#choiceD")
 
 let count = 0;
-let numCurrentQuest = 0;
-let questionTime = 3 //20segundos para o contador
+let questionTime = 20 //20segundos para o contador
 const barTimeWidth = 110; //100px de largura da barra do tempo
 const barTimeUnit = barTimeWidth / questionTime;
 let timer;
@@ -59,10 +59,18 @@ let tempQuestions = []
 let range = 0;
 let randomIndex = 0;
 start.addEventListener("click", quizStart); //botao para comecar o quiz
-checkA.addEventListener("click", checkAnswer("A"))
-checkB.addEventListener("click", checkAnswer("B"))
-checkC.addEventListener("click", checkAnswer("C"))
-checkD.addEventListener("click", checkAnswer("D"))
+checkA.addEventListener("click", function () {
+    checkAnswer("A")
+})
+checkB.addEventListener("click", function () {
+    checkAnswer("B")
+})
+checkC.addEventListener("click", function () {
+    checkAnswer("C")
+})
+checkD.addEventListener("click", function () {
+    checkAnswer("D")
+})
 
 //-------------------------------------------FUNÇÕES---------------------------------------------------------//
 
@@ -75,7 +83,6 @@ function quizStart() {
     timerShow.style.display = "block" //mostra o container do timer
     renderCounter(); //começa o contador
     timer = setInterval(renderCounter, 1000) // executa a funcao de 1 em 1 segundo
-    numCurrentQuest = 1
 }
 
 //funcao para preencher o quiz
@@ -102,7 +109,6 @@ function renderQuestion() {
     choiceB.innerHTML = tempQuestions[randomIndex].choiceB
     choiceC.innerHTML = tempQuestions[randomIndex].choiceC
     choiceD.innerHTML = tempQuestions[randomIndex].choiceD
-    numCurrentQuest++;
 }
 
 //funcao para o contador do quiz
@@ -116,21 +122,23 @@ function renderCounter() {
         count = 0
         //quiz fecha e abre página de game over
         clearInterval(timer);
-        start.style.display = "block" //esconde o botao de iniciar quiz
-        quiz.style.display = "none" //mostra o quiz no centro
-        levelShow.style.display = "none" //mostra o container do nivel
-        timerShow.style.display = "none" //mostra o container do timer      
+        endQuiz.style.display = "block" //mostra o botao de iniciar quiz
+        quiz.style.display = "none" //esconde o quiz no centro
+        endQuiz.innerHTML = `
+        <img src="${imgAvatar}" id="endQuiz">
+        <p id="endScore">Pontuação: ${userScore}</p>
+        <p id="endLabel">FIM DO JOGO</p>
+        `
+        levelShow.style.display = "none" //esconde o container do nivel
+        timerShow.style.display = "none" //esconde o container do timer      
     }
 }
 
 //função que verifica a resposta
 function checkAnswer(answer) {
-    console.log("a funcionar")
     if (answer == questions[randomIndex].correct) {
         //se estiver correto
-        userScore++;
-        numCurrentQuest++;
-        console.log(numCurrentQuest)
+        console.log("a ser executado")
         renderQuestion();
     } else {
         //quiz fecha e abre página de game over
