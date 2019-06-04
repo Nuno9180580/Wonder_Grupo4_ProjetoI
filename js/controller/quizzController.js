@@ -58,7 +58,9 @@ for (const user of users) {
 let tempQuestions = []
 let range = 0;
 let randomIndex = 0;
+
 start.addEventListener("click", quizStart); //botao para comecar o quiz
+//botoes para as escolhas
 checkA.addEventListener("click", function () {
     checkAnswer("A")
 })
@@ -127,7 +129,7 @@ function renderCounter() {
         endQuiz.innerHTML = `
         <img src="${imgAvatar}" id="endQuiz">
         <p id="endScore">Pontuação: ${userScore}</p>
-        <p id="endLabel">FIM DO JOGO</p>
+        <p id="endLabel">FIM DO JOGO!</p>
         `
         levelShow.style.display = "none" //esconde o container do nivel
         timerShow.style.display = "none" //esconde o container do timer      
@@ -136,16 +138,21 @@ function renderCounter() {
 
 //função que verifica a resposta
 function checkAnswer(answer) {
-    if (answer == questions[randomIndex].correct) {
+    if (answer === questions[randomIndex].correct) {
         //se estiver correto
         console.log("a ser executado")
         renderQuestion();
     } else {
         //quiz fecha e abre página de game over
         clearInterval(timer);
-        start.style.display = "block" //esconde o botao de iniciar quiz
-        quiz.style.display = "none" //mostra o quiz no centro
-        levelShow.style.display = "none" //mostra o container do nivel
-        timerShow.style.display = "none" //mostra o container do timer
+        endQuiz.style.display = "block" //mostra o botao de iniciar quiz
+        quiz.style.display = "none" //esconde o quiz no centro
+        endQuiz.innerHTML = `
+        <img src="${imgAvatar}" id="endQuiz">
+        <p id="endScore">Pontuação: ${userScore}</p>
+        <p id="endLabel">FIM DO JOGO!</p>
+        `
+        levelShow.style.display = "none" //esconde o container do nivel
+        timerShow.style.display = "none" //esconde o container do timer
     }
 }
