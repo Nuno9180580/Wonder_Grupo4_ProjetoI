@@ -3,7 +3,7 @@
     src: url("../fonts/ArchivoBlack-Regular.ttf")
 }
 
-h1{
+h1 {
     font-family: archivoBlack;
     margin-left: 400px;
 }
@@ -11,18 +11,18 @@ h1{
 .navbar-dark .navbar-toggler {
     border-color: rgba(255, 255, 255, 0);
     color: white;
-    
+
 }
 
-body{
-   background-color:  #D5F8FF;
+body {
+    background-color: #D5F8FF;
 }
 
-#welcome{
+#welcome {
     margin-top: 40px;
     margin-left: 280px;
     font-size: 44px;
-    color:#025e84;
+    color: #025e84;
 }
 
 #pageNameCenter {
@@ -39,7 +39,7 @@ body{
     height: auto;
 }
 
-#videoContainer{
+#videoContainer {
     background-color: #ffa812;
     margin-top: 20px;
     margin-bottom: 20px;
@@ -47,27 +47,53 @@ body{
     border-radius: 10px;
 }
 
-#topMenu{
+#topMenu {
     display: flex;
-    justify-content:center;
+    justify-content: center;
     padding-left: 100px;
-    
-      
+
+
 }
 
-#banner{
+#banner {
     width: 130px;
     height: 170px;
     margin-right: 90px;
 }
 
 .d-inline-block:hover {
-    -ms-transform: scale(1.1); /* IE 9 */
-    -webkit-transform: scale(1.1); /* Safari 3-8 */
-    transform: scale(1.1); 
-  }
-  #txtUserLogged{
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
+#txtUserLogged {
     font-family: archivoBlack;
     margin-left: 10px;
     font-size: 25spx;
 }
+
+#podium {
+    width: 290px;
+    background-color: #025e84;
+    
+}
+
+/* .winner {
+    width: 300px;
+}
+
+.losers {
+
+    width: 300px;
+} */
+.top2{
+    font-size: 24px;
+}
+.top3{
+    font-size: 20px;
+}
+
+

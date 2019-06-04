@@ -133,10 +133,14 @@
 
 
 #switchPass{
+    background-color: #ffa812;    
+    position: absolute;
     z-index: 10;
     height: 30px;
-    margin-right: 440px;
-    width: 100px;
+    margin-left: 260px;
+    margin-top: 120px;
+    width: 80px;
+    color: black
     
     
 }
