@@ -63,7 +63,13 @@ if (localStorage.monuments) {
 
 // Define um array para guardar os objetos comments
 export let comments = []
-comments = JSON.parse(localStorage.comments)
+if (localStorage.comments) {
+    comments = JSON.parse(localStorage.comments)
+} else {
+    const com = new Comment("", "", "","")
+    comments.push(com)
+    localStorage.setItem("comments", JSON.stringify(comments))
+}
 
 
 //------------------------------------------------------------------------------------------------------------------------------------//
