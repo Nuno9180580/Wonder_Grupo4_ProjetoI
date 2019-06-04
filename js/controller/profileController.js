@@ -55,28 +55,24 @@ userLvl.innerHTML = "Nível: " + userLvl2
 userEmail.value = email;
 userPass.value = pass;
 
-const nowPass = document.querySelector("#nowPass")
-const newPass = document.querySelector("#newPass")
+
 
 
 
 
 document.querySelector("#submitNewPass").addEventListener("click", function (event) {
+  const nowPass = document.querySelector("#nowPass")
+  const newPass = document.querySelector("#newPass")
+
   for (const user of users) {
 
     if (user.username === userOn) {
       if (user.password === nowPass.value) {
         if (newPass.value != nowPass.value) {
-          let userInfo = localStorage.getItem('users.pass')
-console.log(userInfo)
-          /* delete users.password */
-           userInfo = userInfo ? JSON.parse(userInfo) : {};
-          userInfo ["password"] = newPass.value;
-          localStorage.setItem('users.pass', JSON.stringify(userInfo)) 
-
-
+          user.password = newPass.value
           alert("alteracao feita")
-
+             
+                 
         } else {
 
           alert("a senha não pode ser igual à atual!")
@@ -89,6 +85,8 @@ console.log(userInfo)
 
     }
   }
+  localStorage.setItem("users", JSON.stringify(users))
+  
   console.log("ok")
 
   event.preventDefault();
