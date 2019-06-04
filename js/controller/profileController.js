@@ -57,18 +57,47 @@ userPass.value = pass;
 
 
 
-document.querySelector("#submitNewImg").addEventListener("click", function (event){
+document.querySelector("#img1").addEventListener("click", function (event){
   const newImg = document.querySelector("#img1")
-
+  
   for (const user of users) {
     user.userImage = newImg.src
-    alert("alteracao feita")
+    
+  }
+  localStorage.setItem("users", JSON.stringify(users))
+
+  location.reload();
+
+  event.preventDefault();
+})
+
+document.querySelector("#img2").addEventListener("click", function (event){
+  const newImg = document.querySelector("#img2")
+  
+  for (const user of users) {
+    user.userImage = newImg.src
+
 
     
   }
   localStorage.setItem("users", JSON.stringify(users))
   
-  console.log("ok")
+  location.reload();
+  event.preventDefault();
+})
+
+document.querySelector("#img3").addEventListener("click", function (event){
+  const newImg = document.querySelector("#img3")
+  
+  for (const user of users) {
+    user.userImage = newImg.src
+
+
+    
+  }
+  localStorage.setItem("users", JSON.stringify(users))
+  
+  location.reload();
 
   event.preventDefault();
 })
