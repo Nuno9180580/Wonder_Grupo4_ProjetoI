@@ -1,6 +1,7 @@
 import {
   users
 } from "../models/Main.js"
+import User from "../models/userModel.js";
 
 
 const userOn = sessionStorage.getItem('loggedUser')
@@ -54,33 +55,26 @@ userLvl.innerHTML = "Nível: " + userLvl2
 userEmail.value = email;
 userPass.value = pass;
 
-const nowPass = document.querySelector("#nowPass")
-const newPass = document.querySelector("#newPass")
+
+
+
 
 
 document.querySelector("#submitNewPass").addEventListener("click", function (event) {
+  const nowPass = document.querySelector("#nowPass")
+  const newPass = document.querySelector("#newPass")
+
   for (const user of users) {
-    
+
     if (user.username === userOn) {
       if (user.password === nowPass.value) {
         if (newPass.value != nowPass.value) {
           user.password = newPass.value
-          console.log("p:" + user.password + "np:" + newPass.value)
-          console.log(user.username)
-          console.log(userOn)
-          console.log(user.password)
-          console.log(newPass.value)
-          console.log(nowPass.value)
           alert("alteracao feita")
-          localStorage.setItem(users, JSON.stringify(users))
-          
-          
+             
+                 
         } else {
-          console.log(user.username)
-          console.log(userOn)
-          console.log(user.password)
-          console.log(newPass.value)
-          console.log(nowPass.value)
+
           alert("a senha não pode ser igual à atual!")
         }
 
@@ -88,9 +82,11 @@ document.querySelector("#submitNewPass").addEventListener("click", function (eve
         alert("a senha atual não é essa!")
       }
 
-     
+
     }
   }
+  localStorage.setItem("users", JSON.stringify(users))
+  
   console.log("ok")
 
   event.preventDefault();
