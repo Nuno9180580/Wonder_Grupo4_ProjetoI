@@ -1,7 +1,9 @@
 import Monument from "../models/monumentModel.js"
+import Comment from "../models/commentsModel.js"
 import {
     users,
-    monuments
+    monuments,
+    comments
 }
 from "../models/Main.js"
 
@@ -162,22 +164,52 @@ document.querySelector("#btnClear").addEventListener("click", function () {
 })
 
 
-//Comentarios
+
+
+
+
+//Botão que envia os comentários
 document.querySelector("#com").addEventListener("submit", function (event) {
+    commentStorage();
+    renderComments();
+    event.preventDefault();
+
+})
+
+//Função que dá render aos commentarios
+renderComments();
+function renderComments(){
     const coments = document.querySelector("#coments")
+    let result = "";
+    let i = 0;
+    for (const comment of comments) {
+        if (i % 1 === 0) {
+            result += `<div class = "row">`
+        }
+        //geraçao do comentario
+        result += `<p>${comment.username}: ${comment.userComment}, ${comment.date}</p><br>`
+        i++;
+        //fecha a row
+        if (i % 1 === 0) {
+            result += `</div>`
+        }
+    }
+    coments.innerHTML = result
+
+}
+
+//Botão que guarda os comentarios num array
+function commentStorage(){
+    const modalTitle = document.querySelector("#modalTitle").innerHTML
     const txtarea = document.querySelector("#txtarea").value
-
+    let today = new Date();
+    let date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
     let txtname = "";
-    let result = ""
-
     for (const user of users) {
         if (user.username === userOn) {
             txtname = user.username
         }
-        result = `<p> ${txtname}: ${txtarea} </p>`
     }
-
-    coments.innerHTML = result;
-    event.preventDefault();
-
-})
+    comments.push(new Comment(txtname, txtarea, date, modalTitle))
+    localStorage.setItem("comments", JSON.stringify(comments))
+}

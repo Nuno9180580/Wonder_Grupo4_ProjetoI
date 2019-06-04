@@ -1,5 +1,7 @@
 import User from "./userModel.js"
 import Monument from "./monumentModel.js"
+import Comment from "../models/commentsModel.js"
+
 
 //array de utilizadores 
 export let users = []
@@ -58,6 +60,10 @@ if (localStorage.monuments) {
     monuments.push(mnt1, mnt2, mnt3, mnt4, mnt5, mnt6, mnt7, mnt8, mnt9, mnt10, mnt11, mnt12, mnt13, mnt14, mnt15, mnt16, mnt17, mnt18, mnt19, mnt20, mnt21, mnt22, mnt23, mnt24, mnt25, mnt26, mnt27, mnt28, mnt29, mnt30)
     localStorage.setItem("monuments", JSON.stringify(monuments))
 }
+
+// Define um array para guardar os objetos comments
+export let comments = []
+
 //------------------------------------------------------------------------------------------------------------------------------------//
 //---------------------------------------------------------------FUNÇÕES--------------------------------------------------------------//
 //------------------------------------------------------------------------------------------------------------------------------------//
