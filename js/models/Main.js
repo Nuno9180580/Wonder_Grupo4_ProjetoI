@@ -13,7 +13,7 @@ export let users = []
 if (localStorage.users) {
     users = JSON.parse(localStorage.users)
 } else {
-    const userAdmin = new User("admin", "admin", "admin", 5, 3000, "../img/Perfil_Side_Icon.png", "admin", 0)
+    const userAdmin = new User("admin", "admin", "admin", 5, 3000, "../img/Perfil_Side_Icon.png", "admin", 0, 0)
     users.push(userAdmin)
     localStorage.setItem("users", JSON.stringify(users))
 }
@@ -99,7 +99,7 @@ export function registerSubmit(txtUsername, txtEmail, txtPass, txtConfirmPass) {
         }
         if (usernameExists === false && emailExists === false) {
             alert("Conta criada com sucesso!")
-            users.push(new User(txtUsername, txtEmail, txtPass, 1, 0, "../img/AvatarFields.jpg","criança",0))
+            users.push(new User(txtUsername, txtEmail, txtPass, 1, 0, "../img/AvatarFields.jpg","criança",0,0))
             localStorage.setItem("users", JSON.stringify(users))
             window.location.href = "../html/landingLogin.html" //redireciona para apagina login
         }
@@ -126,7 +126,8 @@ export function loginSubmit(txtUsername, txtPass) {
             sessionStorage.setItem("loggedUser", txtUsername)
             userType = user.userType
             existUser = true
-            alert(`Bem-vindo ${txtUsername}!`)
+            if(user.blocked === 0){
+                alert(`Bem-vindo ${txtUsername}!`)
             if(userType == "admin"){
                 window.location.href = "../html/backOffice.html" //redireciona para a pagina principal
             }
@@ -134,6 +135,11 @@ export function loginSubmit(txtUsername, txtPass) {
                 window.location.href = "../html/index.html" //redireciona para a pagina principal
 
             }
+            }
+            else{
+                alert("Conta Bloqueada!")
+            }
+            
         }
     }
     if (existUser === false) {
