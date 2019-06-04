@@ -1,5 +1,5 @@
 export default class Monument {
-    constructor(name, year, photo, description, city, country, level, category) {
+    constructor(name, year, photo, description, city, country, level) {
         this.name = name
         this.year = year
         this.photo = photo
@@ -7,8 +7,6 @@ export default class Monument {
         this.city = city
         this.country = country
         this.level = level
-        this.category = category
-
     }
     static aToZ(mntA, mntB) {
         if (mntA.name < mntB.name) {
