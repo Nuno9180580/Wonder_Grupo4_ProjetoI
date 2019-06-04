@@ -91,9 +91,6 @@ document.querySelector("#img3").addEventListener("click", function (event){
   
   for (const user of users) {
     user.userImage = newImg.src
-
-
-    
   }
   localStorage.setItem("users", JSON.stringify(users))
   
@@ -101,7 +98,42 @@ document.querySelector("#img3").addEventListener("click", function (event){
 
   event.preventDefault();
 })
+document.querySelector("#img4").addEventListener("click", function (event){
+  const newImg = document.querySelector("#img4")
+  
+  for (const user of users) {
+    user.userImage = newImg.src
+  }
+  localStorage.setItem("users", JSON.stringify(users))
+  
+  location.reload();
 
+  event.preventDefault();
+})
+document.querySelector("#img5").addEventListener("click", function (event){
+  const newImg = document.querySelector("#img5")
+  
+  for (const user of users) {
+    user.userImage = newImg.src
+  }
+  localStorage.setItem("users", JSON.stringify(users))
+  
+  location.reload();
+
+  event.preventDefault();
+})
+document.querySelector("#img6").addEventListener("click", function (event){
+  const newImg = document.querySelector("#img6")
+  
+  for (const user of users) {
+    user.userImage = newImg.src
+  }
+  localStorage.setItem("users", JSON.stringify(users))
+  
+  location.reload();
+
+  event.preventDefault();
+})
 
 document.querySelector("#submitNewPass").addEventListener("click", function (event) {
   const nowPass = document.querySelector("#nowPass")
