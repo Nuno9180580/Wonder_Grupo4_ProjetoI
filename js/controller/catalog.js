@@ -105,7 +105,6 @@ function renderCatalog(filtername = "") {
             function renderComments() {
                 let resultComment = ""
                 for (const comment of comments) {
-                    console.log(comment.monument + "-" + myMonument.name)
                     if (comment.monument === myMonument.name) {
                         if (i % 1 === 0) {
                             resultComment += `<div class = "row">`
