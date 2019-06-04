@@ -110,7 +110,7 @@ function renderCatalog(filtername = "") {
                             resultComment += `<div class = "row">`
                         }
                         //geraçao do comentario
-                        resultComment += `<p>${comment.username}: ${comment.userComment}, ${comment.date}</p><br>`
+                        resultComment += `<br><b>${comment.username} </b> &nbsp; <p> ${comment.userComment}, ${comment.date}</p>`
                         i++;
                         //fecha a row
                         if (i % 1 === 0) {

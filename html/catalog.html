@@ -135,13 +135,15 @@
                 <div class="modal-footer">
                     <form action="" method="post" id="com">
                         <label style="color: white; font-family:archivoBlack">Comentário: <br>
-                            <textarea id="txtarea" cols="20" rows="2" name="mes" style="font-family:verdana"></textarea>
+                            <textarea id="txtarea" maxlength="56" cols="51" rows="2" name="mes" style="font-family:verdana"></textarea>
                         </label>
                         <br><br>
-                        <input type="submit" name="submit" value="enviar" class="texty">
+                        <input id="enviar" type="submit" class="btn" name="submit" value="Enviar" class="texty">
                     </form>
-                    <div id="comments" class="container">
-                    </div>
+                </div>
+                <div class="modal-footer">
+                
+                    <div id="comments" style="max-width: 480px;" class="container"></div>
                 </div>
             </div>
         </div>

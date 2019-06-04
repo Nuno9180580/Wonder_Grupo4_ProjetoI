@@ -12,7 +12,7 @@ export let users = []
 if (localStorage.users) {
     users = JSON.parse(localStorage.users)
 } else {
-    const userAdmin = new User("admin", "admin", "admin", 5, " ", "../img/Perfil_Side_Icon.png", "admin")
+    const userAdmin = new User("admin", "admin", "admin", 5, 3000, "../img/Perfil_Side_Icon.png", "admin")
     users.push(userAdmin)
     localStorage.setItem("users", JSON.stringify(users))
 }

@@ -119,7 +119,14 @@
     color: black;
 }
 
-#myBtn4:hover,
+#enviar{ 
+    background-color: #ffa812;
+    color: black;
+    margin-top: -40px;
+
+}
+
+#enviar, #myBtn4:hover,
 #dropdownMenuButton:hover {
     -ms-transform: scale(1.1);
     /* IE 9 */
@@ -140,9 +147,17 @@
 
 #comments{
     background-color: white;
+    border: 5px solid #ffa812;
+    border-radius: 5px;
 }
 
 #cardImg{
     height:198.46px;
     width: 298px;
+}
+
+
+#com{
+    margin-top: -10px;
+    margin-left:15px;
 }
