@@ -24,6 +24,8 @@ userAvatar.src = imgAvatar
 //quiz variaveis e valores
 const start = document.querySelector("#startQuiz")
 const quiz = document.querySelector("#quiz")
+const levelShow = document.querySelector("#levelContainer")
+const timerShow = document.querySelector("#timerContainer")
 const question = document.querySelector("#question")
 const questionImage = document.querySelector("#questionImg")
 const choiceA = document.querySelector("#A")
@@ -37,7 +39,7 @@ const fillTimeBar = document.querySelector("#barFilling")
 
 let count = 0;
 let questionTime = 20 //20segundos para o contador
-const barTimeWidth = 100; //100px de largura da barra do tempo
+const barTimeWidth = 110; //100px de largura da barra do tempo
 const barTimeUnit = barTimeWidth / questionTime;
 let timer;
 
@@ -49,15 +51,17 @@ for (const user of users) {
     }
 }
 
-start.addEventListener("click", quizStart);
+start.addEventListener("click", quizStart); //botao para comecar o quiz
 
 //-------------------------------------------FUNÇÕES---------------------------------------------------------//
 
 //start quizz
 function quizStart() {
-    start.style.display = "none"
-    renderQuestion();
-    quiz.style.display = "block"
+    start.style.display = "none" //esconde o botao de iniciar quiz
+    renderQuestion(); //da render na questao para o quiz
+    quiz.style.display = "block" //mostra o quiz no centro
+    levelShow.style.display = "block" //mostra o container do nivel
+    timerShow.style.display = "block" //mostra o container do timer
     renderCounter(); //começa o contador
     timer = setInterval(renderCounter, 1000) // executa a funcao de 1 em 1 segundo
 }
@@ -75,9 +79,11 @@ function renderQuestion() {
             localStorage.setItem("tempQuestions", JSON.stringify(tempQuestions))
         }
     }
+
     //função que vai buscar pergunta aleatoria ao array temporario
     let range = tempQuestions.length - 1;
-    let randomIndex = Math.floor((Math.random() * range) + 0);
+    let currentQuest = 0;
+
     //função que carrega para o quiz a pergunta aleatoria
     question.innerHTML = `<p>${tempQuestions[randomIndex].question}</p>`
     questionImage.innerHTML = `<img src=${tempQuestions[randomIndex].imgQuestion}>`
@@ -89,6 +95,7 @@ function renderQuestion() {
 
 //funcao para o contador do quiz
 function renderCounter() {
+    //contador inicia
     if (count <= questionTime) {
         counter.innerHTML = count
         fillTimeBar.style.width = count * barTimeUnit + "px";

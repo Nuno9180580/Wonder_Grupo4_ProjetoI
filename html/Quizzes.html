@@ -66,11 +66,11 @@
 
     <!--CONTAINER PARA A IMAGEM | PERGUNTA | RESPOSTAS-->
     <div id="alignContainers">
-        <div class="container-fluid-left-side">
+        <div class="container-fluid-left-side" id="levelContainer" style="display: none">
             <p id="textLevel">Nível</p>
             <p id="quizLevel"></p>
         </div>
-        <div class="container-fluid-secondLeft-side">
+        <div class="container-fluid-secondLeft-side" id="timerContainer" style="display: none">
             <img src="../img/timer icon.png" id="timerIcon">
             <div id="timer">
                 <div id="counter"></div>
@@ -79,7 +79,9 @@
             </div>
         </div>
         <div class="container-fluid">
-            <div id="startQuiz" style="display: block">COMEÇAR QUIZ!</div>
+            <div style="display: block">
+                <img src="../img/start.png" id="startQuiz">
+            </div>
             <div id="quiz" style="display: none">
                 <div id="questionImg">
                 </div>
@@ -89,36 +91,28 @@
                     <div class="row">
                         <div id="aB" class="col-md-5">
                             <div class="btn-group">
-                                <a href="#">
-                                    <a href="" class="choiceLetter">A</a>
-                                    <a href="" class="choice" id="A" onclick="checkAnswer('A')"></a>
-                                </a>
+                                <div href="" class="choiceLetter" onclick="checkAnswer('A')">A</div>
+                                <div href="" class="choice" id="A" onclick="checkAnswer('A')"></div>
                             </div>
                         </div>
                         <div id="aB" class="col-md-5 col-md-offset-2">
                             <div class="btn-group">
-                                <a href="#">
-                                    <a href="" class="choiceLetter">B</a>
-                                    <a href="" class="choice" id="B" onclick="checkAnswer('A')"></a>
-                                </a>
+                                <div href="" class="choiceLetter" onclick="checkAnswer('B')">B</div>
+                                <div href="" class="choice" id="B" onclick="checkAnswer('B')"></div>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div id="cD" class="col-md-5">
                             <div class="btn-group">
-                                <a href="#">
-                                    <a href="" class="choiceLetter">C</a>
-                                    <a href="" class="choice" id="C" onclick="checkAnswer('A')"></a>
-                                </a>
+                                <div href="" class="choiceLetter" onclick="checkAnswer('C')">C</div>
+                                <div href="" class="choice" id="C" onclick="checkAnswer('C')"></div>
                             </div>
                         </div>
                         <div id="cD" class="col-md-5 col-md-offset-2">
                             <div class="btn-group">
-                                <a href="#">
-                                    <a href="" class="choiceLetter">D</a>
-                                    <a href="" class="choice" id="D" onclick="checkAnswer('A')"></a>
-                                </a>
+                                <div href="" class="choiceLetter" onclick="checkAnswer('D')">D</div>
+                                <div href="" class="choice" id="D" onclick="checkAnswer('D')"></div>
                             </div>
 
                         </div>

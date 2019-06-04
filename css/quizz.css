@@ -1,6 +1,6 @@
 #sideMenu {
     margin-top: 95px;
-    background-color: transparent;  
+    background-color: transparent;
     font-family: archivoBlack;
 }
 
@@ -47,19 +47,18 @@
     font-size: 3em;
     font-weight: bolder;
     word-break: break-all;
-    width: 260px;
-    height: 145px;
-    border: 2px solid lightgrey;
+    width: 400px;
+    height: auto;
     text-align: center;
     cursor: pointer;
     position: absolute;
-    left: 310px;
-    top: 200px;
+    left: 240px;
+    top: 140px;
     color: lightgrey;
 }
 
 #startQuiz:hover {
-    border: 3px solid #0aac20;
+    border: solid transparent;
     color: #0aac20;
 }
 
@@ -169,7 +168,7 @@
     height: 10px;
     border-radius: 10px;
     background-color: lightgray;
-    margin-left: 35px;
+    margin-left: 40px;
 }
 
 #barFilling {
@@ -178,7 +177,7 @@
     border-radius: 10px;
     background-color: red;
     margin-top: -10px;
-    margin-left: 34px;
+    margin-left: 40px;
 }
 
 #timerIcon {
