@@ -77,8 +77,13 @@ body {
 
 #podium {
     width: 290px;
-    background-color: #025e84;
     
+    
+}
+.card{
+    background-color: #025e84;
+    color: white;
+    font-family: archivoBlack;
 }
 
 /* .winner {
@@ -89,11 +94,17 @@ body {
 
     width: 300px;
 } */
+.top1{
+    font-size: 28px;
+}
 .top2{
-    font-size: 24px;
+    font-size: 22px;
 }
 .top3{
-    font-size: 20px;
+    font-size: 18px;
 }
+.card-text{
 
+    font-family:'Helvetica Neue', sans-serif;
+}
 
