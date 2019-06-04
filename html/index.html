@@ -60,6 +60,10 @@
 
     <h1 id="welcome"></h1>
 
+    <input id="sugestions" type="button" class="btn" data-toggle="modal" data-target="#changePass" value="Sugestões">
+    
+             
+
     <!-- Video -->
     <div id="videoContainer" class="container " style="width: 60rem">
         <div class="row">
@@ -103,7 +107,42 @@
 
     </div>
 
+    <div class="modal fade" id="changePass" role="dialog">
+        <div class="modal-dialog">
+            <div class="modal-content">
 
+                <!-- Modal Header -->
+                <div class="modal-header">
+                    <h4 class="modal-title" id="myModalLabel">Sugestão de Monumento</h4>
+                    <button type="button" class="close" data-dismiss="modal">
+                        <span aria-hidden="true">&times;</span>
+                        <span class="sr-only">Close</span>
+                    </button>
+
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body">
+                    <p class="statusMsg"></p>
+                    <form role="form">
+                        <div class="form-group">
+                            <label for="inputName">Nome do Monumento</label>
+                            <input type="text" class="form-control" id="mnmtName" placeholder="" />
+                        </div>
+                        <div class="form-group">
+                            <label for="inputName">Mais informação</label>
+                            <textarea name="" id="moreInfo" cols="64" rows="3" maxlength="130"></textarea>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Fechar</button>
+                    <button type="button" class="btn btn-primary submitBtn" id="sugestBtn">Sugerir</button>
+
+                </div>
+            </div>
+        </div>
+</div>
     <!-- Optional JavaScript -->
     <script type="module" src="../js/controller/index.js"></script>
     <script type="module" src="../js/views/sideBarView.js"></script>

@@ -1,6 +1,7 @@
 import User from "./userModel.js"
 import Monument from "./monumentModel.js"
 import Comment from "../models/commentsModel.js"
+import Sugestion from "../models/sugestionsModel.js"
 
 
 //array de utilizadores 
@@ -70,6 +71,13 @@ if (localStorage.comments) {
     comments.push(com)
     localStorage.setItem("comments", JSON.stringify(comments))
 }
+export let sugestions = []
+if (localStorage.sugestions) {
+    sugestions = JSON.parse(localStorage.sugestions)
+} else {
+    localStorage.setItem("sugestions", JSON.stringify(sugestions))
+}
+
 
 
 //------------------------------------------------------------------------------------------------------------------------------------//
