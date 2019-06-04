@@ -146,6 +146,8 @@ function renderCatalog(filtername = "") {
                 }
                 comments.push(new Comment(txtname, txtarea, date, modalTitle))
                 localStorage.setItem("comments", JSON.stringify(comments))
+                document.querySelector("#txtarea").value = ""
+
             }
 
         })
