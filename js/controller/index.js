@@ -18,3 +18,15 @@ userAvatar.src = imgAvatar
 
 const welcome = document.querySelector("#welcome")
 welcome.innerHTML = "Olá " + userOn + "!"
+
+function firstPodium() {
+
+}
+function secondPodium() {
+    
+}
+function thirdPodium() {
+    
+}
+
+
