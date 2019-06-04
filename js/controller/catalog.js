@@ -131,7 +131,7 @@ function renderCatalog(filtername = "") {
 
 
 
-            //Botão que guarda os comentarios num array
+            //função que guarda os comentarios num array
             function commentStorage() {
                 const modalTitle = document.querySelector("#modalTitle").innerHTML
                 const txtarea = document.querySelector("#txtarea").value

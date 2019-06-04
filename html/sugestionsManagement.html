@@ -10,7 +10,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="../css/backOffice.css">
+    <link rel="stylesheet" href="../css/sugestionsManagement.css">
     <link rel="stylesheet" href="../css/sideBarView.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -26,25 +26,23 @@
             <button class="navbar-toggler" type="button">
                 <span style="font-size:30px;cursor:pointer" id="openNav">&#9776;</span>
             </button>
-
             <div id="mySidenav" class="sidenav">
                 <a href="javascript:void(0)" class="closeBtn" id="closeNav">&times;</a>
-                <a href="backOffice.html" id="BackOfficeView">HOME</a>
+                <a href="backOffice.html" id="BackOfficeView">BackOffice</a>
                 <a href="#" id="optionAbout">Sobre</a>
                 <a href="#" id="optionLogout">Sair</a>
             </div>
-
             <!-- AVATAR REDIRECIONA PARA PERFIL -->
             <a class="navbar-brand" href="#">
                 <img id="userAvatar" src="" height="40"><label id="txtUserLogged"></label>
             </a>
         </form>
         <div class="topnav-centered">
-            <h1 id="pageNameCenter">BACKOFFICE</h1>
+            <h1 id="pageNameCenter">GESTÃO DE SUGESTÕES</h1>
         </div>
         <a class="navbar-brand" href="#">
             <!-- ICONE DO SITE WONDER AQUI!! -->
-            <a class="button" href="index.html"><img src="../img/logo.png" width="140" height="40"
+            <a class="button" href="backOffice.html"><img src="../img/logo.png" width="140" height="40"
                     class="d-inline-block"></a>
         </a>
     </nav>
@@ -68,54 +66,16 @@
         </a>
     </div>
 
-
-
-    <div id="bK">
-        <div class="row">
-            <div class="card" style="width: 16rem;">
-                <img class="card-img-top" src="../img/Catalog_Side_Icon.png">
-                <div class="card-body">
-                    <h6 class="card-title">MONUMENTOS</h6>
-                    <a href="../html/addMonument.html" class="w3-bar-item w3-button">
-                        <button id="adicionar" type="button" class="btn">ADICIONAR</button>
-                    </a>
-                </div>
-            </div>
-            <div class="card" style="width: 16rem;">
-                <img class="card-img-top" src="../img/Quizz_Side_Icon.png">
-                <div class="card-body">
-                    <h6 class="card-title">PERGUNTAS</h6>
-                    <a href="../html/addQuestion.html" class="w3-bar-item w3-button">
-                        <button id="adicionar" type="button" class="btn">ADICIONAR</button>
-                    </a>
-                </div>
-            </div>
-            <div class="card" style="width: 16rem;">
-                <img class="card-img-top" src="../img/Perfil_Side_Icon.png">
-                <div class="card-body">
-                    <h6 class="card-title">UTILIZADORES</h6>
-                    <a href="../html/userManagement.html" class="w3-bar-item w3-button">
-                        <button id="adicionar" type="button" class="btn">ADICIONAR</button>
-                    </a>
-                </div>
-            </div>
-            <div class="card" style="width: 16rem;">
-                <img class="card-img-top" src="../img/AvatarLiberty.jpg">
-                <div class="card-body">
-                    <h6 class="card-title">SUGESTÕES</h6>
-                    <a href="../html/sugestionsManagement.html" class="w3-bar-item w3-button">
-                        <button id="adicionar" type="button" class="btn">ABRIR</button>
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </div>
+ 
+ <!--Cards-->
+ <div class="container">
+    <p id="myCatalog"></p>
+</div>
 
 
     <!-- Optional JavaScript -->
-    <script type="module" src="../js/controller/backOffice.js"></script>
     <script type="module" src="../js/views/sideBarView.js"></script>
+    <script type="module" src="../js/controller/sugestionsManagement.js"></script>
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

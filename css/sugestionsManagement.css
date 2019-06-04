@@ -1,0 +1,58 @@
+
+h1 {
+    font-family: archivoBlack;
+    margin-left: 400px;
+}
+
+.navbar-dark .navbar-toggler {
+    border-color: rgba(255, 255, 255, 0);
+    color: white;
+
+}
+
+body {
+    background-color: #D9D0C7;
+}
+
+#pageNameCenter {
+    font-family: archivoBlack;
+    color: white;
+    margin-left: 250px;
+}
+
+
+@font-face {
+    font-family: "archivoBlack";
+    src: url("../fonts/ArchivoBlack-Regular.ttf")
+}
+
+
+
+
+#txtUserLogged {
+    font-family: archivoBlack;
+    margin-left: 10px;
+    font-size: 25px;
+}
+#sideMenu {
+    margin-top: 95px;
+    background-color: transparent;  
+    font-family: archivoBlack;
+}
+
+.container{
+    margin-top: 100px;
+    margin-left: 200px;
+}
+
+.refuse{
+    background-color: red;
+    color: white;
+
+}
+
+.accept{
+    background-color: green;
+    color: white;
+
+}
