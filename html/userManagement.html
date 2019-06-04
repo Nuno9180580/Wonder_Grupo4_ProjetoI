@@ -68,6 +68,10 @@
     <button id="addKid" class="btn butao" type="button">Adicionar Criança</button>
     <button id="addAdmin" class="btn butao" type="button">Adicionar Administrador</button>
     <button id="remove" class="btn butao" type="button">Remover</button>
+    <button id="blockUsers" class="btn butao" type="button">Bloquear</button>
+    <button id="unBlockUsers" class="btn butao" type="button">Desbloquear</button>
+
+
 
 
 
@@ -107,6 +111,23 @@
         </form>
     </div>
 
+    <div id="blockCard" class="card" style="width: 35rem; height: 23rem; display: none;">
+        <form id="removeForm">
+            <h2>Bloquear Usuário</h2>
+            Nome: <input id="blockName" class="input" type="text"><br>
+            <input type="submit" class="btn" value="Bloquear" id="btnBlock">
+            <button id="closeBlock" class="btn" type="button">Fechar</button>
+        </form>
+    </div>
+
+    <div id="unBlockCard" class="card" style="width: 35rem; height: 23rem; display: none;">
+        <form id="removeForm">
+            <h2>Desbloquear Usuário</h2>
+            Nome: <input id="unBlockName" class="input" type="text"><br>
+            <input type="submit" class="btn" value="Desbloquear" id="btnUnBlock">
+            <button id="closeUnBlock" class="btn" type="button">Fechar</button>
+        </form>
+    </div>
 
     <!-- Optional JavaScript -->
     <script type="module" src="../js/views/sideBarView.js"></script>

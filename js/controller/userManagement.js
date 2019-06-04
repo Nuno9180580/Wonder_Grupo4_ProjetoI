@@ -107,6 +107,10 @@ document.querySelector("#addKid").addEventListener("click", function () {
     document.querySelector("#kidCard").style.display = "block";
     document.querySelector("#adminCard").style.display = "none";
     document.querySelector("#removeCard").style.display = "none";
+    document.querySelector("#blockCard").style.display = "none";
+    document.querySelector("#UnblockCard").style.display = "none";
+
+
 
 })
 
@@ -118,6 +122,10 @@ document.querySelector("#addAdmin").addEventListener("click", function () {
     document.querySelector("#adminCard").style.display = "block";
     document.querySelector("#kidCard").style.display = "none";
     document.querySelector("#removeCard").style.display = "none";
+    document.querySelector("#blockCard").style.display = "none";
+    document.querySelector("#UnblockCard").style.display = "none";
+
+
 
 
 })
@@ -131,8 +139,75 @@ document.querySelector("#remove").addEventListener("click", function () {
     document.querySelector("#removeCard").style.display = "block";
     document.querySelector("#adminCard").style.display = "none";
     document.querySelector("#kidCard").style.display = "none";
+    document.querySelector("#blockCard").style.display = "none";
+    document.querySelector("#UnblockCard").style.display = "none";
+
+
 })
 
 document.querySelector("#closeRemove").addEventListener("click", function () {
     document.querySelector("#removeCard").style.display = "none";
+})
+
+
+document.querySelector("#btnBlock").addEventListener("click", function (event){
+    const userName = document.querySelector("#blockName").value
+    
+    for (const user of users) {
+      if(user.username === userName){
+        user.blocked = 1
+        localStorage.setItem("users", JSON.stringify(users))
+        document.querySelector("#blockName").value = ""
+        alert("Bloqueado!")
+      }
+      
+    }
+  
+    event.preventDefault();
+  })
+
+
+  document.querySelector("#blockUsers").addEventListener("click", function () {
+    document.querySelector("#blockCard").style.display = "block";
+    document.querySelector("#removeCard").style.display = "none";
+    document.querySelector("#adminCard").style.display = "none";
+    document.querySelector("#kidCard").style.display = "none";
+    document.querySelector("#UnblockCard").style.display = "none";
+
+})
+
+document.querySelector("#closeBlock").addEventListener("click", function () {
+    document.querySelector("#blockCard").style.display = "none";
+})
+
+
+
+document.querySelector("#btnUnBlock").addEventListener("click", function (event){
+    const userName = document.querySelector("#unBlockName").value
+    
+    for (const user of users) {
+      if(user.username === userName){
+        user.blocked = 0
+        localStorage.setItem("users", JSON.stringify(users))
+        document.querySelector("#unBlockName").value = ""
+        alert("Desbloqueado!")
+      }
+      
+    }
+  
+    event.preventDefault();
+  })
+
+
+  document.querySelector("#unBlockUsers").addEventListener("click", function () {
+    document.querySelector("#unBlockCard").style.display = "block";
+    document.querySelector("#removeCard").style.display = "none";
+    document.querySelector("#adminCard").style.display = "none";
+    document.querySelector("#kidCard").style.display = "none";
+    document.querySelector("#blockCard").style.display = "none";
+
+})
+
+document.querySelector("#closeUnBlock").addEventListener("click", function () {
+    document.querySelector("#UnblockCard").style.display = "none";
 })
