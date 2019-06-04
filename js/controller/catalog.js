@@ -42,11 +42,7 @@ function zToA() {
 }
 
 
-/* document.querySelector("#europe").addEventListener("click", function () {
-   
-    let europe = monuments.filter(monument => monument.category === "Europa");
 
-}) */
 
 //carrega os Monumentos todos 
 renderCatalog();
