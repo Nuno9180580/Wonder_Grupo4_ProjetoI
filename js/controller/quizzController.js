@@ -35,10 +35,15 @@ const choiceD = document.querySelector("#D")
 const quizLevel = document.querySelector("#quizLevel")
 const counter = document.querySelector("#counter")
 const fillTimeBar = document.querySelector("#barFilling")
-
+let userScore = 0;
+const checkA = document.querySelector("#choiceA")
+const checkB = document.querySelector("#choiceB")
+const checkC = document.querySelector("#choiceC")
+const checkD = document.querySelector("#choiceD")
 
 let count = 0;
-let questionTime = 20 //20segundos para o contador
+let numCurrentQuest = 0;
+let questionTime = 3 //20segundos para o contador
 const barTimeWidth = 110; //100px de largura da barra do tempo
 const barTimeUnit = barTimeWidth / questionTime;
 let timer;
@@ -50,8 +55,14 @@ for (const user of users) {
         userLevel = user.level
     }
 }
-
+let tempQuestions = []
+let range = 0;
+let randomIndex = 0;
 start.addEventListener("click", quizStart); //botao para comecar o quiz
+checkA.addEventListener("click", checkAnswer("A"))
+checkB.addEventListener("click", checkAnswer("B"))
+checkC.addEventListener("click", checkAnswer("C"))
+checkD.addEventListener("click", checkAnswer("D"))
 
 //-------------------------------------------FUNÇÕES---------------------------------------------------------//
 
@@ -64,6 +75,7 @@ function quizStart() {
     timerShow.style.display = "block" //mostra o container do timer
     renderCounter(); //começa o contador
     timer = setInterval(renderCounter, 1000) // executa a funcao de 1 em 1 segundo
+    numCurrentQuest = 1
 }
 
 //funcao para preencher o quiz
@@ -72,7 +84,7 @@ function renderQuestion() {
     quizLevel.innerHTML = userLevel;
 
     //cria array temporario para as questions do nivel do user
-    let tempQuestions = []
+
     for (const question of questions) {
         if (question.level === userLevel) {
             tempQuestions.push(new Question(question.question, question.imgQuestion, question.choiceA, question.choiceB, question.choiceC, question.choiceD, question.correct, question.level))
@@ -80,9 +92,8 @@ function renderQuestion() {
         }
     }
 
-    //função que vai buscar pergunta aleatoria ao array temporario
-    let range = tempQuestions.length - 1;
-    let currentQuest = 0;
+    range = tempQuestions.length - 1; //quantidade de perguntas no array temporario
+    randomIndex = Math.floor((Math.random() * range) + 0);
 
     //função que carrega para o quiz a pergunta aleatoria
     question.innerHTML = `<p>${tempQuestions[randomIndex].question}</p>`
@@ -91,16 +102,42 @@ function renderQuestion() {
     choiceB.innerHTML = tempQuestions[randomIndex].choiceB
     choiceC.innerHTML = tempQuestions[randomIndex].choiceC
     choiceD.innerHTML = tempQuestions[randomIndex].choiceD
+    numCurrentQuest++;
 }
 
 //funcao para o contador do quiz
 function renderCounter() {
-    //contador inicia
+    //contador inicia até ao tempo máximo
     if (count <= questionTime) {
         counter.innerHTML = count
         fillTimeBar.style.width = count * barTimeUnit + "px";
         count++;
     } else {
         count = 0
+        //quiz fecha e abre página de game over
+        clearInterval(timer);
+        start.style.display = "block" //esconde o botao de iniciar quiz
+        quiz.style.display = "none" //mostra o quiz no centro
+        levelShow.style.display = "none" //mostra o container do nivel
+        timerShow.style.display = "none" //mostra o container do timer      
+    }
+}
+
+//função que verifica a resposta
+function checkAnswer(answer) {
+    console.log("a funcionar")
+    if (answer == questions[randomIndex].correct) {
+        //se estiver correto
+        userScore++;
+        numCurrentQuest++;
+        console.log(numCurrentQuest)
+        renderQuestion();
+    } else {
+        //quiz fecha e abre página de game over
+        clearInterval(timer);
+        start.style.display = "block" //esconde o botao de iniciar quiz
+        quiz.style.display = "none" //mostra o quiz no centro
+        levelShow.style.display = "none" //mostra o container do nivel
+        timerShow.style.display = "none" //mostra o container do timer
     }
 }
