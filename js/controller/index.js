@@ -47,18 +47,20 @@ document.querySelector("#sugestBtn").addEventListener("click", function(){
 })
 
 
+alertSugestion();
 
-
-
-
-function firstPodium() {
-
-}
-function secondPodium() {
-    
-}
-function thirdPodium() {
-    
+function alertSugestion(){
+    let alertS = ""
+    for (const user of users) {
+        if (user.userType === "criança") 
+        {
+           alertS = user.alert
+           if(alertS === 1)
+           {
+                alert("Recebeste 10XP pela tua sugestão! ")
+           }
+        }
+    }
 }
 
 
