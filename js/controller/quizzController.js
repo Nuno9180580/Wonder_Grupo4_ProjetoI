@@ -41,6 +41,8 @@ const checkA = document.querySelector("#choiceA")
 const checkB = document.querySelector("#choiceB")
 const checkC = document.querySelector("#choiceC")
 const checkD = document.querySelector("#choiceD")
+const restartContainer = document.querySelector("#restartContainer")
+const restartImg = document.querySelector("#restartImg")
 
 let count = 0;
 let questionTime = 20 //20segundos para o contador
@@ -87,8 +89,8 @@ function quizStart() {
     quiz.style.display = "block" //mostra o quiz no centro
     levelShow.style.display = "block" //mostra o container do nivel
     timerShow.style.display = "block" //mostra o container do timer
+    restartContainer.style.display = "none" //esconde o container de restart/continuar quiz
     renderCounter(); //começa o contador
-    console.log("rendercouter start done")
     timer = setInterval(renderCounter, 1000) // executa a funcao de 1 em 1 segundo
 }
 
@@ -96,16 +98,13 @@ function quizStart() {
 function renderQuestion() {
     //muda o nivel do quiz para corresponder ao nivel do utilizador
     quizLevel.innerHTML = userLevel;
-
     //cria array temporario para as questions do nivel do user
-
     for (const question of questions) {
         if (question.level === userLevel) {
             tempQuestions.push(new Question(question.question, question.imgQuestion, question.choiceA, question.choiceB, question.choiceC, question.choiceD, question.correct, question.level))
             localStorage.setItem("tempQuestions", JSON.stringify(tempQuestions))
         }
     }
-
     randomIndex++;
     //função que carrega para o quiz a pergunta aleatoria
     question.innerHTML = `<p>${tempQuestions[randomIndex].question}</p>`
@@ -137,6 +136,8 @@ function renderCounter() {
         `
         levelShow.style.display = "none" //esconde o container do nivel
         timerShow.style.display = "none" //esconde o container do timer      
+        restartImg.src = "../img/tryagain.png"
+        restartContainer.style.display = "block" //esconde o container de restart/continuar quiz
     }
 }
 
@@ -165,6 +166,8 @@ function checkAnswer(answer) {
                     `
             levelShow.style.display = "none" //esconde o container do nivel
             timerShow.style.display = "none" //esconde o container do timer
+            restartImg.src = "../img/tryagain.png"
+            restartContainer.style.display = "block" //esconde o container de restart/continuar quiz
         }
     } else {
         //atribui o score na mesma
@@ -180,6 +183,9 @@ function checkAnswer(answer) {
                 `
         levelShow.style.display = "none" //esconde o container do nivel
         timerShow.style.display = "none" //esconde o container do timer
+        restartImg.src = "../img/nextlvl.png"
+        restartContainer.style.display = "block" //esconde o container de restart/continuar quiz
+
         //utilizador passa para o próximo nivel
         for (const user of users) {
             //atribui XP de acordo com o nivel em que esta
@@ -192,8 +198,7 @@ function checkAnswer(answer) {
                     user.experience = user.experience + 200;
                 } else if (user.level === 4) {
                     user.experience = user.experience + 275;
-                }
-                 else if (user.level === 5) {
+                } else if (user.level === 5) {
                     user.experience = user.experience + 325;
                 }
                 //passa para o proximo nivel
