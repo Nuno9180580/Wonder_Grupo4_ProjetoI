@@ -193,7 +193,7 @@ function checkAnswer(answer) {
                 } else if (user.level === 4) {
                     user.experience = user.experience + 275;
                 }
-                else if (user.level === 5) {
+                 else if (user.level === 5) {
                     user.experience = user.experience + 325;
                 }
                 //passa para o proximo nivel
