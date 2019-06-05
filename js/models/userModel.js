@@ -15,4 +15,14 @@ export default class User {
         this.score = score
 
     }
+    static highScore(scoreA, scoreB) {
+        if (scoreA.score > scoreB.score) {
+            return -1;
+        }
+        if (scoreA.score < scoreB.score) {
+            return 1;
+        }
+        return 0;
+    }
+    
 }
