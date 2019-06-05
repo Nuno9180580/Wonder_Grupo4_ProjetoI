@@ -74,10 +74,10 @@ document.querySelector("#removeForm").addEventListener("submit", function (event
     const removeName = document.querySelector("#removeName").value
     for (const user of users) {
         if (removeName === user.username) {
-                var userIndex = users.indexOf(removeName)
+                let userIndex = users.indexOf(removeName)
                 users.splice(userIndex);
                 localStorage.setItem("users", JSON.stringify(users))
-                userListLoad();   
+                userListLoad(); 
             }
     }
     event.preventDefault();
@@ -108,7 +108,7 @@ document.querySelector("#addKid").addEventListener("click", function () {
     document.querySelector("#adminCard").style.display = "none";
     document.querySelector("#removeCard").style.display = "none";
     document.querySelector("#blockCard").style.display = "none";
-    document.querySelector("#UnblockCard").style.display = "none";
+    document.querySelector("#unBlockCard").style.display = "none";
 
 
 
@@ -123,7 +123,7 @@ document.querySelector("#addAdmin").addEventListener("click", function () {
     document.querySelector("#kidCard").style.display = "none";
     document.querySelector("#removeCard").style.display = "none";
     document.querySelector("#blockCard").style.display = "none";
-    document.querySelector("#UnblockCard").style.display = "none";
+    document.querySelector("#unBlockCard").style.display = "none";
 
 
 
@@ -140,7 +140,7 @@ document.querySelector("#remove").addEventListener("click", function () {
     document.querySelector("#adminCard").style.display = "none";
     document.querySelector("#kidCard").style.display = "none";
     document.querySelector("#blockCard").style.display = "none";
-    document.querySelector("#UnblockCard").style.display = "none";
+    document.querySelector("#unBlockCard").style.display = "none";
 
 
 })
@@ -172,7 +172,7 @@ document.querySelector("#btnBlock").addEventListener("click", function (event){
     document.querySelector("#removeCard").style.display = "none";
     document.querySelector("#adminCard").style.display = "none";
     document.querySelector("#kidCard").style.display = "none";
-    document.querySelector("#UnblockCard").style.display = "none";
+    document.querySelector("#unBlockCard").style.display = "none";
 
 })
 
@@ -209,5 +209,5 @@ document.querySelector("#btnUnBlock").addEventListener("click", function (event)
 })
 
 document.querySelector("#closeUnBlock").addEventListener("click", function () {
-    document.querySelector("#UnblockCard").style.display = "none";
+    document.querySelector("#unBlockCard").style.display = "none";
 })
