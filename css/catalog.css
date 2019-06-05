@@ -126,7 +126,7 @@
 
 }
 
-#enviar, #myBtn4:hover,
+#btnClear:hover, #enviar:hover, #myBtn4:hover,
 #dropdownMenuButton:hover {
     -ms-transform: scale(1.1);
     /* IE 9 */
@@ -160,4 +160,15 @@
 #com{
     margin-top: -10px;
     margin-left:15px;
+}
+
+.card:hover {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+    background-color: #50b4ff;
+    transition: 0.5s;
+    
 }
