@@ -101,7 +101,8 @@ export function registerSubmit(txtUsername, txtEmail, txtPass, txtConfirmPass) {
             alert("Conta criada com sucesso!")
             users.push(new User(txtUsername, txtEmail, txtPass, 1, 0, "../img/AvatarFields.jpg","criança",0, 0, 0))
             localStorage.setItem("users", JSON.stringify(users))
-            window.location.href = "../html/landingLogin.html" //redireciona para apagina login
+            sessionStorage.setItem("loggedUser", txtUsername)
+            window.location.href = "../html/index.html" //redireciona para apagina login
         }
         if (usernameExists === true) {
             document.querySelector("#txtUsername").value = ""
