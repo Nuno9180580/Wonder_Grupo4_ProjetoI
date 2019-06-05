@@ -58,8 +58,12 @@
 }
 
 #startQuiz:hover {
-    border: solid transparent;
-    color: #0aac20;
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+    transition: 0.5s;
 }
 
 #endQuiz {
