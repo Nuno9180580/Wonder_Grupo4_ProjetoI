@@ -5,8 +5,8 @@
 }
 
 .container-fluid {
+    /*background color: white definida no html */
     margin: 25px auto;
-    background-color: white;
     height: 600px;
     width: 900px;
     border-radius: 5px;
@@ -249,4 +249,13 @@
     margin: -10px 20px;
     width: 170px;
     height: auto;
+}
+
+#maxLevel {
+    width: 800px;
+    height: auto;
+    text-align: center;
+    position: absolute;
+    left: 50px;
+    top: 50px;
 }
