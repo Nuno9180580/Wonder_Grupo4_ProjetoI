@@ -197,9 +197,9 @@ function checkAnswer(answer) {
                     user.experience = user.experience + 325;
                 }
                 //passa para o proximo nivel
-                user.level = user.level + 15;
+                user.level = user.level + 1;
                 //recebe o score para possivelmente coloca lo no podio
-                user.score = userScore + user.score;
+                user.score = userScore + user.score + 15;
                 //atualiza a informaçao para a localStorage
                 localStorage.setItem("users", JSON.stringify(users))
                 console.log(user.level)
