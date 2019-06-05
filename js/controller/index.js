@@ -92,6 +92,14 @@ function highScore() {
         document.querySelector("#stName").innerHTML = first
         document.querySelector("#stImg").src = firstImg
         document.querySelector("#stScore").innerHTML = firstScore + " " + "Pontos"
+
+        document.querySelector("#ndName").innerHTML = second
+        document.querySelector("#ndImg").src = secondImg
+        document.querySelector("#ndScore").innerHTML = secondScore + " " + "Pontos"
+
+        document.querySelector("#rdName").innerHTML = third
+        document.querySelector("#rdImg").src = thirdImg
+        document.querySelector("#rdScore").innerHTML = thirdScore + " " + "Pontos"
        
         console.log(first + second + third)
     }
