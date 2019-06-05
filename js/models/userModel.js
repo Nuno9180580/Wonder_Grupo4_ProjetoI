@@ -12,7 +12,7 @@ export default class User {
         this.userType = userType
         this.alert = alert
         this.blocked = blocked
-        this.score = blocked
+        this.score = score
 
     }
 }

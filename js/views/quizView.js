@@ -49,55 +49,6 @@ export let questions = [{
         level: 1
     },
     {
-        question: "Whatdasdz1asdasdsadsadadssa?",
-        imgQuestion: "../img/Stonehendge.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
-        correct: "C",
-        level: 1
-    },
-    {
-        question: "Wdsadsadastand for?",
-        imgQuestion: "../img/TorreDosClerigos.jpg",
-        choiceA: "Wrong",
-        choiceB: "Correct",
-        choiceC: "Wrong",
-        choiceD: "Wrong",
-        correct: "B",
-        level: 1
-    }, {
-        question: "Whafdgfnd for?",
-        imgQuestion: "../img/Stonehendge.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
-        correct: "C",
-        level: 1
-    },
-    {
-        question: "OLds for?",
-        imgQuestion: "../img/TorreDeBelem.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Wrong",
-        choiceD: "Correct",
-        correct: "D",
-        level: 1
-    },
-    {
-        question: "dsadasdsasadas CSS gdfgfdgfdor?",
-        imgQuestion: "../img/TorreDosClerigos.jpg",
-        choiceA: "Wrong",
-        choiceB: "Correct",
-        choiceC: "Wrong",
-        choiceD: "Wrong",
-        correct: "B",
-        level: 1
-    },
-    {
         question: "Whadsasdasdsadsadadssa?",
         imgQuestion: "../img/Stonehendge.jpg",
         choiceA: "Wrong",
@@ -138,55 +89,6 @@ export let questions = [{
     },
     {
         question: "ddasasadas CSS gfdor?",
-        imgQuestion: "../img/TorreDosClerigos.jpg",
-        choiceA: "Wrong",
-        choiceB: "Correct",
-        choiceC: "Wrong",
-        choiceD: "Wrong",
-        correct: "B",
-        level: 2
-    },
-    {
-        question: "Was?",
-        imgQuestion: "../img/Stonehendge.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
-        correct: "C",
-        level: 2
-    },
-    {
-        question: "Whaand for?",
-        imgQuestion: "../img/TorreDosClerigos.jpg",
-        choiceA: "Wrong",
-        choiceB: "Correct",
-        choiceC: "Wrong",
-        choiceD: "Wrong",
-        correct: "B",
-        level: 2
-    }, {
-        question: "Wh for?",
-        imgQuestion: "../img/Stonehendge.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
-        correct: "C",
-        level: 2
-    },
-    {
-        question: "OLA  for?",
-        imgQuestion: "../img/TorreDeBelem.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Wrong",
-        choiceD: "Correct",
-        correct: "D",
-        level: 2
-    },
-    {
-        question: "CSS stand for?",
         imgQuestion: "../img/TorreDosClerigos.jpg",
         choiceA: "Wrong",
         choiceB: "Correct",
@@ -243,55 +145,7 @@ export let questions = [{
         choiceD: "Wrong",
         correct: "B",
         level: 3
-    },
-    {
-        question: "Wh321321sadadssa?",
-        imgQuestion: "../img/Stonehendge.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
-        correct: "C",
-        level: 3
     }, {
-        question: "W213321?",
-        imgQuestion: "../img/Stonehendge.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
-        correct: "C",
-        level: 3
-    }, {
-        question: "Wghtjsa?",
-        imgQuestion: "../img/Stonehendge.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
-        correct: "C",
-        level: 3
-    }, {
-        question: "Wha123?",
-        imgQuestion: "../img/Stonehendge.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
-        correct: "C",
-        level: 3
-    },
-    {
-        question: "Whsdasdasa?",
-        imgQuestion: "../img/Stonehendge.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
-        correct: "C",
-        level: 3
-    },
-    {
         question: "What213a?",
         imgQuestion: "../img/Stonehendge.jpg",
         choiceA: "Wrong",
@@ -342,53 +196,6 @@ export let questions = [{
         level: 4
     },
     {
-        question: "dsa213?",
-        imgQuestion: "../img/Stonehendge.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
-        correct: "C",
-        level: 4
-    }, {
-        question: "dsad34543?",
-        imgQuestion: "../img/Stonehendge.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
-        correct: "C",
-        level: 4
-    }, {
-        question: "2134534g?",
-        imgQuestion: "../img/Stonehendge.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
-        correct: "C",
-        level: 4
-    },{
-        question: "hry654?",
-        imgQuestion: "../img/Stonehendge.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
-        correct: "C",
-        level: 4
-    },
-    {
-        question: "21a?",
-        imgQuestion: "../img/Stonehendge.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
-        correct: "C",
-        level: 4
-    },
-    {
         question: "Wha321dad?",
         imgQuestion: "../img/Stonehendge.jpg",
         choiceA: "Wrong",
@@ -430,53 +237,6 @@ export let questions = [{
     },
     {
         question: "W32ssa?",
-        imgQuestion: "../img/Stonehendge.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
-        correct: "C",
-        level: 5
-    },
-    {
-        question: "html1234?",
-        imgQuestion: "../img/Stonehendge.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
-        correct: "C",
-        level: 5
-    },
-    {
-        question: "hjoijhgdsa?",
-        imgQuestion: "../img/Stonehendge.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
-        correct: "C",
-        level: 5
-    }, {
-        question: "sada?",
-        imgQuestion: "../img/Stonehendge.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
-        correct: "C",
-        level: 5
-    }, {
-        question: "Wadadada?",
-        imgQuestion: "../img/Stonehendge.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
-        correct: "C",
-        level: 5
-    }, {
-        question: "johgn?",
         imgQuestion: "../img/Stonehendge.jpg",
         choiceA: "Wrong",
         choiceB: "Wrong",

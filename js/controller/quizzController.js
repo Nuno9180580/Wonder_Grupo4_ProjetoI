@@ -55,9 +55,11 @@ for (const user of users) {
         userLevel = user.level
     }
 }
+let countQuestions = 0 // 5 questoes no máximo a ser respondidas
 let tempQuestions = []
 let range = 0;
-let randomIndex = 0;
+let randomIndex = -1;
+range = tempQuestions.length - 1; //quantidade de perguntas no array temporario
 
 start.addEventListener("click", quizStart); //botao para comecar o quiz
 //botoes para as escolhas
@@ -78,12 +80,15 @@ checkD.addEventListener("click", function () {
 
 //start quizz
 function quizStart() {
+    countQuestions = 0;
     start.style.display = "none" //esconde o botao de iniciar quiz
     renderQuestion(); //da render na questao para o quiz
+    console.log("renderquest start done")
     quiz.style.display = "block" //mostra o quiz no centro
     levelShow.style.display = "block" //mostra o container do nivel
     timerShow.style.display = "block" //mostra o container do timer
     renderCounter(); //começa o contador
+    console.log("rendercouter start done")
     timer = setInterval(renderCounter, 1000) // executa a funcao de 1 em 1 segundo
 }
 
@@ -101,9 +106,7 @@ function renderQuestion() {
         }
     }
 
-    range = tempQuestions.length - 1; //quantidade de perguntas no array temporario
-    randomIndex = Math.floor((Math.random() * range) + 0);
-
+    randomIndex++;
     //função que carrega para o quiz a pergunta aleatoria
     question.innerHTML = `<p>${tempQuestions[randomIndex].question}</p>`
     questionImage.innerHTML = `<img src=${tempQuestions[randomIndex].imgQuestion}>`
@@ -111,6 +114,7 @@ function renderQuestion() {
     choiceB.innerHTML = tempQuestions[randomIndex].choiceB
     choiceC.innerHTML = tempQuestions[randomIndex].choiceC
     choiceD.innerHTML = tempQuestions[randomIndex].choiceD
+    countQuestions++
 }
 
 //funcao para o contador do quiz
@@ -138,21 +142,52 @@ function renderCounter() {
 
 //função que verifica a resposta
 function checkAnswer(answer) {
-    if (answer === questions[randomIndex].correct) {
-        //se estiver correto
-        console.log("a ser executado")
-        renderQuestion();
+    //se escolher a opçao correta enquanto nao responder
+    console.log(countQuestions)
+    count = 0;
+    if (countQuestions < 5) {
+        console.log(answer)
+        console.log(tempQuestions[randomIndex].correct)
+        if (answer === tempQuestions[randomIndex].correct) {
+            //aumenta o contador das questoes
+            userScore++;
+            renderQuestion();
+            console.log("renderquest on check done")
+        } else { //falta se acertar tudo
+            //quiz fecha e abre página de game over
+            clearInterval(timer);
+            endQuiz.style.display = "block" //mostra o botao de iniciar quiz
+            quiz.style.display = "none" //esconde o quiz no centro
+            endQuiz.innerHTML = `
+                    <img src="${imgAvatar}" id="endQuiz">
+                    <p id="endScore">Pontuação: ${userScore}</p>
+                    <p id="endLabel">FIM DO JOGO!</p>
+                    `
+            levelShow.style.display = "none" //esconde o container do nivel
+            timerShow.style.display = "none" //esconde o container do timer
+        }
     } else {
+        //atribui o score na mesma
+        userScore++;
         //quiz fecha e abre página de game over
         clearInterval(timer);
         endQuiz.style.display = "block" //mostra o botao de iniciar quiz
         quiz.style.display = "none" //esconde o quiz no centro
         endQuiz.innerHTML = `
-        <img src="${imgAvatar}" id="endQuiz">
-        <p id="endScore">Pontuação: ${userScore}</p>
-        <p id="endLabel">FIM DO JOGO!</p>
-        `
+                <img src="${imgAvatar}" id="endQuiz">
+                <p id="endScore">Pontuação: ${userScore}</p>
+                <p id="endLabel">Parabéns, passaste ao próximo nível!</p>
+                `
         levelShow.style.display = "none" //esconde o container do nivel
         timerShow.style.display = "none" //esconde o container do timer
+        //utilizador passa para o próximo nivel
+        for (const user of users) {
+            if (user.username === userOn) {
+                user.level = user.level + 1;
+                user.score = userScore + user.score;
+                localStorage.setItem("users", JSON.stringify(users))
+                console.log(user.level)
+            }
+        }
     }
 }
