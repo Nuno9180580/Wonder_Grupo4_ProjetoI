@@ -76,8 +76,7 @@ document.querySelector("#removeForm").addEventListener("submit", function (event
     for (const user of users) {
         userIndex++;
         if (removeName === user.username) {
-            users.indexOf(removeName)
-            users.splice(userIndex, 1);
+            users.splice(userIndex-1, 1);
             localStorage.setItem("users", JSON.stringify(users))
             userListLoad(); 
         }
