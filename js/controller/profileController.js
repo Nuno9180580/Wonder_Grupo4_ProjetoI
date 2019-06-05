@@ -13,6 +13,7 @@ const userExp = document.querySelector("#xpBar")
 const userImg = document.querySelector("#cardImg")
 const userEmail = document.querySelector("#emailAdress")
 const userPass = document.querySelector("#passWord")
+const scoreUser = document.querySelector("#scoreLabel")
 cardTitle.innerHTML = userOn;
 labelUser.innerHTML = userOn;
 let imgAvatar = ""
@@ -20,6 +21,7 @@ let userLvl2 = ""
 let userXP = ""
 let email = ""
 let pass = ""
+let userScore = ""
 for (const user of users) {
   if (user.username === userOn) {
     imgAvatar = user.userImage
@@ -27,7 +29,7 @@ for (const user of users) {
     userXP = user.experience
     email = user.email
     pass = user.password
-
+    userScore = user.score
   }
 }
 
@@ -35,10 +37,10 @@ for (const user of users) {
 
 
 function xpBarColor() {
-  if (userXP <= 33) {
+  if (userXP <= 200) {
     userExp.style.backgroundColor = "red";
 
-  } else if (userXP >= 33 && userXP <= 66) {
+  } else if (userXP >= 200 && userXP <= 550) {
     userExp.style.backgroundColor = "#ffa812";
 
   } else {
@@ -49,12 +51,12 @@ function xpBarColor() {
 xpBarColor();
 userImg.src = imgAvatar
 userExp.innerHTML = userXP
-userExp.style.width = userXP + "%";
+userExp.style.width = userXP + "px";
 userAvatar.src = imgAvatar
 userLvl.innerHTML = "Nível: " + userLvl2
 userEmail.value = email;
 userPass.value = pass;
-
+scoreUser.innerHTML = "Pontuação: " + userScore
 
 
 document.querySelector("#img1").addEventListener("click", function (event){
