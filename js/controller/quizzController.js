@@ -114,8 +114,7 @@ function renderQuestion() {
     }
     randomIndex++;
     //função que carrega para o quiz a pergunta aleatoria
-    question.innerHTML = ` < p > ${
-            tempQuestions[randomIndex].question} < /p>`
+    question.innerHTML = `<p>${tempQuestions[randomIndex].question}</p>`
     questionImage.innerHTML = `<img src=${tempQuestions[randomIndex].imgQuestion}>`
     choiceA.innerHTML = tempQuestions[randomIndex].choiceA
     choiceB.innerHTML = tempQuestions[randomIndex].choiceB
