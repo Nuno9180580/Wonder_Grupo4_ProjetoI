@@ -182,9 +182,22 @@ function checkAnswer(answer) {
         timerShow.style.display = "none" //esconde o container do timer
         //utilizador passa para o próximo nivel
         for (const user of users) {
+            //atribui XP de acordo com o nivel em que esta
             if (user.username === userOn) {
+                if (user.level === 1) {
+                    user.experience = user.experience + 50;
+                } else if (user.level === 2) {
+                    user.experience = user.experience + 100;
+                } else if (user.level === 3) {
+                    user.experience = user.experience + 150;
+                } else if (user.level === 4) {
+                    user.experience = user.experience + 700;
+                }
+                //passa para o proximo nivel
                 user.level = user.level + 1;
+                //recebe o score para possivelmente coloca lo no podio
                 user.score = userScore + user.score;
+                //atualiza a informaçao para a localStorage
                 localStorage.setItem("users", JSON.stringify(users))
                 console.log(user.level)
             }
