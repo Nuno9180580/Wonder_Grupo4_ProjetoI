@@ -33,7 +33,7 @@ document.querySelector("#kidForm").addEventListener("submit", function (event) {
         }
     }
     if (userExists === false) {
-        users.push(new User(kidName, kidMail, KidPass, 1, 0, "../img/AvatarFields.jpg", "criança",0, 0))
+        users.push(new User(kidName, kidMail, KidPass, 1, 0, "../img/AvatarFields.jpg", "criança",0, 0, 0))
         localStorage.setItem("users", JSON.stringify(users))
         alert("Utilizador Adicionado!")
         userListLoad();
@@ -57,7 +57,7 @@ document.querySelector("#adminForm").addEventListener("submit", function (event)
         }
     }
     if (userExists === false) {
-        users.push(new User(adminName, adminMail, adminPass, "1", "0", "../img/Perfil_Side_Icon.png", "admin", "",0))
+        users.push(new User(adminName, adminMail, adminPass, "1", "0", "../img/Perfil_Side_Icon.png", "admin", "",0, 0))
         localStorage.setItem("users", JSON.stringify(users))
         alert("Administrador Adicionado!")
         userListLoad();
@@ -72,13 +72,15 @@ document.querySelector("#adminForm").addEventListener("submit", function (event)
 
 document.querySelector("#removeForm").addEventListener("submit", function (event) {
     const removeName = document.querySelector("#removeName").value
+    let userIndex = 0
     for (const user of users) {
+        userIndex++;
         if (removeName === user.username) {
-                let userIndex = users.indexOf(removeName)
-                users.splice(userIndex);
-                localStorage.setItem("users", JSON.stringify(users))
-                userListLoad(); 
-            }
+            users.indexOf(removeName)
+            users.splice(userIndex, 1);
+            localStorage.setItem("users", JSON.stringify(users))
+            userListLoad(); 
+        }
     }
     event.preventDefault();
 })
