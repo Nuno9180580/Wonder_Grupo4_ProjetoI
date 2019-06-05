@@ -189,12 +189,15 @@ function checkAnswer(answer) {
                 } else if (user.level === 2) {
                     user.experience = user.experience + 100;
                 } else if (user.level === 3) {
-                    user.experience = user.experience + 150;
+                    user.experience = user.experience + 200;
                 } else if (user.level === 4) {
-                    user.experience = user.experience + 700;
+                    user.experience = user.experience + 275;
+                }
+                else if (user.level === 5) {
+                    user.experience = user.experience + 325;
                 }
                 //passa para o proximo nivel
-                user.level = user.level + 1;
+                user.level = user.level + 15;
                 //recebe o score para possivelmente coloca lo no podio
                 user.score = userScore + user.score;
                 //atualiza a informaçao para a localStorage
