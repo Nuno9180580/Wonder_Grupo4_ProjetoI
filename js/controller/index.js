@@ -53,12 +53,16 @@ alertSugestion();
 function alertSugestion() {
     let alertS = ""
     for (const user of users) {
-        if (user.userType === "criança") {
+        if(user.username === userOn){
             alertS = user.alert
             if (alertS === 1) {
-                alert("Recebeste 10XP pela tua sugestão! ")
+                alert("Recebeste Pontos de Experiência pela tua sugestão! ")
+                user.alert = 0
+                localStorage.setItem("users", JSON.stringify(users))
+
             }
         }
+        
     }
 }
 
