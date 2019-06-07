@@ -4,8 +4,14 @@
     src: url("../fonts/ArchivoBlack-Regular.ttf")
 }
 
+@font-face {
+    font-family: "fredoka";
+    src: url("../fonts/FredokaOne-Regular.ttf")
+}
+
 #pageNameCenter{
     margin-right: 400px;
+    font-family: fredoka;
 }
 
 #bK{
@@ -25,11 +31,11 @@
     border: 3px solid #eb2020;
     color: black;
     background-color: white;
-
-    font-family: archivoBlack;
+    font-family: fredoka;
 }
 
 .card-title{
+    font-family: fredoka;
     font-size: 15px;
 }
 
@@ -40,7 +46,7 @@
 }
 
 #txtUserLogged{
-    font-family: archivoBlack;
+    font-family: fredoka;
     margin-left: 10px;
     font-size: 25spx;
 }
@@ -52,4 +58,17 @@
 
 .btn{
     background-color: #ffa812;
+}
+
+
+#userAvatar{
+    border: 1.5px solid white;
+    border-radius: 15px;
+}
+#userAvatar:hover {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
 }

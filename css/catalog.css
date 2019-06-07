@@ -3,21 +3,28 @@
     src: url("../fonts/ArchivoBlack-Regular.ttf")
 }
 
+@font-face {
+    font-family: "fredoka";
+    src: url("../fonts/FredokaOne-Regular.ttf")
+}
+
+
 .card {
     background-color: hsl(209, 92%, 48%);
     color: whitesmoke;
-    font-family: archivoBlack;
+    font-family: fredoka;
 }
 
 #cardTitle {
     color: white;
-    font-family: archivoBlack;
+    font-family: fredoka;
     font-size: 25px;
 }
 
 #cardOut {
     background-color: white;
     border: 5px solid hsl(209, 92%, 48%);
+    margin-bottom: 20px;
 }
 
 #cardIn {
@@ -27,28 +34,34 @@
 }
 
 
+#userAvatar{
+    border: 1.5px solid white;
+    border-radius: 15px;
+}
+
+
 
 #dropdownMenuButton {
     background-color: #ffa812;
     color: black;
-    font-family: archivoBlack;
+    font-family: fredoka;
     font-size: 18px;
 
 }
 
 
 #modalTitle {
-    font-family: archivoBlack;
+    font-family: fredoka;   
     color: white;
 }
 
 #modalYear {
-    font-family: archivoBlack;
+    font-family: fredoka;
 
 }
 
 #modalCityCountry {
-    font-family: archivoBlack;
+    font-family: fredoka;
     font-size: 25px;
 
 }
@@ -62,8 +75,8 @@
 }
 
 #descLabel {
-    font-family: archivoBlack;
-    margin-left: 15px;
+    font-family: fredoka;   
+        margin-left: 15px;
     margin-top: 15px;
 }
 
@@ -73,11 +86,12 @@
 }
 
 #pageNameCenter {
+    font-family: fredoka;
     margin-right: 320px;
 }
 
 #txtUserLogged {
-    font-family: archivoBlack;
+    font-family: fredoka;
     margin-left: 10px;
     font-size: 25spx;
 }
@@ -113,21 +127,25 @@
 }
 
 .view {
-    font-family: archivoBlack;
-    font-size: 16px;
+    font-family: fredoka;
+    font-size: 20px;
     background-color: #ffa812;
     color: black;
+    border: 2px solid #ffa812;
+    border-radius: 15px;
 }
 
 #enviar{ 
     background-color: #ffa812;
     color: black;
     margin-top: -40px;
+    font-family: fredoka;   
+
 
 }
 
 #btnClear:hover, #enviar:hover, #myBtn4:hover,
-#dropdownMenuButton:hover {
+#dropdownMenuButton:hover,#userAvatar:hover {
     -ms-transform: scale(1.1);
     /* IE 9 */
     -webkit-transform: scale(1.1);

@@ -66,12 +66,12 @@ function renderCatalog(filtername = "") {
         //geraçao do card
         result += ` 
             <div class="col-sm">
-            <div id="cardOut" class="card" style="width: 22rem; height: 23.6rem;">
+            <div id="cardOut" class="card" style="width: 22rem; height: 23.9rem;">
                 <div id="cardIn" class="card" style="width: 20rem;">
                     <img id="cardImg" class="card-img-top" src="${monument.photo}">
                     <div class="card-body">
                         <h5 id="cardTitle" class="card-title">${monument.name}</h5>
-                        <button type="button" id="${monument.name}" class="btn btn-info btn-lg view" data-toggle="modal" data-target="#myModal">Descobrir</button>                                               
+                        <button type="button" id="${monument.name}" class="btn btn-info btn-lg view" data-toggle="modal" data-target="#myModal">Sabe Mais!</button>                                               
                         </div>
                     </div>
                 </div>

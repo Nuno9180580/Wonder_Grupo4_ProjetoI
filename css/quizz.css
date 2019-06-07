@@ -1,7 +1,11 @@
+@font-face {
+    font-family: "fredoka";
+    src: url("../fonts/FredokaOne-Regular.ttf")
+}
+
 #sideMenu {
     margin-top: 95px;
     background-color: transparent;
-    font-family: archivoBlack;
 }
 
 .container-fluid {
@@ -40,7 +44,7 @@
 
 #pageNameCenter {
     margin-right: 350px;
-    font-family: archivoBlack;
+    font-family: fredoka;
 }
 
 #startQuiz {
@@ -91,6 +95,7 @@
     left: 240px;
     top: 350px;
     color: #0aac20;
+    font-family: fredoka;
 }
 
 #endLabel {
@@ -104,7 +109,7 @@
     left: 200px;
     top: 450px;
     color: #eb2020;
-    font-family: "archivoBlack";
+    font-family: fredoka;
 }
 
 @font-face {
@@ -180,7 +185,7 @@
 
 #options {
     margin-left: 200px;
-    font-family: archivoBlack;
+    font-family: fredoka;
 }
 
 #cD {
@@ -188,7 +193,7 @@
 }
 
 #txtUserLogged {
-    font-family: archivoBlack;
+    font-family: fredoka;
     margin-left: 10px;
     font-size: 25spx;
 }
@@ -205,7 +210,7 @@
     font-size: 2em;
     margin-left: -10px;
     margin-top: 10px;
-    font-family: archivoBlack;
+    font-family: fredoka;
 }
 
 #barTime {
@@ -233,14 +238,14 @@
 
 #textLevel {
     margin: 10px 53px;
-    font-family: archivoBlack;
+    font-family: fredoka;
     font-size: 30px
 }
 
 #quizLevel {
     margin: 10px 80px;
     margin-top: -15px;
-    font-family: archivoBlack;
+    font-family: fredoka;
     font-size: 50px;
     color: #0aac20;
 }
@@ -258,4 +263,17 @@
     position: absolute;
     left: 50px;
     top: 50px;
+}
+
+
+#userAvatar{
+    border: 1.5px solid white;
+    border-radius: 15px;
+}
+#userAvatar:hover {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
 }

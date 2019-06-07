@@ -3,8 +3,13 @@
     src: url("../fonts/ArchivoBlack-Regular.ttf")
 }
 
+@font-face {
+    font-family: "fredoka";
+    src: url("../fonts/FredokaOne-Regular.ttf")
+}
+
 h1 {
-    font-family: archivoBlack;
+    font-family: fredoka;
     margin-left: 400px;
 }
 
@@ -18,6 +23,20 @@ body {
     background-color: #D5F8FF;
 }
 
+
+#userAvatar{
+    border: 1.5px solid white;
+    border-radius: 15px;
+}
+#userAvatar:hover {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
+
 #welcome {
     margin-top: 40px;
     margin-left: 280px;
@@ -26,7 +45,7 @@ body {
 }
 
 #pageNameCenter {
-    font-family: archivoBlack;
+    font-family: fredoka;
     color: white;
 }
 
@@ -76,7 +95,7 @@ body {
 }
 
 #txtUserLogged {
-    font-family: archivoBlack;
+    font-family: fredoka;
     margin-left: 10px;
     font-size: 25spx;
 }
@@ -85,11 +104,12 @@ body {
     width: 290px;
     
     
+    
 }
 .card{
     background-color: #025e84;
     color: white;
-    font-family: archivoBlack;
+    font-family: fredoka;
 }
 
 /* .winner {
@@ -111,7 +131,7 @@ body {
 }
 .card-text{
 
-    font-family:'Helvetica Neue', sans-serif;
+    font-family: fredoka;
 }
 
 #sugestions{
