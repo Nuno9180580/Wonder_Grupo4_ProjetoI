@@ -62,13 +62,33 @@
 }
 
 #startQuiz:hover {
+    -ms-transform: scale(1.8);
+    /* IE 9 */
+    -webkit-transform: scale(1.8);
+    /* Safari 3-8 */
+    transform: scale(1.8);
+    
+    transition: 1.5s;
+    
+}
+
+#choiceA:hover, #choiceB:hover, #choiceC:hover, #choiceD:hover {
     -ms-transform: scale(1.1);
     /* IE 9 */
     -webkit-transform: scale(1.1);
     /* Safari 3-8 */
     transform: scale(1.1);
-    transition: 0.5s;
+    
 }
+#startQuiz:hover{
+     -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+    transition: 0.5s;
+
+          
+}
+
+
 
 #endQuiz {
     font-size: 3em;
