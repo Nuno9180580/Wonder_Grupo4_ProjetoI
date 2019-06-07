@@ -3,6 +3,10 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+@font-face {
+    font-family: "fredoka";
+    src: url("../fonts/FredokaOne-Regular.ttf")
+}
 
 .container {
     position: absolute;
@@ -78,5 +82,5 @@ input:focus {
 }
 
 h3 {
-    font-family: archivoBlack;
+    font-family: fredoka;
 }

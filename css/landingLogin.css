@@ -73,10 +73,10 @@ input:focus {
 }
 
 @font-face {
-    font-family: "archivoBlack";
-    src: url("../fonts/ArchivoBlack-Regular.ttf")
+    font-family: "fredoka";
+    src: url("../fonts/FredokaOne-Regular.ttf")
 }
 
 h3 {
-    font-family: archivoBlack;
+    font-family: fredoka;
 }
