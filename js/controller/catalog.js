@@ -122,10 +122,10 @@ function renderCatalog(filtername = "") {
                 for (const comment of comments) {
                     if (comment.monument === myMonument.name) {
                         if (i % 1 === 0) {
-                            resultComment += `<div class = "row">`
+                            resultComment += `<div class = "row" id="comentsName">`
                         }
-                        //geraçao do comentario
-                        resultComment += `<br><b>${comment.username} </b> &nbsp; <p> ${comment.userComment}, ${comment.date}</p>`
+                        //geraçao do comentario &nbsp;
+                        resultComment += `<p><b>${comment.username}:</b> &nbsp;${comment.userComment} <br> ${comment.date}</p>`
                         i++;
                         //fecha a row
                         if (i % 1 === 0) {

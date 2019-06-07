@@ -32,8 +32,13 @@
     margin-top: 11px;
 
 }
-
-
+#comentsName{
+   margin-left: 1px;
+   word-break: break-all;
+}
+#cmtDate {
+    font-size: 12px;
+}
 #userAvatar {
     border: 1.5px solid white;
     border-radius: 15px;

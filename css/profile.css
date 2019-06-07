@@ -33,6 +33,7 @@
     height: 250px;
     width: 250px;
     border: 5px solid white;
+    border-radius: 50px;
 
 }
 .container{
@@ -41,16 +42,23 @@
 .container2{
     display: flex;
 }
-
+#qwerty{
+     border: 5px solid #7f00c0;
+    border-radius: 20px;
+}
 .jb2{
     
     height: 400px;
     background-color: white;
     border: 5px solid #7f00c0;
+    border-radius: 20px;
+
 }
 #jb2{
     margin-left: 32px;
     border: 5px solid #7f00c0;
+    border-radius: 20px;
+
 }
 .jb3{
     height: 350px;  
@@ -58,6 +66,8 @@
     margin-top: -40px;
     z-index: -1;
     border: 5px solid #7f00c0;
+    border-radius: 20px;
+
     z-index: -1;
 } 
 .jb4{
@@ -66,6 +76,8 @@
     height:350px;
     background-color: white;
     border: 5px solid #7f00c0;
+    border-radius: 20px;
+
     z-index: -1;
 }
 
