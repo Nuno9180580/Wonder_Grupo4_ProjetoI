@@ -60,8 +60,8 @@
 
     <h1 id="welcome"></h1>
 
-    
-             
+
+
 
     <!-- Video -->
     <div id="videoContainer" class="container " style="width: 60rem">
@@ -75,50 +75,48 @@
 
         </div>
     </div>
-
-    <div id="sugCard" class="card" style="width: 27rem; height: 10rem;">
-        <div class="card-header">
+    <div class="container" id="sugCont">
+        <div class="card" style="width: 27rem; height: 10rem;">
+            <div class="card-header">
                 <h3 id="sugTitle">SUGERIR MONUMENTO</h3>
+            </div>
+            <input id="sugestions" type="button" class="btn" data-toggle="modal" data-target="#changePass"
+                value="SUGERIR">
         </div>
-        <input id="sugestions" type="button" class="btn" data-toggle="modal" data-target="#changePass" value="SUGERIR">
+
     </div>
 
-
-    <div class="container-fluid" id="podium">
-        <div class="card text-center winner" >
-            
-            <div class="card-body" >
+    <div class="container" id="podium">
+        <label id="podTitle" for="podium">Os Melhores</label>
+        <div class="card text-center" id="winner">
+            <div class="card-body">
                 <h4 class="card-title top1">1º Lugar:</h4>
                 <h5 id="stName"></h5>
-                <img id="stImg"  style="width: 100px; height: 100px; "  src="" alt="">
-                <p  id="stScore" class="card-text">Vazio</p>
+                <img id="stImg" src="" style="width: 100px; height: 100px;" alt="">
+                <p id="stScore" class="card-text">Vazio</p>
             </div>
         </div>
-        <div class="container" id="almostWinners">
-            <div class="card text-center losers">
-                
-                <div class="card-body">
-                    <h4 class="card-title top2">2º Lugar:</h4>
-                    <h5 id="ndName"></h5>
-                    <img id="ndImg" src="" style="width: 100px; height: 100px; " alt="">
-                    <p  id="ndScore" class="card-text">Vazio</p>
-                </div>
+        <div class="card text-center" id="second">
+            <div class="card-body">
+                <h4 class="card-title top2">2º Lugar:</h4>
+                <h5 id="ndName"></h5>
+                <img id="ndImg" src="" style="width: 100px; height: 100px;" alt="">
+                <p id="ndScore" class="card-text">Vazio</p>
             </div>
-            <div class="container">
-                <div class="card text-center ">
-                
-                <div class="card-body">
-                    <h4 class="card-title top3">3º Lugar:</h4>
-                    <h5 id="rdName"></h5>
-                    <img id="rdImg" src="" style="width: 100px; height: 100px; " alt="">
-                    <p  id="rdScore" class="card-text">Vazio</p>
-                </div>
-            </div>
-            </div>
-            
         </div>
+        <div class="card text-center" id="third">
+            <div class="card-body">
+                <h4 class="card-title top3">3º Lugar:</h4>
+                <h5 id="rdName"></h5>
+                <img id="rdImg" src="" style="width: 100px; height: 100px; " alt="">
+                <p id="rdScore" class="card-text">Vazio</p>
+            </div>
+        </div>
+    </div>
 
     </div>
+
+
 
     <div class="modal fade" id="changePass" role="dialog">
         <div class="modal-dialog">
@@ -155,7 +153,7 @@
                 </div>
             </div>
         </div>
-</div>
+    </div>
     <!-- Optional JavaScript -->
     <script type="module" src="../js/controller/index.js"></script>
     <script type="module" src="../js/views/sideBarView.js"></script>
