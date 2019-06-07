@@ -1,6 +1,11 @@
 @font-face {
     font-family: "archivoBlack";
-    src: url("../fonts/ArchivoBlack-Regular.ttf")
+    src: url("../fonts/fredoka-Regular.ttf")
+}
+
+@font-face {
+    font-family: "fredoka";
+    src: url("../fonts/FredokaOne-Regular.ttf")
 }
 
 #cardTitle,#currentLvl{
@@ -18,7 +23,7 @@
 }
 
 #txtUserLogged{
-    font-family: archivoBlack;
+    font-family: fredoka;
     margin-left: 10px;
     font-size: 25spx;
 }
@@ -101,7 +106,7 @@
     justify-content: center;
     
     
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-family: fredoka;
     font-size: 16px;
 }
 #form1{
@@ -128,7 +133,7 @@
     margin-top: 119px;
     height: 30px;
     grid-area: auto;
-    font-family: archivoBlack;
+    font-family: fredoka;
 }
 
 
@@ -143,4 +148,17 @@
     color: black
     
     
+}
+
+
+#userAvatar{
+    border: 1.5px solid white;
+    border-radius: 15px;
+}
+#userAvatar:hover {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
 }

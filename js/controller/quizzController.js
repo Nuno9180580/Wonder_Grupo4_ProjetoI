@@ -51,6 +51,9 @@ let questionTime = 20 //20segundos para o contador
 const barTimeWidth = 110; //100px de largura da barra do tempo
 const barTimeUnit = barTimeWidth / questionTime;
 let timer;
+let countQuestions = 0 // 5 questoes no máximo a ser respondidas
+let tempQuestions = []
+let nextQuest = -1;
 
 //obter o nivel do utilizador para corresponder ao niveis das perguntas
 let userLevel = ""
@@ -59,9 +62,7 @@ for (const user of users) {
         userLevel = user.level
     }
 }
-let countQuestions = 0 // 5 questoes no máximo a ser respondidas
-let tempQuestions = []
-let randomIndex = -1;
+
 
 start.addEventListener("click", quizStart); //botao para comecar o quiz
 //botoes para as escolhas
@@ -112,14 +113,14 @@ function renderQuestion() {
             localStorage.setItem("tempQuestions", JSON.stringify(tempQuestions))
         }
     }
-    randomIndex++;
+    nextQuest++;
     //função que carrega para o quiz a pergunta aleatoria
-    question.innerHTML = `<p>${tempQuestions[randomIndex].question}</p>`
-    questionImage.innerHTML = `<img src=${tempQuestions[randomIndex].imgQuestion}>`
-    choiceA.innerHTML = tempQuestions[randomIndex].choiceA
-    choiceB.innerHTML = tempQuestions[randomIndex].choiceB
-    choiceC.innerHTML = tempQuestions[randomIndex].choiceC
-    choiceD.innerHTML = tempQuestions[randomIndex].choiceD
+    question.innerHTML = `<p>${tempQuestions[nextQuest].question}</p>`
+    questionImage.innerHTML = `<img src=${tempQuestions[nextQuest].imgQuestion}>`
+    choiceA.innerHTML = tempQuestions[nextQuest].choiceA
+    choiceB.innerHTML = tempQuestions[nextQuest].choiceB
+    choiceC.innerHTML = tempQuestions[nextQuest].choiceC
+    choiceD.innerHTML = tempQuestions[nextQuest].choiceD
     countQuestions++
 }
 
@@ -144,7 +145,7 @@ function renderCounter() {
         levelShow.style.display = "none" //esconde o container do nivel
         timerShow.style.display = "none" //esconde o container do timer      
         restartImg.src = "../img/tryagain.png"
-        restartContainer.style.display = "block" //esconde o container de restart/continuar quiz
+        restartContainer.style.display = "block" //mostra o container de restart/continuar quiz
     }
 }
 
@@ -155,13 +156,13 @@ function checkAnswer(answer) {
     count = 0;
     if (countQuestions < 5) {
         console.log(answer)
-        console.log(tempQuestions[randomIndex].correct)
-        if (answer === tempQuestions[randomIndex].correct) {
+        console.log(tempQuestions[nextQuest].correct)
+        if (answer === tempQuestions[nextQuest].correct) {
             //aumenta o contador das questoes
             userScore++;
             renderQuestion();
             console.log("renderquest on check done")
-        } else { //falta se acertar tudo
+        } else {
             //quiz fecha e abre página de game over
             clearInterval(timer);
             endQuiz.style.display = "block" //mostra o botao de iniciar quiz

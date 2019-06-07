@@ -19,8 +19,8 @@ for (const user of users) {
 //Evento Click do Botão Ordem Alfabetica de A-Z
 document.getElementById("btnAToZ").addEventListener("click", function () {
     aToZ();
-
 });
+
 //Função Para ordenar de A-Z
 function aToZ() {
     monuments.sort(Monument.aToZ)
@@ -28,12 +28,11 @@ function aToZ() {
     renderCatalog();
 }
 
-
 //Evento Click do Botão Ordem Alfabetica de Z-A
 document.getElementById("btnZToA").addEventListener("click", function () {
     zToA();
-
 });
+
 //Função Para ordenar de Z-A
 function zToA() {
     monuments.sort(Monument.zToA)
@@ -41,11 +40,17 @@ function zToA() {
     renderCatalog();
 }
 
-
-
-
 //carrega os Monumentos todos 
 renderCatalog();
+//funcoes para mudar as imagens quando hover ou não
+function hover(source) {
+    source.src = "../img/fav.png"
+}
+
+function unhover(source) {
+    element.src = "../img/favEmpty.png"
+}
+
 //funcao para atualizar os Monumentos do catalogo
 function renderCatalog(filtername = "") {
 
@@ -66,16 +71,22 @@ function renderCatalog(filtername = "") {
         //geraçao do card
         result += ` 
             <div class="col-sm">
-            <div id="cardOut" class="card" style="width: 22rem; height: 23.6rem;">
+            <div id="cardOut" class="card" style="width: 22rem; height: 23.9rem;">
                 <div id="cardIn" class="card" style="width: 20rem;">
                     <img id="cardImg" class="card-img-top" src="${monument.photo}">
                     <div class="card-body">
                         <h5 id="cardTitle" class="card-title">${monument.name}</h5>
-                        <button type="button" id="${monument.name}" class="btn btn-info btn-lg view" data-toggle="modal" data-target="#myModal">Descobrir</button>                                               
+                        <div id="alignOptions">
+                            <button type="button" id="${monument.name}" class="btn btn-info btn-lg view" data-toggle="modal" data-target="#myModal">Sabe Mais!</button>     
+                            <a id="likeCard">
+                            <img class="image_on" width="60" height="auto" src="../img/favEmpty.png"><img class="image_off" width="60" height="auto" src="../img/fav.png">
+                            </a>
                         </div>
                     </div>
                 </div>
-            </div>`
+            </div>
+            </div>
+            `
         i++;
         //fecha a row
         if (i % 3 === 0) {
@@ -83,6 +94,9 @@ function renderCatalog(filtername = "") {
         }
     }
     myCatalog.innerHTML = result
+
+
+
 
     //Botão que abre a Modal
     const btnsSeeMore = document.getElementsByClassName("view")
@@ -102,6 +116,7 @@ function renderCatalog(filtername = "") {
             modalImg.src = myMonument.photo;
 
             renderComments();
+
             function renderComments() {
                 let resultComment = ""
                 for (const comment of comments) {
@@ -129,8 +144,6 @@ function renderCatalog(filtername = "") {
 
             })
 
-
-
             //função que guarda os comentarios num array
             function commentStorage() {
                 const modalTitle = document.querySelector("#modalTitle").innerHTML
@@ -146,19 +159,10 @@ function renderCatalog(filtername = "") {
                 comments.push(new Comment(txtname, txtarea, date, modalTitle))
                 localStorage.setItem("comments", JSON.stringify(comments))
                 document.querySelector("#txtarea").value = ""
-
             }
-
         })
-
     }
-
 }
-
-
-
-
-
 
 //Função que retorna o nome do Monumento
 function getMonumentByName(name) {
@@ -168,10 +172,6 @@ function getMonumentByName(name) {
         }
     }
 }
-
-
-
-
 
 //Adiciona a Imagem e o Nome do utilizador na NavBar
 const labelUser = document.querySelector("#txtUserLogged")
@@ -185,8 +185,6 @@ for (const user of users) {
 const userAvatar = document.querySelector("#userAvatar")
 userAvatar.src = imgAvatar
 
-
-
 //Função da SearchBar
 function searchMonument() {
     const searchBar = document.querySelector("#searchBar").value.toLowerCase()
@@ -198,8 +196,6 @@ function searchMonument() {
     }
 }
 
-
-
 //Ao escrever na searchBar vai automaticamente procurar os Monumentos
 document.querySelector("#searchBar").addEventListener("keyup", function () {
     searchMonument();
@@ -208,5 +204,4 @@ document.querySelector("#searchBar").addEventListener("keyup", function () {
 //Remove Os Filtros
 document.querySelector("#btnClear").addEventListener("click", function () {
     renderCatalog();
-
 })
