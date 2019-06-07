@@ -63,6 +63,13 @@ body {
     margin-left: 550px;
     margin-bottom: 150px;
 }
+#startGame{
+    background-image: url("../img/BkgPlay.jpg");
+    background-repeat: no-repeat;
+    background-size: 60rem 42rem;
+    border: 7px solid #025e84;
+    border-radius: 30px;
+}
 
 #videoContainer {
     background-color: #ffa812;
@@ -115,15 +122,7 @@ body {
 }
 
 
-.top1{
-    font-size: 28px;
-}
-.top2{
-    font-size: 22px;
-}
-.top3{
-    font-size: 18px;
-}
+
 .card-text{
 
     font-family: fredoka;
