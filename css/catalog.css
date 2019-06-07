@@ -34,7 +34,7 @@
 }
 
 
-#userAvatar{
+#userAvatar {
     border: 1.5px solid white;
     border-radius: 15px;
 }
@@ -51,7 +51,7 @@
 
 
 #modalTitle {
-    font-family: fredoka;   
+    font-family: fredoka;
     color: white;
 }
 
@@ -71,12 +71,12 @@
     border-radius: 5px;
     background-color: hsl(209, 92%, 48%);
     margin-bottom: 10px;
-    
+
 }
 
 #descLabel {
-    font-family: fredoka;   
-        margin-left: 15px;
+    font-family: fredoka;
+    margin-left: 15px;
     margin-top: 15px;
 }
 
@@ -135,17 +135,41 @@
     border-radius: 15px;
 }
 
-#enviar{ 
+
+#alignOptions {
+    display: flex;
+}
+
+#likeCard {
+    margin-left: 50px;
+    margin-top: 0px;
+    background-image: url("../img/favEmpty.png");
+}
+
+.image_off,
+#likeCard:hover .image_on {
+    display: none
+}
+
+.image_on,
+#likeCard:hover .image_off {
+    display: block
+}
+
+#enviar {
     background-color: #ffa812;
     color: black;
     margin-top: -40px;
-    font-family: fredoka;   
+    font-family: fredoka;
 
 
 }
 
-#btnClear:hover, #enviar:hover, #myBtn4:hover,
-#dropdownMenuButton:hover,#userAvatar:hover {
+#btnClear:hover,
+#enviar:hover,
+#myBtn4:hover,
+#dropdownMenuButton:hover,
+#userAvatar:hover {
     -ms-transform: scale(1.1);
     /* IE 9 */
     -webkit-transform: scale(1.1);
@@ -163,21 +187,21 @@
     background-color: transparent;
 }
 
-#comments{
+#comments {
     background-color: white;
     border: 5px solid #ffa812;
     border-radius: 5px;
 }
 
-#cardImg{
-    height:198.46px;
+#cardImg {
+    height: 198.46px;
     width: 298px;
 }
 
 
-#com{
+#com {
     margin-top: -10px;
-    margin-left:15px;
+    margin-left: 15px;
 }
 
 .card:hover {
@@ -188,5 +212,5 @@
     transform: scale(1.1);
     background-color: #50b4ff;
     transition: 0.5s;
-    
+
 }

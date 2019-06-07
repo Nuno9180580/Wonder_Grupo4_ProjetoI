@@ -101,7 +101,9 @@ body {
 }
 
 #podium {
-    width: 290px;
+    width: 300px;
+    margin-bottom: 190px;
+    margin-top: -100px;
     
     
     
@@ -112,14 +114,7 @@ body {
     font-family: fredoka;
 }
 
-/* .winner {
-    width: 300px;
-}
 
-.losers {
-
-    width: 300px;
-} */
 .top1{
     font-size: 28px;
 }
@@ -146,4 +141,43 @@ body {
 
 #sugTitle{
     margin-left: 16px;
+}
+
+#sugCont{
+    display: flex;
+    justify-content: center;
+}
+#podium{
+    margin-top:50px;
+    width: 1000px;
+    height: 1200px;
+    background-color: #025e84;
+    color:white;
+    border-radius: 5px;
+}
+#podTitle{
+    
+    font-size: 30px;
+}
+#winner{
+    margin: auto;
+    background-color: #ffa812;
+    width: 320px;
+    
+}
+#second{
+    margin: auto;
+    background-color: silver;
+    width: 300px;
+    margin-left: 165px;
+    
+}
+#third{
+    margin: auto;
+    background-color: #AC7E68;
+    width: 300px;
+    height: 237px;
+    margin-right: 165px;
+    margin-top: -237px;
+    
 }
