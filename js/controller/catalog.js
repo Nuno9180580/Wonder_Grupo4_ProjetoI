@@ -72,10 +72,14 @@ function renderCatalog(filtername = "") {
                     <div class="card-body">
                         <h5 id="cardTitle" class="card-title">${monument.name}</h5>
                         <button type="button" id="${monument.name}" class="btn btn-info btn-lg view" data-toggle="modal" data-target="#myModal">Sabe Mais!</button>                                               
-                        </div>
+                        <a id="likeCard">
+                            <img src="../img/favEmpty.png" width="40" height="auto" id="imgLikeCard">
+                        </a>
                     </div>
                 </div>
-            </div>`
+            </div>
+            </div>
+            `
         i++;
         //fecha a row
         if (i % 3 === 0) {
@@ -102,6 +106,7 @@ function renderCatalog(filtername = "") {
             modalImg.src = myMonument.photo;
 
             renderComments();
+
             function renderComments() {
                 let resultComment = ""
                 for (const comment of comments) {
