@@ -135,12 +135,25 @@
     border-radius: 15px;
 }
 
-#likeCard {
-    margin-left: 81px;
+
+#alignOptions {
+    display: flex;
 }
 
-#likeCard :hover{
-    transform: scale(1.5);
+#likeCard {
+    margin-left: 50px;
+    margin-top: 0px;
+    background-image: url("../img/favEmpty.png");
+}
+
+.image_off,
+#likeCard:hover .image_on {
+    display: none
+}
+
+.image_on,
+#likeCard:hover .image_off {
+    display: block
 }
 
 #enviar {
