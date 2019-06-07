@@ -151,8 +151,8 @@ body {
     margin-top:50px;
     width: 1000px;
     height: 1200px;
-    background-color: #025e84;
-    color:white;
+    
+    color:black;
     border-radius: 5px;
 }
 #podTitle{
@@ -161,23 +161,33 @@ body {
 }
 #winner{
     margin: auto;
-    background-color: #ffa812;
+    
     width: 320px;
+    border: 7px solid #ffa812;
+    border-radius: 30px;
     
 }
 #second{
     margin: auto;
-    background-color: silver;
-    width: 300px;
+    
+    width: 320px;
+    border: 7px solid silver;
     margin-left: 165px;
     
 }
 #third{
     margin: auto;
-    background-color: #AC7E68;
+    border: 7px solid #AC7E68;
     width: 300px;
     height: 237px;
     margin-right: 165px;
     margin-top: -237px;
     
+}
+.score{
+    font-size: 20px;
+}
+#stImg{
+    border: 5px solid #ffa812;
+    border-radius: 20px;
 }
