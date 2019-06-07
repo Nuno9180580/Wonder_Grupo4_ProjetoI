@@ -15,7 +15,7 @@
     background-color: #025e84;
     overflow-x: hidden;
     transition: 0.4s;
-    padding-top:1px;
+    padding-top: 1px;
     opacity: 60%;
     font-family: archivoBlack;
 }
@@ -39,7 +39,7 @@
     right: 25px;
     font-size: 36px;
     margin-left: 50px;
-    
+
 }
 
 @media screen and (max-height: 450px) {
@@ -51,4 +51,3 @@
         font-size: 18px;
     }
 }
-

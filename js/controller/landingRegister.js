@@ -4,9 +4,9 @@ import {
 }
 from "../models/main.js"
 
+/* ---------------------------------------------------------------------EventListeners--------------------------------------------------------*/
 
-
-//clica e valida o registo
+//botao que confirma e valida o registo
 document.querySelector("#myForm").addEventListener("submit", function (event) {
   //obter os valores dos campos
   const txtUsername = document.querySelector("#txtUsername").value

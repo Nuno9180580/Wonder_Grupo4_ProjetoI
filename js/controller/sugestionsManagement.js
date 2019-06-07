@@ -7,18 +7,30 @@ import {
 }
 from "../models/Main.js"
 import Sugestion from "../models/sugestionsModel.js";
+
+//Lê o Utilizador Ativo
 const userOn = sessionStorage.getItem('loggedUser')
-const labelUser = document.querySelector("#txtUserLogged")
-labelUser.innerHTML = userOn;
+
+//Array sugestões aceites
 let accepted = []
-let imgAvatar = ""
-for (const user of users) {
-    if (user.username === userOn) {
-        imgAvatar = user.userImage
+
+/* ---------------------------------------------------------------------Funções--------------------------------------------------------*/
+
+//Adiciona a Imagem e o Nome do utilizador na NavBar
+navBarInfo();
+
+function navBarInfo() {
+    const labelUser = document.querySelector("#txtUserLogged")
+    labelUser.innerHTML = userOn;
+    let imgAvatar = ""
+    for (const user of users) {
+        if (user.username === userOn) {
+            imgAvatar = user.userImage
+        }
     }
+    const userAvatar = document.querySelector("#userAvatar")
+    userAvatar.src = imgAvatar
 }
-const userAvatar = document.querySelector("#userAvatar")
-userAvatar.src = imgAvatar
 
 //carrega todas as sugestões
 renderCatalog();
@@ -52,10 +64,10 @@ function renderCatalog() {
         if (i % 3 === 0) {
             result += `</div>`
         }
-
     }
     myCatalog.innerHTML = result
 
+    //botão que recusa uma sugestão
     const btnRefuse = document.getElementsByClassName("refuse")
     for (const elem of btnRefuse) {
         elem.addEventListener("click", function () {
@@ -72,19 +84,18 @@ function renderCatalog() {
         })
     }
 
-
+    //botão que aceita uma sugestão
     const btnAccept = document.getElementsByClassName("accept")
     for (const elem of btnAccept) {
         elem.addEventListener("click", function () {
-
             for (const sugestion of sugestions) {
                 if (sugestion.monument === this.id) {
                     accepted.push(new Sugestion(sugestion.username, sugestion.monument, sugestion.moreInfo))
                     localStorage.setItem("accepted", JSON.stringify(accepted))
                     for (const user of users) {
                         if (sugestion.username === user.username) {
-                            user.experience = user.experience + 10
-                            user.alert = 1
+                            user.experience = user.experience + 10 //atribui 10xp ao utilizador que fez a sugestão
+                            user.alert = 1 //manda um alerta ao utilizador que fez a sugestão
                             console.log(user.username)
                             localStorage.setItem("users", JSON.stringify(users))
                             let userIndex = 0
@@ -96,13 +107,8 @@ function renderCatalog() {
                             }
                         }
                     }
-
                 }
             }
-
-
         })
     }
-
-
 }

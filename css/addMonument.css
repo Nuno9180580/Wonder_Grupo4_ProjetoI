@@ -51,7 +51,7 @@ form {
 }
 
 
-#monumentList{
+#monumentList {
     margin-top: 80px;
     margin-bottom: 80px;
 
@@ -61,7 +61,7 @@ form {
     color: white;
     border: 7px solid #73574D;
     margin-left: 50px;
-    width: 250px; 
+    width: 250px;
     height: 100%;
     border-radius: 5px;
 }
@@ -77,18 +77,18 @@ form {
 
 }
 
-#addMnt{
+#addMnt {
     margin-top: -1215px;
     margin-left: 330px;
     z-index: 1;
 
 }
 
-#removeCard{
+#removeCard {
     margin-top: -760px;
 
     margin-left: 880px;
-    
+
 }
 
 #txtUserLogged {
@@ -96,14 +96,13 @@ form {
     margin-left: 10px;
     font-size: 25spx;
 }
+
 #sideMenu {
     margin-top: 95px;
-    background-color: transparent;  
+    background-color: transparent;
     font-family: archivoBlack;
 }
 
-.btn{
+.btn {
     background-color: #ffa812
 }
-
-

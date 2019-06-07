@@ -7,41 +7,85 @@ import {
 }
 from "../models/Main.js"
 
-//Função que lê o Utilizador Ativo
+//Lê o Utilizador Ativo
 const userOn = sessionStorage.getItem('loggedUser')
 let userLevel = 0
-for (const user of users) {
-    if (userOn == user.username) {
-        userLevel = user.level
-    }
-}
+
+
+
+/* ---------------------------------------------------------------------EventListeners--------------------------------------------------------*/
 
 //Evento Click do Botão Ordem Alfabetica de A-Z
 document.getElementById("btnAToZ").addEventListener("click", function () {
     aToZ();
 });
 
-//Função Para ordenar de A-Z
-function aToZ() {
-    monuments.sort(Monument.aToZ)
-    localStorage.setItem("monumentosAZ", JSON.stringify(monuments))
-    renderCatalog();
-}
-
 //Evento Click do Botão Ordem Alfabetica de Z-A
 document.getElementById("btnZToA").addEventListener("click", function () {
     zToA();
 });
 
-//Função Para ordenar de Z-A
-function zToA() {
-    monuments.sort(Monument.zToA)
-    localStorage.setItem("monumentosZA", JSON.stringify(monuments))
+//Ao escrever na barra de pesquisa vai automaticamente procurar os Monumentos
+document.querySelector("#searchBar").addEventListener("keyup", function () {
+    searchMonument();
+})
+
+//Remove Os Filtros
+document.querySelector("#btnClear").addEventListener("click", function () {
     renderCatalog();
+})
+
+
+/*---------------------------------------------------------------------Funções ---------------------------------------------------------------*/
+
+//Adiciona a Imagem e o Nome do utilizador na NavBar
+navBarInfo();
+
+function navBarInfo() {
+    const labelUser = document.querySelector("#txtUserLogged")
+    labelUser.innerHTML = userOn;
+    let imgAvatar = ""
+    for (const user of users) {
+        if (user.username === userOn) {
+            imgAvatar = user.userImage
+        }
+    }
+    const userAvatar = document.querySelector("#userAvatar")
+    userAvatar.src = imgAvatar
 }
 
-//carrega os Monumentos todos 
-renderCatalog();
+//Função que retorna o nivel do user
+getUserLvl();
+
+function getUserLvl() {
+    for (const user of users) {
+        if (userOn == user.username) {
+            userLevel = user.level
+        }
+    }
+}
+
+
+//Função da barra de pesquisa
+function searchMonument() {
+    const searchBar = document.querySelector("#searchBar").value.toLowerCase()
+    for (const monument of monuments) {
+        let monumentName = monument.name.toLowerCase()
+        if (monumentName.includes(searchBar)) {
+            renderCatalog(searchBar)
+        }
+    }
+}
+
+//Função que retorna o nome do Monumento
+function getMonumentByName(name) {
+    for (const monument of monuments) {
+        if (monument.name === name) {
+            return monument
+        }
+    }
+}
+
 //funcoes para mudar as imagens quando hover ou não
 function hover(source) {
     source.src = "../img/fav.png"
@@ -51,9 +95,24 @@ function unhover(source) {
     element.src = "../img/favEmpty.png"
 }
 
-//funcao para atualizar os Monumentos do catalogo
-function renderCatalog(filtername = "") {
+//Função Para ordenar de Z-A
+function zToA() {
+    monuments.sort(Monument.zToA)
+    localStorage.setItem("monumentosZA", JSON.stringify(monuments))
+    renderCatalog();
+}
 
+//Função Para ordenar de A-Z
+function aToZ() {
+    monuments.sort(Monument.aToZ)
+    localStorage.setItem("monumentosAZ", JSON.stringify(monuments))
+    renderCatalog();
+}
+
+//funcao para atualizar os Monumentos do catalogo
+renderCatalog();
+
+function renderCatalog(filtername = "") {
     const myCatalog = document.querySelector("#myCatalog")
     let result = "";
     let i = 0;
@@ -95,9 +154,6 @@ function renderCatalog(filtername = "") {
     }
     myCatalog.innerHTML = result
 
-
-
-
     //Botão que abre a Modal
     const btnsSeeMore = document.getElementsByClassName("view")
     for (const elem of btnsSeeMore) {
@@ -115,6 +171,7 @@ function renderCatalog(filtername = "") {
             modalDescription.innerHTML = myMonument.description
             modalImg.src = myMonument.photo;
 
+            //função que adiciona os comentarios nos respetivos monumentos
             renderComments();
 
             function renderComments() {
@@ -141,7 +198,6 @@ function renderCatalog(filtername = "") {
                 commentStorage();
                 renderComments();
                 event.preventDefault();
-
             })
 
             //função que guarda os comentarios num array
@@ -163,45 +219,3 @@ function renderCatalog(filtername = "") {
         })
     }
 }
-
-//Função que retorna o nome do Monumento
-function getMonumentByName(name) {
-    for (const monument of monuments) {
-        if (monument.name === name) {
-            return monument
-        }
-    }
-}
-
-//Adiciona a Imagem e o Nome do utilizador na NavBar
-const labelUser = document.querySelector("#txtUserLogged")
-labelUser.innerHTML = userOn;
-let imgAvatar = ""
-for (const user of users) {
-    if (user.username === userOn) {
-        imgAvatar = user.userImage
-    }
-}
-const userAvatar = document.querySelector("#userAvatar")
-userAvatar.src = imgAvatar
-
-//Função da SearchBar
-function searchMonument() {
-    const searchBar = document.querySelector("#searchBar").value.toLowerCase()
-    for (const monument of monuments) {
-        let monumentName = monument.name.toLowerCase()
-        if (monumentName.includes(searchBar)) {
-            renderCatalog(searchBar)
-        }
-    }
-}
-
-//Ao escrever na searchBar vai automaticamente procurar os Monumentos
-document.querySelector("#searchBar").addEventListener("keyup", function () {
-    searchMonument();
-})
-
-//Remove Os Filtros
-document.querySelector("#btnClear").addEventListener("click", function () {
-    renderCatalog();
-})

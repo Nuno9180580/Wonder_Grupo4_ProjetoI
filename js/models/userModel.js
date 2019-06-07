@@ -1,8 +1,5 @@
-/**
- * Classe para modelar um utilizador
- */
 export default class User {
-    constructor (username, email, password, level, experience, userImage, userType, alert, blocked, score) {
+    constructor(username, email, password, level, experience, userImage, userType, alert, blocked, score) {
         this.username = username
         this.email = email
         this.password = password
@@ -24,5 +21,5 @@ export default class User {
         }
         return 0;
     }
-    
+
 }

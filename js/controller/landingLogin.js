@@ -1,16 +1,17 @@
 import {
-    users,
-    loginSubmit
-  }
-  from "../models/main.js"
-
+  users,
+  loginSubmit
+}
+from "../models/main.js"
 const btnLogin = document.querySelector("#btnLogin")
 
-btnLogin.addEventListener("click", function (event) {
-    //obter os valores dos campos
-    const txtUsername = document.querySelector("#txtUsername").value
-    const txtPass = document.querySelector("#txtPass").value
+/* ---------------------------------------------------------------------EventListeners--------------------------------------------------------*/
 
-    loginSubmit(txtUsername, txtPass)
-    event.preventDefault()
+//Botão de confirmar o login
+btnLogin.addEventListener("click", function (event) {
+  //obter os valores dos campos
+  const txtUsername = document.querySelector("#txtUsername").value
+  const txtPass = document.querySelector("#txtPass").value
+  loginSubmit(txtUsername, txtPass)
+  event.preventDefault()
 })

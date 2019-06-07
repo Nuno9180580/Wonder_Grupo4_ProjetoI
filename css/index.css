@@ -24,10 +24,11 @@ body {
 }
 
 
-#userAvatar{
+#userAvatar {
     border: 1.5px solid white;
     border-radius: 15px;
 }
+
 #userAvatar:hover {
     -ms-transform: scale(1.1);
     /* IE 9 */
@@ -58,22 +59,24 @@ body {
     height: auto;
 }
 
-#sugCard{
+#sugCard {
     align-content: center;
     margin-left: 550px;
     margin-bottom: 150px;
 }
-#startGame{
+
+#startGame {
     background-image: url("../img/BkgPlay.jpg");
     background-repeat: no-repeat;
     background-size: 60rem 35rem;
     border: 7px solid #025e84;
     border-radius: 30px;
 }
-#startBtn{
+
+#startBtn {
     margin-left: 420px;
     margin-bottom: -800px;
-    border:5px solid black;
+    border: 5px solid black;
     border-radius: 20px;
 }
 
@@ -117,11 +120,12 @@ body {
     width: 300px;
     margin-bottom: 190px;
     margin-top: -100px;
-    
-    
-    
+
+
+
 }
-.card{
+
+.card {
     background-color: #025e84;
     color: white;
     font-family: fredoka;
@@ -129,12 +133,12 @@ body {
 
 
 
-.card-text{
+.card-text {
 
     font-family: fredoka;
 }
 
-#sugestions{
+#sugestions {
     background-color: #ffa812;
     height: 60px;
     width: 340px;
@@ -144,55 +148,62 @@ body {
 
 }
 
-#sugTitle{
+#sugTitle {
     margin-left: 16px;
 }
 
-#sugCont{
+#sugCont {
     display: flex;
     justify-content: center;
 }
-#podium{
-    margin-top:50px;
+
+#podium {
+    margin-top: 50px;
     width: 1000px;
     height: 1200px;
-    
-    color:black;
+
+    color: black;
     border-radius: 5px;
 }
-#podTitle{
-    
+
+#podTitle {
+
     font-size: 30px;
 }
-#winner{
+
+#winner {
     margin: auto;
-    
+
     width: 320px;
     border: 7px solid #ffa812;
     border-radius: 30px;
-    
+
 }
-#second{
+
+#second {
     margin: auto;
-    
+
     width: 320px;
     border: 7px solid silver;
     margin-left: 165px;
-    
+
 }
-#third{
+
+#third {
     margin: auto;
     border: 7px solid #AC7E68;
     width: 300px;
     height: 257px;
     margin-right: 165px;
     margin-top: -237px;
-    
+
 }
-.score{
+
+.score {
     font-size: 20px;
 }
-#stImg{
+
+#stImg {
     border: 5px solid #ffa812;
     border-radius: 20px;
 }

@@ -50,27 +50,27 @@ form {
     margin-bottom: 20px;
 }
 
-.btn{
+.btn {
     background-color: #ffa812
 }
 
 .flex-container {
     display: flex;
     flex-wrap: wrap;
-  }
+}
 
 .card {
-   margin-left: 360px;
-   margin-top: -500px;
-   margin-bottom: 360px;
+    margin-left: 360px;
+    margin-top: -500px;
+    margin-bottom: 360px;
 
-   
+
     color: white;
     border: 7px solid #73574D;
     background-color: #73574D;
 }
 
-#userList{
+#userList {
     margin-top: 80px;
     background-color: #73574D;
     font-family: archivoBlack;
@@ -78,29 +78,29 @@ form {
     color: white;
     border: 7px solid #73574D;
     margin-left: 50px;
-    width: 250px; 
+    width: 250px;
     height: 500px;
     border-radius: 5px;
 }
 
-p{
+p {
     margin-top: 20px;
     margin-left: 20px;
     font-size: 20px;
 }
 
-#addKid{
+#addKid {
     margin-left: 20px;
 }
 
-.butao{
+.butao {
     margin-left: 10px;
     margin-top: -2px;
     background-color: #ffa812;
     font-family: archivoBlack;
 }
 
-.butao:hover{
+.butao:hover {
     -ms-transform: scale(1.1);
     /* IE 9 */
     -webkit-transform: scale(1.1);
@@ -113,12 +113,9 @@ p{
     margin-left: 10px;
     font-size: 25px;
 }
+
 #sideMenu {
     margin-top: 95px;
-    background-color: transparent;  
+    background-color: transparent;
     font-family: archivoBlack;
 }
-
-
-
-

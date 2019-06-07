@@ -1,4 +1,3 @@
-
 h1 {
     font-family: archivoBlack;
     margin-left: 400px;
@@ -34,24 +33,25 @@ body {
     margin-left: 10px;
     font-size: 25px;
 }
+
 #sideMenu {
     margin-top: 95px;
-    background-color: transparent;  
+    background-color: transparent;
     font-family: archivoBlack;
 }
 
-.container{
+.container {
     margin-top: 100px;
     margin-left: 200px;
 }
 
-.refuse{
+.refuse {
     background-color: red;
     color: white;
 
 }
 
-.accept{
+.accept {
     background-color: green;
     color: white;
 

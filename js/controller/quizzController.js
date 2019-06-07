@@ -45,7 +45,6 @@ const restartContainer = document.querySelector("#restartContainer")
 const restartImg = document.querySelector("#restartImg")
 const maxLevel = document.querySelector("#showMaxLevel")
 const setBackgroudColor = document.querySelector("#containerChangeColor")
-
 let count = 0;
 let questionTime = 20 //20segundos para o contador
 const barTimeWidth = 110; //100px de largura da barra do tempo
@@ -54,7 +53,6 @@ let timer;
 let countQuestions = 0 // 5 questoes no máximo a ser respondidas
 let tempQuestions = []
 let nextQuest = -1;
-
 //obter o nivel do utilizador para corresponder ao niveis das perguntas
 let userLevel = ""
 for (const user of users) {
@@ -63,8 +61,11 @@ for (const user of users) {
     }
 }
 
+/* ---------------------------------------------------------------------EventListeners--------------------------------------------------------*/
 
-start.addEventListener("click", quizStart); //botao para comecar o quiz
+//botao para comecar o quiz
+start.addEventListener("click", quizStart);
+
 //botoes para as escolhas
 checkA.addEventListener("click", function () {
     checkAnswer("A")
@@ -79,7 +80,7 @@ checkD.addEventListener("click", function () {
     checkAnswer("D")
 })
 
-//-------------------------------------------FUNÇÕES---------------------------------------------------------//
+/* ---------------------------------------------------------------------Funções--------------------------------------------------------*/
 
 //start quizz
 function quizStart() {

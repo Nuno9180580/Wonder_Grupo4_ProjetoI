@@ -28,7 +28,7 @@ if (localStorage.monuments) {
     monuments = JSON.parse(localStorage.monuments)
 } else {
     // Só vai entrar aqui a primeira vez
-    const mnt1 = new Monument("Torre Eiffel", "1889 d.C.", "../img/TorreEiffel.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França","1")
+    const mnt1 = new Monument("Torre Eiffel", "1889 d.C.", "../img/TorreEiffel.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França", "1")
     const mnt2 = new Monument("Pirâmides de Gizé", "1850 a.C.", "../img/PiramidesDeGize.jpg", "Lorem Ipsum", "Cairo", "Egito", "1")
     const mnt3 = new Monument("Big Ben", "1859 d.C.", "../img/BigBen.jpg", "Lorem Ipsum", "Londres", "Reino Unido", "1")
     const mnt4 = new Monument("Stonehendge", "3001 a.C.", "../img/Stonehendge.jpg", "Lorem Ipsum", "Salisbury", "Reino Unido", "1")
@@ -38,7 +38,7 @@ if (localStorage.monuments) {
     const mnt8 = new Monument("Coliseu de Roma", "80 d.C.", "../img/ColiseuDeRoma.jpg", "Lorem Ipsum", "Roma", "Itália", "2")
     const mnt9 = new Monument("Palácio da Pena", "1854 d.C.", "../img/PalacioDaPena.jpg", "Lorem Ipsum", "Sintra", "Portugal", "2")
     const mnt10 = new Monument("Palácio da Pena", "1854 d.C.", "../img/PalacioDaPena.jpg", "Lorem Ipsum", "Sintra", "Portugal", "2")
-    const mnt11 = new Monument("Torre Eiffel", "1889 d.C.", "../img/TorreEiffel.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França","2")
+    const mnt11 = new Monument("Torre Eiffel", "1889 d.C.", "../img/TorreEiffel.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França", "2")
     const mnt12 = new Monument("Pirâmides de Gizé", "1850 a.C.", "../img/PiramidesDeGize.jpg", "Lorem Ipsum", "Cairo", "Egito", "2")
     const mnt13 = new Monument("Big Ben", "1859 d.C.", "../img/BigBen.jpg", "Lorem Ipsum", "Londres", "Reino Unido", "3")
     const mnt14 = new Monument("Stonehendge", "3001 a.C.", "../img/Stonehendge.jpg", "Lorem Ipsum", "Salisbury", "Reino Unido", "3")
@@ -48,7 +48,7 @@ if (localStorage.monuments) {
     const mnt18 = new Monument("Coliseu de Roma", "80 d.C.", "../img/ColiseuDeRoma.jpg", "Lorem Ipsum", "Roma", "Itália", "3")
     const mnt19 = new Monument("Palácio da Pena", "1854 d.C.", "../img/PalacioDaPena.jpg", "Lorem Ipsum", "Sintra", "Portugal", "4")
     const mnt20 = new Monument("Palácio da Pena", "1854 d.C.", "../img/PalacioDaPena.jpg", "Lorem Ipsum", "Sintra", "Portugal", "4")
-    const mnt21 = new Monument("Torre Eiffel", "1889 d.C.", "../img/TorreEiffel.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França","4")
+    const mnt21 = new Monument("Torre Eiffel", "1889 d.C.", "../img/TorreEiffel.jpg", "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.", "Paris", "França", "4")
     const mnt22 = new Monument("Pirâmides de Gizé", "1850 a.C.", "../img/PiramidesDeGize.jpg", "Lorem Ipsum", "Cairo", "Egito", "4")
     const mnt23 = new Monument("Big Ben", "1859 d.C.", "../img/BigBen.jpg", "Lorem Ipsum", "Londres", "Reino Unido", "4")
     const mnt24 = new Monument("Stonehendge", "3001 a.C.", "../img/Stonehendge.jpg", "Lorem Ipsum", "Salisbury", "Reino Unido", "4")
@@ -67,7 +67,7 @@ export let comments = []
 if (localStorage.comments) {
     comments = JSON.parse(localStorage.comments)
 } else {
-    const com = new Comment("", "", "","")
+    const com = new Comment("", "", "", "")
     comments.push(com)
     localStorage.setItem("comments", JSON.stringify(comments))
 }
@@ -99,7 +99,7 @@ export function registerSubmit(txtUsername, txtEmail, txtPass, txtConfirmPass) {
         }
         if (usernameExists === false && emailExists === false) {
             alert("Conta criada com sucesso!")
-            users.push(new User(txtUsername, txtEmail, txtPass, 1, 0, "../img/AvatarFields.jpg","criança",0, 0, 0))
+            users.push(new User(txtUsername, txtEmail, txtPass, 1, 0, "../img/AvatarFields.jpg", "criança", 0, 0, 0))
             localStorage.setItem("users", JSON.stringify(users))
             sessionStorage.setItem("loggedUser", txtUsername)
             window.location.href = "../html/index.html" //redireciona para apagina login
@@ -127,20 +127,18 @@ export function loginSubmit(txtUsername, txtPass) {
             sessionStorage.setItem("loggedUser", txtUsername)
             userType = user.userType
             existUser = true
-            if(user.blocked === 0){
+            if (user.blocked === 0) {
                 alert(`Bem-vindo ${txtUsername}!`)
-            if(userType == "admin"){
-                window.location.href = "../html/backOffice.html" //redireciona para a pagina principal
-            }
-            else{
-                window.location.href = "../html/index.html" //redireciona para a pagina principal
+                if (userType == "admin") {
+                    window.location.href = "../html/backOffice.html" //redireciona para a pagina principal
+                } else {
+                    window.location.href = "../html/index.html" //redireciona para a pagina principal
 
-            }
-            }
-            else{
+                }
+            } else {
                 alert("Conta Bloqueada!")
             }
-            
+
         }
     }
     if (existUser === false) {
