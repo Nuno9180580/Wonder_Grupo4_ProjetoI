@@ -70,6 +70,12 @@ body {
     border: 7px solid #025e84;
     border-radius: 30px;
 }
+#startBtn{
+    margin-left: 420px;
+    margin-bottom: -800px;
+    border:5px solid black;
+    border-radius: 20px;
+}
 
 #videoContainer {
     background-color: #ffa812;
@@ -178,7 +184,7 @@ body {
     margin: auto;
     border: 7px solid #AC7E68;
     width: 300px;
-    height: 237px;
+    height: 257px;
     margin-right: 165px;
     margin-top: -237px;
     
