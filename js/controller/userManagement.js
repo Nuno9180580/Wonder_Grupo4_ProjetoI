@@ -13,7 +13,7 @@ const userOn = sessionStorage.getItem('loggedUser')
 
 //adiciona um user criança
 document.querySelector("#kidForm").addEventListener("submit", function (event) {
-    const id = users[users.length -1]["id"]+1
+    const id = users[users.length - 1]["id"] + 1
     const kidName = document.querySelector("#kidName").value
     const kidMail = document.querySelector("#kidMail").value
     const KidPass = document.querySelector("#kidPass").value
@@ -37,7 +37,7 @@ document.querySelector("#kidForm").addEventListener("submit", function (event) {
 
 //adiciona um user administrador
 document.querySelector("#adminForm").addEventListener("submit", function (event) {
-    const id = users[users.length -1]["id"]+1
+    const id = users[users.length - 1]["id"] + 1
     const adminName = document.querySelector("#adminName").value
     const adminMail = document.querySelector("#adminMail").value
     const adminPass = document.querySelector("#adminPass").value
@@ -64,12 +64,17 @@ document.querySelector("#adminForm").addEventListener("submit", function (event)
 document.querySelector("#removeForm").addEventListener("submit", function (event) {
     const removeName = document.querySelector("#removeName").value
     let userIndex = 0
-    for (const user of users) {
-        userIndex++;
-        if (removeName === user.username) {
-            users.splice(userIndex - 1, 1);
-            localStorage.setItem("users", JSON.stringify(users))
-            userListLoad();
+
+    if (removeName === userOn) {
+        alert("Não te podes remover a ti mesmo!")
+    } else {
+        for (const user of users) {
+            userIndex++;
+            if (removeName === user.username) {
+                users.splice(userIndex - 1, 1);
+                localStorage.setItem("users", JSON.stringify(users))
+                userListLoad();
+            }
         }
     }
     event.preventDefault();
