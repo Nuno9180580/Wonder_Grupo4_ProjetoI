@@ -62,6 +62,7 @@ function monumentListLoad() {
 
 //função que adiciona um novo Monumento
 function newMonument() {
+    const id = monuments[monuments.length -1]["id"]+1
     const name = document.querySelector("#name").value
     const country = document.querySelector("#country").value
     const city = document.querySelector("#city").value
@@ -75,8 +76,9 @@ function newMonument() {
             monumentExists = true
         }
     }
+    
     if (monumentExists === false) {
-        monuments.push(new Monument(name, year, img, description, city, country, lvl))
+        monuments.push(new Monument(id, name, year, img, description, city, country, lvl))
         localStorage.setItem("monuments", JSON.stringify(monuments))
         monumentListLoad();
         alert("Monumento Adicionado!")

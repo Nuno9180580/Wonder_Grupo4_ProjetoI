@@ -1,0 +1,90 @@
+@font-face {
+    font-family: "fredoka";
+    src: url("../fonts/FredokaOne-Regular.ttf");
+  }
+  
+  body {
+    background-image: url(../img/BkgIMG.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: #025e84;
+  }
+  
+  .container {
+    position: absolute;
+    height: 100%;
+    align-content: center;
+  }
+  
+  .social_icon {
+    position: absolute;
+    right: 20px;
+    top: -45px;
+  }
+  
+  .social_icon span {
+    font-size: 60px;
+    margin-left: 10px;
+    color: white;
+  }
+  
+  .social_icon span:hover {
+    color: white;
+    cursor: pointer;
+  }
+  
+  .card-header h3 {
+    color: white;
+    text-align: center;
+  }
+  
+  .input-group-prepend span {
+    width: 50px;
+    background-color: #025e85;
+    color: white;
+    border: 0 !important;
+  }
+  
+  input:focus {
+    outline: 0 0 0 0 !important;
+    box-shadow: 0 0 0 0 !important;
+  }
+  
+  .login_btn {
+    color: white;
+    background-color: #025e85;
+    width: 140px;
+  }
+  
+  .login_btn:hover {
+    color: black;
+    background-color: white;
+  }
+  
+  .links {
+    color: white;
+  }
+  
+  .links a {
+    margin-left: 4px;
+  }
+  
+  h3 {
+    font-family: fredoka;
+  }
+  
+  .card {
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 400px;
+    background-color: rgba(255, 176, 0, 0.9) !important;
+  }
+  
+  .card.login {
+    height: 330px;
+  }
+  
+  .card.register {
+    height: 500px;
+  }
+  
