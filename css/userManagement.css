@@ -3,46 +3,21 @@
     src: url("../fonts/ArchivoBlack-Regular.ttf")
 }
 
-h1 {
-    font-family: archivoBlack;
-    margin-left: 400px;
-}
 
 .navbar-dark .navbar-toggler {
     border-color: rgba(255, 255, 255, 0);
     color: white;
-
 }
 
 body {
     background-color: #D9D0C7;
 }
 
-#pageNameCenter {
-    font-family: archivoBlack;
-    color: white;
-    margin-left: 250px;
-}
-
-
-
-#txtUserLogged {
-    font-family: archivoBlack;
-    margin-left: 10px;
-    font-size: 25spx;
-}
-
-
-@font-face {
-    font-family: "archivoBlack";
-    src: url("../fonts/ArchivoBlack-Regular.ttf")
-}
 
 form {
     margin-top: 20px;
     margin-bottom: 20px;
     margin-left: 30px;
-
 }
 
 .input {
@@ -51,20 +26,15 @@ form {
 }
 
 .btn {
+    font-family: archivoBlack;
     background-color: #ffa812
 }
 
-.flex-container {
-    display: flex;
-    flex-wrap: wrap;
-}
 
 .card {
-    margin-left: 360px;
-    margin-top: -500px;
+    margin-left: 400px;
+    margin-top: -149px;
     margin-bottom: 360px;
-
-
     color: white;
     border: 7px solid #73574D;
     background-color: #73574D;
@@ -73,30 +43,20 @@ form {
 #userList {
     margin-top: 80px;
     background-color: #73574D;
-    font-family: archivoBlack;
-    size: 15px;
     color: white;
     border: 7px solid #73574D;
     margin-left: 50px;
-    width: 250px;
-    height: 500px;
+    width: 300px;
+    height: auto;
     border-radius: 5px;
-}
-
-p {
-    margin-top: 20px;
-    margin-left: 20px;
     font-size: 20px;
 }
 
-#addKid {
-    margin-left: 20px;
-}
 
-.butao {
+.botao {
     margin-left: 10px;
-    margin-top: -2px;
     background-color: #ffa812;
+    font-size: 20px;
     font-family: archivoBlack;
 }
 
@@ -111,11 +71,5 @@ p {
 #txtUserLogged {
     font-family: archivoBlack;
     margin-left: 10px;
-    font-size: 25px;
-}
-
-#sideMenu {
-    margin-top: 95px;
-    background-color: transparent;
-    font-family: archivoBlack;
+    font-size: 20px;
 }

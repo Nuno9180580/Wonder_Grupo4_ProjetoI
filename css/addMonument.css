@@ -18,45 +18,20 @@ body {
     background-color: #D9D0C7;
 }
 
-#pageNameCenter {
-    font-family: archivoBlack;
-    color: white;
-    margin-left: 150px;
-}
-
-
-
-#txtUserLogged {
-    font-family: archivoBlack;
-    margin-left: 10px;
-    font-size: 25spx;
-}
-
-
-@font-face {
-    font-family: "archivoBlack";
-    src: url("../fonts/ArchivoBlack-Regular.ttf")
-}
-
 form {
-    margin-top: 20px;
-    margin-bottom: 20px;
     margin-left: 30px;
-
 }
 
 .input {
     margin-top: 20px;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 
 #monumentList {
     margin-top: 80px;
     margin-bottom: 80px;
-
     background-color: #73574D;
-    font-family: archivoBlack;
     size: 15px;
     color: white;
     border: 7px solid #73574D;
@@ -74,7 +49,6 @@ form {
     color: white;
     border: 7px solid #73574D;
     background-color: #73574D;
-
 }
 
 #addMnt {
@@ -85,8 +59,7 @@ form {
 }
 
 #removeCard {
-    margin-top: -760px;
-
+    margin-top: -565px;
     margin-left: 880px;
 
 }
@@ -94,15 +67,11 @@ form {
 #txtUserLogged {
     font-family: archivoBlack;
     margin-left: 10px;
-    font-size: 25spx;
-}
-
-#sideMenu {
-    margin-top: 95px;
-    background-color: transparent;
-    font-family: archivoBlack;
+    font-size: 20px;
 }
 
 .btn {
-    background-color: #ffa812
+    background-color: #ffa812;
+    font-family: archivoBlack;
+
 }
