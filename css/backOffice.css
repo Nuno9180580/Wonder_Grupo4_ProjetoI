@@ -50,6 +50,8 @@ body {
 #adicionar {
     background-color: #ffa812;
     font-family: archivoBlack;
+    border: 2px solid white;
+    border-radius: 15px;
 }
 
 
@@ -59,15 +61,12 @@ body {
     margin-right: 30px;
     margin-block-end: 40px;
     color: white;
-    border: 7px solid #73574D;
+    border: 0px solid #73574D;
     background-color: #73574D;
-
+    border-radius: 22px;
 }
 
-.card-img-top {
-    border: 3px solid #D9D0C7;
 
-}
 
 .card-title {
     font-family: archivoBlack;
