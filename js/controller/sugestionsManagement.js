@@ -16,6 +16,8 @@ let accepted = []
 
 /* ---------------------------------------------------------------------Funções--------------------------------------------------------*/
 
+
+
 //Adiciona a Imagem e o Nome do utilizador na NavBar
 navBarInfo();
 
@@ -32,6 +34,18 @@ function navBarInfo() {
     userAvatar.src = imgAvatar
 }
 
+alertSugestion();
+
+function alertSugestion() {
+    if (sugestions === undefined || sugestions.length == 0) {
+        alert("Não existem Sugestões")
+        location.href = "../html/backOffice.html"
+
+    }   
+
+}
+
+
 //carrega todas as sugestões
 renderCatalog();
 
@@ -47,11 +61,12 @@ function renderCatalog() {
         <div class="col-sm">
             <div class="card" style="width: 20rem; height: 23rem;">
             <div class="card-header">
-            <h3 id="sgtName">${sugestion.username} </h3>
+            <h3 id="sgtName" style="color:white; font-family:archivoBlack;">${sugestion.username} </h3>
 
             </div>
                 <div class="card-body">
-                    <h6 id="sgtMnmt"> ${sugestion.monument}</h6>
+                    <h3 id="sgtMnmt"> ${sugestion.monument}</h3>
+                    <br>
                     <p id="sgtInfo"> ${sugestion.moreInfo}</p>                                              
                 </div>
                 <div class="card-footer">

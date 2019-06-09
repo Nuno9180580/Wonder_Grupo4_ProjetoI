@@ -56,3 +56,29 @@ body {
     color: white;
 
 }
+
+#userAvatar {
+    border: 1.5px solid white;
+    border-radius: 15px;
+}
+
+#userAvatar:hover {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
+.card-footer, .card-header{
+    background-color: #73574D;
+}
+
+.card{
+    border: 5px solid #73574D;
+    border-radius: 10px;
+}
+
+.card-body{
+    background-color: #F5E8DF;
+}

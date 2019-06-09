@@ -45,6 +45,8 @@ form {
 
 }
 
+
+
 .input {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -71,5 +73,23 @@ form {
 #sideMenu {
     margin-top: 95px;
     background-color: transparent;
+    font-family: archivoBlack;
+}
+
+#userAvatar {
+    border: 1.5px solid white;
+    border-radius: 15px;
+}
+
+.btn:hover, #userAvatar:hover {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
+}
+
+.btn{
+    background-color: #ffa812;
     font-family: archivoBlack;
 }

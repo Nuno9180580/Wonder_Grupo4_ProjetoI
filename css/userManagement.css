@@ -32,9 +32,7 @@ form {
 
 
 .card {
-    margin-left: 400px;
-    margin-top: -149px;
-    margin-bottom: 360px;
+    margin-top: 80px;
     color: white;
     border: 7px solid #73574D;
     background-color: #73574D;
@@ -56,7 +54,7 @@ form {
 .botao {
     margin-left: 10px;
     background-color: #ffa812;
-    font-size: 20px;
+    font-size: 16px;
     font-family: archivoBlack;
 }
 
@@ -72,4 +70,16 @@ form {
     font-family: archivoBlack;
     margin-left: 10px;
     font-size: 20px;
+}
+#userAvatar {
+    border: 1.5px solid white;
+    border-radius: 15px;
+}
+
+#userAvatar:hover {
+    -ms-transform: scale(1.1);
+    /* IE 9 */
+    -webkit-transform: scale(1.1);
+    /* Safari 3-8 */
+    transform: scale(1.1);
 }

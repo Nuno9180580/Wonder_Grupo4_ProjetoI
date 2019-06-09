@@ -39,32 +39,7 @@
                 <img id="userAvatar" src="" height="40"><label id="txtUserLogged"></label>
             </a>
 
-            <!-- SideMenu -->
-            <div id="sideMenu" class="w3-sidebar" style="width:6%;right:0;">
-                <a href="index.html" class="w3-bar-item w3-button">
-                    <img src="../img/Home_Side_Icon.png" width="80" height="80" class="d-inline-block" alt="">
-                </a>
-                <a href="Profile.html" class="w3-bar-item w3-button">
-                    <img src="../img/Perfil_Side_Icon.png" width="80" height="80" class="d-inline-block" alt="">
-                </a>
-                <a href="Quizzes.html" class="w3-bar-item w3-button">
-                    <img src="../img/Quizz_Side_Icon.png" width="80" height="80" class="d-inline-block" alt="">
-                </a>
-                <a href="trophies.html" class="w3-bar-item w3-button">
-                    <img src="../img/Trophy_Side_Icon.png" width="80" height="80" class="d-inline-block" alt="">
-                </a>
-                <a href="catalog.html" class="w3-bar-item w3-button">
-                    <img src="../img/Catalog_Side_Icon.png" width="80" height="80" class="d-inline-block" alt="">
-                </a>
-            </div>
-
-
-
-
         </form>
-        <div class="topnav-centered">
-            <h1 id="pageNameCenter">ADICIONAR MONUMENTO</h1>
-        </div>
         <a class="navbar-brand" href="#">
             <!-- ICONE DO SITE WONDER AQUI!! -->
             <a class="button" href="backOffice.html"><img src="../img/logo.png" width="140" height="40"
@@ -72,9 +47,16 @@
         </a>
     </nav>
 
-    <div class="card" style="width: 35rem; height: 37rem;">
+    <div class="card" style="width: 35rem; height: 100%;">
         <form id="myForm">
+            <h3>Adicionar Pergunta</h3>
             Pergunta: <input id="quest" class="input" type="text"><br>
+            Imagem: <input id="questImg" class="input" type="text"><br>
+            Opção A: <input id="choiceA" class="input" type="text"><br>
+            Opção B: <input id="choiceB" class="input" type="text"><br>
+            Opção C: <input id="choiceC" class="input" type="text"><br>
+            Opção D: <input id="choiceD" class="input" type="text"><br>
+            Correta: <input id="correctChoice" class="input" type="text"><br>            
             Nível: <input id="lvl" class="input" type="text"><br>
             <input type="submit" class="input" value="Registar" id="btnSubmit">
         </form>

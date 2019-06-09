@@ -50,59 +50,72 @@
     <button id="blockUsers" class="btn botao" type="button">Bloquear</button>
     <button id="unBlockUsers" class="btn botao" type="button">Desbloquear</button>
 
+    <div class="row">
+        <div class="col-sm-4">
+            <div id="userList" class="container"></div>
+
+        </div>
+        <div class="col-sm-4">
+
+            <!-- Form para adicionar uma crinaça -->
+            <div id="kidCard" class="card" style="width: 35rem; height: 23rem; display: none;">
+                <form id="kidForm">
+                    <h2>Adicionar Utilizador</h2>
+                    Nome: <input id="kidName" class="input" type="text"><br>
+                    e-Mail: <input id="kidMail" class="input" type="text"><br>
+                    Pass: <input id="kidPass" class="input" type="text"><br>
+                    <input type="submit" class="btn" value="Registar" id="btnSubmit">
+                    <button id="closeKid" class="btn" type="button">Fechar</button>
+                </form>
+            </div>
+
+            <!-- Form para adicionar um Administrador -->
+            <div id="adminCard" class="card" style="width: 35rem; height: 23rem; display: none;">
+                <form id="adminForm">
+                    <h2>Adicionar Admin</h2>
+                    Nome: <input id="adminName" class="input" type="text"><br>
+                    e-Mail: <input id="adminMail" class="input" type="text"><br>
+                    Pass: <input id="adminPass" class="input" type="text"><br>
+                    <input type="submit" class="btn" value="Registar" id="btnSubmit">
+                    <button id="closeAdmin" class="btn" type="button">Fechar</button>
+                </form>
+            </div>
+
+            <div id="removeCard" class="card" style="width: 35rem; height: 23rem; display: none;">
+                <form id="removeForm">
+                    <h2>Remover Usuário</h2>
+                    Nome: <input id="removeName" class="input" type="text"><br>
+                    <input type="submit" class="btn" value="Remover" id="btnRemove">
+                    <button id="closeRemove" class="btn" type="button">Fechar</button>
+                </form>
+            </div>
+
+            <div id="blockCard" class="card" style="width: 35rem; height: 23rem; display: none;">
+                <form id="blockForm">
+                    <h2>Bloquear Usuário</h2>
+                    Nome: <input id="blockName" class="input" type="text"><br>
+                    <input type="submit" class="btn" value="Bloquear" id="btnBlock">
+                    <button id="closeBlock" class="btn" type="button">Fechar</button>
+                </form>
+            </div>
+
+            <div id="unBlockCard" class="card" style="width: 35rem; height: 23rem; display: none;">
+                <form id="unBlockForm">
+                    <h2>Desbloquear Usuário</h2>
+                    Nome: <input id="unBlockName" class="input" type="text"><br>
+                    <input type="submit" class="btn" value="Desbloquear" id="btnUnBlock">
+                    <button id="closeUnBlock" class="btn" type="button">Fechar</button>
+                </form>
+            </div>
+        <div class="col-sm-4"></div>
+
+
+        </div>
+
+
+
+    </div>
     <!--   Lista com todos os Users -->
-    <div id="userList" class="container"></div>
-
-    <!-- Form para adicionar uma crinaça -->
-    <div id="kidCard" class="card" style="width: 35rem; height: 23rem; display: none;">
-        <form id="kidForm">
-            <h2>Adicionar Utilizador</h2>
-            Nome: <input id="kidName" class="input" type="text"><br>
-            e-Mail: <input id="kidMail" class="input" type="text"><br>
-            Pass: <input id="kidPass" class="input" type="text"><br>
-            <input type="submit" class="btn" value="Registar" id="btnSubmit">
-            <button id="closeKid" class="btn" type="button">Fechar</button>
-        </form>
-    </div>
-
-    <!-- Form para adicionar um Administrador -->
-    <div id="adminCard" class="card" style="width: 35rem; height: 23rem; display: none;">
-        <form id="adminForm">
-            <h2>Adicionar Admin</h2>
-            Nome: <input id="adminName" class="input" type="text"><br>
-            e-Mail: <input id="adminMail" class="input" type="text"><br>
-            Pass: <input id="adminPass" class="input" type="text"><br>
-            <input type="submit" class="btn" value="Registar" id="btnSubmit">
-            <button id="closeAdmin" class="btn" type="button">Fechar</button>
-        </form>
-    </div>
-
-    <div id="removeCard" class="card" style="width: 35rem; height: 23rem; display: none;">
-        <form id="removeForm">
-            <h2>Remover Usuário</h2>
-            Nome: <input id="removeName" class="input" type="text"><br>
-            <input type="submit" class="btn" value="Remover" id="btnRemove">
-            <button id="closeRemove" class="btn" type="button">Fechar</button>
-        </form>
-    </div>
-
-    <div id="blockCard" class="card" style="width: 35rem; height: 23rem; display: none;">
-        <form id="blockForm">
-            <h2>Bloquear Usuário</h2>
-            Nome: <input id="blockName" class="input" type="text"><br>
-            <input type="submit" class="btn" value="Bloquear" id="btnBlock">
-            <button id="closeBlock" class="btn" type="button">Fechar</button>
-        </form>
-    </div>
-
-    <div id="unBlockCard" class="card" style="width: 35rem; height: 23rem; display: none;">
-        <form id="unBlockForm">
-            <h2>Desbloquear Usuário</h2>
-            Nome: <input id="unBlockName" class="input" type="text"><br>
-            <input type="submit" class="btn" value="Desbloquear" id="btnUnBlock">
-            <button id="closeUnBlock" class="btn" type="button">Fechar</button>
-        </form>
-    </div>
 
     <!-- Optional JavaScript -->
     <script type="module" src="../js/views/sideBarView.js"></script>

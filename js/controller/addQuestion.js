@@ -38,7 +38,14 @@ function navBarInfo() {
 //função que adiciona uma pergunta
 function addQuestion() {
     const quest = document.querySelector("#quest").value
+    const questImg = document.querySelector("#questImg").value
+    const choiceA = document.querySelector("#choiceA").value
+    const choiceB = document.querySelector("#choiceB").value
+    const choiceC = document.querySelector("#choiceC").value
+    const ChoiceD = document.querySelector("#choiceD").value
+    const correctChoice = document.querySelector("#correctChoice").value
     const lvl = document.querySelector("#lvl").value
+
     let questionsExists = false
     for (const question of questions) {
 
@@ -47,7 +54,7 @@ function addQuestion() {
         }
     }
     if (questionsExists === false) {
-        questions.push(new Question(quest, "", "", "", "", "", "", lvl))
+        questions.push(new Question(quest, questImg, choiceA, choiceB, choiceC, ChoiceD, correctChoice, lvl))
         localStorage.setItem("questions", JSON.stringify(questions))
         alert("Pergunta Adicionada!")
     } else {
