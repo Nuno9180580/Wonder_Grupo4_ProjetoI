@@ -32,7 +32,6 @@ document.querySelector("#btnClear").addEventListener("click", function() {
 
 //Adiciona a Imagem e o Nome do utilizador na NavBar
 navBarInfo();
-
 function navBarInfo() {
   const labelUser = document.querySelector("#txtUserLogged");
   labelUser.innerHTML = userOn;
@@ -48,7 +47,6 @@ function navBarInfo() {
 
 //Função que retorna o nivel do user
 getUserLvl();
-
 function getUserLvl() {
   for (const user of users) {
     if (userOn == user.username) {
@@ -77,15 +75,6 @@ function getMonumentByName(name) {
   }
 }
 
-//funcoes para mudar as imagens quando hover ou não
-// function hover(source) {
-//   source.src = "../img/fav.png";
-// }
-
-// function unhover(source) {
-//   element.src = "../img/favEmpty.png";
-// }
-
 //Função Para ordenar de Z-A
 function zToA() {
   monuments.sort(Monument.zToA);
@@ -102,7 +91,6 @@ function aToZ() {
 
 //funcao para atualizar os Monumentos do catalogo
 renderCatalog();
-
 function renderCatalog(filtername = "") {
   const myCatalog = document.querySelector("#myCatalog");
   let result = "";
@@ -189,29 +177,56 @@ function renderCatalog(filtername = "") {
 
       function renderComments() {
         let resultComment = "";
-        for (const comment of comments) {
-          if (comment.monument === myMonument.name) {
-            if (i % 1 === 0) {
-              resultComment += `<div class = "row" id="comentsName">`;
-            }
-            //geraçao do comentario &nbsp;
-            resultComment += `<p><b>${comment.username}:</b> &nbsp;${
-              comment.userComment
-            } <br> ${comment.date}</p>`;
-            i++;
-            //fecha a row
-            if (i % 1 === 0) {
-              resultComment += `</div>`;
-            }
+        let userType = ""
+        for (const user of users) {
+          if(user.username === userOn){
+            userType = user.userType
           }
         }
-        modalComments.innerHTML = resultComment;
+        if(userType === "criança"){
+          for (const comment of comments) {
+            if (comment.monument === myMonument.name) {
+              if (i % 1 === 0) {
+                resultComment += `<div class = "row" id="comentsName">`;
+              }
+              //geraçao do comentario &nbsp;
+              resultComment += `<p><b>${comment.username}:</b> &nbsp;${
+                comment.userComment
+              } <br> ${comment.date}</p>`;
+              i++;
+              //fecha a row
+              if (i % 1 === 0) {
+                resultComment += `</div>`;
+              }
+            }
+          }
+          modalComments.innerHTML = resultComment;
+        }
+        else{
+          for (const comment of comments) {
+            if (comment.monument === myMonument.name) {
+              if (i % 1 === 0) {
+                resultComment += `<div class = "row" id="comentsName">`;
+              }
+              //geraçao do comentario &nbsp;
+              resultComment += `<p><b>${comment.id}, ${comment.username}:</b> &nbsp;${
+                comment.userComment
+              } <br> ${comment.date}</p>`;
+              i++;
+              //fecha a row
+              if (i % 1 === 0) {
+                resultComment += `</div>`;
+              }
+            }
+          }
+          modalComments.innerHTML = resultComment;
+        
+        }
+      
       }
 
       //Botão que envia os comentários
-      document
-        .querySelector("#com")
-        .addEventListener("submit", function(event) {
+      document.querySelector("#com").addEventListener("submit", function(event) {
           commentStorage();
           renderComments();
           event.preventDefault();
@@ -222,6 +237,7 @@ function renderCatalog(filtername = "") {
         const modalTitle = document.querySelector("#modalTitle").innerHTML;
         const txtarea = document.querySelector("#txtarea").value;
         let today = new Date();
+        let id = comments[comments.length -1]["id"]+1
         let date =
           today.getFullYear() +
           "-" +
@@ -234,7 +250,7 @@ function renderCatalog(filtername = "") {
             txtname = user.username;
           }
         }
-        comments.push(new Comment(txtname, txtarea, date, modalTitle));
+        comments.push(new Comment(id, txtname, txtarea, date, modalTitle));
         localStorage.setItem("comments", JSON.stringify(comments));
         document.querySelector("#txtarea").value = "";
       }
@@ -242,32 +258,33 @@ function renderCatalog(filtername = "") {
   }
 }
 
-let favsImgs = document.getElementsByClassName("fav-image");
-if (favsImgs) {
-  const favsImgsArr = Array.from(favsImgs);
-
-  favsImgsArr.forEach(element => {
-    element.addEventListener("mouseover", function(elem) {
-      if (element.dataset.favorited == "False") {
-        element.src = "../img/fav.png";
-      } else {
-        element.src = "../img/favEmpty.png";
-      }
+toggleFav();
+function toggleFav(){
+  let favsImgs = document.getElementsByClassName("fav-image");
+  if (favsImgs) {
+    const favsImgsArr = Array.from(favsImgs);
+  
+    favsImgsArr.forEach(element => {
+      element.addEventListener("mouseover", function(elem) {
+        if (element.dataset.favorited == "False") {
+          element.src = "../img/fav.png";
+        } else {
+          element.src = "../img/favEmpty.png";
+        }
+      });
     });
-  });
-
-  favsImgsArr.forEach(element => {
-    element.addEventListener("mouseout", function(elem) {
-      if (element.dataset.favorited == "False") {
-        element.src = "../img/favEmpty.png";
-      } else {
-        element.src = "../img/fav.png";
-      }
+  
+    favsImgsArr.forEach(element => {
+      element.addEventListener("mouseout", function(elem) {
+        if (element.dataset.favorited == "False") {
+          element.src = "../img/favEmpty.png";
+        } else {
+          element.src = "../img/fav.png";
+        }
+      });
     });
-  });
-}
-
-// toggle favorited
+  }
+  // toggle favorited
 let favsList = document.getElementsByClassName("fav-toggle");
 if (favsList) {
   const favsListArr = Array.from(favsList);
@@ -307,3 +324,11 @@ if (favsList) {
     });
   });
 }
+
+
+
+
+}
+
+
+

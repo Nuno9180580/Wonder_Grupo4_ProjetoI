@@ -1,10 +1,12 @@
 import {
     users,
-    sugestions
+    sugestions,
+    monuments
 }
 from "../models/Main.js"
 import Sugestion from "../models/sugestionsModel.js";
 import User from "../models/userModel.js";
+import Monument from "../models/monumentModel.js";
 
 //Lê o Utilizador Ativo
 const userOn = sessionStorage.getItem('loggedUser')
@@ -103,4 +105,23 @@ function renderHighScore() {
         console.log(first + second + third)
     }
     console.log(scores)
+}
+
+//Funão que renderiza os monumentos mais populares
+
+renderFavoritedMnmt();
+function renderFavoritedMnmt(){
+    let favs = []
+    monuments.sort(Monument.favoritedMnmt)
+    localStorage.setItem("bestMnmts", JSON.stringify(monuments))
+    if (localStorage.getItem("bestMnmts")) {
+        favs = JSON.parse(localStorage.getItem("bestMnmts"))
+        let first = favs[0].name
+        let second = favs[1].name
+        let third = favs[2].name  
+        document.querySelector("#stFav").innerHTML = "1º" + first
+        document.querySelector("#ndFav").innerHTML =  "2º" + second
+        document.querySelector("#rdFav").innerHTML =  "3º" + third
+        console.log(first + " " + second + " " + third)
+    }
 }

@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>WONDER</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/commentsManagement.css">
+    <link rel="stylesheet" href="../css/sideBarView.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-dark" style="background-color: #73574D;">
+        <form>
+            <!-- BOTAO HAMBURGUER  -->
+            <button class="navbar-toggler" type="button">
+                <span style="font-size:30px;cursor:pointer" id="openNav">&#9776;</span>
+            </button>
+
+            <div id="mySidenav" class="sidenav">
+                <a href="javascript:void(0)" class="closeBtn" id="closeNav">&times;</a>
+                <a href="backOffice.html" id="BackOfficeView">BackOffice</a>
+                <a href="#" id="optionAbout">Sobre</a>
+                <a href="#" id="optionLogout">Sair</a>
+            </div>
+
+            <!-- AVATAR REDIRECIONA PARA PERFIL -->
+            <a class="navbar-brand" href="#">
+                <img id="userAvatar" src="" height="40"><label id="txtUserLogged"></label>
+            </a>
+
+            <!-- SideMenu -->
+            <div id="sideMenu" class="w3-sidebar" style="width:6%;right:0;">
+                <a href="index.html" class="w3-bar-item w3-button">
+                    <img src="../img/Home_Side_Icon.png" width="80" height="80" class="d-inline-block" alt="">
+                </a>
+                <a href="Profile.html" class="w3-bar-item w3-button">
+                    <img src="../img/Perfil_Side_Icon.png" width="80" height="80" class="d-inline-block" alt="">
+                </a>
+                <a href="Quizzes.html" class="w3-bar-item w3-button">
+                    <img src="../img/Quizz_Side_Icon.png" width="80" height="80" class="d-inline-block" alt="">
+                </a>
+                <a href="trophies.html" class="w3-bar-item w3-button">
+                    <img src="../img/Trophy_Side_Icon.png" width="80" height="80" class="d-inline-block" alt="">
+                </a>
+                <a href="catalog.html" class="w3-bar-item w3-button">
+                    <img src="../img/Catalog_Side_Icon.png" width="80" height="80" class="d-inline-block" alt="">
+                </a>
+            </div>
+
+
+
+
+        </form>
+        <div class="topnav-centered">
+            <h1 id="pageNameCenter">COMMENTS</h1>
+        </div>
+        <a class="navbar-brand" href="#">
+            <!-- ICONE DO SITE WONDER AQUI!! -->
+            <a class="button" href="backOffice.html"><img src="../img/logo.png" width="140" height="40"
+                    class="d-inline-block"></a>
+        </a>
+    </nav>
+
+    <div class="card" style="width: 35rem; height: 37rem;">
+        <form id="myForm">
+            id do Comment: <input id="quest" class="input" type="text"><br>
+            <input type="submit" class="input" value="Delete" id="btnSubmit">
+        </form>
+    </div>
+    <div class="card" style="width: 35rem; height: 37rem;">
+            <form id="myForm">
+                id do Comment: <input id="giveXP" class="input" type="text"><br>
+                <input type="submit" class="input" value="Delete" id="btnGive">
+            </form>
+        </div>
+    
+
+
+    <!-- Optional JavaScript -->
+    <script type="module" src="../js/controller/commentsManagement.js"></script>
+    <script type="module" src="../js/views/sideBarView.js"></script>
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
+    </script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

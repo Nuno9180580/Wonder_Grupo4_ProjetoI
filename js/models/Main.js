@@ -365,7 +365,7 @@ export let comments = [];
 if (localStorage.comments) {
   comments = JSON.parse(localStorage.comments);
 } else {
-  const com = new Comment("", "", "", "");
+  const com = new Comment(0,"", "", "", "");
   comments.push(com);
   localStorage.setItem("comments", JSON.stringify(comments));
 }
