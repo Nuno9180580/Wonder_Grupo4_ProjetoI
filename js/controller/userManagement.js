@@ -48,7 +48,7 @@ document.querySelector("#adminForm").addEventListener("submit", function (event)
         }
     }
     if (userExists === false) {
-        users.push(new User(id, adminName, adminMail, adminPass, "1", "0", "../img/Perfil_Side_Icon.png", "admin", "", 0, 0))
+        users.push(new User(id, adminName, adminMail, adminPass, "1", "0", "../img/AvatarAdmin.jpg", "admin", "", 0, 0))
         localStorage.setItem("users", JSON.stringify(users))
         alert("Administrador Adicionado!")
         userListLoad();

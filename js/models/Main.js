@@ -318,7 +318,7 @@ if (localStorage.users) {
       dummyUser["password"],
       dummyUser["level"],
       dummyUser["experience"],
-      "../img/Perfil_Side_Icon.png",
+      "../img/AvatarAdmin.jpg",
       dummyUser["userType"],
       dummyUser["alert"],
       dummyUser["blocked"],
