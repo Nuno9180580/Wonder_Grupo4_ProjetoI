@@ -87,6 +87,13 @@
                 <img src="" id="restartImg">
             </a>
         </div>
+
+        <!--imagem para informar que acertou-->
+        <div class="container-fluid-left-side" id="continueOverlay" style="display: none">
+            <a id="continueBtn">
+                <img src="../img/continueOverlay.png" id="continueImg">
+            </a>
+        </div>
         <div class="container-fluid" id="containerChangeColor" style="background-color: white">
             <div style="display: block">
                 <img src="../img/start.png" id="startQuiz">
@@ -126,7 +133,6 @@
                                 <div class="choiceLetter">D</div>
                                 <div class="choice" id="D"></div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -135,12 +141,14 @@
                 <img src="" id="endQuiz">
             </div>
         </div>
-    </div>
 
+    </div>
 
     <!-- Optional JavaScript -->
     <script type="module" src="../js/controller/quizzController.js"> </script>
     <script type="module" src="../js/views/sideBarView.js"></script>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous">

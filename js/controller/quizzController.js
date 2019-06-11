@@ -161,8 +161,12 @@ function checkAnswer(answer) {
         if (answer === tempQuestions[nextQuest].correct) {
             //aumenta o contador das questoes
             userScore++;
+            swal({
+                title: "Acertaste!",
+                icon: "success",
+                button: "Continuar!",
+            });
             renderQuestion();
-            console.log("renderquest on check done")
         } else {
             //quiz fecha e abre página de game over
             clearInterval(timer);

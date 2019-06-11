@@ -302,3 +302,38 @@
     /* Safari 3-8 */
     transform: scale(1.1);
 }
+
+/* alert box */
+#box {
+    width: 500px;
+    height: 250px;
+    overflow: hidden;
+    background: white;
+    box-shadow: 0 0 5px black;
+    border-radius: 8px;
+    border: 2px solid #ffa812;
+    margin: auto;
+    padding: 10px;
+    text-align: center;
+    z-index: 999;
+    transform: translate(0%, 40%);
+}
+
+#box h1 {
+    font-family: "fredoka";
+    color: black;
+    margin: auto;
+    margin-top: 10px;
+    font-size: 40px;
+}
+
+.close {
+    color: black;
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: #ffa812;
+    margin-top: 20px;
+    margin-right: 157px;
+    font-family: "fredoka";
+    font-size: 20px;
+}
