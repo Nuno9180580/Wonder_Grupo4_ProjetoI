@@ -74,8 +74,8 @@
     <!-- Video -->
     <div id="videoContainer" class="container " style="width: 60rem">
         <div class="row">
-            <div class="card" style="width: 60rem;">
-                <div class="embed-responsive embed-responsive-21by9">
+            <div class="card" id="you2" style="width: 60rem;">
+                <div id="you" class="embed-responsive embed-responsive-21by9">
                     <video controls>
                         <source src="../img/P.mp4" type="video/mp4"></video>
                 </div>
@@ -83,53 +83,98 @@
 
         </div>
     </div>
-    <div class="container" id="sugCont">
-        <div class="card" style="width: 27rem; height: 10rem;">
-            <div class="card-header">
-                <h3 id="sugTitle">SUGERIR MONUMENTO</h3>
-            </div>
-            <input id="sugestions" type="button" class="btn" data-toggle="modal" data-target="#changePass"
-                value="SUGERIR">
-        </div>
 
+    <div id="sugestMnmt" class="container" style="width: 60rem ; height: 35rem;">
+        <a class="btn" data-toggle="modal" data-target="#changePass" value="SUGERIR">
+            <img id="startBtn" src="../img/BtnSugerir.png" width="400" height="160" class="d-inline-block" alt="">
+        </a>
     </div>
+
+
     <h1 id="podTitle">Os Melhores</h1>
-    <div class="container" id="podium">
 
-        <div class="card text-center" id="winner">
-            <div class="card-body">
-                <h4 class="card-title top1">1º Lugar:</h4>
-                <h5 id="stName"></h5>
-                <img id="stImg" src="" style="width: 150px; height: 150px;" alt="">
-                <p id="stScore" class="card-text score">Vazio</p>
+    <div class="row">
+        <div class="col-sm-4">
+
+            <div class="card text-center" id="winner">
+                <div class="card-body">
+                    <h4 class="card-title top1">1º Lugar:</h4>
+                    <h5 id="stName"></h5>
+                    <img id="stImg" src="" style="width: 150px; height: 150px;" alt="">
+                    <p id="stScore" class="card-text score">Vazio</p>
+                </div>
             </div>
         </div>
-        <div class="card text-center" id="second">
-            <div class="card-body">
-                <h4 class="card-title top2">2º Lugar:</h4>
-                <h5 id="ndName"></h5>
-                <img id="ndImg" src="" style="width: 100px; height: 100px;" alt="">
-                <p id="ndScore" class="card-text score">Vazio</p>
+        <div class="col-sm-4">
+            <div class="card text-center" id="second">
+                <div class="card-body">
+                    <h4 class="card-title top2">2º Lugar:</h4>
+                    <h5 id="ndName"></h5>
+                    <img id="ndImg" src="" style="width: 150px; height: 150px;" alt="">
+                    <p id="ndScore" class="card-text score">Vazio</p>
+                </div>
             </div>
         </div>
-        <div class="card text-center" id="third">
-            <div class="card-body">
-                <h4 class="card-title top3">3º Lugar:</h4>
-                <h5 id="rdName"></h5>
-                <img id="rdImg" src="" style="width: 100px; height: 100px; " alt="">
-                <p id="rdScore" class="card-text score">Vazio</p>
+        <div class="col-sm-4">
+
+            <div class="card text-center" id="third">
+                <div class="card-body">
+                    <h4 class="card-title top3">3º Lugar:</h4>
+                    <h5 id="rdName"></h5>
+                    <img id="rdImg" src="" style="width: 150px; height: 150px; " alt="">
+                    <p id="rdScore" class="card-text score">Vazio</p>
+                </div>
             </div>
         </div>
+
     </div>
+ 
+
+
+    <h1 id="podTitle">Monumentos Favoritos</h1>
+
+    <div class="row">
+        <div class="col-sm-4">
+
+            <div class="card text-center" id="winner">
+                <div class="card-body">
+                    <h4 class="card-title top1">1º Lugar:</h4>
+                    <h5 id="stFav"></h5>
+                    <img id="stFavImg" src="" style="width: 200px; height: 150px;" alt="">
+                    <p id="stFavScore" class="card-text score">Vazio</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+            <div class="card text-center" id="second">
+                <div class="card-body">
+                    <h4 class="card-title top2">2º Lugar:</h4>
+                    <h5 id="ndFav"></h5>
+                    <img id="ndFavImg" src="" style="width: 200px; height: 150px;" alt="">
+                    <p id="ndFavScore" class="card-text score">Vazio</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-4">
+
+            <div class="card text-center" id="third">
+                <div class="card-body">
+                    <h4 class="card-title top3">3º Lugar:</h4>
+                    <h5 id="rdFav"></h5>
+                    <img id="rdFavImg" src="" style="width: 200px; height: 150px; " alt="">
+                    <p id="rdFavScore" class="card-text score">Vazio</p>
+                </div>
+            </div>
+        </div>
 
     </div>
+ 
 
-<div>
-        <h3 id="stFav"></h3>
-        <h3 id="ndFav"></h3>
-        <h3 id="rdFav"></h3>
+    
 
-</div>
+   
+
+   
 
     <div class="modal fade" id="changePass" role="dialog">
         <div class="modal-dialog">

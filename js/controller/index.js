@@ -119,9 +119,22 @@ function renderFavoritedMnmt(){
         let first = favs[0].name
         let second = favs[1].name
         let third = favs[2].name  
+        let firstImg   = favs[0].photo
+        let secondImg  = favs[1].photo
+        let thirdImg = favs[2].photo
+        let firstScore = favs[0].usersFav.length
+        let secondScore = favs[0].usersFav.length
+        let thirdScore = favs[0].usersFav.length
         document.querySelector("#stFav").innerHTML = "1º" + first
         document.querySelector("#ndFav").innerHTML =  "2º" + second
         document.querySelector("#rdFav").innerHTML =  "3º" + third
-        console.log(first + " " + second + " " + third)
+        document.querySelector("#stFavImg").src =  firstImg
+        document.querySelector("#ndFavImg").src =  secondImg
+        document.querySelector("#rdFavImg").src =  thirdImg
+        document.querySelector("#stFavScore").innerHTML = firstScore + " " + "Favoritos"
+        document.querySelector("#ndFavScore").innerHTML = secondScore + " " + "Favoritos"
+        document.querySelector("#rdFavScore").innerHTML = thirdScore   + " " + "Favoritos"
+
+
     }
 }

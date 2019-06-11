@@ -73,6 +73,14 @@ body {
     border-radius: 30px;
 }
 
+#sugestMnmt {
+    background-image: url("../img/BkgSugerir.jpg");
+    background-repeat: no-repeat;
+    background-size: 60rem 35rem;
+    border: 7px solid #025e84;
+    border-radius: 30px;
+}
+
 #startBtn {
     margin-left: 420px;
     margin-bottom: -800px;
@@ -81,11 +89,21 @@ body {
 }
 
 #videoContainer {
-    background-color: #ffa812;
     margin-top: 20px;
     margin-bottom: 20px;
-    border: 10px solid #ffa812;
-    border-radius: 10px;
+   
+    
+}
+
+#you{
+    border: 7px solid #ffa812;
+    border-radius: 20px;
+    background-color: #025e84
+}
+
+#you2{
+    border: 0px solid #ffa812;
+    border-radius: 20px;
 }
 
 #topMenu {
@@ -125,11 +143,6 @@ body {
 
 }
 
-.card {
-    background-color: #025e84;
-    color: white;
-    font-family: fredoka;
-}
 
 
 
@@ -171,39 +184,66 @@ body {
     font-size: 30px;
 }
 
-#winner {
-    margin: auto;
-
-    width: 320px;
-    border: 7px solid #ffa812;
-    border-radius: 30px;
-
-}
-
-#second {
-    margin: auto;
-
-    width: 320px;
-    border: 7px solid silver;
-    margin-left: 165px;
-
-}
-
-#third {
-    margin: auto;
-    border: 7px solid #AC7E68;
-    width: 300px;
-    height: 257px;
-    margin-right: 165px;
-    margin-top: -237px;
-
-}
 
 .score {
     font-size: 20px;
 }
 
-#stImg {
-    border: 5px solid #ffa812;
+#stImg, #stFavImg {
+    border: 5px solid #DAA520;
     border-radius: 20px;
 }
+
+#ndIm, #ndFavImg  {
+    border: 5px solid #c0c0c0;
+    border-radius: 20px;
+}
+
+#rdImg, #rdFavImg  {
+    border: 5px solid #b87333;
+    border-radius: 20px;
+}
+
+#winner {
+    margin: auto;
+    margin-left: 230px;
+    margin-right: -100px;
+    width: 320px;
+    border: 7px solid #DAA520;
+    border-radius: 30px;
+    background-color: #025e84;
+    color:white;
+    font-family: fredoka;
+
+}
+
+
+#second {
+    margin: auto;
+    margin-left: 75px;
+    width: 320px;
+    border: 7px solid #c0c0c0;
+    border-radius: 30px;
+    background-color: #025e84;
+    color:white;
+    font-family: fredoka;
+
+
+
+}
+
+
+#third {
+    margin: auto;
+    margin-left: -80px;    
+    width: 320px;
+    border: 7px solid #b87333;
+    border-radius: 30px;
+    background-color: #025e84;
+    color:white;
+    font-family: fredoka;
+    
+
+}
+
+
