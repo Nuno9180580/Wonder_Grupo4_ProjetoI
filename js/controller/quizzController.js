@@ -155,12 +155,14 @@ function checkAnswer(answer) {
     //se escolher a opçao correta enquanto nao responder
     console.log(countQuestions)
     count = 0;
-    if (countQuestions < 5) {
+    if (countQuestions < 6) {
         console.log(answer)
         console.log(tempQuestions[nextQuest].correct)
         if (answer === tempQuestions[nextQuest].correct) {
+            console.log("pergunta numero:"+countQuestions)
             //aumenta o contador das questoes
             userScore++;
+            //funcao que mostra alert personalizado
             swal({
                 title: "Acertaste!",
                 icon: "success",
