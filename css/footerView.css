@@ -38,7 +38,7 @@
     margin-top: 30px;
 }
 
-#myFooter h2 a{
+#myFooter h2 a {
     font-size: 50px;
     text-align: center;
     color: #fff;
@@ -106,32 +106,38 @@
 /* CSS used for positioning the footers at the bottom of the page. */
 /* You can remove this. */
 
-#htmlSecond{
+#htmlSecond {
     height: 100%;
 }
 
-#bodySecond{
+#bodySecond {
     display: flex;
     display: -webkit-flex;
     flex-direction: column;
-    -webkit-flex-direction: column; 
+    -webkit-flex-direction: column;
     height: 100%;
 }
 
-.content{
-   flex: 1 0 auto;
-   -webkit-flex: 1 0 auto;
-   min-height: 100px;
+.content {
+    flex: 1 0 auto;
+    -webkit-flex: 1 0 auto;
+    min-height: 100px;
 }
 
-#myFooter{
-   flex: 0 0 auto;
-   -webkit-flex: 0 0 auto;
+#myFooter {
+    flex: 0 0 auto;
+    -webkit-flex: 0 0 auto;
 }
 
-#myFooter img{
+#wonderLogo {
     margin-left: -100px;
     margin-top: 60px;
     width: 100%;
     height: auto;
+}
+
+#esmadLogo {
+    width: auto;
+    height: 170px;
+    margin-top: 30px;
 }
