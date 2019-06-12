@@ -80,19 +80,61 @@ renderHighScore();
 
 function renderHighScore() {
     let scores = []
+    let first = ""
+    let firstImg = ""
+    let firstScore = ""
+    let second = ""
+    let secondImg = ""
+    let secondScore = ""
+    let third = ""
+    let thirdImg = ""
+    let thirdScore = ""
     users.sort(User.highScore)
     localStorage.setItem("highscores", JSON.stringify(users))
     if (localStorage.getItem("highscores")) {
         scores = JSON.parse(localStorage.getItem("highscores"))
-        let first = scores[0].username
-        let firstImg = scores[0].userImage
-        let firstScore = scores[0].score
-        let second = scores[1].username
-        let secondImg = scores[1].userImage
-        let secondScore = scores[1].score
-        let third = scores[2].username
-        let thirdImg = scores[2].userImage
-        let thirdScore = scores[2].score
+        if (scores[0].username === "admin") {
+            first = scores[1].username
+            firstImg = scores[1].userImage
+            firstScore = scores[1].score
+            second = scores[2].username
+            secondImg = scores[2].userImage
+            secondScore = scores[2].score
+            third = scores[3].username
+            thirdImg = scores[3].userImage
+            thirdScore = scores[3].score
+        } else if (scores[1].username === "admin") {
+            first = scores[0].username
+            firstImg = scores[0].userImage
+            firstScore = scores[0].score
+            second = scores[2].username
+            secondImg = scores[2].userImage
+            secondScore = scores[2].score
+            third = scores[3].username
+            thirdImg = scores[3].userImage
+            thirdScore = scores[3].score
+        } else if (scores[2].username === "admin") {
+            first = scores[0].username
+            firstImg = scores[0].userImage
+            firstScore = scores[0].score
+            second = scores[1].username
+            secondImg = scores[1].userImage
+            secondScore = scores[1].score
+            third = scores[3].username
+            thirdImg = scores[3].userImage
+            thirdScore = scores[3].score
+        } else {
+            first = scores[0].username
+            firstImg = scores[0].userImage
+            firstScore = scores[0].score
+            second = scores[1].username
+            secondImg = scores[1].userImage
+            secondScore = scores[1].score
+            third = scores[2].username
+            thirdImg = scores[2].userImage
+            thirdScore = scores[2].score
+        }
+        //coloca os valores em cada podio
         document.querySelector("#stName").innerHTML = first
         document.querySelector("#stImg").src = firstImg
         document.querySelector("#stScore").innerHTML = firstScore + " " + "Pontos"
@@ -102,7 +144,6 @@ function renderHighScore() {
         document.querySelector("#rdName").innerHTML = third
         document.querySelector("#rdImg").src = thirdImg
         document.querySelector("#rdScore").innerHTML = thirdScore + " " + "Pontos"
-        console.log(first + second + third)
     }
     console.log(scores)
 }
@@ -110,7 +151,8 @@ function renderHighScore() {
 //Funão que renderiza os monumentos mais populares
 
 renderFavoritedMnmt();
-function renderFavoritedMnmt(){
+
+function renderFavoritedMnmt() {
     let favs = []
     monuments.sort(Monument.favoritedMnmt)
     localStorage.setItem("bestMnmts", JSON.stringify(monuments))
@@ -118,16 +160,16 @@ function renderFavoritedMnmt(){
         favs = JSON.parse(localStorage.getItem("bestMnmts"))
         let first = favs[0].name
         let second = favs[1].name
-        let third = favs[2].name  
-        let firstImg   = favs[0].photo
-        let secondImg  = favs[1].photo
+        let third = favs[2].name
+        let firstImg = favs[0].photo
+        let secondImg = favs[1].photo
         let thirdImg = favs[2].photo
-        document.querySelector("#stFav").innerHTML =  first
-        document.querySelector("#ndFav").innerHTML =  second
-        document.querySelector("#rdFav").innerHTML =  third
-        document.querySelector("#stFavImg").src =  firstImg
-        document.querySelector("#ndFavImg").src =  secondImg
-        document.querySelector("#rdFavImg").src =  thirdImg
+        document.querySelector("#stFav").innerHTML = first
+        document.querySelector("#ndFav").innerHTML = second
+        document.querySelector("#rdFav").innerHTML = third
+        document.querySelector("#stFavImg").src = firstImg
+        document.querySelector("#ndFavImg").src = secondImg
+        document.querySelector("#rdFavImg").src = thirdImg
 
 
     }
