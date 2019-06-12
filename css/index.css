@@ -179,11 +179,11 @@ body {
     border-radius: 5px;
 }
 
-#podTitle {
-
-    font-size: 30px;
+#title{
+    color: #025e84;
+    margin-top: 40px;
+    margin-left: 280px;
 }
-
 
 .score {
     font-size: 20px;
