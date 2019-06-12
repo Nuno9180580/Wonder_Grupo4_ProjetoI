@@ -38,13 +38,31 @@
     position: absolute;
 }
 
+.container-fluid-secondLeft-side-news {
+    margin: 250px 70px;
+    background-color: white;
+    height: 160px;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 7px 0px;
+    position: absolute;
+}
+
+#newMonLabel {
+    font-family: "fredoka";
+    color: black;
+    font-size: 18px;
+    margin: -10px 12px;
+    cursor: pointer;
+}
+
 #alignContainers {
     display: inline;
 }
 
 #pageNameCenter {
     margin-right: 350px;
-    font-family: fredoka;
+    font-family: "fredoka";
 }
 
 #startQuiz {
@@ -92,8 +110,6 @@
 
 }
 
-
-
 #endQuiz {
     font-size: 3em;
     font-weight: bolder;
@@ -106,6 +122,13 @@
     top: 10px;
     color: lightgrey;
     border-radius: 1100px;
+}
+
+#newLvl {
+    width: auto;
+    height: 250px;
+    margin-top: 350px;
+    margin-left: 20px;
 }
 
 #endScore {
@@ -289,6 +312,11 @@
     top: 50px;
 }
 
+#newMonImg {
+    margin: 0px 30px;
+    width: 150px;
+    height: auto;
+}
 
 #userAvatar {
     border: 1.5px solid white;
