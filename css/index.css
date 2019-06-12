@@ -134,20 +134,7 @@ body {
     font-size: 25spx;
 }
 
-#podium {
-    width: 300px;
-    margin-bottom: 190px;
-    margin-top: -100px;
-
-
-
-}
-
-
-
-
 .card-text {
-
     font-family: fredoka;
 }
 
@@ -214,9 +201,7 @@ body {
     background-color: #025e84;
     color:white;
     font-family: fredoka;
-
 }
-
 
 #second {
     margin: auto;
@@ -227,11 +212,7 @@ body {
     background-color: #025e84;
     color:white;
     font-family: fredoka;
-
-
-
 }
-
 
 #third {
     margin: auto;
@@ -242,8 +223,6 @@ body {
     background-color: #025e84;
     color:white;
     font-family: fredoka;
-    
-
 }
 
 
