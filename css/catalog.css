@@ -86,7 +86,8 @@
   
   #pageNameCenter {
     font-family: fredoka;
-    margin-right: 320px;
+    margin:auto;
+    
   }
   
   #txtUserLogged {
