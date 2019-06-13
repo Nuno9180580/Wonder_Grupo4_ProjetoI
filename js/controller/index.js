@@ -75,7 +75,7 @@ function alertSugestion() {
     }
 }
 
-//Funão que renderiza o podio
+//Função que renderiza o podio
 renderHighScore();
 
 function renderHighScore() {
@@ -91,7 +91,7 @@ function renderHighScore() {
     let thirdScore = ""
     users.sort(User.highScore)
     localStorage.setItem("highscores", JSON.stringify(users))
-    if (localStorage.getItem("highscores")) {
+    if (localStorage.getItem("highscores")) {    
         scores = JSON.parse(localStorage.getItem("highscores"))
         if (scores[0].username === "admin") {
             first = scores[1].username
