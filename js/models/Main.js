@@ -362,14 +362,18 @@ if (localStorage.monuments) {
 
 // Define um array para guardar os objetos comments
 export let comments = [];
+
 if (localStorage.comments) {
   comments = JSON.parse(localStorage.comments);
 } else {
-  const com = new Comment(0,"", "", "", "");
+  const com = new Comment(0, "", "", "", "");
   comments.push(com);
   localStorage.setItem("comments", JSON.stringify(comments));
 }
+
+//define o array para as sugestions
 export let sugestions = [];
+
 if (localStorage.sugestions) {
   sugestions = JSON.parse(localStorage.sugestions);
 } else {
@@ -381,7 +385,7 @@ if (localStorage.sugestions) {
 //------------------------------------------------------------------------------------------------------------------------------------//
 
 //função para validar o registo para o landing
-export function registerSubmit(id,txtUsername, txtEmail, txtPass, txtConfirmPass) {
+export function registerSubmit(id, txtUsername, txtEmail, txtPass, txtConfirmPass) {
   let usernameExists = false;
   let emailExists = false;
   if (txtPass === txtConfirmPass) {
@@ -395,7 +399,7 @@ export function registerSubmit(id,txtUsername, txtEmail, txtPass, txtConfirmPass
     }
     if (usernameExists === false && emailExists === false) {
       alert("Conta criada com sucesso!");
-      users.push(new User(id, txtUsername,txtEmail,txtPass,1,0,"../img/AvatarFields.jpg","criança",0,0,0));
+      users.push(new User(id, txtUsername, txtEmail, txtPass, 1, 0, "../img/AvatarFields.jpg", "criança", 0, 0, 0));
       localStorage.setItem("users", JSON.stringify(users));
       sessionStorage.setItem("loggedUser", txtUsername);
       window.location.href = "../html/index.html"; //redireciona para apagina login

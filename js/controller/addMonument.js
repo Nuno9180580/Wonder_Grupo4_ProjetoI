@@ -6,9 +6,13 @@ import {
     monuments
 }
 from "../models/Main.js"
+
 //Lê o Utilizador Ativo
 const userOn = sessionStorage.getItem('loggedUser')
 
+let acceptedSugests = []
+
+acceptedSugests = JSON.parse(localStorage.getItem("accepted"))
 /* ---------------------------------------------------------------------EventListeners--------------------------------------------------------*/
 
 //Botão que adiciona um novo Monumento
@@ -60,9 +64,21 @@ function monumentListLoad() {
     monumentList.innerHTML = lista
 }
 
+//Adiciona na lista todos as sugestoes aceites
+sugestionListLoad();
+
+function sugestionListLoad() {
+    const addToList = document.querySelector("#sugestionList")
+    let sugestionsList = `<h2 id="titleSugestions">Sugestões Aceites</h2>`
+    for (let i = 0; i < acceptedSugests.length; i++) {
+        sugestionsList += `<p>${acceptedSugests[i].monument}</p>`
+    }
+    addToList.innerHTML = sugestionsList
+}
+
 //função que adiciona um novo Monumento
 function newMonument() {
-    const id = monuments[monuments.length -1]["id"]+1
+    const id = monuments[monuments.length - 1]["id"] + 1
     const name = document.querySelector("#name").value
     const country = document.querySelector("#country").value
     const city = document.querySelector("#city").value
@@ -71,17 +87,40 @@ function newMonument() {
     const img = document.querySelector("#img").value
     const lvl = document.querySelector("#lvl").value
     let monumentExists = false
+    let sugestionExists = false
     for (const monument of monuments) {
         if (name.value === monument.name) {
             monumentExists = true
         }
     }
-    
     if (monumentExists === false) {
-        monuments.push(new Monument(id, name, year, img, description, city, country, lvl))
-        localStorage.setItem("monuments", JSON.stringify(monuments))
-        monumentListLoad();
-        alert("Monumento Adicionado!")
+        for (const accepted of acceptedSugests) {
+            if (accepted.monument === name) {
+                sugestionExists = true
+            }
+        }
+        if (sugestionExists === true) { //se existir nas sugestoes remove de la
+            let index = -1
+            for (const accepted of acceptedSugests) {
+                index++;
+                if (accepted.monument === name) {
+                    acceptedSugests.splice(index, 1);
+                    localStorage.setItem("accepted", JSON.stringify(acceptedSugests))
+                }
+            }
+            monuments.push(new Monument(id, name, year, img, description, city, country, lvl))
+            localStorage.setItem("monuments", JSON.stringify(monuments))
+            monumentListLoad();
+            sugestionListLoad();
+            alert("Monumento Adicionado!")
+        } else {
+            monuments.push(new Monument(id, name, year, img, description, city, country, lvl))
+            localStorage.setItem("monuments", JSON.stringify(monuments))
+            monumentListLoad();
+            sugestionListLoad();
+            alert("Monumento Adicionado!")
+        }
+
     } else {
         alert("Este Monumento já existe!")
     }
@@ -99,6 +138,7 @@ function removeMonument() {
             localStorage.setItem("monuments", JSON.stringify(monuments))
             alert("Monumento Removido com sucesso!")
             monumentListLoad();
+            sugestionListLoad();
         }
     }
     event.preventDefault();

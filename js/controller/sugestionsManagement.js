@@ -14,9 +14,11 @@ const userOn = sessionStorage.getItem('loggedUser')
 //Array sugestões aceites
 let accepted = []
 
+//se ja existtir atualiza no array
+if (localStorage.accepted) {
+    accepted = JSON.parse(localStorage.accepted);
+}
 /* ---------------------------------------------------------------------Funções--------------------------------------------------------*/
-
-
 
 //Adiciona a Imagem e o Nome do utilizador na NavBar
 navBarInfo();
@@ -41,7 +43,7 @@ function alertSugestion() {
         alert("Não existem Sugestões")
         location.href = "../html/backOffice.html"
 
-    }   
+    }
 
 }
 
@@ -93,6 +95,7 @@ function renderCatalog() {
                 if (sugestion.monument === this.id) {
                     sugestions.splice(userIndex - 1, 1);
                     localStorage.setItem("sugestions", JSON.stringify(sugestions))
+                    alert(`Sugestão de ${sugestion.username} rejeitada!`)
                     renderCatalog();
                 }
             }
@@ -101,12 +104,14 @@ function renderCatalog() {
 
     //botão que aceita uma sugestão
     const btnAccept = document.getElementsByClassName("accept")
+    //percorre os botoes todos e escolhe o id personalizado correspondente ao nome do monumento
     for (const elem of btnAccept) {
         elem.addEventListener("click", function () {
             for (const sugestion of sugestions) {
                 if (sugestion.monument === this.id) {
                     accepted.push(new Sugestion(sugestion.username, sugestion.monument, sugestion.moreInfo))
                     localStorage.setItem("accepted", JSON.stringify(accepted))
+                    alert(`Sugestão de ${sugestion.username} adicionado!`)
                     for (const user of users) {
                         if (sugestion.username === user.username) {
                             user.experience = user.experience + 10 //atribui 10xp ao utilizador que fez a sugestão
