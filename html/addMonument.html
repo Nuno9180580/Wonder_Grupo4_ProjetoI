@@ -16,7 +16,6 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 </head>
 
 <body>
@@ -44,46 +43,41 @@
         </a>
     </nav>
 
-    <!--   Lista com todos os Users -->
-
-    
     <div class="row">
-    <div class="col-sm-4">
-    <div id="monumentList" class="container"></div>
-
-    </div>
-    <div class="col-sm-4">
-            <div id="addMnt" class="card" style="width: 35rem; height: 35rem;">
-                    <form id="addForm">
-                        <h2>Adicionar Monumento</h2>
-                        Nome: <input id="name" class="input" type="text"><br>
-                        País: <input id="country" class="input" type="text"><br>
-                        Cidade: <input id="city" class="input" type="text"><br>
-                        Ano: <input id="year" class="input" type="text"><br>
-                        Descrição: <input id="description" class="input" type="text"><br>
-                        Imagem: <input id="img" class="input" type="text"><br>
-                        Nível: <input id="lvl" class="input" type="text"><br>
-                        <input type="submit" class="btn" value="Registar" id="btnSubmit">
-                    </form>
-                </div>
-            
-
-    </div>
-    <div class="col-sm-4">
-        
-    <div id="removeCard" class="card" style="width: 25rem; height: 15rem;">
-            <form id="removeForm">
-                <h2>Remover Monumento</h2>
-                Nome: <input id="removeMonument" class="input" type="text"><br>
-                <input type="submit" class="btn" value="Remover" id="btnRemove">
-            </form>
+        <div class="col-sm-4">
+            <div id="monumentList" class="container"></div>
         </div>
-    
+
+        <div class="col-sm-4">
+            <div id="addMnt" class="card" style="width: 35rem; height: 35rem;">
+                <form id="addForm">
+                    <h2>Adicionar Monumento</h2>
+                    Nome: <input id="name" class="input" type="text"><br>
+                    País: <input id="country" class="input" type="text"><br>
+                    Cidade: <input id="city" class="input" type="text"><br>
+                    Ano: <input id="year" class="input" type="text"><br>
+                    Descrição: <input id="description" class="input" type="text"><br>
+                    Imagem: <input id="img" class="input" type="text"><br>
+                    Nível: <input id="lvl" class="input" type="text"><br>
+                    <input type="submit" class="btn" value="Registar" id="btnSubmit">
+                </form>
+            </div>
+        </div>
+
+        <div class="col-sm-4">
+            <div id="removeCard" class="card" style="width: 25rem; height: 15rem;">
+                <form id="removeForm">
+                    <h2>Remover Monumento</h2>
+                    Nome: <input id="removeMonument" class="input" type="text"><br>
+                    <input type="submit" class="btn" value="Remover" id="btnRemove">
+                </form>
+            </div>
+            <!--   Lista com todas as sugestoes aceites -->
+            <div class="col-sm-4">
+                <div id="sugestionList" class="card"></div>
+            </div>
+        </div>
     </div>
-</div>
-
-
- 
 
     <!-- Optional JavaScript -->
     <script type="module" src="../js/views/sideBarView.js"></script>

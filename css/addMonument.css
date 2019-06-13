@@ -39,6 +39,23 @@ form {
     border-radius: 5px;
 }
 
+#sugestionList {
+    margin-top: 30px;
+    margin-left: -13px;
+    background-color: #73574D;
+    size: 15px;
+    color: white;
+    border: 7px solid #73574D;
+    width: 25rem;
+    height: auto;
+    border-radius: 5px;
+}
+
+#titleSugestions {
+    margin: auto;
+    font-size: 20px;
+}
+
 .card {
     color: white;
     border: 7px solid #73574D;
@@ -48,14 +65,10 @@ form {
 #addMnt {
     margin-top: 80px;
     margin-left: -80px;
-   
-
 }
 
 #removeCard {
     margin-top: 80px;
-    
-
 }
 
 #txtUserLogged {
