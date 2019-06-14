@@ -1,6 +1,10 @@
 import Monument from "../models/monumentModel.js";
 import Comment from "../models/commentsModel.js";
-import { users, monuments, comments } from "../models/Main.js";
+import {
+  users,
+  monuments,
+  comments
+} from "../models/Main.js";
 
 //Lê o Utilizador Ativo
 const userOn = sessionStorage.getItem("loggedUser");
@@ -9,22 +13,22 @@ let userLevel = 0;
 /* ---------------------------------------------------------------------EventListeners--------------------------------------------------------*/
 
 //Evento Click do Botão Ordem Alfabetica de A-Z
-document.getElementById("btnAToZ").addEventListener("click", function() {
+document.getElementById("btnAToZ").addEventListener("click", function () {
   aToZ();
 });
 
 //Evento Click do Botão Ordem Alfabetica de Z-A
-document.getElementById("btnZToA").addEventListener("click", function() {
+document.getElementById("btnZToA").addEventListener("click", function () {
   zToA();
 });
 
 //Ao escrever na barra de pesquisa vai automaticamente procurar os Monumentos
-document.querySelector("#searchBar").addEventListener("keyup", function() {
+document.querySelector("#searchBar").addEventListener("keyup", function () {
   searchMonument();
 });
 
 //Remove Os Filtros
-document.querySelector("#btnClear").addEventListener("click", function() {
+document.querySelector("#btnClear").addEventListener("click", function () {
   renderCatalog();
 });
 
@@ -32,6 +36,7 @@ document.querySelector("#btnClear").addEventListener("click", function() {
 
 //Adiciona a Imagem e o Nome do utilizador na NavBar
 navBarInfo();
+
 function navBarInfo() {
   const labelUser = document.querySelector("#txtUserLogged");
   labelUser.innerHTML = userOn;
@@ -47,6 +52,7 @@ function navBarInfo() {
 
 //Função que retorna o nivel do user
 getUserLvl();
+
 function getUserLvl() {
   for (const user of users) {
     if (userOn == user.username) {
@@ -91,6 +97,7 @@ function aToZ() {
 
 //funcao para atualizar os Monumentos do catalogo
 renderCatalog();
+
 function renderCatalog(filtername = "") {
   const myCatalog = document.querySelector("#myCatalog");
   let result = "";
@@ -158,7 +165,7 @@ function renderCatalog(filtername = "") {
   //Botão que abre a Modal
   const btnsSeeMore = document.getElementsByClassName("view");
   for (const elem of btnsSeeMore) {
-    elem.addEventListener("click", function() {
+    elem.addEventListener("click", function () {
       const modalTitle = document.querySelector("#modalTitle");
       const modalImg = document.querySelector("#modalImg");
       const modalCityCountry = document.querySelector("#modalCityCountry");
@@ -179,11 +186,11 @@ function renderCatalog(filtername = "") {
         let resultComment = "";
         let userType = ""
         for (const user of users) {
-          if(user.username === userOn){
+          if (user.username === userOn) {
             userType = user.userType
           }
         }
-        if(userType === "criança"){
+        if (userType === "criança") {
           for (const comment of comments) {
             if (comment.monument === myMonument.name) {
               if (i % 1 === 0) {
@@ -201,8 +208,7 @@ function renderCatalog(filtername = "") {
             }
           }
           modalComments.innerHTML = resultComment;
-        }
-        else{
+        } else {
           for (const comment of comments) {
             if (comment.monument === myMonument.name) {
               if (i % 1 === 0) {
@@ -220,24 +226,24 @@ function renderCatalog(filtername = "") {
             }
           }
           modalComments.innerHTML = resultComment;
-        
+
         }
-      
+
       }
 
       //Botão que envia os comentários
-      document.querySelector("#com").addEventListener("submit", function(event) {
-          commentStorage();
-          renderComments();
-          event.preventDefault();
-        });
+      document.querySelector("#com").addEventListener("submit", function (event) {
+        commentStorage();
+        renderComments();
+        event.preventDefault();
+      });
 
       //função que guarda os comentarios num array
       function commentStorage() {
         const modalTitle = document.querySelector("#modalTitle").innerHTML;
         const txtarea = document.querySelector("#txtarea").value;
         let today = new Date();
-        let id = comments[comments.length -1]["id"]+1
+        let id = comments[comments.length - 1]["id"] + 1
         let date =
           today.getFullYear() +
           "-" +
@@ -259,13 +265,14 @@ function renderCatalog(filtername = "") {
 }
 
 toggleFav();
-function toggleFav(){
+
+function toggleFav() {
   let favsImgs = document.getElementsByClassName("fav-image");
   if (favsImgs) {
     const favsImgsArr = Array.from(favsImgs);
-  
+
     favsImgsArr.forEach(element => {
-      element.addEventListener("mouseover", function(elem) {
+      element.addEventListener("mouseover", function (elem) {
         if (element.dataset.favorited == "False") {
           element.src = "../img/fav.png";
         } else {
@@ -273,9 +280,9 @@ function toggleFav(){
         }
       });
     });
-  
+
     favsImgsArr.forEach(element => {
-      element.addEventListener("mouseout", function(elem) {
+      element.addEventListener("mouseout", function (elem) {
         if (element.dataset.favorited == "False") {
           element.src = "../img/favEmpty.png";
         } else {
@@ -285,50 +292,47 @@ function toggleFav(){
     });
   }
   // toggle favorited
-let favsList = document.getElementsByClassName("fav-toggle");
-if (favsList) {
-  const favsListArr = Array.from(favsList);
+  let favsList = document.getElementsByClassName("fav-toggle");
+  if (favsList) {
+    const favsListArr = Array.from(favsList);
 
-  favsListArr.forEach(element => {
-    element.addEventListener("click", function(elem) {
-      const monumentId = element.dataset.id;
-      for (let monument of monuments) {
-        if (monumentId == monument["id"]) {
-          if (monument.usersFav.indexOf(userOn) > -1) {
-            let indexU = monument.usersFav.indexOf(userOn);
-            console.log("indexU", indexU);
-            monument.usersFav.splice(indexU, 1);
-            for (let user of users) {
-              if (user.username == userOn) {
-                let indexM = user.monumentsFav.indexOf(monumentId);
-                console.log("indexM", indexM);
-                user.monumentsFav.splice(indexM, 1);
+    favsListArr.forEach(element => {
+      element.addEventListener("click", function (elem) {
+        const monumentId = element.dataset.id;
+        for (let monument of monuments) {
+          if (monumentId == monument["id"]) {
+            if (monument.usersFav.indexOf(userOn) > -1) {
+              let indexU = monument.usersFav.indexOf(userOn);
+              console.log("indexU", indexU);
+              monument.usersFav.splice(indexU, 1);
+              for (let user of users) {
+                if (user.username == userOn) {
+                  let indexM = user.monumentsFav.indexOf(monumentId);
+                  console.log("indexM", indexM);
+                  user.monumentsFav.splice(indexM, 1);
+                }
               }
-            }
 
-            element.dataset.favorited = "False";
-            element.src = "../img/favEmpty.png";
-          } else {
-            monument.usersFav.push(userOn);
-            for (let user of users) {
-              user.monumentsFav.push(monumentId);
+              element.dataset.favorited = "False";
+              element.src = "../img/favEmpty.png";
+            } else {
+              monument.usersFav.push(userOn);
+              for (let user of users) {
+                user.monumentsFav.push(monumentId);
+              }
+              element.dataset.favorited = "True";
+              element.src = "../img/fav.png";
             }
-            element.dataset.favorited = "True";
-            element.src = "../img/fav.png";
           }
         }
-      }
-      localStorage.setItem("monuments", JSON.stringify(monuments));
-      localStorage.setItem("users", JSON.stringify(users));
-      // renderCatalog();
+        localStorage.setItem("monuments", JSON.stringify(monuments));
+        localStorage.setItem("users", JSON.stringify(users));
+        // renderCatalog();
+      });
     });
-  });
-}
+  }
 
 
 
 
 }
-
-
-

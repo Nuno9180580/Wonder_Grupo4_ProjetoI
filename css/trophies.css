@@ -9,7 +9,7 @@
 }
 
 #pageNameCenter {
-    margin:auto;
+    margin: auto;
     font-family: "fredoka";
 }
 
@@ -72,4 +72,8 @@
     -webkit-transform: scale(1.1);
     /* Safari 3-8 */
     transform: scale(1.1);
+}
+
+#titleTxt { /* nome do titulo exemplo:viajante */
+    margin: auto;
 }
