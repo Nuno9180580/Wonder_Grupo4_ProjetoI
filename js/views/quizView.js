@@ -1,7 +1,7 @@
 //array para as questions
 export let questions = [{
         question: "What does HTML stand for?",
-        imgQuestion: "../img/TorreDeBelem.jpg",
+        imgQuestion:"../img/quizzMonuments/lvl1_belem.jpg",
         choiceA: "Correct",
         choiceB: "Wrong",
         choiceC: "Wrong",
@@ -11,7 +11,7 @@ export let questions = [{
     },
     {
         question: "What does CSS stand for?",
-        imgQuestion: "../img/TorreDosClerigos.jpg",
+        imgQuestion: "../img/quizzMonuments/lvl1_ben.jpg",
         choiceA: "Wrong",
         choiceB: "Correct",
         choiceC: "Wrong",
@@ -30,7 +30,7 @@ export let questions = [{
     },
     {
         question: "x1dadadsadas?",
-        imgQuestion: "../img/TorreDeBelem.jpg",
+        imgQuestion: "../img/quizzMonuments/lvl1_gize.jpg",
         choiceA: "Wrong",
         choiceB: "Wrong",
         choiceC: "Wrong",
@@ -40,7 +40,7 @@ export let questions = [{
     },
     {
         question: "z1dsadadsa?",
-        imgQuestion: "../img/TorreDosClerigos.jpg",
+        imgQuestion: "../img/quizzMonuments/lvl1_liberty.jpg",
         choiceA: "Wrong",
         choiceB: "Correct",
         choiceC: "Wrong",
