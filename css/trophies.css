@@ -74,6 +74,12 @@
     transform: scale(1.1);
 }
 
-#titleTxt { /* nome do titulo exemplo:viajante */
+#titleTxt {
+    /* nome do titulo exemplo:viajante */
     margin: auto;
+}
+
+#xpDone {
+    display: flex;
+    justify-content: center;
 }
