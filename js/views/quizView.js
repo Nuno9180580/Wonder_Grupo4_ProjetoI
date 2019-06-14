@@ -20,7 +20,7 @@ export let questions = [{
         level: 1
     }, {
         question: "What does JS stand for?",
-        imgQuestion: "../img/Stonehendge.jpg",
+        imgQuestion: "../img/quizzMonuments/eiffel_sombra.jpg",
         choiceA: "Wrong",
         choiceB: "Wrong",
         choiceC: "Correct",
