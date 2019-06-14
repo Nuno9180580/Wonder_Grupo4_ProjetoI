@@ -3,6 +3,7 @@ import {
 }
 from "../models/Main.js"
 import Trophy from "../models/trophiesModel.js"
+import Title from "../models/titlesModel.js"
 
 //Lê o Utilizador Ativo
 const userOn = sessionStorage.getItem('loggedUser')
@@ -14,31 +15,65 @@ if (localStorage.trophies) {
     trophies = JSON.parse(localStorage.trophies);
 }
 
+let titles = []
+
+//se existir atualiza o array
+if (localStorage.titles) {
+    titles = JSON.parse(localStorage.titles);
+}
+
 /* ---------------------------------------------------------------------EventListeners--------------------------------------------------------*/
 
-const btn1 = document.querySelector("#btn1").addEventListener("click", function () {
+//botoes das medalhas
+document.querySelector("#btn1").addEventListener("click", function () {
     xp100Medal()
     medal1Acquired()
 })
-const btn2 = document.querySelector("#btn2").addEventListener("click", function () {
+document.querySelector("#btn2").addEventListener("click", function () {
     xp200Medal()
     medal2Acquired()
 })
-const btn3 = document.querySelector("#btn3").addEventListener("click", function () {
+document.querySelector("#btn3").addEventListener("click", function () {
     xp300Medal()
     medal3Acquired()
 })
-const btn4 = document.querySelector("#btn4").addEventListener("click", function () {
+document.querySelector("#btn4").addEventListener("click", function () {
     xp400Medal()
     medal4Acquired()
 })
-const btn5 = document.querySelector("#btn5").addEventListener("click", function () {
+document.querySelector("#btn5").addEventListener("click", function () {
     xp500Medal()
     medal5Acquired()
 })
-const btn6 = document.querySelector("#btn6").addEventListener("click", function () {
+document.querySelector("#btn6").addEventListener("click", function () {
     xp1000Medal()
     medal6Acquired()
+})
+
+//botoes dos titulos
+document.querySelector("#title1").addEventListener("click", function () {
+    lvl1Title()
+    title1Acquired()
+})
+document.querySelector("#title2").addEventListener("click", function () {
+    lvl2Title()
+    title2Acquired()
+})
+document.querySelector("#title3").addEventListener("click", function () {
+    lvl3Title()
+    title3Acquired()
+})
+document.querySelector("#title4").addEventListener("click", function () {
+    lvl4Title()
+    title4Acquired()
+})
+document.querySelector("#title5").addEventListener("click", function () {
+    lvl5Title()
+    title5Acquired()
+})
+document.querySelector("#title6").addEventListener("click", function () {
+    lvl6Title()
+    title6Acquired()
 })
 
 /* ---------------------------------------------------------------------Funções--------------------------------------------------------------*/
@@ -48,7 +83,6 @@ checkForMedals()
 function checkForMedals() {
     for (const trophy of trophies) {
         if (userOn === trophy.username) {
-            console.log(trophy.medal)
             switch (trophy.medal) {
                 case "xp100Medal":
                     xp100Medal();
@@ -88,7 +122,8 @@ function xp100Medal() {
     if (XP >= 100) {
         img.src = "../img/medal1.png"
         changeBorder.style.border = "3px solid #eb2020";
-        document.querySelector("#btn1").style.visibility = "hidden"; //esconde o botao
+        document.querySelector("#btn1").style.display = "none" //esconde o botao
+        document.querySelector("#xp1").style.display = "block"
     }
 }
 //carrega para o array e localStorage a informaçao das medalhas adquiridas
@@ -118,7 +153,8 @@ function xp200Medal() {
     if (XP >= 200) {
         img.src = "../img/medal2.png"
         changeBorder.style.border = "3px solid #eb2020";
-        document.querySelector("#btn2").style.visibility = "hidden"; //esconde o botao
+        document.querySelector("#btn2").style.display = "none"; //esconde o botao
+        document.querySelector("#xp2").style.display = "block"
     }
 }
 
@@ -149,7 +185,8 @@ function xp300Medal() {
     if (XP >= 300) {
         img.src = "../img/medal3.png"
         changeBorder.style.border = "3px solid #eb2020";
-        document.querySelector("#btn3").style.visibility = "hidden"; //esconde o botao
+        document.querySelector("#btn3").style.display = "none"; //esconde o botao
+        document.querySelector("#xp3").style.display = "block"
     }
 }
 
@@ -180,7 +217,8 @@ function xp400Medal() {
     if (XP >= 400) {
         img.src = "../img/medal4.png"
         changeBorder.style.border = "3px solid #eb2020";
-        document.querySelector("#btn4").style.visibility = "hidden"; //esconde o botao
+        document.querySelector("#btn4").style.display = "none"; //esconde o botao
+        document.querySelector("#xp4").style.display = "block"
     }
 }
 
@@ -209,9 +247,10 @@ function xp500Medal() {
         }
     }
     if (XP >= 500) {
-        img.src = "../img/medal1.png"
+        img.src = "../img/medal5.png"
         changeBorder.style.border = "3px solid #eb2020";
-        document.querySelector("#btn5").style.visibility = "hidden"; //esconde o botao
+        document.querySelector("#btn5").style.display = "none"; //esconde o botao
+        document.querySelector("#xp5").style.display = "block"
     }
 }
 
@@ -238,10 +277,11 @@ function xp1000Medal() {
             XP = user.experience
         }
     }
-    if (XP === 1000) {
-        img.src = "../img/medal1.png"
+    if (XP >= 1000) {
+        img.src = "../img/medal6.png"
         changeBorder.style.border = "3px solid #eb2020";
-        document.querySelector("#btn6").style.visibility = "hidden"; //esconde o botao
+        document.querySelector("#btn6").style.display = "none"; //esconde o botao
+        document.querySelector("#xp6").style.display = "block"
     }
 }
 
@@ -274,4 +314,68 @@ function navBarInfo() {
     }
     const userAvatar = document.querySelector("#userAvatar")
     userAvatar.src = imgAvatar
+}
+
+//carrega para o array e localStorage a informaçao dos titulos adquiridos
+function lvl1Title() {
+    const img = document.querySelector("#imgT1")
+    const changeBorder = document.querySelector("#cardImgT1")
+    let level = ""
+    for (const user of users) {
+        if (user.username === userOn) {
+            level = user.level
+        }
+    }
+    if (level >= 6) {
+        img.src = "../img/title6.png"
+        changeBorder.style.border = "3px solid #eb2020";
+        document.querySelector("#title6").style.display = "none"; //esconde o botao
+        document.querySelector("#lvl6").style.display = "block"
+    }
+}
+
+//carrega para o array e localStorage a informaçao das medalhas adquiridas
+function title6Acquired() {
+    let level = ""
+    for (const user of users) {
+        if (user.username === userOn) {
+            level = user.level
+        }
+    }
+    if (level >= 6) {
+        titles.push(new Trophy(userOn, "lvl6"))
+        localStorage.setItem("titles", JSON.stringify(titles))
+    }
+}
+
+//carrega para o array e localStorage a informaçao dos titulos adquiridos
+function lvl6Title() {
+    const img = document.querySelector("#imgT6")
+    const changeBorder = document.querySelector("#cardImgT6")
+    let level = ""
+    for (const user of users) {
+        if (user.username === userOn) {
+            level = user.level
+        }
+    }
+    if (level >= 6) {
+        img.src = "../img/title6.png"
+        changeBorder.style.border = "3px solid #eb2020";
+        document.querySelector("#title6").style.display = "none"; //esconde o botao
+        document.querySelector("#lvl6").style.display = "block"
+    }
+}
+
+//carrega para o array e localStorage a informaçao das medalhas adquiridas
+function title6Acquired() {
+    let level = ""
+    for (const user of users) {
+        if (user.username === userOn) {
+            level = user.level
+        }
+    }
+    if (level >= 6) {
+        titles.push(new Trophy(userOn, "lvl6"))
+        localStorage.setItem("titles", JSON.stringify(titles))
+    }
 }
