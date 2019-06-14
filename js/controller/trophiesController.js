@@ -16,27 +16,27 @@ if (localStorage.trophies) {
 
 /* ---------------------------------------------------------------------EventListeners--------------------------------------------------------*/
 
-const btn1 = document.querySelector("#btn1").addEventListener("click", function () {
+document.querySelector("#btn1").addEventListener("click", function () {
     xp100Medal()
     medal1Acquired()
 })
-const btn2 = document.querySelector("#btn2").addEventListener("click", function () {
+document.querySelector("#btn2").addEventListener("click", function () {
     xp200Medal()
     medal2Acquired()
 })
-const btn3 = document.querySelector("#btn3").addEventListener("click", function () {
+document.querySelector("#btn3").addEventListener("click", function () {
     xp300Medal()
     medal3Acquired()
 })
-const btn4 = document.querySelector("#btn4").addEventListener("click", function () {
+document.querySelector("#btn4").addEventListener("click", function () {
     xp400Medal()
     medal4Acquired()
 })
-const btn5 = document.querySelector("#btn5").addEventListener("click", function () {
+document.querySelector("#btn5").addEventListener("click", function () {
     xp500Medal()
     medal5Acquired()
 })
-const btn6 = document.querySelector("#btn6").addEventListener("click", function () {
+document.querySelector("#btn6").addEventListener("click", function () {
     xp1000Medal()
     medal6Acquired()
 })
