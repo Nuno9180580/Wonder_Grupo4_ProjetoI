@@ -51,10 +51,6 @@ document.querySelector("#btn6").addEventListener("click", function () {
 })
 
 //botoes dos titulos
-document.querySelector("#title1").addEventListener("click", function () {
-    lvl1Title()
-    title1Acquired()
-})
 document.querySelector("#title2").addEventListener("click", function () {
     lvl2Title()
     title2Acquired()
@@ -101,6 +97,36 @@ function checkForMedals() {
                     break;
                 case "xp1000Medal":
                     xp1000Medal();
+                    break;
+                default: //nao faz nada
+                    break;
+            }
+        }
+    }
+}
+
+//funcao para ao entrar verificar que titulos devem aparecer marcados
+checkForTitles()
+
+function checkForTitles() {
+    for (const title of titles) {
+        if (userOn === title.username) {
+            console.log(title.name)
+            switch (title.name) {
+                case "lvl2":
+                    lvl2Title();
+                    break;
+                case "lvl3":
+                    lvl3Title();
+                    break;
+                case "lvl4":
+                    lvl4Title();
+                    break;
+                case "lvl5":
+                    lvl5Title();
+                    break;
+                case "lvl6":
+                    lvl6Title();
                     break;
                 default: //nao faz nada
                     break;
@@ -316,38 +342,139 @@ function navBarInfo() {
     userAvatar.src = imgAvatar
 }
 
+//LVL2
 //carrega para o array e localStorage a informaçao dos titulos adquiridos
-function lvl1Title() {
-    const img = document.querySelector("#imgT1")
-    const changeBorder = document.querySelector("#cardImgT1")
+function lvl2Title() {
+    const img = document.querySelector("#imgT2")
+    const changeBorder = document.querySelector("#cardImgT2")
     let level = ""
     for (const user of users) {
         if (user.username === userOn) {
             level = user.level
         }
     }
-    if (level >= 6) {
-        img.src = "../img/title6.png"
+    if (level >= 2) {
+        img.src = "../img/title2.png"
         changeBorder.style.border = "3px solid #eb2020";
-        document.querySelector("#title6").style.display = "none"; //esconde o botao
-        document.querySelector("#lvl6").style.display = "block"
+        document.querySelector("#title2").style.display = "none"; //esconde o botao
+        document.querySelector("#lvl2").style.display = "block"
     }
 }
 
 //carrega para o array e localStorage a informaçao das medalhas adquiridas
-function title6Acquired() {
+function title2Acquired() {
     let level = ""
     for (const user of users) {
         if (user.username === userOn) {
             level = user.level
         }
     }
-    if (level >= 6) {
-        titles.push(new Trophy(userOn, "lvl6"))
+    if (level >= 2) {
+        titles.push(new Title(userOn, "lvl2"))
         localStorage.setItem("titles", JSON.stringify(titles))
     }
 }
 
+//LVL3
+//carrega para o array e localStorage a informaçao dos titulos adquiridos
+function lvl3Title() {
+    const img = document.querySelector("#imgT3")
+    const changeBorder = document.querySelector("#cardImgT3")
+    let level = ""
+    for (const user of users) {
+        if (user.username === userOn) {
+            level = user.level
+        }
+    }
+    if (level >= 3) {
+        img.src = "../img/title3.png"
+        changeBorder.style.border = "3px solid #eb2020";
+        document.querySelector("#title3").style.display = "none"; //esconde o botao
+        document.querySelector("#lvl3").style.display = "block"
+    }
+}
+
+//carrega para o array e localStorage a informaçao das medalhas adquiridas
+function title3Acquired() {
+    let level = ""
+    for (const user of users) {
+        if (user.username === userOn) {
+            level = user.level
+        }
+    }
+    if (level >= 3) {
+        titles.push(new Title(userOn, "lvl3"))
+        localStorage.setItem("titles", JSON.stringify(titles))
+    }
+}
+
+//LVL4
+//carrega para o array e localStorage a informaçao dos titulos adquiridos
+function lvl4Title() {
+    const img = document.querySelector("#imgT4")
+    const changeBorder = document.querySelector("#cardImgT4")
+    let level = ""
+    for (const user of users) {
+        if (user.username === userOn) {
+            level = user.level
+        }
+    }
+    if (level >= 4) {
+        img.src = "../img/title4.png"
+        changeBorder.style.border = "3px solid #eb2020";
+        document.querySelector("#title4").style.display = "none"; //esconde o botao
+        document.querySelector("#lvl4").style.display = "block"
+    }
+}
+
+//carrega para o array e localStorage a informaçao das medalhas adquiridas
+function title4Acquired() {
+    let level = ""
+    for (const user of users) {
+        if (user.username === userOn) {
+            level = user.level
+        }
+    }
+    if (level >= 4) {
+        titles.push(new Title(userOn, "lvl4"))
+        localStorage.setItem("titles", JSON.stringify(titles))
+    }
+}
+
+//LVL5
+//carrega para o array e localStorage a informaçao dos titulos adquiridos
+function lvl5Title() {
+    const img = document.querySelector("#imgT5")
+    const changeBorder = document.querySelector("#cardImgT5")
+    let level = ""
+    for (const user of users) {
+        if (user.username === userOn) {
+            level = user.level
+        }
+    }
+    if (level >= 5) {
+        img.src = "../img/title5.png"
+        changeBorder.style.border = "3px solid #eb2020";
+        document.querySelector("#title5").style.display = "none"; //esconde o botao
+        document.querySelector("#lvl5").style.display = "block"
+    }
+}
+
+//carrega para o array e localStorage a informaçao das medalhas adquiridas
+function title5Acquired() {
+    let level = ""
+    for (const user of users) {
+        if (user.username === userOn) {
+            level = user.level
+        }
+    }
+    if (level >= 5) {
+        titles.push(new Title(userOn, "lvl5"))
+        localStorage.setItem("titles", JSON.stringify(titles))
+    }
+}
+
+//LVL5
 //carrega para o array e localStorage a informaçao dos titulos adquiridos
 function lvl6Title() {
     const img = document.querySelector("#imgT6")
@@ -375,7 +502,7 @@ function title6Acquired() {
         }
     }
     if (level >= 6) {
-        titles.push(new Trophy(userOn, "lvl6"))
+        titles.push(new Title(userOn, "lvl6"))
         localStorage.setItem("titles", JSON.stringify(titles))
     }
 }

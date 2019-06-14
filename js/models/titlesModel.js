@@ -1,6 +1,6 @@
 export default class Title {
-    constructor(username, title) {
+    constructor(username, name) {
         this.username = username
-        this.title = title
+        this.name = name
     }
 }
