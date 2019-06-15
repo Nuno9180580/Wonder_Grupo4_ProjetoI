@@ -125,7 +125,7 @@ function renderUserInfo() {
     }
   }
   userImg.src = imgAvatar
-  userExp.innerHTML = userXP
+  userExp.innerHTML = userXP+" XP"
   userExp.style.width = userXP + "px";
   userAvatar.src = imgAvatar
   userLvl.innerHTML = "Nível: " + userLvl2

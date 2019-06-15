@@ -10,7 +10,11 @@
 
 #cardTitle,
 #currentLvl {
+    background-color: #7f00c0;
+    color: white;
+}
 
+#currentTitle {
     background-color: #7f00c0;
     color: white;
 }
@@ -19,84 +23,88 @@
     font-size: 40px;
 }
 
-.jb1 {
+.row {
+    margin-left: 200px;
+}
+
+#profileContainer {
     background-color: #7f00c0;
-    width: 40%;
-    height: 500px;
-    ;
+    width: 100%;
+    height: 550px;
+    border: 5px solid #7f00c0;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#infoContainer {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-family: fredoka;
+    font-size: 16px;
+    height: 400px;
+    background-color: white;
+    border: 5px solid #7f00c0;
+    border-radius: 20px;
+}
+
+#xpScoreContainer {
+    height: 280px;
+    width: 750px;
+    background-color: white;
+    border: 5px solid #7f00c0;
+    border-radius: 20px;
+    margin-left: 32px;
+    border: 5px solid #7f00c0;
+    border-radius: 20px;
+}
+
+#infoProfile {
+    height: 250px;
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 32px;
+    border: 5px solid #7f00c0;
+    border-radius: 20px;
+    width: 750px;
 }
 
 #txtUserLogged {
     font-family: fredoka;
     margin-left: 10px;
-    font-size: 25spx;
+    font-size: 25px;
 }
 
 #cardImg {
-    margin-top: 10px;
-    height: 250px;
+    height: auto;
     width: 250px;
     border: 5px solid white;
     border-radius: 50px;
-
 }
 
-.container {
-    display: flex;
-}
-
-.container2 {
-    display: flex;
-}
-
-#qwerty {
-    border: 5px solid #7f00c0;
-    border-radius: 20px;
-}
-
-.jb2 {
-
-    height: 400px;
-    background-color: white;
-    border: 5px solid #7f00c0;
-    border-radius: 20px;
-
-}
-
-#jb2 {
-    margin-left: 32px;
-    border: 5px solid #7f00c0;
-    border-radius: 20px;
-
-}
-
-.jb3 {
-    height: 350px;
-    background-color: white;
-    margin-top: -40px;
-    z-index: -1;
-    border: 5px solid #7f00c0;
-    border-radius: 20px;
-
-    z-index: -1;
-}
-
-.jb4 {
+/* .jb4 {
     margin-left: 400px;
     margin-top: -380px;
     height: 350px;
     background-color: white;
     border: 5px solid #7f00c0;
     border-radius: 20px;
-
     z-index: -1;
+} */
+
+/* .jb2 {
+
+    
 }
 
-.pontos {
-    width: 100%;
-    background-color: white;
-    border-block-start-color: black;
+#jb2 {
+    
+
 }
+ */
 
 #sideMenu {
     margin-top: 95px;
@@ -107,38 +115,11 @@
     margin: auto;
 }
 
-#labelLvl {
-
-    font-size: 23px;
-    color: white;
-}
-
 .progress {
     height: 30px;
     border: 2px solid #7f00c0;
     margin-bottom: 20px;
-    margin-top: 10px;
-
-
-}
-
-#xpContainer {
-    margin-top: -30px;
-}
-
-#userDetails {
-    display: flex;
-    align-content: center;
-    justify-content: center;
-
-
-    font-family: fredoka;
-    font-size: 16px;
-}
-
-#form1 {
-    margin-top: -20px;
-    margin-left: -70px;
+    margin-top: 30px;
 }
 
 .details {
@@ -155,7 +136,7 @@
 }
 
 
-#changeBtn {
+/* #changeBtn {
     background-color: #ffa812;
     z-index: 10;
     margin-left: -110px;
@@ -163,24 +144,88 @@
     height: 30px;
     grid-area: auto;
     font-family: fredoka;
-}
+} */
 
 
 #switchPass {
     background-color: #ffa812;
-    position: absolute;
     z-index: 10;
     height: 30px;
-    margin-left: 260px;
-    margin-top: 120px;
     width: 80px;
-    color: black
+    color: black;
+    margin-left: 10px;
+    margin-top: -4px;
 }
-
 
 #userAvatar {
     border: 1.5px solid white;
     border-radius: 15px;
+}
+
+#xpTxt {
+    background-color: #7f00c0;
+    border-top: 5px solid #7f00c0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-left: -33.5px;
+    margin-top: -1px;
+    width: 110%;
+    text-align: center;
+    color: white;
+    color: white;
+    font-family: fredoka;
+    font-size: 30px;
+}
+
+#scoreTxt {
+    background-color: #7f00c0;
+    margin-left: -33.5px;
+    margin-top: -1px;
+    width: 110%;
+    text-align: center;
+    color: white;
+    color: white;
+    font-family: fredoka;
+    font-size: 30px;
+}
+
+#defTxt {
+    background-color: #7f00c0;
+    border: 5px solid #7f00c0;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    margin-top: -1px;
+    margin-left: -20px;
+    width: 105.5%;
+    text-align: center;
+    color: white;
+    font-family: fredoka;
+    font-size: 30px;
+}
+
+#scoreContainer {
+    border: 15px solid #7f00c0;
+    border-radius: 20px;
+    height: 100px;
+    width: 520px;
+}
+#scoreContainer2 {
+    border: 10px solid #ffa812;
+    border-radius: 20px;
+    margin-top: -5px;
+    margin-left: -20px;
+    width: 500px;
+    height: 80px;
+    z-index: 100;
+}
+
+#scoreLabel {
+    margin-top: 10px;
+    margin-left: 120px;
+    width: 200%;
+    color: black;
+    font-family: fredoka;
+    font-size: 30px;
 }
 
 #userAvatar:hover {
