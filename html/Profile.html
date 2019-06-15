@@ -69,10 +69,62 @@
         </a>
     </div>
 
-
     <br><br>
-
     <div class="row">
+        <div class="col-xs-1-12">
+            <!-- container do perfil (imagem, nome lvl) -->
+            <div class=" container-fluid" id="profileContainer">
+                <h5 id="cardTitle" style="font-family: fredoka;" class="card-title"></h5>
+                <img src="" alt="">
+                <img id="cardImg" src="">
+                <br>
+                <h2 style="font-family: fredoka;" id="currentLvl">Nivel: 4</h2>
+                <h2 style="font-family: fredoka;" id="currentTitle">Explorador</h2>
+                <br>
+                <button type="button" style="font-family: fredoka;" class="btn btn-info btn-lg view" data-toggle="modal"
+                    data-target="#changeUser">Mudar
+                    Avatar</button>
+            </div>
+        </div>
+
+        <div class="col-xs-1-12">
+            <!-- container do score e experiencia -->
+            <div class="container-fluid" id="xpScoreContainer">
+                <div id="xpContainer" class="container-fluid">
+                    <p id="xpTxt">BARRA DE EXPERIÊNCIA</p>
+                    <div class="progress">
+                        <div id="xpBar" class="progress-bar progress-bar-danger" role="progressbar" aria-valuemin="0"
+                            aria-valuemax="1000" style="color:white; font-family: fredoka; font-size: 20px;"></div>
+                    </div>
+                </div>
+                <br>
+                <div id="scoreContainer" class="container-fluid">
+                    <div id="scoreContainer2" class="container-fluid">
+                        <p id="scoreLabel"></p>
+                    </div>
+                </div>
+            </div>
+            <!-- container do email e password -->
+            <div class="container-fluid" id="infoProfile">
+                <p id="defTxt">Definições</p>
+                <div class="container details" style="background-color:#ffa812">
+                    <label id="label">E-mail</label>
+                </div>
+                <input id="emailAdress" value="" type="text" name="emailAdress" readonly>
+
+                <br>
+                <br>
+                <div class="container details" style="background-color:#ffa812">
+                    <label id="label">Senha</label>
+                </div>
+                <input id="passWord" type="password" readonly>
+                <input id="switchPass" style="font-family: fredoka;" type="button" class="btn" data-toggle="modal"
+                    data-target="#changePass" value="Alterar">
+            </div>
+        </div>
+    </div>
+
+    <!-- <div class="row">
         <div id="container0" class="container">
             <div id="qwerty" class="jumbotron text-center col-md-4 jb1">
                 <img id="cardImg" src=""
@@ -90,7 +142,6 @@
             </div>
 
             <div id="jb2" class="jumbotron text-center col-md-8 jb2">
-
                 <div id="xpContainer" class="container-fluid"
                     style="color:#7f00c0; font-family: fredoka; font-size: 30px;">
                     BARRA DE EXPERIÊNCIA
@@ -102,10 +153,7 @@
                 <h1 id="scoreLabel" style="color:black"></h1>
             </div>
         </div>
-
     </div>
-
-
     <div class="row">
         <div id="container1" class="container">
             <div class="jumbotron text-center col-md-4 jb3">
@@ -124,31 +172,19 @@
                         <input id="passWord" type="password">
                         <br>
                         <br>
-
-
-
                     </form>
-
                 </div>
-
             </div>
-
             <input id="switchPass" style="font-family: fredoka;" type="button" class="btn" data-toggle="modal"
                 data-target="#changePass" value="Alterar">
-
-
-
-
         </div>
         <div id="container2" class="container">
             <div class="jumbotron text-center col-md-8 jb4">
                 <div class="container-fluid">
-
                 </div>
             </div>
         </div>
-
-    </div>
+    </div> -->
 
 
     <!-- Modal -->

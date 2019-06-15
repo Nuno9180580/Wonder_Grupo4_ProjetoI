@@ -370,7 +370,7 @@ function title2Acquired() {
         }
     }
     if (level >= 2) {
-        titles.push(new Title(userOn, "lvl2"))
+        titles.push(new Title(userOn, 2))
         localStorage.setItem("titles", JSON.stringify(titles))
     }
 }
@@ -403,7 +403,7 @@ function title3Acquired() {
         }
     }
     if (level >= 3) {
-        titles.push(new Title(userOn, "lvl3"))
+        titles.push(new Title(userOn, 3))
         localStorage.setItem("titles", JSON.stringify(titles))
     }
 }
@@ -436,7 +436,7 @@ function title4Acquired() {
         }
     }
     if (level >= 4) {
-        titles.push(new Title(userOn, "lvl4"))
+        titles.push(new Title(userOn, 4))
         localStorage.setItem("titles", JSON.stringify(titles))
     }
 }
@@ -469,7 +469,7 @@ function title5Acquired() {
         }
     }
     if (level >= 5) {
-        titles.push(new Title(userOn, "lvl5"))
+        titles.push(new Title(userOn, 5))
         localStorage.setItem("titles", JSON.stringify(titles))
     }
 }
@@ -502,7 +502,7 @@ function title6Acquired() {
         }
     }
     if (level >= 6) {
-        titles.push(new Title(userOn, "lvl6"))
+        titles.push(new Title(userOn, 6))
         localStorage.setItem("titles", JSON.stringify(titles))
     }
 }
