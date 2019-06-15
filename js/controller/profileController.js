@@ -109,7 +109,11 @@ function renderUserInfo() {
   const userPass = document.querySelector("#passWord")
   const scoreUser = document.querySelector("#scoreLabel")
   cardTitle.innerHTML = userOn;
-  labelUser.innerHTML = userOn + ", " + userOnTitle;
+  if (userOn != "admin") {
+    labelUser.innerHTML = userOn + ", " + userOnTitle;
+  } else {
+    labelUser.innerHTML = userOn
+  }
   let imgAvatar = ""
   let userLvl2 = ""
   let userXP = ""
@@ -131,7 +135,11 @@ function renderUserInfo() {
   userExp.style.width = userXP + "px";
   userAvatar.src = imgAvatar
   userLvl.innerHTML = "Nível: " + userLvl2
-  userTitle.innerHTML = userOnTitle
+  if (userOn != "admin") {
+    userTitle.innerHTML = userOnTitle
+  } else {
+    userTitle.innerHTML = ""
+  }
   userEmail.value = email;
   userPass.value = pass;
   scoreUser.innerHTML = "Pontuação: " + userScore
@@ -168,12 +176,12 @@ function changePass() {
       if (user.password === nowPass.value) {
         if (newPass.value != nowPass.value) {
           user.password = newPass.value
-          alert("alteracao feita")
+          alert("Alteracão Feita!")
         } else {
-          alert("a senha não pode ser igual à atual!")
+          alert("A senha não pode ser igual à atual!")
         }
       } else {
-        alert("a senha atual não é essa!")
+        alert("A senha atual não é essa!")
       }
     }
   }

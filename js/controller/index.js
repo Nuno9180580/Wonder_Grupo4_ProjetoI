@@ -73,7 +73,11 @@ navBarInfo();
 
 function navBarInfo() {
     const labelUser = document.querySelector("#txtUserLogged")
-    labelUser.innerHTML = `${userOn}, ${userOnTitle}`
+    if (userOn != "admin") {
+        labelUser.innerHTML = userOn + ", " + userOnTitle;
+    } else {
+        labelUser.innerHTML = userOn
+    }
     let imgAvatar = ""
     for (const user of users) {
         if (user.username === userOn) {

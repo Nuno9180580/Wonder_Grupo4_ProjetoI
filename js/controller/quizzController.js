@@ -14,7 +14,11 @@ const userOnTitle = sessionStorage.getItem('currentTitle')
 //vai buscar a label para ser mostrado o utilizador
 const labelUser = document.querySelector("#txtUserLogged")
 //da o nome de utilizador a label na navbar
-labelUser.innerHTML = userOn + ", " + userOnTitle;
+if (userOn != "admin") {
+    labelUser.innerHTML = userOn + ", " + userOnTitle;
+} else {
+    labelUser.innerHTML = userOn
+}
 
 let imgAvatar = "" //variavel a ser usada em baixo
 for (const user of users) { //percorre o array users para ir buscar o user logado
