@@ -8,6 +8,7 @@ import {
 
 //Lê o Utilizador Ativo
 const userOn = sessionStorage.getItem("loggedUser");
+const userOnTitle = sessionStorage.getItem('currentTitle')
 let userLevel = 0;
 
 /* ---------------------------------------------------------------------EventListeners--------------------------------------------------------*/
@@ -39,7 +40,7 @@ navBarInfo();
 
 function navBarInfo() {
   const labelUser = document.querySelector("#txtUserLogged");
-  labelUser.innerHTML = userOn;
+  labelUser.innerHTML = userOn + ", " + userOnTitle;
   let imgAvatar = "";
   for (const user of users) {
     if (user.username === userOn) {

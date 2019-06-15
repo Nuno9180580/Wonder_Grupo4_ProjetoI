@@ -10,6 +10,7 @@ import Monument from "../models/monumentModel.js";
 
 //Lê o Utilizador Ativo
 const userOn = sessionStorage.getItem('loggedUser')
+const userOnTitle = sessionStorage.getItem('currentTitle')
 
 //Adiciona o nome do utilizador ativo na frase inicial
 const welcome = document.querySelector("#welcome")
@@ -24,13 +25,55 @@ document.querySelector("#sugestBtn").addEventListener("click", function () {
 })
 
 /*---------------------------------------------------------------------Funções ---------------------------------------------------------------*/
+//funcao que atribui o melhor titulo ao utilizador
+getUserTitle()
 
-//Adiciona a Imagem e o Nome do utilizador na NavBar
+function getUserTitle() {
+    let titles = []
+    if (localStorage.titles) {
+        titles = JSON.parse(localStorage.titles)
+    }
+    let titleLevel = 1
+    let userTitle = ""
+    for (const title of titles) {
+        if (userOn === title.username) {
+            if (title.name > titleLevel) {
+                titleLevel = title.name
+            }
+        }
+    }
+    switch (titleLevel) {
+        case 1:
+            userTitle = "Novato"
+            break;
+        case 2:
+            userTitle = "Turista"
+            break;
+        case 3:
+            userTitle = "Viajante"
+            break;
+        case 4:
+            userTitle = "Aventureiro"
+            break;
+        case 5:
+            userTitle = "Explorador"
+            break;
+        case 6:
+            userTitle = "Maravilha"
+            break;
+        default: //nao faz nada
+            break;
+    }
+    //guarda na sessionStorage o titulo do user logado
+    sessionStorage.setItem("currentTitle", userTitle);
+}
+
+//Adiciona a Imagem, o Nome do utilizador e o titulo na NavBar
 navBarInfo();
 
 function navBarInfo() {
     const labelUser = document.querySelector("#txtUserLogged")
-    labelUser.innerHTML = userOn;
+    labelUser.innerHTML = `${userOn}, ${userOnTitle}`
     let imgAvatar = ""
     for (const user of users) {
         if (user.username === userOn) {
@@ -91,7 +134,7 @@ function renderHighScore() {
     let thirdScore = ""
     users.sort(User.highScore)
     localStorage.setItem("highscores", JSON.stringify(users))
-    if (localStorage.getItem("highscores")) {    
+    if (localStorage.getItem("highscores")) {
         scores = JSON.parse(localStorage.getItem("highscores"))
         if (scores[0].username === "admin") {
             first = scores[1].username
@@ -145,7 +188,6 @@ function renderHighScore() {
         document.querySelector("#rdImg").src = thirdImg
         document.querySelector("#rdScore").innerHTML = thirdScore + " " + "Pontos"
     }
-    console.log(scores)
 }
 
 //Funão que renderiza os monumentos mais populares

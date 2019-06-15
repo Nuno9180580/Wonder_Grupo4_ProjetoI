@@ -9,10 +9,12 @@ import Question from "../models/questionModel.js"
 
 //vai buscar o utilizador logado no momento
 const userOn = sessionStorage.getItem('loggedUser')
+//vai buscar o titulo do utilizador logado
+const userOnTitle = sessionStorage.getItem('currentTitle')
 //vai buscar a label para ser mostrado o utilizador
 const labelUser = document.querySelector("#txtUserLogged")
 //da o nome de utilizador a label na navbar
-labelUser.innerHTML = userOn;
+labelUser.innerHTML = userOn + ", " + userOnTitle;
 
 let imgAvatar = "" //variavel a ser usada em baixo
 for (const user of users) { //percorre o array users para ir buscar o user logado

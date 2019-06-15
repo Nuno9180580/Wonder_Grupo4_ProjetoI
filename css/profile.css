@@ -75,7 +75,7 @@
 #txtUserLogged {
     font-family: fredoka;
     margin-left: 10px;
-    font-size: 25px;
+    font-size: 25spx;
 }
 
 #cardImg {
@@ -84,27 +84,6 @@
     border: 5px solid white;
     border-radius: 50px;
 }
-
-/* .jb4 {
-    margin-left: 400px;
-    margin-top: -380px;
-    height: 350px;
-    background-color: white;
-    border: 5px solid #7f00c0;
-    border-radius: 20px;
-    z-index: -1;
-} */
-
-/* .jb2 {
-
-    
-}
-
-#jb2 {
-    
-
-}
- */
 
 #sideMenu {
     margin-top: 95px;
@@ -134,18 +113,6 @@
     margin-left: 6px;
     margin-top: 5px;
 }
-
-
-/* #changeBtn {
-    background-color: #ffa812;
-    z-index: 10;
-    margin-left: -110px;
-    margin-top: 119px;
-    height: 30px;
-    grid-area: auto;
-    font-family: fredoka;
-} */
-
 
 #switchPass {
     background-color: #ffa812;

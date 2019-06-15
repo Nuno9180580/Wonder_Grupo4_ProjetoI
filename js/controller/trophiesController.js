@@ -7,6 +7,7 @@ import Title from "../models/titlesModel.js"
 
 //Lê o Utilizador Ativo
 const userOn = sessionStorage.getItem('loggedUser')
+const userOnTitle = sessionStorage.getItem('currentTitle')
 
 let trophies = []
 
@@ -54,25 +55,31 @@ document.querySelector("#btn6").addEventListener("click", function () {
 document.querySelector("#title2").addEventListener("click", function () {
     lvl2Title()
     title2Acquired()
+    updateTitle()
 })
 document.querySelector("#title3").addEventListener("click", function () {
     lvl3Title()
     title3Acquired()
+    updateTitle()
 })
 document.querySelector("#title4").addEventListener("click", function () {
     lvl4Title()
     title4Acquired()
+    updateTitle()
 })
 document.querySelector("#title5").addEventListener("click", function () {
     lvl5Title()
     title5Acquired()
+    updateTitle()
 })
 document.querySelector("#title6").addEventListener("click", function () {
     lvl6Title()
     title6Acquired()
+    updateTitle()
 })
 
 /* ---------------------------------------------------------------------Funções--------------------------------------------------------------*/
+
 //funcao para ao entrar verificar que medalhas devem aparecer marcadas
 checkForMedals()
 
@@ -111,21 +118,20 @@ checkForTitles()
 function checkForTitles() {
     for (const title of titles) {
         if (userOn === title.username) {
-            console.log(title.name)
             switch (title.name) {
-                case "lvl2":
+                case 2:
                     lvl2Title();
                     break;
-                case "lvl3":
+                case 3:
                     lvl3Title();
                     break;
-                case "lvl4":
+                case 4:
                     lvl4Title();
                     break;
-                case "lvl5":
+                case 5:
                     lvl5Title();
                     break;
-                case "lvl6":
+                case 6:
                     lvl6Title();
                     break;
                 default: //nao faz nada
@@ -135,6 +141,42 @@ function checkForTitles() {
     }
 }
 
+//da update no melhor titulo desbloqueado
+function updateTitle() {
+    let titleLevel = 1
+    let userTitle = ""
+    for (const title of titles) {
+        if (userOn === title.username) {
+            if (title.name > titleLevel) {
+                titleLevel = title.name
+            }
+        }
+    }
+    switch (titleLevel) {
+        case 1:
+            userTitle = "Novato"
+            break;
+        case 2:
+            userTitle = "Turista"
+            break;
+        case 3:
+            userTitle = "Viajante"
+            break;
+        case 4:
+            userTitle = "Aventureiro"
+            break;
+        case 5:
+            userTitle = "Explorador"
+            break;
+        case 6:
+            userTitle = "Maravilha"
+            break;
+        default: //nao faz nada
+            break;
+    }
+    //guarda na sessionStorage o titulo do user logado
+    sessionStorage.setItem("currentTitle", userTitle);
+}
 //funcao click na 1ª medalha guarda user e medal na localStorage
 function xp100Medal() {
     const img = document.querySelector("#img1")
@@ -331,7 +373,7 @@ navBarInfo();
 
 function navBarInfo() {
     const labelUser = document.querySelector("#txtUserLogged")
-    labelUser.innerHTML = userOn;
+    labelUser.innerHTML = userOn + ", " + userOnTitle;
     let imgAvatar = ""
     for (const user of users) {
         if (user.username === userOn) {

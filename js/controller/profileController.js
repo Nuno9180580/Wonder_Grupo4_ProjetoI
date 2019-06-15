@@ -4,6 +4,7 @@ import {
 
 //Lê o Utilizador Ativo
 const userOn = sessionStorage.getItem('loggedUser')
+const userOnTitle = sessionStorage.getItem('currentTitle')
 
 /* ---------------------------------------------------------------------EventListeners--------------------------------------------------------*/
 
@@ -101,13 +102,14 @@ function renderUserInfo() {
   const cardTitle = document.querySelector("#cardTitle")
   const userAvatar = document.querySelector("#userAvatar")
   const userLvl = document.querySelector("#currentLvl")
+  const userTitle = document.querySelector("#currentTitle")
   const userExp = document.querySelector("#xpBar")
   const userImg = document.querySelector("#cardImg")
   const userEmail = document.querySelector("#emailAdress")
   const userPass = document.querySelector("#passWord")
   const scoreUser = document.querySelector("#scoreLabel")
   cardTitle.innerHTML = userOn;
-  labelUser.innerHTML = userOn;
+  labelUser.innerHTML = userOn + ", " + userOnTitle;
   let imgAvatar = ""
   let userLvl2 = ""
   let userXP = ""
@@ -125,10 +127,11 @@ function renderUserInfo() {
     }
   }
   userImg.src = imgAvatar
-  userExp.innerHTML = userXP+" XP"
+  userExp.innerHTML = userXP + " XP"
   userExp.style.width = userXP + "px";
   userAvatar.src = imgAvatar
   userLvl.innerHTML = "Nível: " + userLvl2
+  userTitle.innerHTML = userOnTitle
   userEmail.value = email;
   userPass.value = pass;
   scoreUser.innerHTML = "Pontuação: " + userScore
