@@ -55,9 +55,9 @@ const dummyMonuments = [{
     level: "1"
   },
   {
-    name: "Stonehendge",
+    name: "Torre de Belém",
     year: "3001 a.C.",
-    photo: "../img/Stonehendge.jpg",
+    photo: "../img/quizzMonuments/lvl1_belem.jpg",
     description: "Lorem Ipsum",
     city: "Salisbury",
     country: "Reino Unido",
