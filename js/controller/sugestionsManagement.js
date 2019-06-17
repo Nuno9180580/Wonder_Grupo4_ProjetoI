@@ -41,7 +41,7 @@ alertSugestion();
 function alertSugestion() {
     if (sugestions === undefined || sugestions.length == 0) {
         Swal.fire("Não existem Sugestões")
-        location.href = "../html/backOffice.html"
+        
 
     }
 
