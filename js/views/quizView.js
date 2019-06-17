@@ -78,12 +78,12 @@ export let questions = [{
         level: 2
     },
     {
-        question: "Só podemos ter esta vista se visitarmos... ",
+        question: "Só podemos ter esta vista se visitarmos o... ",
         imgQuestion: "../img/quizzMonuments/lvl2_rome.jpg",
-        choiceA: "o Coliseu de Roma",
-        choiceB: "o Teatro de Mileto",
-        choiceC: "o Aqueduto de Segovia",
-        choiceD: "O Estádio da Luz",
+        choiceA: "Coliseu de Roma",
+        choiceB: "Teatro de Mileto",
+        choiceC: "Aqueduto de Segovia",
+        choiceD: "Estádio da Luz",
         correct: "A",
         level: 2
     },
