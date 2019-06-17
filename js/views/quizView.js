@@ -99,7 +99,7 @@ export let questions = [{
     },
     {
         question: "?",
-        imgQuestion: "../img/quizzMonuments/lvl.jpg",
+        imgQuestion: "../img/quizzMonuments/esfinge_sombra.jpg",
         choiceA: "Wrong",
         choiceB: "Wrong",
         choiceC: "Correct",
@@ -109,7 +109,7 @@ export let questions = [{
     },
     {
         question: "Whatewawa?",
-        imgQuestion: "../img/quizzMonuments/lvl1_liberty.jpg",
+        imgQuestion: "../img/quizzMonuments/lvl3_mahal.jpg",
         choiceA: "Wrong",
         choiceB: "Correct",
         choiceC: "Wrong",
@@ -118,7 +118,7 @@ export let questions = [{
         level: 3
     }, {
         question: "What dasdadsad for?",
-        imgQuestion: "../img/quizzMonuments/lvl1_liberty.jpg",
+        imgQuestion: "../img/quizzMonuments/lvl3_notredame.jpg",
         choiceA: "Wrong",
         choiceB: "Wrong",
         choiceC: "Correct",
@@ -128,7 +128,7 @@ export let questions = [{
     },
     {
         question: "OLA fdghfr?",
-        imgQuestion: "../img/quizzMonuments/lvl1_liberty.jpg",
+        imgQuestion: "../img/quizzMonuments/lvl3_rodes.jpg",
         choiceA: "Wrong",
         choiceB: "Wrong",
         choiceC: "Wrong",
@@ -138,7 +138,7 @@ export let questions = [{
     },
     {
         question: "dswz21r?",
-        imgQuestion:"../img/quizzMonuments/lvl1_liberty.jpg",
+        imgQuestion:"../img/quizzMonuments/lvl3_khalifa.jpg",
         choiceA: "Wrong",
         choiceB: "Correct",
         choiceC: "Wrong",
@@ -147,7 +147,7 @@ export let questions = [{
         level: 3
     }, {
         question: "What213a?",
-        imgQuestion: "../img/quizzMonuments/lvl1_liberty.jpg",
+        imgQuestion: "../img/quizzMonuments/lvl4_kremlin.jpg",
         choiceA: "Wrong",
         choiceB: "Wrong",
         choiceC: "Correct",
@@ -157,7 +157,7 @@ export let questions = [{
     },
     {
         question: "Whatdasdasdsadasdasdsadsadadssa213213213?",
-        imgQuestion: "../img/quizzMonuments/lvl1_liberty.jpg",
+        imgQuestion: "../img/quizzMonuments/lvl4_picchu.jpg",
         choiceA: "Wrong",
         choiceB: "Wrong",
         choiceC: "Correct",
@@ -167,7 +167,7 @@ export let questions = [{
     },
     {
         question: "1231321321Whatdasdasdsadasdasdsadsadadssa?",
-        imgQuestion: "../img/quizzMonuments/lvl1_liberty.jpg",
+        imgQuestion: "../img/quizzMonuments/lvl4_jeronimos.jpg",
         choiceA: "Wrong",
         choiceB: "Wrong",
         choiceC: "Correct",
@@ -177,7 +177,7 @@ export let questions = [{
     },
     {
         question: "We212312adadssa?",
-        imgQuestion: "../img/quizzMonuments/lvl1_liberty.jpg",
+        imgQuestion: "../img/quizzMonuments/opera_sombra.jpg",
         choiceA: "Wrong",
         choiceB: "Wrong",
         choiceC: "Correct",
@@ -187,7 +187,7 @@ export let questions = [{
     },
     {
         question: "css21321321?",
-        imgQuestion: "../img/quizzMonuments/lvl1_liberty.jpg",
+        imgQuestion: "../img/quizzMonuments/lvl4_zeus.jpg",
         choiceA: "Wrong",
         choiceB: "Wrong",
         choiceC: "Correct",
@@ -196,8 +196,8 @@ export let questions = [{
         level: 4
     },
     {
-        question: "Wha321dad?",
-        imgQuestion: "../img/quizzMonuments/lvl1_liberty.jpg",
+        question: "Esta réplica representa que monumento do mundo antigo?",
+        imgQuestion: "../img/quizzMonuments/lvl5_artemis.jpg",
         choiceA: "Wrong",
         choiceB: "Wrong",
         choiceC: "Correct",
@@ -207,7 +207,7 @@ export let questions = [{
     },
     {
         question: "Wha12321fdasdsa?",
-        imgQuestion: "../img/quizzMonuments/lvl1_liberty.jpg",
+        imgQuestion: "../img/quizzMonuments/itza_sombra.jpg",
         choiceA: "Wrong",
         choiceB: "Wrong",
         choiceC: "Correct",
@@ -217,7 +217,7 @@ export let questions = [{
     },
     {
         question: "Wh12a?",
-        imgQuestion: "../img/quizzMonuments/lvl1_liberty.jpg",
+        imgQuestion: "../img/quizzMonuments/lvl5_petra.jpg",
         choiceA: "Wrong",
         choiceB: "Wrong",
         choiceC: "Correct",
@@ -227,7 +227,7 @@ export let questions = [{
     },
     {
         question: "Wcsss?",
-        imgQuestion: "../img/quizzMonuments/lvl1_liberty.jpg",
+        imgQuestion: "../img/quizzMonuments/lvl5_rushmore.jpg",
         choiceA: "Wrong",
         choiceB: "Wrong",
         choiceC: "Correct",
@@ -237,7 +237,7 @@ export let questions = [{
     },
     {
         question: "W32ssa?",
-        imgQuestion: "../img/quizzMonuments/lvl1_liberty.jpg",
+        imgQuestion: "../img/quizzMonuments/lvl5_batalha.jpg",
         choiceA: "Wrong",
         choiceB: "Wrong",
         choiceC: "Correct",
