@@ -31,7 +31,7 @@ alertSugestion();
 function alertSugestion() {
     if (sugestions === undefined || sugestions.length == 0) {} // vê se o array existe ou se está vazio
     else {
-        alert("Existem Sugestões")
+        Swal.fire("Existem Sugestões")
     }
 
 }

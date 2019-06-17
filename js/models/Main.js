@@ -398,7 +398,7 @@ export function registerSubmit(id, txtUsername, txtEmail, txtPass, txtConfirmPas
       }
     }
     if (usernameExists === false && emailExists === false) {
-      alert("Conta criada com sucesso!");
+      Swal.fire("Conta criada com sucesso!");
       users.push(new User(id, txtUsername, txtEmail, txtPass, 1, 0, "../img/AvatarFields.jpg", "criança", 0, 0, 0));
       localStorage.setItem("users", JSON.stringify(users));
       sessionStorage.setItem("loggedUser", txtUsername);
@@ -406,13 +406,13 @@ export function registerSubmit(id, txtUsername, txtEmail, txtPass, txtConfirmPas
     }
     if (usernameExists === true) {
       document.querySelector("#txtUsername").value = "";
-      alert("Nome de Utilizador já existe!");
+      Swal.fire("Nome de Utilizador já existe!");
     } else if (emailExists === true) {
       document.querySelector("#txtEmail").value = "";
-      alert("Email já existe!");
+      Swal.fire("Email já existe!");
     }
   } else {
-    alert("As palavras passe não coincidem!");
+    Swal.fire("As palavras passe não coincidem!");
     document.querySelector("#txtPass").value = "";
     document.querySelector("#txtConfirmPass").value = "";
   }
@@ -428,19 +428,19 @@ export function loginSubmit(txtUsername, txtPass) {
       userType = user.userType;
       existUser = true;
       if (user.blocked === 0) {
-        alert(`Bem-vindo ${txtUsername}!`);
+        Swal.fire(`Bem-vindo ${txtUsername}!`);
         if (userType == "admin") {
           window.location.href = "../html/backOffice.html"; //redireciona para a pagina principal
         } else {
           window.location.href = "../html/index.html"; //redireciona para a pagina principal
         }
       } else {
-        alert("Conta Bloqueada!");
+        Swal.fire("Conta Bloqueada!");
       }
     }
   }
   if (existUser === false) {
-    alert("Dados incorretos!");
+    Swal.fire("Dados incorretos!");
     document.querySelector("#txtUsername").value = "";
     document.querySelector("#txtPass").value = "";
   }
@@ -449,7 +449,7 @@ export function loginSubmit(txtUsername, txtPass) {
 
 //função para efetuar logout
 export function logout() {
-  alert("Sessão terminada.");
+  Swal.fire("Sessão terminada.");
   sessionStorage.removeItem("loggedUser");
   window.location.href = "../html/landingRegister.html";
 }

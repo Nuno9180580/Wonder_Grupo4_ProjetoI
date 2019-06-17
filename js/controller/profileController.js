@@ -176,12 +176,12 @@ function changePass() {
       if (user.password === nowPass.value) {
         if (newPass.value != nowPass.value) {
           user.password = newPass.value
-          alert("Alteracão Feita!")
+          Swal.fire("Alteracão Feita!")
         } else {
-          alert("A senha não pode ser igual à atual!")
+          Swal.fire("A senha não pode ser igual à atual!")
         }
       } else {
-        alert("A senha atual não é essa!")
+        Swal.fire("A senha atual não é essa!")
       }
     }
   }
