@@ -1,5 +1,4 @@
 import {
-  users,
   loginSubmit
 }
 from "../models/main.js"
