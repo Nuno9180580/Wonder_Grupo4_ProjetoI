@@ -10,7 +10,7 @@ import Monument from "../models/monumentModel.js";
 
 //Lê o Utilizador Ativo
 const userOn = sessionStorage.getItem('loggedUser')
-const userOnTitle = sessionStorage.getItem('currentTitle')
+let userTitle //na funcao getUserTitle vai atribuir o titulo a esta variavel
 
 //Adiciona o nome do utilizador ativo na frase inicial
 const welcome = document.querySelector("#welcome")
@@ -21,7 +21,7 @@ welcome.innerHTML = "Olá " + userOn + "!"
 //Butão que envia a sugestão
 document.querySelector("#sugestBtn").addEventListener("click", function () {
     sugestionStorage();
-    alert("Enviado")
+    Swal.fire("Enviado")
 })
 
 /*---------------------------------------------------------------------Funções ---------------------------------------------------------------*/
@@ -34,7 +34,6 @@ function getUserTitle() {
         titles = JSON.parse(localStorage.titles)
     }
     let titleLevel = 1
-    let userTitle = ""
     for (const title of titles) {
         if (userOn === title.username) {
             if (title.name > titleLevel) {
@@ -66,15 +65,14 @@ function getUserTitle() {
     }
     //guarda na sessionStorage o titulo do user logado
     sessionStorage.setItem("currentTitle", userTitle);
+    navBarInfo();
 }
-
 //Adiciona a Imagem, o Nome do utilizador e o titulo na NavBar
-navBarInfo();
 
 function navBarInfo() {
     const labelUser = document.querySelector("#txtUserLogged")
     if (userOn != "admin") {
-        labelUser.innerHTML = userOn + ", " + userOnTitle;
+        labelUser.innerHTML = userOn + ", " + userTitle;
     } else {
         labelUser.innerHTML = userOn
     }
@@ -114,7 +112,7 @@ function alertSugestion() {
         if (user.username === userOn) {
             alertS = user.alert
             if (alertS === 1) {
-                alert("Recebeste Pontos de Experiência pela tua sugestão! ")
+                Swal.fire("Recebeste Pontos de Experiência pela tua sugestão! ")
                 user.alert = 0
                 localStorage.setItem("users", JSON.stringify(users))
             }

@@ -37,8 +37,8 @@ function removeComment() {
         if (removeComment == comment.id) {
             comments.splice(index, 1);
             localStorage.setItem("comments", JSON.stringify(comments))
-            alert("o comentario " + "'" +comment.userComment + "'" + " foi removido com sucesso!")
-            alert(userName + " perdeu 5XP")
+            Swal.fire("o comentario " + "'" +comment.userComment + "'" + " foi removido com sucesso!")
+            Swal.fire(userName + " perdeu 5XP")
             for (const user of users) {
                 if(userName === user.username){
                     user.experience = user.experience - 5
@@ -65,7 +65,7 @@ function giveXP() {
                 if(userName === user.username){
                     user.experience = user.experience + 3
                   localStorage.setItem("users", JSON.stringify(users))
-                    alert("Foram atribuidos 3XP a" + " " +userName)
+                    Swal.fire("Foram atribuidos 3XP a" + " " +userName)
                 }
                 
             }
