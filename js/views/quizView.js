@@ -199,7 +199,7 @@ export let questions = [{
         question: "Esta réplica representa que monumento do mundo antigo?",
         imgQuestion: "../img/quizzMonuments/lvl5_artemis.jpg",
         choiceA: "Templo de Zeus",
-        choiceB: "Templo de Afaia",
+        choiceB: "Templo de Atena",
         choiceC: "Templo de Ártemis",
         choiceD: "Templo de Poseidon",
         correct: "C",
@@ -226,12 +226,12 @@ export let questions = [{
         level: 5
     },
     {
-        question: "Quem está representado neste monumento?",
+        question: "Estes 4 presidentes estão esculpidos nos E.U.A. no estado de...",
         imgQuestion: "../img/quizzMonuments/lvl5_rushmore.jpg",
-        choiceA: "Presidentes Americanos",
-        choiceB: "Cientistas Americanos",
-        choiceC: "Presidentes Ingleses",
-        choiceD: "Presidentes Canadianos",
+        choiceA: "Dakota do Sul",
+        choiceB: "Kansas",
+        choiceC: "Nebraska",
+        choiceD: "Califórnia",
         correct: "A",
         level: 5
     },
