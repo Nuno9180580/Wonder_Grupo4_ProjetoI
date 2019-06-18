@@ -40,7 +40,7 @@ const dummyMonuments = [{
     name: "Pirâmides de Gizé",
     year: "1850 a.C.",
     photo: "../img/PiramidesDeGize.jpg",
-    description: "Lorem Ipsum",
+    description: "",
     city: "Cairo",
     country: "Egito",
     level: "1"
@@ -49,7 +49,7 @@ const dummyMonuments = [{
     name: "Big Ben",
     year: "1859 d.C.",
     photo: "../img/BigBen.jpg",
-    description: "Lorem Ipsum",
+    description: "S",
     city: "Londres",
     country: "Reino Unido",
     level: "1"
@@ -66,7 +66,7 @@ const dummyMonuments = [{
   {
     name: "Torre dos Clérigos",
     year: "1750 d.C.",
-    photo: "../img/TorreDosClerigos.jpg",
+    photo: "../img/lvl2_clerigos.jpg",
     description: "Lorem Ipsum",
     city: "Porto",
     country: "Portugal",
