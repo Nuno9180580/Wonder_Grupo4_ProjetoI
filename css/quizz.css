@@ -244,6 +244,9 @@
 #cD {
     padding-top: 15px;
 }
+#cD, #aB{
+    font-size: 15px;
+}
 
 #txtUserLogged {
     font-family: fredoka;

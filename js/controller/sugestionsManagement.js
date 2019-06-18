@@ -40,7 +40,8 @@ alertSugestion();
 
 function alertSugestion() {
     if (sugestions === undefined || sugestions.length == 0) {
-        Swal.fire("Não existem Sugestões")
+        alert("Não existem Sugestões")
+        window.location.href = "../html/BackOffice.html"
         
 
     }
@@ -95,7 +96,7 @@ function renderCatalog() {
                 if (sugestion.monument === this.id) {
                     sugestions.splice(userIndex - 1, 1);
                     localStorage.setItem("sugestions", JSON.stringify(sugestions))
-                    Swal.fire(`Sugestão de ${sugestion.username} rejeitada!`)
+                    alert(`Sugestão de ${sugestion.username} rejeitada!`)
                     renderCatalog();
                 }
             }
@@ -111,7 +112,7 @@ function renderCatalog() {
                 if (sugestion.monument === this.id) {
                     accepted.push(new Sugestion(sugestion.username, sugestion.monument, sugestion.moreInfo))
                     localStorage.setItem("accepted", JSON.stringify(accepted))
-                    Swal.fire(`Sugestão de ${sugestion.username} adicionado!`)
+                    alert(`Sugestão de ${sugestion.username} adicionado!`)
                     for (const user of users) {
                         if (sugestion.username === user.username) {
                             user.experience = user.experience + 10 //atribui 10xp ao utilizador que fez a sugestão

@@ -111,8 +111,8 @@ export let questions = [{
         question: "O que simboliza este monumento?",
         imgQuestion: "../img/quizzMonuments/lvl3_mahal.jpg",
         choiceA: "Alegria e Sofrimento",
-        choiceB: "Presistência e Preserverança",
-        choiceC: "Veneração e Sabedoria",
+        choiceB: "Persistência",
+        choiceC: "Sabedoria",
         choiceD: "Amor e Paixão",
         correct: "D",
         level: 3
@@ -166,12 +166,12 @@ export let questions = [{
         level: 4
     },
     {
-        question: "Que monumento português é este?",
+        question: "Na imagem está representado o Mosteiro...",
         imgQuestion: "../img/quizzMonuments/lvl4_jeronimos.jpg",
-        choiceA: "Palácio da Bolsa",
-        choiceB: "Mosteiro de Alcobaça",
-        choiceC: "Sé da Guarda",
-        choiceD: "Mosteiro dos Jerónimos",
+        choiceA: "de Tibães",
+        choiceB: "de Alcobaça",
+        choiceC: "da Batalha",
+        choiceD: "dos Jerónimos",
         correct: "D",
         level: 4
     },
@@ -179,10 +179,10 @@ export let questions = [{
         question: "Descobre o monumento!",
         imgQuestion: "../img/quizzMonuments/opera_sombra.jpg",
         choiceA: "Museu de Louvre",
-        choiceB: "Biblioteca do Congresso",
+        choiceB: "Taj Mahal",
         choiceC: "Guggenheim",
         choiceD: "Opera de Sydney",
-        correct: "C",
+        correct: "D",
         level: 4
     },
     {
@@ -198,10 +198,10 @@ export let questions = [{
     {
         question: "Esta réplica representa que monumento do mundo antigo?",
         imgQuestion: "../img/quizzMonuments/lvl5_artemis.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
+        choiceA: "Templo de Zeus",
+        choiceB: "Templo de Afaia",
+        choiceC: "Templo de Ártemis",
+        choiceD: "Templo de Poseidon",
         correct: "C",
         level: 5
     },
@@ -226,23 +226,23 @@ export let questions = [{
         level: 5
     },
     {
-        question: "Wcsss?",
+        question: "Quem está representado neste monumento?",
         imgQuestion: "../img/quizzMonuments/lvl5_rushmore.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
-        correct: "C",
+        choiceA: "Presidentes Americanos",
+        choiceB: "Cientistas Americanos",
+        choiceC: "Presidentes Ingleses",
+        choiceD: "Presidentes Canadianos",
+        correct: "A",
         level: 5
     },
     {
-        question: "W32ssa?",
+        question: "Na imagem está representado o Mosteiro...",
         imgQuestion: "../img/quizzMonuments/lvl5_batalha.jpg",
-        choiceA: "Wrong",
-        choiceB: "Wrong",
-        choiceC: "Correct",
-        choiceD: "Wrong",
-        correct: "C",
+        choiceA: "de Tibães",
+        choiceB: "de Alcobaça",
+        choiceC: "dos Jerónimos",
+        choiceD: "da Batalha",
+        correct: "D",
         level: 5
     }
 ]

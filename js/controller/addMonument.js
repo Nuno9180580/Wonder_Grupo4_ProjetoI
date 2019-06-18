@@ -112,17 +112,17 @@ function newMonument() {
             localStorage.setItem("monuments", JSON.stringify(monuments))
             monumentListLoad();
             sugestionListLoad();
-            Swal.fire("Monumento Adicionado!")
+            alert("Monumento Adicionado!")
         } else {
             monuments.push(new Monument(id, name, year, img, description, city, country, lvl))
             localStorage.setItem("monuments", JSON.stringify(monuments))
             monumentListLoad();
             sugestionListLoad();
-            Swal.fire("Monumento Adicionado!")
+            alert("Monumento Adicionado!")
         }
 
     } else {
-        Swal.fire("Este Monumento já existe!")
+        alert("Este Monumento já existe!")
     }
     event.preventDefault();
 }
@@ -136,7 +136,7 @@ function removeMonument() {
         if (removeMonument === monument.name) {
             monuments.splice(index, 1);
             localStorage.setItem("monuments", JSON.stringify(monuments))
-            Swal.fire("Monumento Removido com sucesso!")
+            alert("Monumento Removido com sucesso!")
             monumentListLoad();
             sugestionListLoad();
         }

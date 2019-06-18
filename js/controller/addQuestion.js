@@ -56,9 +56,9 @@ function addQuestion() {
     if (questionsExists === false) {
         questions.push(new Question(quest, questImg, choiceA, choiceB, choiceC, ChoiceD, correctChoice, lvl))
         localStorage.setItem("questions", JSON.stringify(questions))
-        Swal.fire("Pergunta Adicionada!")
+        alert("Pergunta Adicionada!")
     } else {
-        Swal.fire("Pergunta já existe!")
+        alert("Pergunta já existe!")
     }
     event.preventDefault();
 }

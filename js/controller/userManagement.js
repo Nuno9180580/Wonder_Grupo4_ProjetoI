@@ -26,11 +26,11 @@ document.querySelector("#kidForm").addEventListener("submit", function (event) {
     if (userExists === false) {
         users.push(new User(id, kidName, kidMail, KidPass, 1, 0, "../img/AvatarFields.jpg", "criança", 0, 0, 0))
         localStorage.setItem("users", JSON.stringify(users))
-        Swal.fire("Utilizador Adicionado!")
+        alert("Utilizador Adicionado!")
         userListLoad();
         document.querySelector("#kidCard").style.display = "none";
     } else {
-        Swal.fire("Utilizador já existe!")
+        alert("Utilizador já existe!")
     }
     event.preventDefault();
 })
@@ -50,12 +50,12 @@ document.querySelector("#adminForm").addEventListener("submit", function (event)
     if (userExists === false) {
         users.push(new User(id, adminName, adminMail, adminPass, "1", "0", "../img/AvatarAdmin.jpg", "admin", "", 0, 0))
         localStorage.setItem("users", JSON.stringify(users))
-        Swal.fire("Administrador Adicionado!")
+        alert("Administrador Adicionado!")
         userListLoad();
         document.querySelector("#adminCard").style.display = "none";
 
     } else {
-        Swal.fire("Administrador já existe!")
+        alert("Administrador já existe!")
     }
     event.preventDefault();
 })
@@ -66,7 +66,7 @@ document.querySelector("#removeForm").addEventListener("submit", function (event
     let userIndex = 0
 
     if (removeName === userOn) {
-        Swal.fire("Não te podes remover a ti mesmo!")
+        alert("Não te podes remover a ti mesmo!")
     } else {
         for (const user of users) {
             userIndex++;
@@ -88,7 +88,7 @@ document.querySelector("#btnUnBlock").addEventListener("click", function (event)
             user.blocked = 0
             localStorage.setItem("users", JSON.stringify(users))
             document.querySelector("#unBlockName").value = ""
-            Swal.fire("Desbloqueado!")
+            alert("Desbloqueado!")
         }
     }
     event.preventDefault();
@@ -102,7 +102,7 @@ document.querySelector("#btnBlock").addEventListener("click", function (event) {
             user.blocked = 1
             localStorage.setItem("users", JSON.stringify(users))
             document.querySelector("#blockName").value = ""
-            Swal.fire("Bloqueado!")
+            alert("Bloqueado!")
         }
     }
     event.preventDefault();
