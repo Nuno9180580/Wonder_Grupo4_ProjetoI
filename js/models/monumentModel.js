@@ -11,7 +11,7 @@ export default class Monument {
     this.favorited = favorited;
     this.usersFav = usersFav;
   }
-  static aToZ(mntA, mntB) {
+  static aToZ(mntA, mntB) {   //procurar de A a Z
     if (mntA.name < mntB.name) {
       return -1;
     }
@@ -20,7 +20,7 @@ export default class Monument {
     }
     return 0;
   }
-  static zToA(mntA, mntB) {
+  static zToA(mntA, mntB) {  //procurar de Z a A
     if (mntA.name > mntB.name) {
       return -1;
     }
@@ -29,7 +29,7 @@ export default class Monument {
     }
     return 0;
   }
-  static favoritedMnmt(mnmtA, mnmtB) {
+  static favoritedMnmt(mnmtA, mnmtB) {   //procurar por monumentos favoritos
     const favA = mnmtA.usersFav
     const favB = mnmtB.usersFav
 
