@@ -75,7 +75,7 @@ const dummyMonuments = [{
   {
     name: "Palácio da Pena",
     year: "1910 d.C.",
-    photo: "../img/quizzMonuments/lvl1_pena.jpg",
+    photo: "../img/PalacioDaPena.jpg",
     description: "Localiza-se na vila de Sintra, freguesia de São Pedro de Penaferrim, concelho de Sintra, no distrito de Lisboa, em Portugal. Representa uma das principais expressões do Romantismo arquitectónico do século XIX no mundo, constituindo-se no primeiro palácio nesse estilo na Europa, erguido cerca de 30 anos antes do Castelo de Neuschwanstein, na Baviera. Em 7 de julho de 2007 foi eleito como uma das Sete Maravilhas de Portugal.",
     city: "Sintra",
     country: "Portugal",
