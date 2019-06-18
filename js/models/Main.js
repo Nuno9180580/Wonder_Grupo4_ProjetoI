@@ -109,7 +109,7 @@ const dummyMonuments = [{
     level: "2"
   },
   {
-    name: "Grande Muralha da China",
+    name: "Muralha da China",
     year: "206 a.C.",
     photo: "../img/quizzMonuments/lvl2_wall.jpg",
     description: "Série de fortificações feitas de pedra, tijolo, terra compactada, madeira e outros materiais, geralmente construída ao longo de uma linha leste-oeste através das fronteiras históricas do norte da China para proteger os Estados e Impérios chineses principalmente contra as invasões dos mongóis. Os próprios operários, quando morriam, eram usados como materal para construir a muralha.",
