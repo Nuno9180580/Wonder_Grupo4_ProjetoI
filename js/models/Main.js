@@ -103,25 +103,25 @@ const dummyMonuments = [{
     name: "Torre dos Clérigos",
     year: "1763 d.C.",
     photo: "../img/PalacioDaPena.jpg",
-    description: "No ano de 1753, Nicolau Nasoni apresentou o projeto, que iria durar uma década, para uma torre sineira para o conjunto dos Clérigos, que haveria de substituir as duas torres inicialmente previstas para as fachadas laterais da igreja. Para além de servir como torre sineira, esta edificação teve outras utilizações ao longo dos anos: serviu para marcar o tempo (através de um disparo diário de pólvora seca que assinalava o meio dia); foi telégrafo comercial; foi utilizada como marco de orientação para as embarcações que rumavam no rio Douro, entre outros.",
+    description: "No ano de 1753, Nicolau Nasoni apresentou o projeto, que durou 10 anos, para uma torre sineira para o conjunto dos Clérigos, que haveria de substituir as duas torres inicialmente previstas para as fachadas laterais da igreja. Para além de servir como torre sineira, esta edificação teve outras utilizações ao longo dos anos: serviu para marcar o tempo (através de um disparo diário de pólvora seca que assinalava o meio dia); foi telégrafo comercial; foi utilizada como marco de orientação para as embarcações que rumavam no rio Douro, entre outros.",
     city: "Porto",
     country: "Portugal",
     level: "2"
   },
   {
-    name: "Monte Rushmore",
-    year: "1941 d.C.",
-    photo: "../img/MonteRushmore.jpg",
-    description: "Lorem Ipsum",
-    city: "Keystone",
-    country: "Estados Unidos da América",
+    name: "Grande Muralha da China",
+    year: "206 a.C.",
+    photo: "../img/quizzMonuments/lvl2_wall.jpg",
+    description: "Série de fortificações feitas de pedra, tijolo, terra compactada, madeira e outros materiais, geralmente construída ao longo de uma linha leste-oeste através das fronteiras históricas do norte da China para proteger os Estados e Impérios chineses principalmente contra as invasões dos mongóis. Os próprios operários, quando morriam, eram usados como materal para construir a muralha.",
+    city: "",
+    country: "China",
     level: "2"
   },
   {
     name: "Coliseu de Roma",
     year: "80 d.C.",
     photo: "../img/ColiseuDeRoma.jpg",
-    description: "Lorem Ipsum",
+    description: "Construído com concreto e areia, é o maior anfiteatro já construído e está situado a leste do Fórum Romano. O Coliseu poderia abrigar entre 50 mil e 80 mil espectadores, com uma audiência média de cerca de 65 mil pessoas. O edifício era usado para combates de gladiadores e espetáculos públicos, tais como simulações de batalhas marítimas ( era inundado através de certos mecanismos), execuções, encenações de batalhas famosas e dramas baseados na mitologia clássica.",
     city: "Roma",
     country: "Itália",
     level: "2"
