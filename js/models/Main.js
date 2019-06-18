@@ -67,7 +67,7 @@ const dummyMonuments = [{
     name: "Estátua da Liberdade",
     year: "1886 d.C.",
     photo: "../img/quizzMonuments/lvl1_liberty.jpg",
-    description: "escultura neoclássica colossal localizada na ilha da Liberdade no porto de Nova Iorque, nos Estados Unidos. A estátua de cobre, projetada pelo escultor francês Frédéric Auguste Bartholdi, que se baseou no Colosso de Rodes para edificá-la, foi construída por Gustave Eiffel e dedicada em 28 de outubro de 1886. Foi um presente dado aos Estados Unidos pelo povo da França. A estátua é de uma figura feminina vestida que representa Libertas, deusa romana, que carrega uma tocha e um tabula ansata (uma tabuleta que evoca uma lei) sobre a qual está inscrita a data da Declaração da Independência dos Estados Unidos, 4 de julho de 1776. Uma corrente quebrada encontra-se a sob pés. A estátua é um ícone da liberdade e dos Estados Unidos, além de ser um símbolo de boas-vindas aos imigrantes que chegam do exterior.",
+    description: "A estátua de cobre, projetada pelo escultor francês Frédéric Auguste Bartholdi, que se baseou no Colosso de Rodes, foi construída por Gustave Eiffel. Foi um presente dado aos Estados Unidos pelo povo da França. A estátua é de uma figura feminina vestida que representa Libertas, deusa romana, que carrega uma tocha e um tabula ansata (uma tabuleta que evoca uma lei) sobre a qual está inscrita a data da Declaração da Independência dos Estados Unidos, 4 de julho de 1776. Uma corrente quebrada encontra-se a sob pés. A estátua é um ícone da liberdade e dos Estados Unidos, além de ser um símbolo de boas-vindas aos imigrantes que chegam do exterior.",
     city: "New York",
     country: "Estados Unidos da América",
     level: "1"
