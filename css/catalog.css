@@ -122,7 +122,12 @@
     margin-left: 10px;
     background-color: #ffa812;
   }
-  
+    
+  #btnFav {
+    margin-left: 10px;
+    background-color: #ffa812;
+    font-family: fredoka;
+  }
   .view {
     font-family: fredoka;
     font-size: 20px;

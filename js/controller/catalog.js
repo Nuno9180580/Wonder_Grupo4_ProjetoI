@@ -10,6 +10,8 @@ import {
 const userOn = sessionStorage.getItem("loggedUser");
 const userOnTitle = sessionStorage.getItem('currentTitle')
 let userLevel = 0;
+let favOn = false
+
 
 /* ---------------------------------------------------------------------EventListeners--------------------------------------------------------*/
 
@@ -30,9 +32,15 @@ document.querySelector("#searchBar").addEventListener("keyup", function () {
 
 //Remove Os Filtros
 document.querySelector("#btnClear").addEventListener("click", function () {
-  renderCatalog();
+ location.reload();
 });
 
+//Remove Os Filtros
+document.querySelector("#btnFav").addEventListener("click", function () {
+   favOn = true
+  renderCatalog();
+ 
+});
 /*---------------------------------------------------------------------Funções ---------------------------------------------------------------*/
 
 //Adiciona a Imagem e o Nome do utilizador na NavBar
@@ -103,7 +111,7 @@ function aToZ() {
 //funcao para atualizar os Monumentos do catalogo
 renderCatalog();
 
-function renderCatalog(filtername = "") {
+function renderCatalog(filtername = "", abc) {
   const myCatalog = document.querySelector("#myCatalog");
   let result = "";
   let i = 0;
@@ -113,10 +121,11 @@ function renderCatalog(filtername = "") {
       continue;
     }
 
-    if (
-      filtername !== "" &&
-      !monument.name.toLowerCase().includes(filtername)
-    ) {
+    if (filtername !== "" && !monument.name.toLowerCase().includes(filtername))
+    {
+      continue;
+    }
+    if(favOn == true && !monument.usersFav.includes(userOn)){
       continue;
     }
 
