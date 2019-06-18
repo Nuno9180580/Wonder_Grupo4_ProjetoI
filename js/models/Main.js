@@ -49,7 +49,7 @@ const dummyMonuments = [{
     name: "Big Ben",
     year: "1858 d.C.",
     photo: "../img/quizzMonuments/lvl1_ben.jpg",
-    description: "Apesar do termo também ser usado para se referir à torre do relógio onde o sino está localizado, a estrutura é oficialmente conhecida como a Elizabeth Tower, rebatizada para comemorar o Jubileu de Diamante da Rainha Isabel II do Reino Unido. A edificação possui o segundo maior relógio de quatro faces do mundo, foi construída em estilo neogótico e tem 96 metros de altura. A torre foi concluída em 1858 e tornou-se um dos símbolos mais importantes do Reino Unido, sendo frequentemente retratada em filmes ambientados em Londres.",
+    description: "Apesar do termo também ser usado para se referir à torre do relógio onde o sino está localizado, a estrutura é oficialmente conhecida como a Elizabeth Tower, rebatizada para comemorar o Jubileu de Diamante da Rainha Isabel II do Reino Unido. A edificação possui o segundo maior relógio de quatro faces do mundo, foi construída em estilo neogótico e tem 96 metros de altura. A torre foi concluída em 1858 e tornou-se um dos símbolos mais importantes do Reino Unido.",
     city: "Londres",
     country: "Reino Unido",
     level: "1"
