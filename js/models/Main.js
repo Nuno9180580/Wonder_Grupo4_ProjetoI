@@ -190,10 +190,10 @@ const dummyMonuments = [{
     level: "3"
   },
   {
-    name: "Monte Rushmore",
+    name: "Machu Picchu",
     year: "1941 d.C.",
     photo: "../img/MonteRushmore.jpg",
-    description: "Lorem Ipsum",
+    description: " também chamada a Cidade Perdida dos Incas, Machu Picchu é uma cidade pré-colombiana bem conservada, localizada no topo de uma montanha, a 2400 metros de altitude, no vale do rio Urubamba, atual Peru.",
     city: "Keystone",
     country: "Estados Unidos da América",
     level: "4"
