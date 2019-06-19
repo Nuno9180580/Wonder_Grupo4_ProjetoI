@@ -71,8 +71,6 @@ function renderCatalog() {
                     <h3 id="sgtMnmt"> ${sugestion.monument}</h3>
                     <br>
                     <p id="sgtInfo"> ${sugestion.moreInfo}</p>                                              
-                </div>
-                <div class="card-footer">
                 <button type="button" id="${sugestion.monument}" class="btn accept">Aceitar</button>                                               
                     <button type="button" id="${sugestion.monument}" class="btn refuse">Recusar</button> 
                 </div>
