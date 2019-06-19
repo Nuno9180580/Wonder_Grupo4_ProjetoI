@@ -103,7 +103,7 @@ const dummyMonuments = [{
     name: "Torre dos Clérigos",
     year: "1763 d.C.",
     photo: "../img/quizzMonuments/lvl2_clerigos.jpg",
-    description: "No ano de 1753, Nicolau Nasoni apresentou o projeto, que durou 10 anos, para uma torre sineira para o conjunto dos Clérigos, que haveria de substituir as duas torres inicialmente previstas para as fachadas laterais da igreja. Para além de servir como torre sineira, esta edificação teve outras utilizações ao longo dos anos: serviu para marcar o tempo (através de um disparo diário de pólvora seca que assinalava o meio dia); foi telégrafo comercial; foi utilizada como marco de orientação para as embarcações que rumavam no rio Douro, entre outros.",
+    description: "No ano de 1753, Nicolau Nasoni apresentou o projeto de uma torre sineira para o conjunto dos Clérigos, que haveria de substituir as duas torres inicialmente previstas para as fachadas laterais da igreja. Para além de servir como torre sineira, esta edificação teve outras utilizações ao longo dos anos: serviu para marcar o tempo (através de um disparo diário de pólvora seca que assinalava o meio dia); foi telégrafo comercial; foi utilizada como marco de orientação para as embarcações que rumavam no rio Douro, entre outros.",
     city: "Porto",
     country: "Portugal",
     level: "2"
