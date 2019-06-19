@@ -23,6 +23,7 @@
   #cardOut {
     background-color: white;
     border: 5px solid hsl(209, 92%, 48%);
+    border-radius: 10px;
     margin-bottom: 20px;
   }
   
@@ -72,7 +73,14 @@
     background-color: hsl(209, 92%, 48%);
     margin-bottom: 10px;
   }
-  
+  #googleMap{
+    border: 5px solid hsl(209, 92%, 48%);
+    border-radius: 7px;
+  }
+  #maps{
+    margin-top: 8px;
+
+  }
   #descLabel {
     font-family: fredoka;
     margin-left: 15px;

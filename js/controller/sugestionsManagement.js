@@ -42,7 +42,7 @@ function alertSugestion() {
     if (sugestions === undefined || sugestions.length == 0) {
         alert("Não existem Sugestões")
         window.location.href = "../html/BackOffice.html"
-        
+
 
     }
 
@@ -93,11 +93,19 @@ function renderCatalog() {
             let userIndex = 0
             for (const sugestion of sugestions) {
                 userIndex++;
-                if (sugestion.monument === this.id) {
-                    sugestions.splice(userIndex - 1, 1);
-                    localStorage.setItem("sugestions", JSON.stringify(sugestions))
-                    alert(`Sugestão de ${sugestion.username} rejeitada!`)
-                    renderCatalog();
+                for (const user of users) {
+                    if (sugestion.username === user.username) {
+                        user.alert = 2 //manda um alerta ao utilizador que fez a sugestão
+                        localStorage.setItem("users", JSON.stringify(users))
+                        let userIndex = 0
+                        userIndex++;
+                        if (sugestion.monument === this.id) {
+                            sugestions.splice(userIndex - 1, 1);
+                            localStorage.setItem("sugestions", JSON.stringify(sugestions))
+                            alert(`Sugestão de ${sugestion.username} rejeitada!`)
+                            renderCatalog();
+                        }
+                    }
                 }
             }
         })
@@ -117,7 +125,6 @@ function renderCatalog() {
                         if (sugestion.username === user.username) {
                             user.experience = user.experience + 10 //atribui 10xp ao utilizador que fez a sugestão
                             user.alert = 1 //manda um alerta ao utilizador que fez a sugestão
-                            console.log(user.username)
                             localStorage.setItem("users", JSON.stringify(users))
                             let userIndex = 0
                             userIndex++;

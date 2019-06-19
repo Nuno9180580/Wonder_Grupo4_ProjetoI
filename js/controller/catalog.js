@@ -12,8 +12,12 @@ const userOnTitle = sessionStorage.getItem('currentTitle')
 let userLevel = 0;
 let favOn = false
 
+console.log(map)
 
 /* ---------------------------------------------------------------------EventListeners--------------------------------------------------------*/
+
+
+
 
 //Evento Click do Botão Ordem Alfabetica de A-Z
 document.getElementById("btnAToZ").addEventListener("click", function () {
@@ -350,3 +354,4 @@ function toggleFav() {
 
 
 }
+

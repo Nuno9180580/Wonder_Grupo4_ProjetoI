@@ -116,6 +116,11 @@ function alertSugestion() {
                 user.alert = 0
                 localStorage.setItem("users", JSON.stringify(users))
             }
+            else if(alertS === 2){
+                alert("A tua sugestão foi rejeitada! ")
+                user.alert = 0
+                localStorage.setItem("users", JSON.stringify(users))
+            }
         }
     }
 }
