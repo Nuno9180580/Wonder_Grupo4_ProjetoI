@@ -240,12 +240,12 @@ const dummyMonuments = [{
     linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
   },
   {
-    name: "Monte Rushmore",
-    year: "1941 d.C.",
-    photo: "../img/MonteRushmore.jpg",
-    description: "Lorem Ipsum",
-    city: "Keystone",
-    country: "Estados Unidos da América",
+    name: "Ópera de Sydney",
+    year: "1973 d.C.",
+    photo: "../img/quizzMonuments/catalogo_sidney.jpg",
+    description: "Também conhecida como Teatro de Sydney, é um dos edifícios de espetáculo mais marcantes a nível mundial e um dos símbolos da Austrália. Anualmente, os seus 8,2 milhões de visitantes geram mais de 520 milhões de euros.",
+    city: "Sydney",
+    country: "Austrália",
     level: "4",
     linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
   },
