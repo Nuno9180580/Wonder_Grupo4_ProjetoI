@@ -25,6 +25,8 @@ document.querySelector("#addForm").addEventListener("submit", function (event) {
     document.querySelector("#description").value = ""
     document.querySelector("#img").value = ""
     document.querySelector("#lvl").value = ""
+    document.querySelector("#map").value = ""
+
 })
 
 //Botão e função que elimina um Monumento
@@ -86,6 +88,8 @@ function newMonument() {
     const description = document.querySelector("#description").value
     const img = document.querySelector("#img").value
     const lvl = document.querySelector("#lvl").value
+    const map = document.querySelector("#map").value
+
     let monumentExists = false
     let sugestionExists = false
     for (const monument of monuments) {
@@ -108,13 +112,13 @@ function newMonument() {
                     localStorage.setItem("accepted", JSON.stringify(acceptedSugests))
                 }
             }
-            monuments.push(new Monument(id, name, year, img, description, city, country, lvl))
+            monuments.push(new Monument(id, name, year, img, description, city, country, lvl,false,[] , map))
             localStorage.setItem("monuments", JSON.stringify(monuments))
             monumentListLoad();
             sugestionListLoad();
             alert("Monumento Adicionado!")
         } else {
-            monuments.push(new Monument(id, name, year, img, description, city, country, lvl))
+            monuments.push(new Monument(id, name, year, img, description, city, country, lvl,false, [],map))
             localStorage.setItem("monuments", JSON.stringify(monuments))
             monumentListLoad();
             sugestionListLoad();
