@@ -177,6 +177,16 @@ function renderCatalog(filtername = "", abc) {
     if (i % 3 === 0) {
       result += `</div>`;
     }
+    //codigo que bloqueia o butao comentar se o utilizador foi o admin
+    let userType=""
+    for (const user of users) {
+      if (user.username === userOn) {
+        userType = user.userType
+      }
+    }
+    if (userType === "admin") {
+      document.querySelector("#com").style.display= "none";
+    }
   }
   myCatalog.innerHTML = result;
 
