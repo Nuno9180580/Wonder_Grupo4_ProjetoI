@@ -7,7 +7,7 @@ import Title from "../models/titlesModel.js"
 
 //Lê o Utilizador Ativo
 const userOn = sessionStorage.getItem('loggedUser')
-const userOnTitle = sessionStorage.getItem('currentTitle')
+let userOnTitle = sessionStorage.getItem('currentTitle')
 
 let trophies = []
 
@@ -56,26 +56,31 @@ document.querySelector("#title2").addEventListener("click", function () {
     lvl2Title()
     title2Acquired()
     updateTitle()
+    navBarInfo()
 })
 document.querySelector("#title3").addEventListener("click", function () {
     lvl3Title()
     title3Acquired()
     updateTitle()
+    navBarInfo()
 })
 document.querySelector("#title4").addEventListener("click", function () {
     lvl4Title()
     title4Acquired()
     updateTitle()
+    navBarInfo()
 })
 document.querySelector("#title5").addEventListener("click", function () {
     lvl5Title()
     title5Acquired()
     updateTitle()
+    navBarInfo()
 })
 document.querySelector("#title6").addEventListener("click", function () {
     lvl6Title()
     title6Acquired()
     updateTitle()
+    navBarInfo()
 })
 
 /* ---------------------------------------------------------------------Funções--------------------------------------------------------------*/
@@ -372,6 +377,7 @@ function medal6Acquired() {
 navBarInfo();
 
 function navBarInfo() {
+    userOnTitle = sessionStorage.getItem('currentTitle')
     const labelUser = document.querySelector("#txtUserLogged")
     if (userOn != "admin") {
         labelUser.innerHTML = userOn + ", " + userOnTitle;
