@@ -89,7 +89,6 @@ function renderCatalog() {
     const btnRefuse = document.getElementsByClassName("refuse")
     for (const elem of btnRefuse) {
         elem.addEventListener("click", function () {
-            console.log(this.id)
             let userIndex = 0
             for (const sugestion of sugestions) {
                 userIndex++;
