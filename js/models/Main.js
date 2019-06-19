@@ -234,8 +234,8 @@ const dummyMonuments = [{
     year: "1854 d.C.",
     photo: "../img/quizzMonuments/lvl4_zeus.jpg",
     description: "Esta maravilha do mundo Antigo media por volta de 13 metros de altura, o equivalente a um prédio de de cinco andares. Esculpido por Fídias, esta estátua era feita de marfim e ébano e repleta de pedras preciosas. Ela foi perdida e destruída durante o século V sem nenhuma cópia, sendo que os seus detalhes são apenas conhecidos através de antigas descrições.",
-    city: "Sintra",
-    country: "Portugal",
+    city: "Olímpia",
+    country: "Grécia",
     level: "4",
     linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
   },
