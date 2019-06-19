@@ -73,14 +73,17 @@
     background-color: hsl(209, 92%, 48%);
     margin-bottom: 10px;
   }
-  #googleMap{
+ /*  #googleMap{
     border: 5px solid hsl(209, 92%, 48%);
     border-radius: 7px;
-  }
-  #maps{
-    margin-top: 8px;
+  }*/
+   #map{
+     margin-top: -90px;
+    margin-left:380px;
+  } 
+ 
 
-  }
+  
   #descLabel {
     font-family: fredoka;
     margin-left: 15px;

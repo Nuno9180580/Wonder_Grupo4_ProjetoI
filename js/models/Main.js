@@ -34,7 +34,8 @@ const dummyMonuments = [{
     description: "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.",
     city: "Paris",
     country: "França",
-    level: "1"
+    level: "1",
+    linkMap: "https://goo.gl/maps/HSgN9pkz3EgzChBy9"
   },
   {
     name: "Pirâmides de Gizé",
@@ -43,7 +44,10 @@ const dummyMonuments = [{
     description: "A Necrópole de Gizé, também chamada de Pirâmides de Gizé, é um sítio arqueológico localizado no planalto de Gizé, nos arredores do Cairo. Este complexo de monumentos antigos inclui os três complexos de pirâmides conhecidas como as Grandes Pirâmides. É, de longe, a mais antiga das maravilhas do mundo antigo e a única que ainda existe.",
     city: "Cairo",
     country: "Egito",
-    level: "1"
+    level: "1",
+    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+
+    
   },
   {
     name: "Big Ben",
@@ -69,7 +73,7 @@ const dummyMonuments = [{
     photo: "../img/quizzMonuments/lvl1_liberty.jpg",
     description: "A estátua de cobre, projetada pelo escultor francês Frédéric Auguste Bartholdi, que se baseou no Colosso de Rodes, foi construída por Gustave Eiffel. Foi um presente dado aos Estados Unidos pelo povo da França. A estátua é de uma figura feminina vestida que representa Libertas, deusa romana, que carrega uma tocha e um tabula ansata (uma tabuleta que evoca uma lei) sobre a qual está inscrita a data da Declaração da Independência dos Estados Unidos, 4 de julho de 1776. Uma corrente quebrada encontra-se a sob pés. A estátua é um ícone da liberdade e dos Estados Unidos, além de ser um símbolo de boas-vindas aos imigrantes que chegam do exterior.",
     city: "New York",
-    country: "Estados Unidos da América",
+    country: "E.U.A.",
     level: "1"
   },
   {
@@ -351,7 +355,12 @@ if (localStorage.monuments) {
       dummyMonument["description"],
       dummyMonument["city"],
       dummyMonument["country"],
-      dummyMonument["level"]
+      dummyMonument["level"],
+      dummyMonument["usersFav"],
+      dummyMonument["favorited"],
+      dummyMonument["linkMap"]
+
+
     );
 
     monuments.push(newMonument);

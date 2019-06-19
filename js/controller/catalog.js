@@ -12,7 +12,6 @@ const userOnTitle = sessionStorage.getItem('currentTitle')
 let userLevel = 0;
 let favOn = false
 
-console.log(map)
 
 /* ---------------------------------------------------------------------EventListeners--------------------------------------------------------*/
 
@@ -200,13 +199,14 @@ function renderCatalog(filtername = "", abc) {
       const modalYear = document.querySelector("#modalYear");
       const modalDescription = document.querySelector("#modalDescription");
       const modalComments = document.querySelector("#comments");
+      const googleMaps = document.querySelector("#map");
       const myMonument = getMonumentByName(this.id);
       modalTitle.innerHTML = myMonument.name;
       modalCityCountry.innerHTML = myMonument.city + ", " + myMonument.country;
       modalYear.innerHTML = myMonument.year;
       modalDescription.innerHTML = myMonument.description;
       modalImg.src = myMonument.photo;
-
+      googleMaps.href = myMonument.linkMap
       //função que adiciona os comentarios nos respetivos monumentos
       renderComments();
 

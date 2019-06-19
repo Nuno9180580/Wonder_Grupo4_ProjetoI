@@ -1,5 +1,5 @@
 export default class Monument {
-  constructor(id, name, year, photo, description, city, country, level, favorited = "False", usersFav = []) {
+  constructor(id, name, year, photo, description, city, country, level, favorited = "False", usersFav = [], linkMap) {
     this.id = id;
     this.name = name;
     this.year = year;
@@ -10,6 +10,7 @@ export default class Monument {
     this.level = level;
     this.favorited = favorited;
     this.usersFav = usersFav;
+    this.linkMap = linkMap;
   }
   static aToZ(mntA, mntB) {   //procurar de A a Z++
     if (mntA.name < mntB.name) {
