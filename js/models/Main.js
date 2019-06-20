@@ -45,7 +45,7 @@ const dummyMonuments = [{
     city: "Cairo",
     country: "Egito",
     level: "1",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/AscLChUumAVxLGyr6"
 
     
   },
@@ -57,7 +57,7 @@ const dummyMonuments = [{
     city: "Londres",
     country: "Reino Unido",
     level: "1",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/uu2STt5ppm965VRC7"
   },
   {
     name: "Torre de Belém",
@@ -67,7 +67,7 @@ const dummyMonuments = [{
     city: "Lisboa",
     country: "Portugal",
     level: "1",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/XeNkR1LneKkuKNVTA"
   },
   {
     name: "Estátua da Liberdade",
@@ -77,7 +77,7 @@ const dummyMonuments = [{
     city: "New York",
     country: "E.U.A.",
     level: "1",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/5rkWX7yX9zFfKVp26"
   },
   {
     name: "Palácio da Pena",
@@ -87,7 +87,7 @@ const dummyMonuments = [{
     city: "Sintra",
     country: "Portugal",
     level: "1",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/p4ppM7RZesyNK1tu6"
   },
   {
     name: "Stonehenge",
@@ -97,7 +97,7 @@ const dummyMonuments = [{
     city: "Salisbury",
     country: "Inglaterra",
     level: "2",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/MDeApWHYvcWeGkrTA"
   },
   {
     name: "Cristo Redentor",
@@ -107,7 +107,7 @@ const dummyMonuments = [{
     city: "Rio de Janeiro",
     country: "Brasil",
     level: "2",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/jWHjeuWNB5ssxuYt5"
   },
   {
     name: "Torre dos Clérigos",
@@ -117,7 +117,7 @@ const dummyMonuments = [{
     city: "Porto",
     country: "Portugal",
     level: "2",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/pkfPVPv282pdduFW7"
   },
   {
     name: "Muralha da China",
@@ -127,7 +127,7 @@ const dummyMonuments = [{
     city: "China",
     country: "China",
     level: "2",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/MAHSDYyyTZWVAPuG9"
   },
   {
     name: "Coliseu de Roma",
@@ -137,17 +137,17 @@ const dummyMonuments = [{
     city: "Roma",
     country: "Itália",
     level: "2",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/anV6iM7GJ1oUjjbg8"
   },
   {
     name: "Torre de Pisa",
     year: "1373 d.C.",
     photo: "../img/quizzMonuments/catalogo_pisa.jpg",
-    description: "É uma torre sineira da catedral da cidade italiana de Pisa. Está situada atrás da catedral e é a terceira estrutura mais antiga na praça da Catedral de Pisa. Embora destinada a ficar na vertical, a torre começou a inclinar-se para sudeste logo após o início da construção devido a uma fundação mal construída e a um solo mal consolidado",
-    city: "Pisa",
+    description: "É uma torre sineira da catedral da cidade italiana de Roma. Está situada atrás da catedral e é a terceira estrutura mais antiga na praça da Catedral de Pisa. Embora destinada a ficar na vertical, a torre começou a inclinar-se para sudeste logo após o início da construção devido a uma fundação mal construída e a um solo mal consolidado",
+    city: "Roma",
     country: "Itália",
     level: "2",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/4REX4BzYc8ekeb16A"
   },
   {
     name: "Notre-Dame",
@@ -157,7 +157,7 @@ const dummyMonuments = [{
     city: "Paris",
     country: "França",
     level: "3",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/ojLTJyHFw6Vkeqic7"
   },
   {
     name: "Grande Esfinge",
@@ -167,7 +167,7 @@ const dummyMonuments = [{
     city: "Cairo",
     country: "Egipto",
     level: "3",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/tJVtQRGfYCBCXRyq8"
   },
   {
     name: "Templo de Diana",
@@ -177,7 +177,7 @@ const dummyMonuments = [{
     city: "Évora",
     country: "Portugal",
     level: "3",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/Mpmjn3MTrKcfp3j16"
   },
   {
     name: "Burj Khalifa",
@@ -187,7 +187,7 @@ const dummyMonuments = [{
     city: "Dubai",
     country: "Emirados Árabes Unidos",
     level: "3",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/2Sx5dgfJg8eh5H8o6"
   },
   {
     name: "Colosso de Ródes",
@@ -197,7 +197,7 @@ const dummyMonuments = [{
     city: "Rodes",
     country: "Grécia",
     level: "3",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/5tX1hVqaex8A3N5A9"
   },
   {
     name: "Taj Mahal",
@@ -207,7 +207,7 @@ const dummyMonuments = [{
     city: "Agra",
     country: "Índia",
     level: "3",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/rUH5Vn3j8tJFwc3k6"
   },
   {
     name: "Machu Picchu",
@@ -217,7 +217,7 @@ const dummyMonuments = [{
     city: "Urabamba",
     country: "Peru",
     level: "4",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/PkeJrwrKKcBeiW5r6"
   },
   {
     name: "Mosteiro dos Jerónimos",
@@ -227,7 +227,7 @@ const dummyMonuments = [{
     city: "Lisboa",
     country: "Portugal",
     level: "4",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/vdPEpQYGd3xUTxb2A"
   },
   {
     name: "Estátua de Zeus",
@@ -237,7 +237,7 @@ const dummyMonuments = [{
     city: "Olímpia",
     country: "Grécia",
     level: "4",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/kkBgnRzJYB9CiVM78"
   },
   {
     name: "Ópera de Sydney",
@@ -247,7 +247,7 @@ const dummyMonuments = [{
     city: "Sydney",
     country: "Austrália",
     level: "4",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/EFUuegKXYRHUx344A"
   },
   {
     name: "Catedral São Basílio",    
@@ -257,7 +257,7 @@ const dummyMonuments = [{
     city: "Moscovo",
     country: "Rússia",
     level: "4",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/tR5batHyE6eYThGK9"
   },
   {
     name: "Casa da Música",
@@ -267,7 +267,7 @@ const dummyMonuments = [{
     city: "Porto",
     country: "Portugal",
     level: "4",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/dkbAw7H56QP118Gs5"
   },
   {
     name: "Mosteiro da Batalha",
@@ -277,7 +277,7 @@ const dummyMonuments = [{
     city: "Batalha",
     country: "Portugal",
     level: "5",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/3uXa5JnVtSNn8NaJA"
   },
   {
     name: "Templo de Ártemis",
@@ -287,7 +287,7 @@ const dummyMonuments = [{
     city: "Éfeso (atual Selçuk)",
     country: "Turquia",
     level: "5",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/E3GzFZaAevty4yoi6"
   },
   {
     name: "Farol de Alexandria",
@@ -297,17 +297,17 @@ const dummyMonuments = [{
     city: "Ilha de Faros",
     country: "Egipto",
     level: "5",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/JxL9QMHWtWLekSRB7"
   },
   {
-    name: "Petra",
+    name: " Cidadela de Petra",
     year: "1941 d.C.",
     photo: "../img/quizzMonuments/lvl5_petra.jpg",
     description: "É uma cidadela histórica e arqueológica localizada no sul da Jordânia. A cidade é famosa pela sua arquitetura esculpida em rocha e pelo seu sistema complexo de canalização, contendo vários templo e até um anfiteatro. É também conhecida com a Cidade Rosa, devido à cor das pedras do local. Petra foi nomeada como uma das sete maravilhas do Mundo Moderno em 2007 e também foi escolhida como um dos 28 lugares para ver antes de morrer.",
     city: "Petra",
     country: "Jordânia",
     level: "5",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/PwBHmbqWmHZ6QFrM7"
   },
   {
     name: "Templo de Kukulcán",
@@ -317,7 +317,7 @@ const dummyMonuments = [{
     city: "Yucatán",
     country: "México",
     level: "5",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/EZ2UY2u7foLhHNPS6"
   },
   {
     name: "Monte Rushmore",
@@ -327,7 +327,7 @@ const dummyMonuments = [{
     city: "Keystone",
     country: "E.U.A.",
     level: "5",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/wJ9VkiNUZhVfYS5KA"
   },
   {
     name: "Jardins Suspensos da Babilónia",
@@ -347,7 +347,7 @@ const dummyMonuments = [{
     city: "Bodrum",
     country: "Turquia",
     level: "6",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/iTfWCZ61dJfWnG4G9"
   },
   {
     name: "Angkor",
@@ -367,7 +367,7 @@ const dummyMonuments = [{
     city: "Évora",
     country: "Portugal",
     level: "6",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/RCwCWaoeKLcD58LY7"
   },
   {
     name: "Atomium",
@@ -377,17 +377,17 @@ const dummyMonuments = [{
     city: "Bruxelas",
     country: "Bélgica",
     level: "6",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/TLsCR5cozMrsgesL8"
   },
   {
     name: "Os Moais",
-    year: " d.C.",
+    year: "Século I d.C.",
     photo: "../img/quizzMonuments/moais_sombra.jpg",
-    description: "Os moais são estátuas esculpidas a partir das pedras do vulcão Rano Raraku, dispostas em diversas plataformas. A maior plataforma tem 15 moais. O maior deles tem 21 metros e está inacabado, estando ainda na pedreira do vulcão. O maior moai que foi colocado de pé tem 11 metros.",
+    description: "A Ilha de Páscoa é um dos lugares mais misteriosos da Terra e é o antigo lar de uma civilização polinésia que habitou a região há cerca de 2.000 anos. A civilização deixou na ilha um vasto número de vestígios em forma de moais gigantes que, segundo acreditam os cientistas, personalizam os antepassados dos antigos moradores da ilha. Muito ainda falta por se descobrir acerca desta civilização.",
     city: "Ilhas da Páscoa",
     country: "Argentina",
     level: "6",
-    linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
+    linkMap: "https://goo.gl/maps/q9u7vitbT7E6dnvt8"
   }
 ];
 
