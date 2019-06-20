@@ -333,7 +333,7 @@ const dummyMonuments = [{
     name: "Jardins Suspensos da Babilónia",
     year: "Século VI/VII a.C.",
     photo: "../img/quizzMonuments/lvl6_jardins.jpg",
-    description: "É uma das sete maravilhas do Mundo Antigo e aquela de que menos conhecimento se tem. Tradicionalmente, acredita-se que tenha sido construído na antiga cidade da Babilónia, próximo de onde atualmente se encontra a cidade de Hillah, no Iraque. Foi também sugerido que os Jardins Suspensos são puramente míticos, e que as descrições encontradas em documentos gregos e romanos antigos representam apenas um ideal romântico de um jardim oriental. Se ele de fato existiu, foi destruído após o primeiro século d.C.. Alternativamente, o jardim pode ter sido, na verdade, um monumento documentado em que o rei assírio Senaqueribe (704-681 a.C.) construiu na sua capital, Nínive, sobre o rio Tigre, próximo da cidade de Mossul.",
+    description: "É uma das sete maravilhas do Mundo Antigo e aquela de que menos conhecimento se tem. Tradicionalmente, acredita-se que tenha sido construído na antiga cidade da Babilónia, próximo de onde atualmente se encontra a cidade de Hillah, no Iraque. Foi também sugerido que os Jardins Suspensos são puramente míticos, e que as descrições encontradas em documentos gregos e romanos antigos representam apenas um ideal romântico de um jardim oriental. Se ele de fato existiu, foi destruído após o primeiro século d.C..",
     city: "Hillah",
     country: "Iraque",
     level: "6",
