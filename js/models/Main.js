@@ -222,7 +222,7 @@ const dummyMonuments = [{
   {
     name: "Mosteiro dos Jerónimos",
     year: " 1602 d.C.",
-    photo: "../img/quizzMonuments/lvl4_jerónimos.jpg",
+    photo: "../img/quizzMonuments/lvl4_jeronimos.jpg",
     description: "Este mosteiro é o mais notável conjunto monástico português do seu tempo e uma das principais igrejas-salão da Europa. A sua construção iniciou-se, por iniciativa do rei D. Manuel I no inicio do século XVI e prolongou-se por uma centena de anos, tendo sido dirigida por um conjunto notável de arquitetos. Tem, desde 2016, o estatuto de Panteão Nacional.",
     city: "Lisboa",
     country: "Portugal",
@@ -312,7 +312,7 @@ const dummyMonuments = [{
   {
     name: "Templo de Kukulcán",
     year: "Século XII d.C.",
-    photo: "../img/quizzMonuments/lvl5_itza.jpg",
+    photo: "../img/quizzMonuments/catalogo_itza.jpg",
     description: "Também conhecido como Pirâmide de Kukulcán e medindo 30 metros de altura, este templo pertence à cidade arqueológica de Chichén Itzá situada no estado de Yucatán, no México. Esta cidade funcionou como o centro político e económico da civilização Maia. Mais tarde, em 2007, Chichén Itzá foi classificada como uma das 7 marvilhas do Mundo Moderno e tornou-se património Mundial pela UNESCO. ",
     city: "Yucatán",
     country: "México",
@@ -362,7 +362,7 @@ const dummyMonuments = [{
   {
     name: "Capela dos Ossos",
     year: "Século XVII d.C.",
-    photo: "../img/quizzMonuments/lvl5_faros.jpg",
+    photo: "../img/quizzMonuments/lvl6_ossos.jpg",
     description: " Esta capela é um dos mais conhecidos monumentos do País. Está situada na Igreja de São Francisco e foi construída no século XVII. A capela é formada por 3 divisões de 18,70 m de comprimento e 11m de largura. As suas paredes e os oito pilares estão decorados com ossos e crânios ligados por cimento e na entrada encontra-se esta mensagem: Nós ossos que aqui estamos, pelos vossos esperamos.",
     city: "Évora",
     country: "Portugal",
