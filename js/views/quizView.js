@@ -226,12 +226,12 @@ export let questions = [{
         level: 5
     },
     {
-        question: "Estes 4 presidentes estão esculpidos nos E.U.A. no estado de...",
+        question: "Um dos 4 presidentes dos E.U.A. aqui esculpidos é o...",
         imgQuestion: "../img/quizzMonuments/lvl5_rushmore.jpg",
-        choiceA: "Dakota do Sul",
-        choiceB: "Kansas",
-        choiceC: "Nebraska",
-        choiceD: "Califórnia",
+        choiceA: "Abraham Lincoln",
+        choiceB: "John F. Kennedy",
+        choiceC: "Donald Trump",
+        choiceD: "Richard Nixon",
         correct: "A",
         level: 5
     },
