@@ -380,12 +380,12 @@ const dummyMonuments = [{
     linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
   },
   {
-    name: "Moais",
-    year: "1854 d.C.",
-    photo: "../img/quizzMonuments/lvl5_faros.jpg",
-    description: "Lorem Ipsum",
-    city: "Sintra",
-    country: "Portugal",
+    name: "Os Moais",
+    year: " d.C.",
+    photo: "../img/quizzMonuments/moais_sombra.jpg",
+    description: "Os moais são estátuas esculpidas a partir das pedras do vulcão Rano Raraku, dispostas em diversas plataformas. A maior plataforma tem 15 moais. O maior deles tem 21 metros e está inacabado, estando ainda na pedreira do vulcão. O maior moai que foi colocado de pé tem 11 metros.",
+    city: "Ilhas da Páscoa",
+    country: "Argentina",
     level: "6",
     linkMap: "https://goo.gl/maps/tyytB5PBmtrMYQCLA"
   }
