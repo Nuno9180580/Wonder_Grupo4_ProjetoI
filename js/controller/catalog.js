@@ -11,7 +11,7 @@ const userOn = sessionStorage.getItem("loggedUser");
 const userOnTitle = sessionStorage.getItem('currentTitle')
 let userLevel = 0;
 let favOn = false
-
+let filter = "";
 
 /* ---------------------------------------------------------------------EventListeners--------------------------------------------------------*/
 
@@ -21,11 +21,13 @@ let favOn = false
 //Evento Click do Botão Ordem Alfabetica de A-Z
 document.getElementById("btnAToZ").addEventListener("click", function () {
   aToZ();
+  filter = "AZ"
 });
 
 //Evento Click do Botão Ordem Alfabetica de Z-A
 document.getElementById("btnZToA").addEventListener("click", function () {
   zToA();
+  filter = "ZA"
 });
 
 //Ao escrever na barra de pesquisa vai automaticamente procurar os Monumentos
@@ -35,14 +37,16 @@ document.querySelector("#searchBar").addEventListener("keyup", function () {
 
 //Remove Os Filtros
 document.querySelector("#btnClear").addEventListener("click", function () {
- location.reload();
+  location.reload();
+  filter = "";
 });
 
-//Remove Os Filtros
+//Mostrar só os favoritos
 document.querySelector("#btnFav").addEventListener("click", function () {
-   favOn = true
+  favOn = true
   renderCatalog();
- 
+  toggleFav();
+
 });
 /*---------------------------------------------------------------------Funções ---------------------------------------------------------------*/
 
@@ -102,6 +106,7 @@ function zToA() {
   monuments.sort(Monument.zToA);
   localStorage.setItem("monumentosZA", JSON.stringify(monuments));
   renderCatalog();
+  toggleFav();
 }
 
 //Função Para ordenar de A-Z
@@ -109,6 +114,7 @@ function aToZ() {
   monuments.sort(Monument.aToZ);
   localStorage.setItem("monumentosAZ", JSON.stringify(monuments));
   renderCatalog();
+  toggleFav();
 }
 
 //funcao para atualizar os Monumentos do catalogo
@@ -124,11 +130,10 @@ function renderCatalog(filtername = "", abc) {
       continue;
     }
 
-    if (filtername !== "" && !monument.name.toLowerCase().includes(filtername))
-    {
+    if (filtername !== "" && !monument.name.toLowerCase().includes(filtername)) {
       continue;
     }
-    if(favOn == true && !monument.usersFav.includes(userOn)){
+    if (favOn == true && !monument.usersFav.includes(userOn)) {
       continue;
     }
 
@@ -177,14 +182,14 @@ function renderCatalog(filtername = "", abc) {
       result += `</div>`;
     }
     //codigo que bloqueia o butao comentar se o utilizador foi o admin
-    let userType=""
+    let userType = ""
     for (const user of users) {
       if (user.username === userOn) {
         userType = user.userType
       }
     }
     if (userType === "admin") {
-      document.querySelector("#com").style.display= "none";
+      document.querySelector("#com").style.display = "none";
     }
   }
   myCatalog.innerHTML = result;
@@ -353,8 +358,17 @@ function toggleFav() {
             }
           }
         }
-        localStorage.setItem("monuments", JSON.stringify(monuments));
+        if (filter === "AZ") {
+          localStorage.setItem("monumentosAZ", JSON.stringify(monuments));
+        } else if (filter === "ZA") {
+          localStorage.setItem("monumentosZA", JSON.stringify(monuments));
+        } else {
+          localStorage.setItem("monuments", JSON.stringify(monuments));
+        }
+
         localStorage.setItem("users", JSON.stringify(users));
+
+
         // renderCatalog();
       });
     });
@@ -364,4 +378,3 @@ function toggleFav() {
 
 
 }
-
