@@ -1,7 +1,6 @@
 import User from "./userModel.js";
 import Monument from "./monumentModel.js";
 import Comment from "../models/commentsModel.js";
-import Sugestion from "../models/sugestionsModel.js";
 
 const dummyUsers = [{
     username: "admin",
@@ -31,7 +30,7 @@ const dummyMonuments = [{
     name: "Torre Eiffel",
     year: "1889 d.C.",
     photo: "../img/TorreEiffel.jpg",
-    description: "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris.Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.",
+    description: "A Torre Eiffel é uma torre de ferro do século XIX e é o edifício mais alto de Paris. Nomeada em homenagem ao seu projetista, o engenheiro Gustave Eiffel.Possui 324 metros de altura e fica cerca de 15 centímetros mais alta no verão, devido à dilatação térmica do ferro.",
     city: "Paris",
     country: "França",
     level: "1",
@@ -433,7 +432,7 @@ if (localStorage.monuments) {
 } else {
   // Só vai entrar aqui a primeira vez
   let idCount = 0;
-  for (let dummyMonument of dummyMonuments) {
+  for (let dummyMonument of dummyMonuments) {  //dummyMonuments está em cima, serão usados para o catálogo  
     idCount = idCount + 1;
     let newMonument = new Monument(
       idCount,
@@ -451,7 +450,7 @@ if (localStorage.monuments) {
 
     );
 
-    monuments.push(newMonument);
+    monuments.push(newMonument); //no array de monuments, dá push ao new monument que foi criado de acordo com os parametros em cima.
   }
 
   localStorage.setItem("monuments", JSON.stringify(monuments));
