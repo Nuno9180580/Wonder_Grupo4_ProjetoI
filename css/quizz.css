@@ -252,6 +252,7 @@
     font-family: fredoka;
     margin-left: 10px;
     font-size: 25spx;
+    cursor: pointer;
 }
 
 #timer {

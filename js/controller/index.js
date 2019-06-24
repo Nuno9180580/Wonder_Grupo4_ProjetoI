@@ -21,7 +21,7 @@ welcome.innerHTML = "Olá " + userOn + "!"
 //Butão que envia a sugestão
 document.querySelector("#sugestBtn").addEventListener("click", function () {
     sugestionStorage();
-    alert("Enviado")
+    Swal.fire('Sugestão enviada, poderás ser recompensado!')
 })
 
 /*---------------------------------------------------------------------Funções ---------------------------------------------------------------*/
@@ -115,8 +115,7 @@ function alertSugestion() {
                 alert("Recebeste Pontos de Experiência pela tua sugestão! ")
                 user.alert = 0
                 localStorage.setItem("users", JSON.stringify(users))
-            }
-            else if(alertS === 2){
+            } else if (alertS === 2) {
                 alert("A tua sugestão foi rejeitada! ")
                 user.alert = 0
                 localStorage.setItem("users", JSON.stringify(users))

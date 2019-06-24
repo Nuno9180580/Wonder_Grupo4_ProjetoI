@@ -70,7 +70,9 @@ form {
     font-family: archivoBlack;
     margin-left: 10px;
     font-size: 20px;
+    cursor: pointer;
 }
+
 #userAvatar {
     border: 1.5px solid white;
     border-radius: 15px;

@@ -45,6 +45,7 @@ form {
     font-family: archivoBlack;
     margin-left: 10px;
     font-size: 20px;
+    cursor: pointer;
 }
 
 #userAvatar {
