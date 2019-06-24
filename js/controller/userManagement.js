@@ -20,14 +20,14 @@ document.querySelector("#kidForm").addEventListener("submit", function (event) {
     let userExists = false
     for (const user of users) {
         if (kidName === user.username) {
-            userExists = true
+            userExists = true//utilizador ja existe
         }
     }
-    if (userExists === false) {
+    if (userExists === false) {//se nao existir adiciona ao array
         users.push(new User(id, kidName, kidMail, KidPass, 1, 0, "../img/AvatarFields.jpg", "criança", 0, 0, 0))
-        localStorage.setItem("users", JSON.stringify(users))
-        alert("Utilizador Adicionado!")
-        userListLoad();
+        localStorage.setItem("users", JSON.stringify(users))//atualiza a localStorage
+        alert("Utilizador Adicionado!")//alerta adicionado
+        userListLoad();//carrega a lista dos users
         document.querySelector("#kidCard").style.display = "none";
     } else {
         alert("Utilizador já existe!")
@@ -44,14 +44,14 @@ document.querySelector("#adminForm").addEventListener("submit", function (event)
     let userExists = false
     for (const user of users) {
         if (adminName === user.username) {
-            userExists = true
+            userExists = true//ja existe este user
         }
     }
-    if (userExists === false) {
+    if (userExists === false) {//se nao existir adiciona ao array
         users.push(new User(id, adminName, adminMail, adminPass, "1", "0", "../img/AvatarAdmin.jpg", "admin", "", 0, 0))
-        localStorage.setItem("users", JSON.stringify(users))
-        alert("Administrador Adicionado!")
-        userListLoad();
+        localStorage.setItem("users", JSON.stringify(users))//atualiza a localStorage
+        alert("Administrador Adicionado!")//alerta o admin adicionado
+        userListLoad();//atualiza a lista de utilizadores
         document.querySelector("#adminCard").style.display = "none";
 
     } else {
@@ -66,14 +66,14 @@ document.querySelector("#removeForm").addEventListener("submit", function (event
     let userIndex = 0
 
     if (removeName === userOn) {
-        alert("Não te podes remover a ti mesmo!")
+        alert("Não te podes remover a ti mesmo!")//nao pode remover o proprio
     } else {
         for (const user of users) {
-            userIndex++;
-            if (removeName === user.username) {
-                users.splice(userIndex - 1, 1);
-                localStorage.setItem("users", JSON.stringify(users))
-                userListLoad();
+            userIndex++;//posicao no array users
+            if (removeName === user.username) {//percorre o array ate encontrar o user procurado
+                users.splice(userIndex - 1, 1);//remove o utilizador procurado
+                localStorage.setItem("users", JSON.stringify(users))//atualiza na localStorage
+                userListLoad();//atualiza a lista dos users
             }
         }
     }
@@ -84,11 +84,11 @@ document.querySelector("#removeForm").addEventListener("submit", function (event
 document.querySelector("#btnUnBlock").addEventListener("click", function (event) {
     const userName = document.querySelector("#unBlockName").value
     for (const user of users) {
-        if (user.username === userName) {
-            user.blocked = 0
-            localStorage.setItem("users", JSON.stringify(users))
-            document.querySelector("#unBlockName").value = ""
-            alert("Desbloqueado!")
+        if (user.username === userName) {//procura o users a desbloquear
+            user.blocked = 0// altera o users de bloqueado para desbloqueado
+            localStorage.setItem("users", JSON.stringify(users))//atualiza o array na localStorage
+            document.querySelector("#unBlockName").value = ""//limpa o campo de texto
+            alert("Desbloqueado!")//alerta que foi desbloqueado
         }
     }
     event.preventDefault();
@@ -98,10 +98,10 @@ document.querySelector("#btnUnBlock").addEventListener("click", function (event)
 document.querySelector("#btnBlock").addEventListener("click", function (event) {
     const userName = document.querySelector("#blockName").value
     for (const user of users) {
-        if (user.username === userName) {
-            user.blocked = 1
-            localStorage.setItem("users", JSON.stringify(users))
-            document.querySelector("#blockName").value = ""
+        if (user.username === userName) {//procura o user a ser bloqueado
+            user.blocked = 1//da block no user
+            localStorage.setItem("users", JSON.stringify(users))//atualiza o array na localStorage
+            document.querySelector("#blockName").value = ""//da reset no campo de texto
             alert("Bloqueado!")
         }
     }
@@ -166,16 +166,16 @@ document.querySelector("#closeUnBlock").addEventListener("click", function () {
 navBarInfo();
 
 function navBarInfo() {
-    const labelUser = document.querySelector("#txtUserLogged")
-    labelUser.innerHTML = userOn;
+    const labelUser = document.querySelector("#txtUserLogged")//vai buscar a label
+    labelUser.innerHTML = userOn;//atualiza a label para "admin"
     let imgAvatar = ""
     for (const user of users) {
         if (user.username === userOn) {
-            imgAvatar = user.userImage
+            imgAvatar = user.userImage//guarda a src do avatar do user
         }
     }
     const userAvatar = document.querySelector("#userAvatar")
-    userAvatar.src = imgAvatar
+    userAvatar.src = imgAvatar//coloca o avatar na navBar
 }
 
 //função que renderiza a lista de users
@@ -184,10 +184,10 @@ userListLoad();
 function userListLoad() {
     const userList = document.querySelector("#userList")
     let lista = ""
-    for (let i = 0; i < users.length; i++) {
+    for (let i = 0; i < users.length; i++) {//percorre todos os users e adiciona os a lista
         const name = users[i].username;
         const userType = users[i].userType;
-        lista += `<p>${name}: ${userType}</p>`
+        lista += `<p>${name}: ${userType}</p>`//adiciona ao container cada user com o respetivo tipo de utilizador que é
     }
-    userList.innerHTML = lista
+    userList.innerHTML = lista//coloca a lista na pagina
 }

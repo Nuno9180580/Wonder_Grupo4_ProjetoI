@@ -24,30 +24,26 @@ if (localStorage.accepted) {
 navBarInfo();
 
 function navBarInfo() {
-    const labelUser = document.querySelector("#txtUserLogged")
-    labelUser.innerHTML = userOn;
+    const labelUser = document.querySelector("#txtUserLogged") //obtem a label a ser preenchida
+    labelUser.innerHTML = userOn; //preenche a label com o nome de utilizador neste caso admin
     let imgAvatar = ""
     for (const user of users) {
         if (user.username === userOn) {
-            imgAvatar = user.userImage
+            imgAvatar = user.userImage //obtem a src do avatar do admin
         }
     }
     const userAvatar = document.querySelector("#userAvatar")
-    userAvatar.src = imgAvatar
+    userAvatar.src = imgAvatar //coloca o avatar na navBar
 }
 
 alertSugestion();
 
 function alertSugestion() {
-    if (sugestions === undefined || sugestions.length == 0) {
-        alert("Não existem Sugestões")
-        window.location.href = "../html/BackOffice.html"
-
-
+    if (sugestions === undefined || sugestions.length == 0) { //se nao existirem suugestoes
+        alert("Não existem Sugestões") //alerta que nao existe
+        window.location.href = "../html/BackOffice.html" //redireciona asseguir ao alert para a pagina inicial do backOffice
     }
-
 }
-
 
 //carrega todas as sugestões
 renderCatalog();
@@ -56,7 +52,7 @@ function renderCatalog() {
     const myCatalog = document.querySelector("#myCatalog")
     let result = "";
     let i = 0;
-    for (const sugestion of sugestions) {
+    for (const sugestion of sugestions) { //le todas as sugestoes e renderiza as em cards
         if (i % 3 === 0) {
             result += `<br><div class = "row">`
         }
@@ -81,26 +77,26 @@ function renderCatalog() {
             result += `</div>`
         }
     }
-    myCatalog.innerHTML = result
+    myCatalog.innerHTML = result //adiciona as cards ao catalogo das sugestoes
 
     //botão que recusa uma sugestão
-    const btnRefuse = document.getElementsByClassName("refuse")
+    const btnRefuse = document.getElementsByClassName("refuse") //variavel que vai buscar o botao de recusar sugestao
     for (const elem of btnRefuse) {
-        elem.addEventListener("click", function () {
+        elem.addEventListener("click", function () { //adiciona a cada botao de recusar um evento click
             let userIndex = 0
             for (const sugestion of sugestions) {
                 userIndex++;
                 for (const user of users) {
-                    if (sugestion.username === user.username) {
+                    if (sugestion.username === user.username) { //procura o utilizador que fez a sugestao
                         user.alert = 2 //manda um alerta ao utilizador que fez a sugestão
-                        localStorage.setItem("users", JSON.stringify(users))
-                        let userIndex = 0
+                        localStorage.setItem("users", JSON.stringify(users)) //atualiza o array users por causa do alert alterado
+                        let userIndex = 0 //obtem a posicao da sugstao no array
                         userIndex++;
                         if (sugestion.monument === this.id) {
-                            sugestions.splice(userIndex - 1, 1);
-                            localStorage.setItem("sugestions", JSON.stringify(sugestions))
-                            alert(`Sugestão de ${sugestion.username} rejeitada!`)
-                            renderCatalog();
+                            sugestions.splice(userIndex - 1, 1); //apaga a sugestao do array
+                            localStorage.setItem("sugestions", JSON.stringify(sugestions)) //atualiza o array na localStorage
+                            alert(`Sugestão de ${sugestion.username} rejeitada!`) //alerta que a sugestao foi rejeitada
+                            renderCatalog(); //atualiza as sugestoes renderizadas
                         }
                     }
                 }
@@ -109,26 +105,26 @@ function renderCatalog() {
     }
 
     //botão que aceita uma sugestão
-    const btnAccept = document.getElementsByClassName("accept")
+    const btnAccept = document.getElementsByClassName("accept") //variavel que vai buscar o botao de aceitar sugestao
     //percorre os botoes todos e escolhe o id personalizado correspondente ao nome do monumento
     for (const elem of btnAccept) {
         elem.addEventListener("click", function () {
             for (const sugestion of sugestions) {
-                if (sugestion.monument === this.id) {
-                    accepted.push(new Sugestion(sugestion.username, sugestion.monument, sugestion.moreInfo))
-                    localStorage.setItem("accepted", JSON.stringify(accepted))
-                    alert(`Sugestão de ${sugestion.username} adicionado!`)
+                if (sugestion.monument === this.id) { //se o monumento da sugestao for igual ao id personalizado do monumento
+                    accepted.push(new Sugestion(sugestion.username, sugestion.monument, sugestion.moreInfo)) //adiciona ao array a sugestao aceite
+                    localStorage.setItem("accepted", JSON.stringify(accepted)) //atualiza o array na localStorage
+                    alert(`Sugestão de ${sugestion.username} adicionado!`) //alerta a sugestao aceite
                     for (const user of users) {
-                        if (sugestion.username === user.username) {
+                        if (sugestion.username === user.username) { //procura o user que fez a sugestao para premia lo
                             user.experience = user.experience + 10 //atribui 10xp ao utilizador que fez a sugestão
                             user.alert = 1 //manda um alerta ao utilizador que fez a sugestão
-                            localStorage.setItem("users", JSON.stringify(users))
+                            localStorage.setItem("users", JSON.stringify(users)) //atualiza o array na localStorage
                             let userIndex = 0
                             userIndex++;
                             if (sugestion.monument === this.id) {
-                                sugestions.splice(userIndex - 1, 1);
-                                localStorage.setItem("sugestions", JSON.stringify(sugestions))
-                                renderCatalog();
+                                sugestions.splice(userIndex - 1, 1); //remove a sugestao do array das sugestoes visto que foi aceite
+                                localStorage.setItem("sugestions", JSON.stringify(sugestions)) //atualiza o array sugestoes
+                                renderCatalog(); //atualiza as sugestoes no catalogo
                             }
                         }
                     }

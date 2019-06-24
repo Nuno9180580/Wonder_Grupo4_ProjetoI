@@ -29,19 +29,19 @@ document.querySelector("#sugestBtn").addEventListener("click", function () {
 getUserTitle()
 
 function getUserTitle() {
-    let titles = []
-    if (localStorage.titles) {
-        titles = JSON.parse(localStorage.titles)
+    let titles = [] //cria array 
+    if (localStorage.titles) { //se existir um array na localStorage
+        titles = JSON.parse(localStorage.titles) //atualiza o array definido em cima para o da localStorage
     }
-    let titleLevel = 1
+    let titleLevel = 1 //define o nivel do titulo em 1
     for (const title of titles) {
-        if (userOn === title.username) {
-            if (title.name > titleLevel) {
-                titleLevel = title.name
+        if (userOn === title.username) { //procura os titulos do user que esta logado
+            if (title.name > titleLevel) { //compara todos os titulos do user logado e determina o nivel do titulo mais alto
+                titleLevel = title.name //atribui o nivel do titulo mais alto
             }
         }
     }
-    switch (titleLevel) {
+    switch (titleLevel) { //usa switch para comparar o nivel do titulo e identificar o nome do titulo para ser definido para o user
         case 1:
             userTitle = "Novato"
             break;
@@ -65,25 +65,25 @@ function getUserTitle() {
     }
     //guarda na sessionStorage o titulo do user logado
     sessionStorage.setItem("currentTitle", userTitle);
-    navBarInfo();
+    navBarInfo(); //atualiza a navBar com o nome do novo titulo
 }
-//Adiciona a Imagem, o Nome do utilizador e o titulo na NavBar
 
+//Adiciona a Imagem, o Nome do utilizador e o titulo na NavBar
 function navBarInfo() {
-    const labelUser = document.querySelector("#txtUserLogged")
-    if (userOn != "admin") {
-        labelUser.innerHTML = userOn + ", " + userTitle;
+    const labelUser = document.querySelector("#txtUserLogged") //vai buscar a label do nome de utilizador e do titulo
+    if (userOn != "admin") { //se for criança
+        labelUser.innerHTML = userOn + ", " + userTitle; //coloca o nome de utilizador e do titulo na label
     } else {
-        labelUser.innerHTML = userOn
+        labelUser.innerHTML = userOn //se for admin apenas coloca "admin" na label
     }
     let imgAvatar = ""
     for (const user of users) {
-        if (user.username === userOn) {
-            imgAvatar = user.userImage
+        if (user.username === userOn) { //procura o user logado no array dos users
+            imgAvatar = user.userImage //guarda a src da imagem do user logado
         }
     }
     const userAvatar = document.querySelector("#userAvatar")
-    userAvatar.src = imgAvatar
+    userAvatar.src = imgAvatar //coloca o avatar na navBar
 }
 
 //função que guarda a informação das sugestões
@@ -94,13 +94,13 @@ function sugestionStorage() {
     let userName = "";
     for (const user of users) {
         if (user.username === userOn) {
-            userName = user.username
+            userName = user.username //guarda o nome do utilziador logado para mais tarde inserir no array das sugestoes
         }
     }
-    sugestions.push(new Sugestion(userName, mnmtName, moreInfo))
-    localStorage.setItem("sugestions", JSON.stringify(sugestions))
-    document.querySelector("#mnmtName").value = ""
-    document.querySelector("#moreInfo").value = ""
+    sugestions.push(new Sugestion(userName, mnmtName, moreInfo)) //adiciona uma nova sugestao com o nome de utilizador, nome do monumento e info
+    localStorage.setItem("sugestions", JSON.stringify(sugestions)) //atualiza a localStorage pelo array sugestions
+    document.querySelector("#mnmtName").value = "" //limpa o campo de texto do nome do monumento sugerido
+    document.querySelector("#moreInfo").value = "" //limpa o campo de texto da info do monumento sugerido
 }
 
 //função que avisa o user que a sugestão foi aceite
@@ -111,14 +111,14 @@ function alertSugestion() {
     for (const user of users) {
         if (user.username === userOn) {
             alertS = user.alert
-            if (alertS === 1) {
+            if (alertS === 1) { //se alertas = 1
                 alert("Recebeste Pontos de Experiência pela tua sugestão! ")
-                user.alert = 0
-                localStorage.setItem("users", JSON.stringify(users))
-            } else if (alertS === 2) {
+                user.alert = 0 //alerta volta a 0
+                localStorage.setItem("users", JSON.stringify(users)) //atualiza o array user pela LocalStorage
+            } else if (alertS === 2) { //alertas = 2
                 alert("A tua sugestão foi rejeitada! ")
-                user.alert = 0
-                localStorage.setItem("users", JSON.stringify(users))
+                user.alert = 0 //alerta volta a 0
+                localStorage.setItem("users", JSON.stringify(users)) //atualiza o array user pela LocalStorage
             }
         }
     }
@@ -142,7 +142,7 @@ function renderHighScore() {
     localStorage.setItem("highscores", JSON.stringify(users))
     if (localStorage.getItem("highscores")) {
         scores = JSON.parse(localStorage.getItem("highscores"))
-        if (scores[0].username === "admin") {
+        if (scores[0].username === "admin") { //se o admin for o 1º user com mais pontos, passa uma posicao a frente no array
             first = scores[1].username
             firstImg = scores[1].userImage
             firstScore = scores[1].score
@@ -152,7 +152,7 @@ function renderHighScore() {
             third = scores[3].username
             thirdImg = scores[3].userImage
             thirdScore = scores[3].score
-        } else if (scores[1].username === "admin") {
+        } else if (scores[1].username === "admin") { //se o admin for o 2º user com mais pontos, passa uma posicao a frente no array
             first = scores[0].username
             firstImg = scores[0].userImage
             firstScore = scores[0].score
@@ -162,7 +162,7 @@ function renderHighScore() {
             third = scores[3].username
             thirdImg = scores[3].userImage
             thirdScore = scores[3].score
-        } else if (scores[2].username === "admin") {
+        } else if (scores[2].username === "admin") { //se o admin for o 3º user com mais pontos, passa uma posicao a frente no array
             first = scores[0].username
             firstImg = scores[0].userImage
             firstScore = scores[0].score
@@ -172,7 +172,7 @@ function renderHighScore() {
             third = scores[3].username
             thirdImg = scores[3].userImage
             thirdScore = scores[3].score
-        } else {
+        } else { //se o admin nao estiver nos 3 primeiros, renderiza o podio normalmente
             first = scores[0].username
             firstImg = scores[0].userImage
             firstScore = scores[0].score
@@ -197,15 +197,15 @@ function renderHighScore() {
 }
 
 //Funão que renderiza os monumentos mais populares
-
 renderFavoritedMnmt();
 
 function renderFavoritedMnmt() {
-    let favs = []
-    monuments.sort(Monument.favoritedMnmt)
-    localStorage.setItem("bestMnmts", JSON.stringify(monuments))
-    if (localStorage.getItem("bestMnmts")) {
-        favs = JSON.parse(localStorage.getItem("bestMnmts"))
+    let favs = [] //cria array
+    monuments.sort(Monument.favoritedMnmt) //ordena pelos mais favoritados
+    localStorage.setItem("bestMnmts", JSON.stringify(monuments)) //atualiza a localStorage para os melhores monumentos
+    if (localStorage.getItem("bestMnmts")) { //se existir os melhores monumentos na localStorage
+        favs = JSON.parse(localStorage.getItem("bestMnmts")) //atualiza o array criado no inicio para o array dos melhores monumentos
+        //carrega as informaçoes para o podio dos monumentos
         let first = favs[0].name
         let second = favs[1].name
         let third = favs[2].name
@@ -218,7 +218,5 @@ function renderFavoritedMnmt() {
         document.querySelector("#stFavImg").src = firstImg
         document.querySelector("#ndFavImg").src = secondImg
         document.querySelector("#rdFavImg").src = thirdImg
-
-
     }
 }
