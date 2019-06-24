@@ -339,7 +339,7 @@ function toggleFav() {
               console.log("indexU", indexU);
               monument.usersFav.splice(indexU, 1);
               for (let user of users) {
-                if (user.username == userOn) {
+                if (user.username === userOn) {
                   let indexM = user.monumentsFav.indexOf(monumentId);
                   console.log("indexM", indexM);
                   user.monumentsFav.splice(indexM, 1);
@@ -351,7 +351,9 @@ function toggleFav() {
             } else {
               monument.usersFav.push(userOn);
               for (let user of users) {
-                user.monumentsFav.push(monumentId);
+                if(user.username === userOn){
+                  user.monumentsFav.push(monumentId);
+                }
               }
               element.dataset.favorited = "True";
               element.src = "../img/fav.png";
